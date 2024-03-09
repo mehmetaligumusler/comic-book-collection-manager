@@ -5,32 +5,32 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- The Basics -->
-	<groupId>com.ucoruh.calculator</groupId>
-	<artifactId>calculator-app</artifactId>
+	<groupId>com.mehmetali.comicmanager</groupId>
+	<artifactId>comic-manager-app</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<!-- More Project Information -->
-	<name>calculator-app</name>
-	<url>https://github.com/ucoruh/eclipse-java-maven-template</url>
+	<name>comic-manager-app</name>
+	<url>https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java</url>
 	<scm>
-		<url>https://github.com/ucoruh/eclipse-java-maven-template</url>
+		<url>https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java</url>
 	</scm>
-	<inceptionYear>2023</inceptionYear>
+	<inceptionYear>2024</inceptionYear>
 	<developers>
 		<developer>
-			<name>Asst. Prof. Dr. Ugur CORUH</name>
+			<name>Mehmet Ali GUMUSLER</name>
 			<organization>RTEU</organization>
-			<email>ugur.coruh@erdogan.edu.tr</email>
+			<email>mehmetali_gumusler21@erdogan.edu.tr</email>
 			<roles>
 				<role>Developer</role>
 				<role>Designer</role>
 			</roles>
 		</developer>
 		<developer>
-			<name>Other Person</name>
+			<name>Gokay DERVISOGLU</name>
 			<organization>RTEU</organization>
-			<email>mail@gmail.com</email>
+			<email>gokay_dervisoglu21@erdogan.edu.tr</email>
 			<roles>
 				<role>Developer</role>
 			</roles>
@@ -38,8 +38,8 @@
 	</developers>
 	<contributors>
 		<contributor>
-			<name>Asst. Prof. Dr. Ugur CORUH</name>
-			<email>ugur.coruh@erdogan.edu.tr</email>
+			<name>Mehmet Ali GUMUSLER</name>
+			<email>mehmetali_gumusler21@erdogan.edu.tr</email>
 			<organization>RTEU</organization>
 			<roles>
 				<role>Developer</role>
@@ -47,15 +47,15 @@
 			</roles>
 		</contributor>
 		<contributor>
-			<name>Other Person</name>
+			<name>Gokay DERVISOGLU</name>
 			<organization>RTEU</organization>
-			<email>mail@gmail.com</email>
+			<email>gokay_dervisoglu21@erdogan.edu.tr</email>
 			<roles>
 				<role>Developer</role>
 			</roles>
 		</contributor>
 	</contributors>
-	<description>Maven Example Template Project</description>
+	<description>Comic Book Collection Manager</description>
 	<organization>
 		<name>Recep Tayyip Erdogan University</name>
 		<url>www.erdogan.edu.tr</url>
@@ -63,38 +63,38 @@
 	<!-- Environment Settings -->
 	<issueManagement>
 		<system>Github</system>
-		<url>https://github.com/ucoruh/eclipse-java-maven-template</url>
+		<url>https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java</url>
 	</issueManagement>
 	<ciManagement>
 		<system>Github</system>
 		<notifiers>
 			<notifier>
-				<address>ugur.coruh@erdogan.edu.tr</address>
+				<address>gumuslermehmetali@gmail</address>
 				<sendOnSuccess>true</sendOnSuccess>
 				<sendOnError>true</sendOnError>
 				<sendOnFailure>true</sendOnFailure>
 				<sendOnWarning>true</sendOnWarning>
 			</notifier>
 		</notifiers>
-		<url>https://github.com/ucoruh/eclipse-java-maven-template</url>
+		<url>https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java/actions/</url>
 	</ciManagement>
 	<repositories>
 		<repository>
-			<id>eclipse-java-maven-template</id>
-			<name>eclipse-java-maven-template</name>
-			<url>https://github.com/ucoruh/eclipse-java-maven-template</url>
+			<id>ce204-midterm-mehmetali-gumusler-java</id>
+			<name>ce204-midterm-mehmetali-gumusler-java</name>
+			<url>https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java</url>
 		</repository>
 	</repositories>
 	<distributionManagement>
 		<site>
-			<name>https://github.com/ucoruh/eclipse-java-maven-template</name>
+			<name>https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java/releases/</name>
 			<id>eclipse-java-maven-template</id>
 		</site>
-		<downloadUrl>https://github.com/ucoruh/eclipse-java-maven-template</downloadUrl>
+		<downloadUrl>https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java/releases/</downloadUrl>
 		<repository>
-			<id>eclipse-java-maven-template</id>
-			<name>eclipse-java-maven-template</name>
-			<url>https://github.com/ucoruh/eclipse-java-maven-template</url>
+			<id>ce204-midterm-mehmetali-gumusler-java</id>
+			<name>ce204-midterm-mehmetali-gumusler-java</name>
+			<url>https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java</url>
 		</repository>
 	</distributionManagement>
 	<properties>
@@ -145,8 +145,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
 					<includes>
-						<include>**/CalculatorAppTest.java</include>
-						<include>**/CalculatorTest.java</include>
+						<include>**/**Test.java</include>
 					</includes>
 				</configuration>
 			</plugin>
@@ -250,7 +249,7 @@
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<mainClass>
-										com.ucoruh.calculator.CalculatorApp</mainClass>
+										com.mehmetali.comic-manager.ComicManagerApp</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>
