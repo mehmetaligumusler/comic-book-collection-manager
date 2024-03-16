@@ -4,7 +4,7 @@
 @brief This file contains the test cases for the CalculatorApp class.
 @details This file includes test methods to validate the functionality of the CalculatorApp class. It uses JUnit for unit testing.
 */
-package com.ucoruh.calculator;
+package com.mehmetali.comic_manager;
 
 import static org.junit.Assert.*;
 
@@ -19,6 +19,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.mehmetali.comic_manager.ComicManagerApp;
+
 
 /**
 
@@ -27,7 +29,7 @@ import org.junit.Test;
 @details The CalculatorAppTest class provides test methods to verify the behavior of the CalculatorApp class. It includes test methods for successful execution, object creation, and error handling scenarios.
 @author ugur.coruh
 */
-public class CalculatorAppTest {
+public class ComicManagerAppTest {
 
   /**
    * @brief This method is executed once before all test methods.
@@ -81,7 +83,7 @@ public class CalculatorAppTest {
     System.setOut(new PrintStream(outputStream));
     String[] args = new String[] {"0"};
     // Call the main method of CalculatorApp
-    CalculatorApp.main(args);
+    ComicManagerApp.main(args);
     // Restore original System.in and System.out
     System.setIn(originalIn);
     System.setOut(originalOut);
@@ -97,7 +99,7 @@ public class CalculatorAppTest {
   @Test
   public void testMainObject() {
     // Creating an instance of CalculatorApp
-    CalculatorApp app = new CalculatorApp();
+	  ComicManagerApp app = new ComicManagerApp();
     // Asserting the successful creation of the object
     assertTrue(true);
   }
@@ -122,7 +124,7 @@ public class CalculatorAppTest {
     System.setOut(new PrintStream(outputStream));
     String[] args = new String[] {"1"};
     // Call the main method of CalculatorApp
-    CalculatorApp.main(args);
+    ComicManagerApp.main(args);
     // Restore original System.in and System.out
     System.setIn(originalIn);
     System.setOut(originalOut);

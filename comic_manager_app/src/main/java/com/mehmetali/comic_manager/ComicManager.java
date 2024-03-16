@@ -1,33 +1,33 @@
 /**
 
-@file Calculator.java
+@file ComicManager.java
 @brief This file serves as a demonstration file for the Calculator class.
 @details This file contains the implementation of the Calculator class, which provides various mathematical operations.
 */
 
 /**
 
-@package com.ucoruh.calculator
+@package com.mehmetali.comic_manager
 @brief The com.ucoruh.calculator package contains all the classes and files related to the Calculator App.
 */
-package com.ucoruh.calculator;
+package com.mehmetali.comic_manager;
 
 import org.slf4j.LoggerFactory;
 
 import ch.qos.logback.classic.Logger;
 /**
 
-@class Calculator
+@class ComicManager
 @brief This class represents a Calculator that performs mathematical operations.
-@details The Calculator class provides methods to perform mathematical operations such as addition, subtraction, multiplication, and division. It also supports logging functionality using the logger object.
-@author ugur.coruh
+@details The ComicManager class provides methods to perform mathematical operations such as addition, subtraction, multiplication, and division. It also supports logging functionality using the logger object.
+@author mehmetali.gumusler
 */
-public class Calculator {
+public class ComicManager {
 
   /**
-   * @brief Logger for the Calculator class.
+   * @brief Logger for the ComicManager class.
    */
-  private static final Logger logger = (Logger) LoggerFactory.getLogger(Calculator.class);
+  private static final Logger logger = (Logger) LoggerFactory.getLogger(ComicManager.class);
 
   /**
    * @brief Calculates the sum of two integers.

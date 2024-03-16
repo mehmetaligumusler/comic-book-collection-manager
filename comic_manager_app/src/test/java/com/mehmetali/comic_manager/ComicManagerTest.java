@@ -4,7 +4,7 @@
 @brief This file contains the test cases for the Calculator class.
 @details This file includes test methods to validate the functionality of the Calculator class. It uses JUnit for unit testing.
 */
-package com.ucoruh.calculator;
+package com.mehmetali.comic_manager;
 
 import static org.junit.Assert.*;
 
@@ -21,7 +21,7 @@ import org.junit.Test;
 @details The CalculatorTest class provides test methods to verify the behavior of the Calculator class. It includes test methods for addition, subtraction, multiplication, and division operations.
 @author ugur.coruh
 */
-public class CalculatorTest {
+public class ComicManagerTest {
 
   /**
    * @brief This method is executed once before all test methods.
@@ -62,7 +62,7 @@ public class CalculatorTest {
    */
   @Test
   public void testAddition() {
-    Calculator calculator = new Calculator();
+    ComicManager calculator = new ComicManager();
     int result = calculator.add(2, 3);
     assertEquals(5, result);
   }
