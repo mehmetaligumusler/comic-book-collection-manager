@@ -3,7 +3,7 @@ package com.mehmetali.comic_manager;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class Comic implements Serializable {
+public class Wish implements Serializable {
     private int comicID;
     private String title;
     private int issueNumber;
@@ -12,7 +12,7 @@ public class Comic implements Serializable {
     private double value;
 
     // Constructor
-    public Comic(int comicID, String title, int issueNumber, String condition, String coverArt, double value) {
+    public Wish(int comicID, String title, int issueNumber, String condition, String coverArt, double value) {
         this.comicID = comicID;
         this.title = title;
         this.issueNumber = issueNumber;

@@ -10,7 +10,8 @@ public class Main {
 	
 	private static final Scanner scanner = new Scanner(System.in);
 	private static final UserManager userManager = new UserManager();
-	private static final ComicManager comicmanager = new ComicManager();
+	private static final BookManager comicmanager = new BookManager();
+	private static final WishManager wishmanager = new WishManager();
 
 
   private static void printMenu(String title, String[] options) {
@@ -88,6 +89,8 @@ public class Main {
     System.out.println("Kayit basarili!");
   }
   
+  //ComicBook
+  
   private static void AddBookMenu()
   {
   	System.out.println("Kitap Kayit");
@@ -99,7 +102,7 @@ public class Main {
     String bookName = scanner.nextLine();
 
 
-    Comic newUser = new Comic(IntBookId, bookName,1,LoginName,"a",10);
+    Book newUser = new Book(IntBookId, bookName,1,LoginName,"a",10);
     comicmanager.AddBook(newUser);
     System.out.println("Kayit basarili!");
   }
@@ -112,7 +115,7 @@ public class Main {
 	  comicmanager.listBooksByCondition(LoginName);
   }
   
-  private static void listBookMenu2()
+  private static void listAllBookMenu()
   {
 	  System.out.println("Kitap Liste");
 	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
@@ -145,6 +148,44 @@ public class Main {
 	  comicmanager.updateBookTitleByID(IntBookId, bookName);
 	  System.out.println("Güncelleme basarili!");
   }
+
+  //WishList
+  
+  private static void WishAddBookMenu()
+  {
+  	System.out.println("Wish Kitap Kayit");
+    System.out.print("Kitap ID: ");
+    String bookId = scanner.nextLine();
+    int IntBookId = Integer.valueOf(bookId);
+    
+    
+    Wish newUser = new Wish(IntBookId, "a",1,LoginName,"a",10);
+    wishmanager.AddBook(newUser);
+    //System.out.println("Kayit basarili!");
+  }
+  
+  private static void WishlistBookMenu()
+  {
+	  System.out.println("Wish Kitap Liste");
+	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
+	  //comicmanager.listBooks();
+	  wishmanager.listBooksByCondition(LoginName);
+  }
+  
+  
+  private static void WishdeleteBookMenu()
+  {
+	  System.out.println("Wish Kitap Silme");
+	  
+	  System.out.print("kitap ID: ");
+	  String bookId = scanner.nextLine();
+	  int IntBookId = Integer.valueOf(bookId);
+	  
+	  wishmanager.deleteBookByID(IntBookId);
+  }
+  
+  
+  //Normal Menu
 
   private static User loginMenu() {
     System.out.println("Giris Yap");
@@ -179,13 +220,13 @@ public class Main {
       
       printMenu(title, options);
       int choice = scanner.nextInt();
-      scanner.nextLine(); // Boş satırı oku
+      scanner.nextLine(); 
 
       switch (choice) {
         case 1:
           System.out.println("Cataloging Comic Book Collection");
           
-          String title2 = "USER MENU";
+          String title2 = "MY BOOK MENU";
           String[] options2 = {
             "1. My Book Add",
             "2. My Book Delete",
@@ -212,7 +253,7 @@ public class Main {
         	  listBookMenu();
         	  break;
           case 5:
-        	  listBookMenu2();
+        	  listAllBookMenu();
         	  break;
           case 6:
         	  break;
@@ -222,7 +263,35 @@ public class Main {
 
         case 2:
           System.out.println("Wishlist and Trade List Management");
-          // Implement wishlist and trade menu here
+          
+          String title3 = "MY WISHLIST MENU";
+          String[] options3 = {
+            "1. My Wish Book Add",
+            "2. My Wish Book Delete",
+            "3. My Wish Book List",
+            "4. My Book List",
+            "5. Exit"
+          };
+          printMenu(title3, options3);
+          int choice3 = scanner.nextInt();
+          scanner.nextLine(); 
+          
+          switch (choice3) {
+          case 1:
+        	  WishAddBookMenu();
+        	  break;
+          case 2:
+        	  WishdeleteBookMenu();
+        	  break;
+          case 3:
+        	  WishlistBookMenu();
+        	  break;
+          case 4:
+        	  listBookMenu();
+        	  break;
+          case 5:
+        	  break;
+          }
           
           
           
