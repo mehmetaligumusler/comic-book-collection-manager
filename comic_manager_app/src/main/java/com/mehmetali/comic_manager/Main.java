@@ -2,9 +2,15 @@ package com.mehmetali.comic_manager;
 
 import java.util.Scanner;
 
+
+
 public class Main {
-  private static final Scanner scanner = new Scanner(System.in);
-  private static final UserManager userManager = new UserManager();
+	
+	private static String LoginName;
+	
+	private static final Scanner scanner = new Scanner(System.in);
+	private static final UserManager userManager = new UserManager();
+	private static final ComicManager comicmanager = new ComicManager();
 
 
   private static void printMenu(String title, String[] options) {
@@ -48,7 +54,9 @@ public class Main {
 
         case 2:
           User loggedInUser = loginMenu();
-
+          
+          setLoginName(loggedInUser.getUsername());
+          
           if (loggedInUser != null) {
             userMenu(loggedInUser);
           }
@@ -78,6 +86,64 @@ public class Main {
     User newUser = new User(username, password);
     userManager.registerUser(newUser);
     System.out.println("Kayit basarili!");
+  }
+  
+  private static void AddBookMenu()
+  {
+  	System.out.println("Kitap Kayit");
+    System.out.print("Kitap ID: ");
+    String bookId = scanner.nextLine();
+    int IntBookId = Integer.valueOf(bookId);
+    
+    System.out.print("kitap Adi: ");
+    String bookName = scanner.nextLine();
+
+
+    Comic newUser = new Comic(IntBookId, bookName,1,LoginName,"a",10);
+    comicmanager.AddBook(newUser);
+    System.out.println("Kayit basarili!");
+  }
+  
+  private static void listBookMenu()
+  {
+	  System.out.println("Kitap Liste");
+	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
+	  //comicmanager.listBooks();
+	  comicmanager.listBooksByCondition(LoginName);
+  }
+  
+  private static void listBookMenu2()
+  {
+	  System.out.println("Kitap Liste");
+	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
+	  //comicmanager.listBooks();
+	  comicmanager.listBooks();
+  }
+  
+  private static void deleteBookMenu()
+  {
+	  System.out.println("Kitap Silme");
+	  
+	  System.out.print("kitap ID: ");
+	  String bookId = scanner.nextLine();
+	  int IntBookId = Integer.valueOf(bookId);
+	  
+	  comicmanager.deleteBookByID(IntBookId);
+  }
+  
+  private static void updateBookMenu()
+  {
+	  System.out.println("Kitap Güncelleme");
+	  
+	  System.out.print("kitap ID: ");
+	  String bookId = scanner.nextLine();
+	  int IntBookId = Integer.valueOf(bookId);
+	  
+	  System.out.print("kitap Adi: ");
+	  String bookName = scanner.nextLine();
+	  
+	  comicmanager.updateBookTitleByID(IntBookId, bookName);
+	  System.out.println("Güncelleme basarili!");
   }
 
   private static User loginMenu() {
@@ -109,6 +175,8 @@ public class Main {
         "3. Comic Book Events and Conventions",
         "4. Exit"
       };
+      
+      
       printMenu(title, options);
       int choice = scanner.nextInt();
       scanner.nextLine(); // Boş satırı oku
@@ -116,21 +184,61 @@ public class Main {
       switch (choice) {
         case 1:
           System.out.println("Cataloging Comic Book Collection");
-          // Implement cataloging menu here
+          
+          String title2 = "USER MENU";
+          String[] options2 = {
+            "1. My Book Add",
+            "2. My Book Delete",
+            "3. My Book Update",
+            "4. My Book List",
+            "5. All Book List",
+            "6. Exit"
+          };
+          printMenu(title2, options2);
+          int choice2 = scanner.nextInt();
+          scanner.nextLine(); 
+          
+          switch (choice2) {
+          case 1:
+        	  AddBookMenu();
+        	  break;
+          case 2:
+        	  deleteBookMenu();
+        	  break;
+          case 3:
+        	  updateBookMenu();
+        	  break;
+          case 4:
+        	  listBookMenu();
+        	  break;
+          case 5:
+        	  listBookMenu2();
+        	  break;
+          case 6:
+        	  break;
+          }
+          
           break;
 
         case 2:
           System.out.println("Wishlist and Trade List Management");
           // Implement wishlist and trade menu here
+          
+          
+          
           break;
 
         case 3:
           System.out.println("Comic Book Events and Conventions");
-          // Implement events and conventions menu here
+          
+          
+          
           break;
 
         case 4:
-          exit = true;
+          
+        
+        	
           break;
 
         default:
@@ -141,6 +249,14 @@ public class Main {
 
     scanner.close(); // Döngü bittiğinde scanner kapatılmalı
   }
+
+public static String getLoginName() {
+	return LoginName;
+}
+
+public static void setLoginName(String loginName) {
+	LoginName = loginName;
+}
 
 
 }

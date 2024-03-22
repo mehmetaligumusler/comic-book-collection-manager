@@ -1,6 +1,9 @@
 package com.mehmetali.comic_manager;
 
-public class Comic {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Comic implements Serializable {
     private int comicID;
     private String title;
     private int issueNumber;
