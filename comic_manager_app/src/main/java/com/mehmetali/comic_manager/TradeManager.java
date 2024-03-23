@@ -104,6 +104,32 @@ public class TradeManager {
         }
     }
     
+    public void BuyTradeByID(int TradeID) {
+        boolean found = false;
+        for (Trade comic : comics) {
+            if (comic.getComicID() == TradeID) 
+            {
+            	String oldUser = comic.getCondition();
+            	System.out.print(oldUser);
+            	
+                comics.remove(comic);
+                saveUsersToFile(comics);
+                System.out.println("Kitap başarıyla silindi.");
+                found = true;
+                
+                Main main = new Main();
+                
+                Book newUser = new Book(TradeID, comic.getTitle(),1,Main.LoginName,"a",10);
+                comicmanager.AddBook(newUser);
+                
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("Kitap ID'si ile eşleşen kitap bulunamadı.");
+        }
+    }
+    
     
     public boolean isTradeNameAvailable(String title) {
         for (Trade comic : comics) {

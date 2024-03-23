@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 	
-	private static String LoginName;
+	public static String LoginName;
 	
 	private static final Scanner scanner = new Scanner(System.in);
 	private static final UserManager userManager = new UserManager();
@@ -188,7 +188,6 @@ public class Main {
   
   //TradeList
   
-//WishList
   
   private static void TradeAddBookMenu()
   {
@@ -229,6 +228,17 @@ public class Main {
 	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
 	  //comicmanager.listBooks();
 	  trademanager.listAllTradeList();
+  }
+  
+  private static void TradeBuyBookMenu()
+  {
+	  System.out.println("Trade Kitap Silme");
+	  
+	  System.out.print("kitap ID: ");
+	  String bookId = scanner.nextLine();
+	  int IntBookId = Integer.valueOf(bookId);
+	  
+	  trademanager.BuyTradeByID(IntBookId);
   }
   
   
@@ -379,8 +389,10 @@ public class Main {
                   switch(choice6)
                   {
                   case 1:
+                	  TradeBuyBookMenu();
                 	  break;
                   case 2:
+                	  TradeAllListBookMenu();
                 	  break;
                   case 3:
                 	  break;
