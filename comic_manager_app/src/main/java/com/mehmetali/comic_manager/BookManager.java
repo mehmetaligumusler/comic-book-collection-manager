@@ -29,6 +29,9 @@ public class BookManager {
     }
     
     public void listBooks() {
+    	
+    	this.comics = readUsersFromFile();
+    	
         if (comics.isEmpty()) {
             System.out.println("Listelenecek kitap bulunamadı.");
             return;
@@ -47,6 +50,9 @@ public class BookManager {
     }
     
     public void listBooksByCondition(String condition) {
+    	
+    	this.comics = readUsersFromFile();
+    	
         if (comics.isEmpty()) {
             System.out.println("Listelenecek kitap bulunamadı.");
             return;
