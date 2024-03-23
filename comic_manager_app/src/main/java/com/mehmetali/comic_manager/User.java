@@ -16,7 +16,7 @@ public class User<Comic> implements Serializable {
   private List<Comic> wishlist;
   private List<Comic> tradeList;
 
-
+  
   // Constructor
   public User(String username, String password, int wallet) {
     this.username = username;

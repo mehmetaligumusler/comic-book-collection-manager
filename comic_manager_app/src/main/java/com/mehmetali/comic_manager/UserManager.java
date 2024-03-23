@@ -129,5 +129,16 @@ public class UserManager {
  
         saveUsersToFile(users); 
     }
-
+ 
+ public int getUserWallet(String username) {
+	    for (User user : users) {
+	        if (user.getUsername().equals(username)) {
+	            return user.getWallet(); 
+	        }
+	    }
+	    return -1;
+	}
+ 
 }
+
+

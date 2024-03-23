@@ -26,10 +26,12 @@ public class Main {
 
 	    // Kullanıcı adı ve parasını sağ üst köşede göster
 	    
+	    int wallet = userManager.getUserWallet(LoginName);
+	    
 	    if(control == false)
 	    {
 	    	System.out.println("|" + rightPad("User: " + LoginName, 79) + "|");
-		    System.out.println("|" + rightPad("Money: " + LoginWallet, 79) + "|");
+		    System.out.println("|" + rightPad("Money: " + wallet, 79) + "|");
 	    }
 
 	    for (String option : options) {
@@ -120,22 +122,19 @@ public class Main {
   {
   	System.out.println("Kitap Kayit");
     System.out.print("Kitap ID: ");
-    String bookId = scanner.nextLine();
-    int IntBookId = Integer.valueOf(bookId);
+    int bookId = scanner.nextInt();
     
     System.out.print("kitap Adi: ");
     String bookName = scanner.nextLine();
     
     System.out.print("kitap Sayfa sayi: ");
-    String bookpage = scanner.nextLine();
-    int Intbookpage= Integer.valueOf(bookId);
+    int bookpage = scanner.nextInt();
     
     System.out.print("kitap değeri: ");
-    String bookvalue = scanner.nextLine();
-    int Intbookvalue= Integer.valueOf(bookId);
+    int bookvalue = scanner.nextInt();
 
 
-    Book newUser = new Book(IntBookId, bookName,Intbookpage,LoginName,Intbookvalue);
+    Book newUser = new Book(bookId, bookName,bookpage,LoginName,bookvalue);
     comicmanager.AddBook(newUser);
     System.out.println("Kayit basarili!");
   }
@@ -163,10 +162,9 @@ public class Main {
 	  System.out.println("Kitap Silme");
 	  
 	  System.out.print("kitap ID: ");
-	  String bookId = scanner.nextLine();
-	  int IntBookId = Integer.valueOf(bookId);
+	  int bookId = scanner.nextInt();
 	  
-	  comicmanager.deleteBookByID(IntBookId);
+	  comicmanager.deleteBookByID(bookId);
   }
   
   private static void updateBookMenu()
@@ -174,13 +172,12 @@ public class Main {
 	  System.out.println("Kitap Güncelleme");
 	  
 	  System.out.print("kitap ID: ");
-	  String bookId = scanner.nextLine();
-	  int IntBookId = Integer.valueOf(bookId);
+	  int bookId = scanner.nextInt();
 	  
 	  System.out.print("kitap Adi: ");
 	  String bookName = scanner.nextLine();
 	  
-	  comicmanager.updateBookTitleByID(IntBookId, bookName);
+	  comicmanager.updateBookTitleByID(bookId, bookName);
 	  System.out.println("Güncelleme basarili!");
   }
 
@@ -190,11 +187,10 @@ public class Main {
   {
   	System.out.println("Wish Kitap Kayit");
     System.out.print("Kitap ID: ");
-    String bookId = scanner.nextLine();
-    int IntBookId = Integer.valueOf(bookId);
+    int bookId = scanner.nextInt();
     
     
-    Wish newUser = new Wish(IntBookId, null,1,LoginName,"a",10);
+    Wish newUser = new Wish(bookId, null,1,LoginName,"a",10);
     wishmanager.AddBook(newUser);
   }
   
@@ -211,10 +207,9 @@ public class Main {
 	  System.out.println("Wish Kitap Silme");
 	  
 	  System.out.print("kitap ID: ");
-	  String bookId = scanner.nextLine();
-	  int IntBookId = Integer.valueOf(bookId);
+	  int bookId = scanner.nextInt();
 	  
-	  wishmanager.deleteBookByID(IntBookId);
+	  wishmanager.deleteBookByID(bookId);
   }
   
   //TradeList
@@ -226,11 +221,10 @@ public class Main {
   {
   	System.out.println("Trade Kitap Kayit");
     System.out.print("Kitap ID: ");
-    String bookId = scanner.nextLine();
-    int IntBookId = Integer.valueOf(bookId);
+    int bookId = scanner.nextInt();
     
     
-    Trade newUser = new Trade(IntBookId, null,1,LoginName,"a",10);
+    Trade newUser = new Trade(bookId, null,1,LoginName,"a",10);
     trademanager.AddTrade(newUser);
     //comicmanager.deleteBookByID(IntBookId); // book list den silme
   }
@@ -248,10 +242,9 @@ public class Main {
 	  System.out.println("Trade Kitap Silme");
 	  
 	  System.out.print("kitap ID: ");
-	  String bookId = scanner.nextLine();
-	  int IntBookId = Integer.valueOf(bookId);
+	  int bookId = scanner.nextInt();
 	  
-	  trademanager.deleteTradeByID(IntBookId);
+	  trademanager.deleteTradeByID(bookId);
   }
   
   private static void TradeAllListBookMenu()
@@ -269,20 +262,18 @@ public class Main {
 	  System.out.println("Trade Kitap Satin Alma");
 	  
 	  System.out.print("kitap ID: ");
-	  String bookId = scanner.nextLine();
-	  int IntBookId = Integer.valueOf(bookId);
+	  int bookId = scanner.nextInt();
 	  
-	  trademanager.BuyTradeByID(IntBookId);
+	  trademanager.BuyTradeByID(bookId);
   }
   
   public static void CreditBuyScoreMenu()
   {
 	  System.out.println("Kredi puanı:");
 	  
-	  String score = scanner.nextLine();
-	  int IntScore = Integer.valueOf(score);
+	  int score = scanner.nextInt();
 	  
-	  userManager.creditbuyscore(LoginName, IntScore);
+	  userManager.creditbuyscore(LoginName, score);
   }
   
   
@@ -292,8 +283,7 @@ public class Main {
   {
   	System.out.println("Event Kayit");
     System.out.print("Event ID: ");
-    String bookId = scanner.nextLine();
-    int IntBookId = Integer.valueOf(bookId);
+    int bookId = scanner.nextInt();
     
     System.out.print("Event Adi: ");
     String title = scanner.nextLine();
@@ -302,7 +292,7 @@ public class Main {
     String content = scanner.nextLine();
 
 
-    Event newUser = new Event(IntBookId, title,content,LoginName);
+    Event newUser = new Event(bookId, title,content,LoginName);
     eventmanager.AddEvent(newUser);
     System.out.println("Kayit basarili!");
   }
@@ -330,10 +320,9 @@ public class Main {
 	  System.out.println("Event Silme");
 	  
 	  System.out.print("Event ID: ");
-	  String bookId = scanner.nextLine();
-	  int IntBookId = Integer.valueOf(bookId);
+	  int bookId = scanner.nextInt();
 	  
-	  eventmanager.deleteEventByID(IntBookId);
+	  eventmanager.deleteEventByID(bookId);
   }
   
   private static void EventupdateBookMenu()
@@ -341,8 +330,7 @@ public class Main {
 	  System.out.println("Event Güncelleme");
 	  
 	  System.out.print("Event ID: ");
-	  String bookId = scanner.nextLine();
-	  int IntBookId = Integer.valueOf(bookId);
+	  int bookId = scanner.nextInt();
 	  
 	  System.out.print("Event Adi: ");
 	  String title = scanner.nextLine();
@@ -350,7 +338,7 @@ public class Main {
 	  System.out.print("Event İçerik: ");
 	  String content = scanner.nextLine();
 	  
-	  eventmanager.updateEventTitleByID(IntBookId, title,content);
+	  eventmanager.updateEventTitleByID(bookId, title,content);
 	  System.out.println("Güncelleme basarili!");
   }
   
@@ -580,6 +568,7 @@ public class Main {
                   }
             	  break;
               case 3:
+            	  
             	  break;
               default:
                   System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
@@ -589,7 +578,7 @@ public class Main {
         	  break;
             
           case 3:
-        	  choice =4;
+        	  choice = 5;
         	  break;
           default:
               System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
@@ -663,7 +652,7 @@ public class Main {
           	  
           	  break;
             case 2:
-          	 
+          	 choice = 5;
           	  break;
             }
             
