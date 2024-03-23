@@ -6,12 +6,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<!-- The Basics -->
 	<groupId>com.mehmetali.comicmanager</groupId>
-	<artifactId>comic-manager-app</artifactId>
+	<artifactId>comic_manager_app</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<!-- More Project Information -->
-	<name>comic-manager-app</name>
+	<name>comic_manager_app</name>
 	<url>https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java</url>
 	<scm>
 		<url>https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java</url>
