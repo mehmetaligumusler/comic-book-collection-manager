@@ -1,5 +1,6 @@
 package com.mehmetali.comic_manager;
 
+
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
