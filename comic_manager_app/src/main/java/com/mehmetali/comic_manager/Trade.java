@@ -1,10 +1,9 @@
 package com.mehmetali.comic_manager;
 
-
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class Book implements Serializable {
+public class Trade implements Serializable {
     private int comicID;
     private String title;
     private int issueNumber;
@@ -13,7 +12,7 @@ public class Book implements Serializable {
     private double value;
 
     // Constructor
-    public Book(int comicID, String title, int issueNumber, String condition, String coverArt, double value) {
+    public Trade(int comicID, String title, int issueNumber, String condition, String coverArt, double value) {
         this.comicID = comicID;
         this.title = title;
         this.issueNumber = issueNumber;
