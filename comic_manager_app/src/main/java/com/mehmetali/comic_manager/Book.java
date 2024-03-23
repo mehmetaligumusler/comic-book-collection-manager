@@ -1,6 +1,6 @@
 package com.mehmetali.comic_manager;
 
-public class Comic {
+public class Book {
     private int comicID;
     private String title;
     private int issueNumber;
@@ -9,7 +9,7 @@ public class Comic {
     private double value;
 
     // Constructor
-    public Comic(int comicID, String title, int issueNumber, String condition, String coverArt, double value) {
+    public Book(int comicID, String title, int issueNumber, String condition, String coverArt, double value) {
         this.comicID = comicID;
         this.title = title;
         this.issueNumber = issueNumber;
