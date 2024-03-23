@@ -13,6 +13,7 @@ public class Main {
 	private static final BookManager comicmanager = new BookManager();
 	private static final WishManager wishmanager = new WishManager();
 	private static final TradeManager trademanager = new TradeManager();
+	private static final EventManager eventmanager = new EventManager();
 
 
   private static void printMenu(String title, String[] options) {
@@ -171,7 +172,7 @@ public class Main {
 	  System.out.println("Wish Kitap Liste");
 	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
 	  //comicmanager.listBooks();
-	  wishmanager.listBooksByCondition(LoginName);
+	  wishmanager.listBooksByUser(LoginName);
   }
   
   
@@ -241,6 +242,76 @@ public class Main {
 	  trademanager.BuyTradeByID(IntBookId);
   }
   
+  
+  //Event Menu
+  
+  //ComicBook
+  
+  private static void EventAddBookMenu()
+  {
+  	System.out.println("Event Kayit");
+    System.out.print("Event ID: ");
+    String bookId = scanner.nextLine();
+    int IntBookId = Integer.valueOf(bookId);
+    
+    System.out.print("Event Adi: ");
+    String title = scanner.nextLine();
+    
+    System.out.print("Event İçerik: ");
+    String content = scanner.nextLine();
+
+
+    Event newUser = new Event(IntBookId, title,content,LoginName);
+    eventmanager.AddEvent(newUser);
+    System.out.println("Kayit basarili!");
+  }
+  
+  private static void EventlistBookMenu()
+  {
+	  System.out.println("Event Liste");
+	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
+	  //comicmanager.listBooks();
+	  eventmanager.listEventsByCondition(LoginName);
+  }
+  
+  private static void EventlistAllBookMenu()
+  {
+	  
+	  
+	  System.out.println("Event Liste");
+	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
+	  //comicmanager.listBooks();
+	  eventmanager.listEvents();
+  }
+  
+  private static void EventdeleteBookMenu()
+  {
+	  System.out.println("Event Silme");
+	  
+	  System.out.print("Event ID: ");
+	  String bookId = scanner.nextLine();
+	  int IntBookId = Integer.valueOf(bookId);
+	  
+	  eventmanager.deleteEventByID(IntBookId);
+  }
+  
+  private static void EventupdateBookMenu()
+  {
+	  System.out.println("Event Güncelleme");
+	  
+	  System.out.print("Event ID: ");
+	  String bookId = scanner.nextLine();
+	  int IntBookId = Integer.valueOf(bookId);
+	  
+	  System.out.print("Event Adi: ");
+	  String title = scanner.nextLine();
+	
+	  System.out.print("Event İçerik: ");
+	  String content = scanner.nextLine();
+	  
+	  eventmanager.updateEventTitleByID(IntBookId, title,content);
+	  System.out.println("Güncelleme basarili!");
+  }
   
   //Normal Menu
 
@@ -450,6 +521,41 @@ public class Main {
 
         case 3:
           System.out.println("Comic Book Events and Conventions");
+          
+          String title8 = "MY EVENT MENU";
+          String[] options8 = {
+            "1. Add My Event",
+            "2. Sell My Event",
+            "3. Update My Event",
+            "4. My Event List",
+            "5. All Event List",
+            "6. Exit"
+          };
+          printMenu(title8, options8);
+          int choice8 = scanner.nextInt();
+          scanner.nextLine(); 
+          
+          switch(choice8)
+          {
+          case 1:
+        	  EventAddBookMenu();
+        	  break;
+          case 2:
+        	  EventdeleteBookMenu();
+        	  break;
+          case 3:
+        	  EventupdateBookMenu();
+        	  break;
+          case 4:
+        	  EventlistBookMenu();
+        	  break;
+          case 5:
+        	  EventlistAllBookMenu();
+        	  break;
+          case 6:
+        	  break;
+          
+          }
           
           
           

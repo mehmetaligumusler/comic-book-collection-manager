@@ -7,16 +7,16 @@ public class Wish implements Serializable {
     private int comicID;
     private String title;
     private int issueNumber;
-    private String condition;
+    private String User;
     private String coverArt;
     private double value;
 
     // Constructor
-    public Wish(int comicID, String title, int issueNumber, String condition, String coverArt, double value) {
+    public Wish(int comicID, String title, int issueNumber, String User, String coverArt, double value) {
         this.comicID = comicID;
         this.title = title;
         this.issueNumber = issueNumber;
-        this.condition = condition;
+        this.User = User;
         this.coverArt = coverArt;
         this.value = value;
     }
@@ -46,12 +46,12 @@ public class Wish implements Serializable {
         this.issueNumber = issueNumber;
     }
 
-    public String getCondition() {
-        return condition;
+    public String getUser() {
+        return User;
     }
 
-    public void setCondition(String condition) {
-        this.condition = condition;
+    public void setUser(String User) {
+        this.User = User;
     }
 
     public String getCoverArt() {
@@ -77,7 +77,7 @@ public class Wish implements Serializable {
                 "comicID=" + comicID +
                 ", title='" + title + '\'' +
                 ", issueNumber=" + issueNumber +
-                ", condition='" + condition + '\'' +
+                ", User='" + User + '\'' +
                 ", coverArt='" + coverArt + '\'' +
                 ", value=" + value +
                 '}';

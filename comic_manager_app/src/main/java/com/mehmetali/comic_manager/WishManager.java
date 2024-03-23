@@ -54,14 +54,14 @@ public class WishManager {
             System.out.println("Kitap ID: " + comic.getComicID());
             System.out.println("Başlık: " + comic.getTitle());
             System.out.println("Sayı Numarası: " + comic.getIssueNumber());
-            System.out.println("Durum: " + comic.getCondition());
+            System.out.println("Durum: " + comic.getUser());
             System.out.println("Kapak Resmi: " + comic.getCoverArt());
             System.out.println("Değer: " + comic.getValue());
             System.out.println("-------------------------");
         }
     }
     
-    public void listBooksByCondition(String condition) {
+    public void listBooksByUser(String User) {
     	
     	this.comics = readUsersFromFile();
     	
@@ -70,13 +70,13 @@ public class WishManager {
             return;
         }
 
-        System.out.println("----- " + condition + " Durumundaki Kitaplar -----");
+        System.out.println("----- " + User + " Durumundaki Kitaplar -----");
         for (Wish comic : comics) {
-            if (comic.getCondition().equalsIgnoreCase(condition)) {
+            if (comic.getUser().equalsIgnoreCase(User)) {
                 System.out.println("Kitap ID: " + comic.getComicID());
                 System.out.println("Başlık: " + comic.getTitle());
                 System.out.println("Sayı Numarası: " + comic.getIssueNumber());
-                System.out.println("Durum: " + comic.getCondition());
+                System.out.println("Durum: " + comic.getUser());
                 System.out.println("Kapak Resmi: " + comic.getCoverArt());
                 System.out.println("Değer: " + comic.getValue());
                 System.out.println("-------------------------");

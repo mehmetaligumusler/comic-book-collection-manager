@@ -54,7 +54,7 @@ public class TradeManager {
             System.out.println("Kitap ID: " + comic.getComicID());
             System.out.println("Başlık: " + comic.getTitle());
             System.out.println("Sayı Numarası: " + comic.getIssueNumber());
-            System.out.println("Durum: " + comic.getCondition());
+            System.out.println("Durum: " + comic.getuser());
             System.out.println("Kapak Resmi: " + comic.getCoverArt());
             System.out.println("Değer: " + comic.getValue());
             System.out.println("-------------------------");
@@ -72,11 +72,11 @@ public class TradeManager {
 
         System.out.println("----- " + condition + " Durumundaki Kitaplar -----");
         for (Trade comic : comics) {
-            if (comic.getCondition().equalsIgnoreCase(condition)) {
+            if (comic.getuser().equalsIgnoreCase(condition)) {
                 System.out.println("Kitap ID: " + comic.getComicID());
                 System.out.println("Başlık: " + comic.getTitle());
                 System.out.println("Sayı Numarası: " + comic.getIssueNumber());
-                System.out.println("Durum: " + comic.getCondition());
+                System.out.println("Durum: " + comic.getuser());
                 System.out.println("Kapak Resmi: " + comic.getCoverArt());
                 System.out.println("Değer: " + comic.getValue());
                 System.out.println("-------------------------");
@@ -93,7 +93,7 @@ public class TradeManager {
                 System.out.println("Kitap başarıyla silindi.");
                 found = true;
                 
-                Book newUser = new Book(TradeID, comic.getTitle(),1,comic.getCondition(),"a",10);
+                Book newUser = new Book(TradeID, comic.getTitle(),1,comic.getuser(),"a",10);
                 comicmanager.AddBook(newUser);
                 
                 break;
@@ -109,7 +109,7 @@ public class TradeManager {
         for (Trade comic : comics) {
             if (comic.getComicID() == TradeID) 
             {
-            	String oldUser = comic.getCondition();
+            	String oldUser = comic.getuser();
             	System.out.print(oldUser);
             	
                 comics.remove(comic);

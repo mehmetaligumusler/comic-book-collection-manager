@@ -42,7 +42,7 @@ public class BookManager {
             System.out.println("Kitap ID: " + comic.getComicID());
             System.out.println("Başlık: " + comic.getTitle());
             System.out.println("Sayı Numarası: " + comic.getIssueNumber());
-            System.out.println("Durum: " + comic.getCondition());
+            System.out.println("Durum: " + comic.getuser());
             System.out.println("Kapak Resmi: " + comic.getCoverArt());
             System.out.println("Değer: " + comic.getValue());
             System.out.println("-------------------------");
@@ -60,11 +60,11 @@ public class BookManager {
 
         System.out.println("----- " + condition + " Durumundaki Kitaplar -----");
         for (Book comic : comics) {
-            if (comic.getCondition().equalsIgnoreCase(condition)) {
+            if (comic.getuser().equalsIgnoreCase(condition)) {
                 System.out.println("Kitap ID: " + comic.getComicID());
                 System.out.println("Başlık: " + comic.getTitle());
                 System.out.println("Sayı Numarası: " + comic.getIssueNumber());
-                System.out.println("Durum: " + comic.getCondition());
+                System.out.println("Durum: " + comic.getuser());
                 System.out.println("Kapak Resmi: " + comic.getCoverArt());
                 System.out.println("Değer: " + comic.getValue());
                 System.out.println("-------------------------");

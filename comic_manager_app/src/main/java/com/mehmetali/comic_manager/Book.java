@@ -8,16 +8,16 @@ public class Book implements Serializable {
     private int comicID;
     private String title;
     private int issueNumber;
-    private String condition;
+    private String user;
     private String coverArt;
     private double value;
 
     // Constructor
-    public Book(int comicID, String title, int issueNumber, String condition, String coverArt, double value) {
+    public Book(int comicID, String title, int issueNumber, String user, String coverArt, double value) {
         this.comicID = comicID;
         this.title = title;
         this.issueNumber = issueNumber;
-        this.condition = condition;
+        this.user = user;
         this.coverArt = coverArt;
         this.value = value;
     }
@@ -47,12 +47,12 @@ public class Book implements Serializable {
         this.issueNumber = issueNumber;
     }
 
-    public String getCondition() {
-        return condition;
+    public String getuser() {
+        return user;
     }
 
-    public void setCondition(String condition) {
-        this.condition = condition;
+    public void setuser(String user) {
+        this.user = user;
     }
 
     public String getCoverArt() {
@@ -78,7 +78,7 @@ public class Book implements Serializable {
                 "comicID=" + comicID +
                 ", title='" + title + '\'' +
                 ", issueNumber=" + issueNumber +
-                ", condition='" + condition + '\'' +
+                ", user='" + user + '\'' +
                 ", coverArt='" + coverArt + '\'' +
                 ", value=" + value +
                 '}';
