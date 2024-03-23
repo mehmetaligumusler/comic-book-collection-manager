@@ -175,7 +175,6 @@ public class Main {
 	  wishmanager.listBooksByUser(LoginName);
   }
   
-  
   private static void WishdeleteBookMenu()
   {
 	  System.out.println("Wish Kitap Silme");
@@ -188,7 +187,6 @@ public class Main {
   }
   
   //TradeList
-  
   
   private static void TradeAddBookMenu()
   {
@@ -210,7 +208,6 @@ public class Main {
 	  //comicmanager.listBooks();
 	  trademanager.listMyTradeList(LoginName);
   }
-  
   
   private static void TradedeleteBookMenu()
   {
@@ -244,8 +241,6 @@ public class Main {
   
   
   //Event Menu
-  
-  //ComicBook
   
   private static void EventAddBookMenu()
   {
@@ -350,6 +345,8 @@ public class Main {
       int choice = scanner.nextInt();
       scanner.nextLine(); 
 
+      
+      while (choice != 4) {
       switch (choice) {
         case 1:
           System.out.println("Cataloging Comic Book Collection");
@@ -384,6 +381,7 @@ public class Main {
         	  listAllBookMenu();
         	  break;
           case 6:
+        	  choice = 4;
         	  break;
           }
           
@@ -419,17 +417,20 @@ public class Main {
               switch (choice4) {
               case 1:
             	  WishAddBookMenu();
+            	  
             	  break;
               case 2:
             	  WishdeleteBookMenu();
             	  break;
               case 3:
             	  WishlistBookMenu();
+            
             	  break;
               case 4:
             	  listBookMenu();
             	  break;
               case 5:
+            	  choice = 4;
             	  break;
               }
         	  break;
@@ -510,6 +511,7 @@ public class Main {
               
         	  break;
           case 3:
+        	  choice = 4;
         	  
         	  break;
         	  
@@ -553,6 +555,7 @@ public class Main {
         	  EventlistAllBookMenu();
         	  break;
           case 6:
+        	  choice = 4;
         	  break;
           
           }
@@ -570,10 +573,11 @@ public class Main {
         default:
           System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
           break;
+      	}
       }
     }
 
-    scanner.close(); // Döngü bittiğinde scanner kapatılmalı
+    scanner.close(); 
   }
 
 public static String getLoginName() {
