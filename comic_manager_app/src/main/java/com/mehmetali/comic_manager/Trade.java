@@ -9,10 +9,10 @@ public class Trade implements Serializable {
     private String title;
     private int pageNumber;
     private String user;
-    private double value;
+    private int value;
 
     // Constructor
-    public Trade(int comicID, String title, int pageNumber, String user, String coverArt, double value) {
+    public Trade(int comicID, String title, int pageNumber, String user, String coverArt, int value) {
         this.comicID = comicID;
         this.title = title;
         this.pageNumber = pageNumber;
@@ -53,11 +53,11 @@ public class Trade implements Serializable {
         this.user = user;
     }
 
-    public double getValue() {
+    public int getValue() {
         return value;
     }
 
-    public void setValue(double value) {
+    public void setValue(int value) {
         this.value = value;
     }
 

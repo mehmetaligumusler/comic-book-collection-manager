@@ -131,7 +131,7 @@ public class WishManager {
     {
         File file = new File(WISH_FILE_PATH);
         if (!file.exists()) {
-            System.out.println("Dosya bulunamadi, yeni bir dosya olusturuluyor.");
+            //System.out.println("Dosya bulunamadi, yeni bir dosya olusturuluyor.");
             // Dosya yoksa, dosyayı oluştur ve boş bir kitap listesi oluştur
             try {
                 if (file.createNewFile()) {
@@ -151,7 +151,7 @@ public class WishManager {
         } 
         catch (IOException | ClassNotFoundException e) 
         {
-            System.out.println("Dosya okuma hatasi: " + e.getMessage());
+            //System.out.println("Dosya okuma hatasi: " + e.getMessage());
             return new ArrayList<>();
         }
     }

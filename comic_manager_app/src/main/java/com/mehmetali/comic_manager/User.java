@@ -29,11 +29,11 @@ public class User<Comic> implements Serializable {
   
   public int getWallet() {
 	    return wallet;
-	  }
+  }
 
-	  public void setWallet(int wallet) {
-	    this.wallet = wallet;
-	  }
+  public void setWallet(int wallet) {
+    this.wallet = wallet;
+  }
 
   public String getUsername() {
     return username;

@@ -10,6 +10,7 @@ public class TradeManager {
     private List<Trade> comics;
     private static final String Trade_FILE_PATH = "trade.dat";
     private static final BookManager comicmanager = new BookManager();
+    private static final UserManager usermanager = new UserManager();
 
     public TradeManager() {
         this.comics = readUsersFromFile();
@@ -107,18 +108,35 @@ public class TradeManager {
         for (Trade comic : comics) {
             if (comic.getComicID() == TradeID) 
             {
-            	String oldUser = comic.getuser();
-            	System.out.print(oldUser);
+            	Main main = new Main();
+            	 
+            	if(Main.LoginWallet >= comic.getValue())
+            	{
+            		String oldUser = comic.getuser();
+                	System.out.print(oldUser);
+                	
+                	//kitap satilir.
+                    comics.remove(comic);
+                    saveUsersToFile(comics);
+                    System.out.println("Kitap başarıyla silindi.");
+                    found = true;
+                    
+                    //kitap diger kullaniciye gecer
+                    Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());
+                    comicmanager.AddBook(newUser);
+                    
+                    //kitap parasi alan kullaniciden eksilir.
+                    usermanager.creditSellscore(Main.LoginName, comic.getValue());
+                    
+                    //kitap parasi eklenir satan kullaniciye
+                    usermanager.creditbuyscore(oldUser, comic.getValue());
+                    
+            	}
+            	else {
+            		System.out.println("Kredi Skoru Yetersiz! Satin Alinamadi.");
+				}
             	
-                comics.remove(comic);
-                saveUsersToFile(comics);
-                System.out.println("Kitap başarıyla silindi.");
-                found = true;
-                
-                Main main = new Main();
-                
-                Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());
-                comicmanager.AddBook(newUser);
+            	
                 
                 break;
             }
@@ -161,7 +179,7 @@ public class TradeManager {
     {
         File file = new File(Trade_FILE_PATH);
         if (!file.exists()) {
-            System.out.println("Dosya bulunamadi, yeni bir dosya olusturuluyor.");
+            //System.out.println("Dosya bulunamadi, yeni bir dosya olusturuluyor.");
             // Dosya yoksa, dosyayı oluştur ve boş bir kitap listesi oluştur
             try {
                 if (file.createNewFile()) {
@@ -181,7 +199,7 @@ public class TradeManager {
         } 
         catch (IOException | ClassNotFoundException e) 
         {
-            System.out.println("Dosya okuma hatasi: " + e.getMessage());
+            //System.out.println("Dosya okuma hatasi: " + e.getMessage());
             return new ArrayList<>();
         }
     }

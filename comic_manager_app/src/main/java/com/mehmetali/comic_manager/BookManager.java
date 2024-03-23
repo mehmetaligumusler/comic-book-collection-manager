@@ -135,7 +135,7 @@ public class BookManager {
     {
         File file = new File(BOOK_FILE_PATH);
         if (!file.exists()) {
-            System.out.println("Dosya bulunamadi, yeni bir dosya olusturuluyor.");
+            //System.out.println("Dosya bulunamadi, yeni bir dosya olusturuluyor.");
             // Dosya yoksa, dosyayı oluştur ve boş bir kitap listesi oluştur
             try {
                 if (file.createNewFile()) {
@@ -155,7 +155,7 @@ public class BookManager {
         } 
         catch (IOException | ClassNotFoundException e) 
         {
-            System.out.println("Dosya okuma hatasi: " + e.getMessage());
+            //System.out.println("Dosya okuma hatasi: " + e.getMessage());
             return new ArrayList<>();
         }
     }
@@ -165,7 +165,7 @@ public class BookManager {
         try (FileOutputStream fileOut = new FileOutputStream(BOOK_FILE_PATH);
              ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
             objectOut.writeObject(comics2);
-            System.out.println("Kitap basariyla dosyaya kaydedildi.");
+            //System.out.println("Kitap basariyla dosyaya kaydedildi.");
         } catch (IOException e) {
             System.out.println("Dosya yazma hatasi: " + e.getMessage());
         }

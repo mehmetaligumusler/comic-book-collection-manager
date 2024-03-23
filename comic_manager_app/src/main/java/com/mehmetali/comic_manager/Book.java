@@ -9,10 +9,10 @@ public class Book implements Serializable {
     private String title;
     private int pageNumber;
     private String user;
-    private double value;
+    private int value;
 
     // Constructor
-    public Book(int comicID, String title, int pageNumber, String user, double value) {
+    public Book(int comicID, String title, int pageNumber, String user, int value) {
         this.comicID = comicID;
         this.title = title;
         this.pageNumber = pageNumber;
@@ -53,11 +53,11 @@ public class Book implements Serializable {
         this.user = user;
     }
 
-    public double getValue() {
+    public int getValue() {
         return value;
     }
 
-    public void setValue(double value) {
+    public void setValue(int value) {
         this.value = value;
     }
 

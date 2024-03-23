@@ -133,7 +133,7 @@ public class EventManager {
     {
         File file = new File(Event_FILE_PATH);
         if (!file.exists()) {
-            System.out.println("Dosya bulunamadi, yeni bir dosya olusturuluyor.");
+            //System.out.println("Dosya bulunamadi, yeni bir dosya olusturuluyor.");
             // Dosya yoksa, dosyayı oluştur ve boş bir Event listesi oluştur
             try {
                 if (file.createNewFile()) {
@@ -153,7 +153,7 @@ public class EventManager {
         } 
         catch (IOException | ClassNotFoundException e) 
         {
-            System.out.println("Dosya okuma hatasi: " + e.getMessage());
+            //System.out.println("Dosya okuma hatasi: " + e.getMessage());
             return new ArrayList<>();
         }
     }

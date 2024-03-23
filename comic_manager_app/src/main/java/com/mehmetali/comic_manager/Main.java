@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Main {
 	
 	public static String LoginName;
+	public static int LoginWallet;
 	
 	private static final Scanner scanner = new Scanner(System.in);
 	private static final UserManager userManager = new UserManager();
@@ -28,7 +29,7 @@ public class Main {
 	    if(control == false)
 	    {
 	    	System.out.println("|" + rightPad("User: " + LoginName, 79) + "|");
-		    System.out.println("|" + rightPad("Money: " + 0, 79) + "|");
+		    System.out.println("|" + rightPad("Money: " + LoginWallet, 79) + "|");
 	    }
 
 	    for (String option : options) {
@@ -79,6 +80,8 @@ public class Main {
           User loggedInUser = loginMenu();
           
           setLoginName(loggedInUser.getUsername());
+          setWallet(loggedInUser.getWallet());
+          
           
           if (loggedInUser != null) {
             userMenu(loggedInUser);
@@ -216,6 +219,9 @@ public class Main {
   
   //TradeList
   
+  //satin alan kisi parasi yetecek
+  // satan kisiye para eklenecek
+  
   private static void TradeAddBookMenu()
   {
   	System.out.println("Trade Kitap Kayit");
@@ -256,15 +262,27 @@ public class Main {
 	  trademanager.listAllTradeList();
   }
   
+  //satin alma
+  
   private static void TradeBuyBookMenu()
   {
-	  System.out.println("Trade Kitap Silme");
+	  System.out.println("Trade Kitap Satin Alma");
 	  
 	  System.out.print("kitap ID: ");
 	  String bookId = scanner.nextLine();
 	  int IntBookId = Integer.valueOf(bookId);
 	  
 	  trademanager.BuyTradeByID(IntBookId);
+  }
+  
+  public static void CreditBuyScoreMenu()
+  {
+	  System.out.println("Kredi puanı:");
+	  
+	  String score = scanner.nextLine();
+	  int IntScore = Integer.valueOf(score);
+	  
+	  userManager.creditbuyscore(LoginName, IntScore);
   }
   
   
@@ -360,12 +378,14 @@ public class Main {
     boolean exit = false;
 
     while (!exit) {
+    	
       String title = "USER MENU";
       String[] options = {
         "1. Cataloging Comic Book Collection",
         "2. Wishlist and Trade List Management",
         "3. Comic Book Events and Conventions",
-        "4. Exit"
+        "4. Buy Credit Score",
+        "5. Exit"
       };
       
       
@@ -374,7 +394,7 @@ public class Main {
       scanner.nextLine(); 
 
       
-      while (choice != 4) {
+      while (choice != 5) {
       switch (choice) {
         case 1:
           System.out.println("Cataloging Comic Book Collection");
@@ -409,7 +429,7 @@ public class Main {
         	  listAllBookMenu();
         	  break;
           case 6:
-        	  choice = 4;
+        	  choice = 5;
         	  break;
           default:
               System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
@@ -462,7 +482,7 @@ public class Main {
             	  listBookMenu();
             	  break;
               case 5:
-            	  choice = 4;
+            	  choice = 5;
             	  break;
               case 6:
             	  break;
@@ -506,7 +526,7 @@ public class Main {
                 	  TradeAllListBookMenu();
                 	  break;
                   case 3:
-                	  choice =4;
+                	  choice = 5;
                 	  break;
                   case 4:
                 	  
@@ -549,7 +569,7 @@ public class Main {
                 	  TradeMylistBookMenu();
                 	  break;
                   case 5:
-                	  choice = 4;
+                	  choice = 5;
                 	  break;
                   case 6:
                 	  exit = true;
@@ -567,9 +587,9 @@ public class Main {
               }
               
         	  break;
+            
           case 3:
-        	  choice = 4;
-        	  
+        	  choice =4;
         	  break;
           default:
               System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
@@ -615,7 +635,7 @@ public class Main {
         	  EventlistAllBookMenu();
         	  break;
           case 6:
-        	  choice = 4;
+        	  choice = 5;
         	  break;
           case 7:
         	  break;
@@ -624,21 +644,42 @@ public class Main {
               break;
           
           }
-          
-          
-          
           break;
-
-        case 4:
           
-        	choice = 4;
+        case 4:
+      	  String title9 = "MY CREDIT SCORE MENU";
+            String[] options9 = {
+              "1. Buy Credit Score",
+              "2. Exit"
+            };
+            printMenu(title9, options9);
+            int choice9 = scanner.nextInt();
+            scanner.nextLine(); 
+            
+            switch(choice9)
+            {
+            case 1:
+          	  CreditBuyScoreMenu();
+          	  
+          	  break;
+            case 2:
+          	 
+          	  break;
+            }
+            
+      	  
+      	  break;
+
+        case 5:
+          
+        	choice = 5;
         	exit = true;
         	
           break;
 
         default:
           System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
-          choice = 4;
+          choice = 5;
           break;
       	}
       }
@@ -653,6 +694,14 @@ public static String getLoginName() {
 
 public static void setLoginName(String loginName) {
 	LoginName = loginName;
+}
+
+public static int getWallet() {
+	return LoginWallet;
+}
+
+public static void setWallet(int loginWallet) {
+	LoginWallet = loginWallet;
 }
 
 

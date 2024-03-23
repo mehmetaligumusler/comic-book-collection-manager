@@ -36,7 +36,7 @@ public class UserManager {
     private List<User> readUsersFromFile() {
         File file = new File(USER_FILE_PATH);
         if (!file.exists()) {
-            System.out.println("Dosya bulunamadi, yeni bir dosya olusturuluyor.");
+            //System.out.println("Dosya bulunamadi, yeni bir dosya olusturuluyor.");
             // Dosya yoksa, dosyayı oluştur ve boş bir kullanıcı listesi oluştur
             try {
                 if (file.createNewFile()) {
@@ -54,7 +54,7 @@ public class UserManager {
              ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
             return (List<User>) objectIn.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Dosya okuma hatasi: " + e.getMessage());
+            //System.out.println("Dosya okuma hatasi: " + e.getMessage());
             return new ArrayList<>();
         }
     }
@@ -74,9 +74,60 @@ public class UserManager {
     public User login(String username, String password) {
         for (User user : users) {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
-                return user; // Kullanıcı adı ve şifre doğruysa kullanıcıyı döndür
+                return user; // 
             }
         }
-        return null; // Kullanıcı adı veya şifre hatalıysa null döndür
+        return null; 
     }
+    
+    public void creditbuyscore(String username, int credit) {
+        
+        User foundUser = null;
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
+                foundUser = user;
+                break;
+            }
+        }
+
+        if (foundUser == null) {
+            System.out.println("Kullanıcı bulunamadı.");
+            return;
+        }
+
+
+        int currentWallet = foundUser.getWallet(); 
+        int newWallet = currentWallet + credit; 
+        foundUser.setWallet(newWallet); 
+
+ 
+        saveUsersToFile(users); 
+
+        System.out.println("Kredi başarıyla eklendi. Yeni bakiye: " + newWallet);
+    }
+    
+ public void creditSellscore(String username, int credit) {
+        
+        User foundUser = null;
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
+                foundUser = user;
+                break;
+            }
+        }
+
+        if (foundUser == null) {
+            System.out.println("Kullanıcı bulunamadı.");
+            return;
+        }
+
+
+        int currentWallet = foundUser.getWallet(); 
+        int newWallet = currentWallet - credit; 
+        foundUser.setWallet(newWallet); 
+
+ 
+        saveUsersToFile(users); 
+    }
+
 }
