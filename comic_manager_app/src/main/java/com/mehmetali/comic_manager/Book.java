@@ -7,18 +7,16 @@ import java.io.Serializable;
 public class Book implements Serializable {
     private int comicID;
     private String title;
-    private int issueNumber;
+    private int pageNumber;
     private String user;
-    private String coverArt;
     private double value;
 
     // Constructor
-    public Book(int comicID, String title, int issueNumber, String user, String coverArt, double value) {
+    public Book(int comicID, String title, int pageNumber, String user, double value) {
         this.comicID = comicID;
         this.title = title;
-        this.issueNumber = issueNumber;
+        this.pageNumber = pageNumber;
         this.user = user;
-        this.coverArt = coverArt;
         this.value = value;
     }
 
@@ -39,12 +37,12 @@ public class Book implements Serializable {
         this.title = title;
     }
 
-    public int getIssueNumber() {
-        return issueNumber;
+    public int getpageNumber() {
+        return pageNumber;
     }
 
-    public void setIssueNumber(int issueNumber) {
-        this.issueNumber = issueNumber;
+    public void setpageNumber(int pageNumber) {
+        this.pageNumber = pageNumber;
     }
 
     public String getuser() {
@@ -53,14 +51,6 @@ public class Book implements Serializable {
 
     public void setuser(String user) {
         this.user = user;
-    }
-
-    public String getCoverArt() {
-        return coverArt;
-    }
-
-    public void setCoverArt(String coverArt) {
-        this.coverArt = coverArt;
     }
 
     public double getValue() {
@@ -77,9 +67,8 @@ public class Book implements Serializable {
         return "Comic{" +
                 "comicID=" + comicID +
                 ", title='" + title + '\'' +
-                ", issueNumber=" + issueNumber +
+                ", pageNumber=" + pageNumber +
                 ", user='" + user + '\'' +
-                ", coverArt='" + coverArt + '\'' +
                 ", value=" + value +
                 '}';
     }

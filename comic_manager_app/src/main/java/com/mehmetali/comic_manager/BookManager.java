@@ -41,9 +41,8 @@ public class BookManager {
         for (Book comic : comics) {
             System.out.println("Kitap ID: " + comic.getComicID());
             System.out.println("Başlık: " + comic.getTitle());
-            System.out.println("Sayı Numarası: " + comic.getIssueNumber());
+            System.out.println("Sayı Numarası: " + comic.getpageNumber());
             System.out.println("Durum: " + comic.getuser());
-            System.out.println("Kapak Resmi: " + comic.getCoverArt());
             System.out.println("Değer: " + comic.getValue());
             System.out.println("-------------------------");
         }
@@ -63,9 +62,8 @@ public class BookManager {
             if (comic.getuser().equalsIgnoreCase(condition)) {
                 System.out.println("Kitap ID: " + comic.getComicID());
                 System.out.println("Başlık: " + comic.getTitle());
-                System.out.println("Sayı Numarası: " + comic.getIssueNumber());
+                System.out.println("Sayı Numarası: " + comic.getpageNumber());
                 System.out.println("Durum: " + comic.getuser());
-                System.out.println("Kapak Resmi: " + comic.getCoverArt());
                 System.out.println("Değer: " + comic.getValue());
                 System.out.println("-------------------------");
             }

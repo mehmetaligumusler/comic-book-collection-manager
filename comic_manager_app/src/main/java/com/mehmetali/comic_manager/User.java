@@ -10,6 +10,7 @@ public class User<Comic> implements Serializable {
 
   private String username;
   private String password;
+  private int wallet; 
 
   private List<Comic> collection;
   private List<Comic> wishlist;
@@ -17,13 +18,22 @@ public class User<Comic> implements Serializable {
 
 
   // Constructor
-  public User(String username, String password) {
+  public User(String username, String password, int wallet) {
     this.username = username;
     this.password = password;
+    this.wallet = wallet;
     this.collection = new ArrayList<>();
     this.wishlist = new ArrayList<>();
     this.tradeList = new ArrayList<>();
   }
+  
+  public int getWallet() {
+	    return wallet;
+	  }
+
+	  public void setWallet(int wallet) {
+	    this.wallet = wallet;
+	  }
 
   public String getUsername() {
     return username;

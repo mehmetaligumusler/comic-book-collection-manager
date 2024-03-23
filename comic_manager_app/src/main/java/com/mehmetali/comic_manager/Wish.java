@@ -1,23 +1,22 @@
 package com.mehmetali.comic_manager;
 
+
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
 public class Wish implements Serializable {
     private int comicID;
     private String title;
-    private int issueNumber;
-    private String User;
-    private String coverArt;
+    private int pageNumber;
+    private String user;
     private double value;
 
     // Constructor
-    public Wish(int comicID, String title, int issueNumber, String User, String coverArt, double value) {
+    public Wish(int comicID, String title, int pageNumber, String user, String coverArt, double value) {
         this.comicID = comicID;
         this.title = title;
-        this.issueNumber = issueNumber;
-        this.User = User;
-        this.coverArt = coverArt;
+        this.pageNumber = pageNumber;
+        this.user = user;
         this.value = value;
     }
 
@@ -38,28 +37,20 @@ public class Wish implements Serializable {
         this.title = title;
     }
 
-    public int getIssueNumber() {
-        return issueNumber;
+    public int getpageNumber() {
+        return pageNumber;
     }
 
-    public void setIssueNumber(int issueNumber) {
-        this.issueNumber = issueNumber;
+    public void setpageNumber(int pageNumber) {
+        this.pageNumber = pageNumber;
     }
 
-    public String getUser() {
-        return User;
+    public String getuser() {
+        return user;
     }
 
-    public void setUser(String User) {
-        this.User = User;
-    }
-
-    public String getCoverArt() {
-        return coverArt;
-    }
-
-    public void setCoverArt(String coverArt) {
-        this.coverArt = coverArt;
+    public void setuser(String user) {
+        this.user = user;
     }
 
     public double getValue() {
@@ -76,9 +67,8 @@ public class Wish implements Serializable {
         return "Comic{" +
                 "comicID=" + comicID +
                 ", title='" + title + '\'' +
-                ", issueNumber=" + issueNumber +
-                ", User='" + User + '\'' +
-                ", coverArt='" + coverArt + '\'' +
+                ", pageNumber=" + pageNumber +
+                ", user='" + user + '\'' +
                 ", value=" + value +
                 '}';
     }

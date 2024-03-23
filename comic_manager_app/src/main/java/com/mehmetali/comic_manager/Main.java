@@ -14,20 +14,36 @@ public class Main {
 	private static final WishManager wishmanager = new WishManager();
 	private static final TradeManager trademanager = new TradeManager();
 	private static final EventManager eventmanager = new EventManager();
+	
+	public static boolean control = false;
 
 
-  private static void printMenu(String title, String[] options) {
-    System.out.println("|===============================================================================|");
-    System.out.println("|" + centerText(title, 79) + "|");
-    System.out.println("|===============================================================================|");
+	private static void printMenu(String title, String[] options) {
+	    System.out.println("|===============================================================================|");
+	    System.out.println("|" + centerText(title, 79) + "|");
+	    System.out.println("|===============================================================================|");
 
-    for (String option : options) {
-      System.out.println("|" + centerText(option, 79) + "|");
-    }
+	    // Kullanıcı adı ve parasını sağ üst köşede göster
+	    
+	    if(control == false)
+	    {
+	    	System.out.println("|" + rightPad("User: " + LoginName, 79) + "|");
+		    System.out.println("|" + rightPad("Money: " + 0, 79) + "|");
+	    }
 
-    System.out.println("|===============================================================================|");
-    System.out.print("Enter your choice: ");
-  }
+	    for (String option : options) {
+	        System.out.println("|" + centerText(option, 79) + "|");
+	    }
+
+	    System.out.println("|===============================================================================|");
+	    System.out.print("Enter your choice: ");
+	}
+
+	// Sağa yaslı şekilde metin düzenleme metodu
+	private static String rightPad(String text, int length) {
+	    return String.format("%-" + length + "s", text);
+	}
+
 
   private static String centerText(String text, int length) {
     int spaces = length - text.length();
@@ -40,6 +56,8 @@ public class Main {
     boolean exit = false;
 
     while (!exit) {
+    	
+      control = true;
       String title = "MAIN MENU";
       String[] options = {
         "1. Register",
@@ -49,6 +67,8 @@ public class Main {
       printMenu(title, options);
       int choice = scanner.nextInt();
       scanner.nextLine(); // Boş satırı oku
+      
+      control = false;
 
       switch (choice) {
         case 1:
@@ -86,7 +106,7 @@ public class Main {
     System.out.print("Sifre: ");
     String password = scanner.nextLine();
     // Kullanıcıyı kaydet
-    User newUser = new User(username, password);
+    User newUser = new User(username, password, 0);
     userManager.registerUser(newUser);
     System.out.println("Kayit basarili!");
   }
@@ -102,9 +122,17 @@ public class Main {
     
     System.out.print("kitap Adi: ");
     String bookName = scanner.nextLine();
+    
+    System.out.print("kitap Sayfa sayi: ");
+    String bookpage = scanner.nextLine();
+    int Intbookpage= Integer.valueOf(bookId);
+    
+    System.out.print("kitap değeri: ");
+    String bookvalue = scanner.nextLine();
+    int Intbookvalue= Integer.valueOf(bookId);
 
 
-    Book newUser = new Book(IntBookId, bookName,1,LoginName,"a",10);
+    Book newUser = new Book(IntBookId, bookName,Intbookpage,LoginName,Intbookvalue);
     comicmanager.AddBook(newUser);
     System.out.println("Kayit basarili!");
   }
@@ -383,6 +411,9 @@ public class Main {
           case 6:
         	  choice = 4;
         	  break;
+          default:
+              System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+              break;
           }
           
           break;
@@ -408,6 +439,7 @@ public class Main {
                 "2. My Wish Book Delete",
                 "3. My Wish Book List",
                 "4. My Book List",
+                "5. Return",
                 "5. Exit"
               };
               printMenu(title4, options4);
@@ -432,6 +464,11 @@ public class Main {
               case 5:
             	  choice = 4;
             	  break;
+              case 6:
+            	  break;
+              default:
+                  System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+                  break;
               }
         	  break;
           case 2:
@@ -439,7 +476,8 @@ public class Main {
               String[] options5 = {
                 "1. Buy Book",
                 "2. Sell Book",
-                "3. Exit"
+                "3. Return",
+                "4. Exit"
               };
               printMenu(title5, options5);
               int choice5 = scanner.nextInt();
@@ -452,6 +490,7 @@ public class Main {
                   String[] options6 = {
                     "1. Buy New Book",
                     "2. Trade Book List",
+                    "3. Return",
                     "3. Exit"
                   };
                   printMenu(title6, options6);
@@ -467,7 +506,14 @@ public class Main {
                 	  TradeAllListBookMenu();
                 	  break;
                   case 3:
+                	  choice =4;
                 	  break;
+                  case 4:
+                	  
+                	  break;
+                  default:
+                      System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+                      break;
                   }
                   
                   
@@ -481,7 +527,8 @@ public class Main {
                     "2. Delete Sell Book",
                     "3. Trade Book List",
                     "4. My Trade Book List",
-                    "5. Exit"
+                    "5. Return",
+                    "6. Exit"
                   };
                   printMenu(title7, options7);
                   int choice7 = scanner.nextInt();
@@ -502,11 +549,21 @@ public class Main {
                 	  TradeMylistBookMenu();
                 	  break;
                   case 5:
+                	  choice = 4;
                 	  break;
+                  case 6:
+                	  exit = true;
+                	  break;
+                  default:
+                      System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+                      break;
                   }
             	  break;
               case 3:
             	  break;
+              default:
+                  System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+                  break;
               }
               
         	  break;
@@ -514,8 +571,10 @@ public class Main {
         	  choice = 4;
         	  
         	  break;
-        	  
-          
+          default:
+              System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+              break;
+
           }
           
 
@@ -531,7 +590,8 @@ public class Main {
             "3. Update My Event",
             "4. My Event List",
             "5. All Event List",
-            "6. Exit"
+            "6. Return",
+            "7. Exit"
           };
           printMenu(title8, options8);
           int choice8 = scanner.nextInt();
@@ -557,6 +617,11 @@ public class Main {
           case 6:
         	  choice = 4;
         	  break;
+          case 7:
+        	  break;
+          default:
+              System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+              break;
           
           }
           
@@ -566,12 +631,14 @@ public class Main {
 
         case 4:
           
-        
+        	choice = 4;
+        	exit = true;
         	
           break;
 
         default:
           System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+          choice = 4;
           break;
       	}
       }

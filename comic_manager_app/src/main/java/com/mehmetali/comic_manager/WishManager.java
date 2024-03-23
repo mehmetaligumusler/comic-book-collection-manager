@@ -53,9 +53,8 @@ public class WishManager {
         for (Wish comic : comics) {
             System.out.println("Kitap ID: " + comic.getComicID());
             System.out.println("Başlık: " + comic.getTitle());
-            System.out.println("Sayı Numarası: " + comic.getIssueNumber());
-            System.out.println("Durum: " + comic.getUser());
-            System.out.println("Kapak Resmi: " + comic.getCoverArt());
+            System.out.println("Sayı Numarası: " + comic.getpageNumber());
+            System.out.println("Durum: " + comic.getuser());
             System.out.println("Değer: " + comic.getValue());
             System.out.println("-------------------------");
         }
@@ -72,12 +71,11 @@ public class WishManager {
 
         System.out.println("----- " + User + " Durumundaki Kitaplar -----");
         for (Wish comic : comics) {
-            if (comic.getUser().equalsIgnoreCase(User)) {
+            if (comic.getuser().equalsIgnoreCase(User)) {
                 System.out.println("Kitap ID: " + comic.getComicID());
                 System.out.println("Başlık: " + comic.getTitle());
-                System.out.println("Sayı Numarası: " + comic.getIssueNumber());
-                System.out.println("Durum: " + comic.getUser());
-                System.out.println("Kapak Resmi: " + comic.getCoverArt());
+                System.out.println("Sayı Numarası: " + comic.getpageNumber());
+                System.out.println("Durum: " + comic.getuser());
                 System.out.println("Değer: " + comic.getValue());
                 System.out.println("-------------------------");
             }

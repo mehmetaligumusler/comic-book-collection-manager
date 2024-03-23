@@ -53,9 +53,8 @@ public class TradeManager {
         for (Trade comic : comics) {
             System.out.println("Kitap ID: " + comic.getComicID());
             System.out.println("Başlık: " + comic.getTitle());
-            System.out.println("Sayı Numarası: " + comic.getIssueNumber());
+            System.out.println("Sayı Numarası: " + comic.getpageNumber());
             System.out.println("Durum: " + comic.getuser());
-            System.out.println("Kapak Resmi: " + comic.getCoverArt());
             System.out.println("Değer: " + comic.getValue());
             System.out.println("-------------------------");
         }
@@ -75,9 +74,8 @@ public class TradeManager {
             if (comic.getuser().equalsIgnoreCase(condition)) {
                 System.out.println("Kitap ID: " + comic.getComicID());
                 System.out.println("Başlık: " + comic.getTitle());
-                System.out.println("Sayı Numarası: " + comic.getIssueNumber());
+                System.out.println("Sayı Numarası: " + comic.getpageNumber());
                 System.out.println("Durum: " + comic.getuser());
-                System.out.println("Kapak Resmi: " + comic.getCoverArt());
                 System.out.println("Değer: " + comic.getValue());
                 System.out.println("-------------------------");
             }
@@ -93,7 +91,7 @@ public class TradeManager {
                 System.out.println("Kitap başarıyla silindi.");
                 found = true;
                 
-                Book newUser = new Book(TradeID, comic.getTitle(),1,comic.getuser(),"a",10);
+                Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),comic.getuser(),comic.getValue());
                 comicmanager.AddBook(newUser);
                 
                 break;
@@ -119,7 +117,7 @@ public class TradeManager {
                 
                 Main main = new Main();
                 
-                Book newUser = new Book(TradeID, comic.getTitle(),1,Main.LoginName,"a",10);
+                Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());
                 comicmanager.AddBook(newUser);
                 
                 break;
