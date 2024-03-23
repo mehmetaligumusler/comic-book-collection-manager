@@ -105,7 +105,6 @@ public class UserManager {
  
         saveUsersToFile(users); 
 
-        //System.out.println("Kredi başarıyla eklendi. Yeni bakiye: " + newWallet);
         return newWallet;
     }
     

@@ -137,14 +137,15 @@ public class TradeManager {
                     //kitap parasi eklenir satan kullaniciye
                     usermanager.creditbuyscore(oldUser, comic.getValue());
                     
+                    return 0;
+                    
             	}
             	else {
             		System.out.println("Kredi Skoru Yetersiz! Satin Alinamadi.");
+            		return -1;
 				}
             	
             	
-                
-                return 0;
             }
         }
         if (!found) {

@@ -1,6 +1,7 @@
 package com.mehmetali.comic_manager;
 
 import java.util.Scanner;
+import java.io.IOException;
 
 
 
@@ -54,6 +55,24 @@ public class Main {
     int after = spaces - before;
     return " ".repeat(before) + text + " ".repeat(after);
   }
+  
+  
+    public static void clearConsole() {
+        try {
+            // Windows
+            if (System.getProperty("os.name").contains("Windows")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            }
+            // Unix/Linux/Mac
+            else {
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+            }
+        } catch (IOException | InterruptedException ex) {
+            // Handle exception
+            ex.printStackTrace();
+        }
+    }
 
   public static void main(String[] args) {
     boolean exit = false;
@@ -121,8 +140,10 @@ public class Main {
   private static void AddBookMenu()
   {
   	System.out.println("Kitap Kayit");
+  	
     System.out.print("Kitap ID: ");
     int bookId = scanner.nextInt();
+    scanner.nextLine();
     
     System.out.print("kitap Adi: ");
     String bookName = scanner.nextLine();
@@ -173,6 +194,7 @@ public class Main {
 	  
 	  System.out.print("kitap ID: ");
 	  int bookId = scanner.nextInt();
+	  scanner.nextLine();
 	  
 	  System.out.print("kitap Adi: ");
 	  String bookName = scanner.nextLine();
@@ -188,6 +210,7 @@ public class Main {
   	System.out.println("Wish Kitap Kayit");
     System.out.print("Kitap ID: ");
     int bookId = scanner.nextInt();
+    scanner.nextLine();
     
     
     Wish newUser = new Wish(bookId, null,1,LoginName,"a",10);
@@ -284,6 +307,7 @@ public class Main {
   	System.out.println("Event Kayit");
     System.out.print("Event ID: ");
     int bookId = scanner.nextInt();
+    scanner.nextLine();
     
     System.out.print("Event Adi: ");
     String title = scanner.nextLine();
@@ -331,6 +355,7 @@ public class Main {
 	  
 	  System.out.print("Event ID: ");
 	  int bookId = scanner.nextInt();
+	  scanner.nextLine();
 	  
 	  System.out.print("Event Adi: ");
 	  String title = scanner.nextLine();
@@ -411,6 +436,7 @@ public class Main {
         	  updateBookMenu();
         	  break;
           case 4:
+        	  clearConsole();
         	  listBookMenu();
         	  break;
           case 5:
@@ -425,6 +451,7 @@ public class Main {
           }
           
           break;
+          
 
         case 2:
           System.out.println("Wishlist and Trade List Management");
@@ -568,7 +595,7 @@ public class Main {
                   }
             	  break;
               case 3:
-            	  
+            	  choice = 5;
             	  break;
               default:
                   System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
@@ -661,8 +688,9 @@ public class Main {
 
         case 5:
           
-        	choice = 5;
-        	exit = true;
+        	System.exit(0); 
+
+        	//exit = true;
         	
           break;
 
