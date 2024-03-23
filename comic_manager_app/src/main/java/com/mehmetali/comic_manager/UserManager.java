@@ -12,16 +12,17 @@ public class UserManager {
         this.users = readUsersFromFile();
     }
 
-    public void registerUser(User user) {
+    public String registerUser(User user) {
         // Kullanıcı adı kontrolü
         if (!isUsernameAvailable(user.getUsername())) {
             System.out.println("Bu kullanici adi zaten kullaniliyor. Lutfen farkli bir kullanici adi secin.");
-            return;
+            return null;
         }
         
         users.add(user);
         saveUsersToFile(users);
         System.out.println("Kullanici basariyla kaydedildi.");
+        return user.getUsername();
     }
 
     public boolean isUsernameAvailable(String username) {
@@ -60,13 +61,14 @@ public class UserManager {
     }
 
 
-    private void saveUsersToFile(List<User> userList) {
+    private int saveUsersToFile(List<User> userList) {
         try (FileOutputStream fileOut = new FileOutputStream(USER_FILE_PATH);
              ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
             objectOut.writeObject(userList);
-            System.out.println("Kullanicilar basariyla dosyaya kaydedildi.");
+            return 0;
         } catch (IOException e) {
             System.out.println("Dosya yazma hatasi: " + e.getMessage());
+            return -1;
         }
     }
 
@@ -80,7 +82,7 @@ public class UserManager {
         return null; 
     }
     
-    public void creditbuyscore(String username, int credit) {
+    public int creditbuyscore(String username, int credit) {
         
         User foundUser = null;
         for (User user : users) {
@@ -92,7 +94,7 @@ public class UserManager {
 
         if (foundUser == null) {
             System.out.println("Kullanıcı bulunamadı.");
-            return;
+            return -1;
         }
 
 
@@ -103,10 +105,11 @@ public class UserManager {
  
         saveUsersToFile(users); 
 
-        System.out.println("Kredi başarıyla eklendi. Yeni bakiye: " + newWallet);
+        //System.out.println("Kredi başarıyla eklendi. Yeni bakiye: " + newWallet);
+        return newWallet;
     }
     
- public void creditSellscore(String username, int credit) {
+ public int creditSellscore(String username, int credit) {
         
         User foundUser = null;
         for (User user : users) {
@@ -118,7 +121,7 @@ public class UserManager {
 
         if (foundUser == null) {
             System.out.println("Kullanıcı bulunamadı.");
-            return;
+            return -1;
         }
 
 
@@ -128,6 +131,7 @@ public class UserManager {
 
  
         saveUsersToFile(users); 
+        return newWallet;
     }
  
  public int getUserWallet(String username) {

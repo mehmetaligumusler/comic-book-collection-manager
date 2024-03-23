@@ -17,17 +17,17 @@ public class WishManager {
 
     //Book Collection
     
-    public void AddBook(Wish comic) {
+    public String AddBook(Wish comic) {
         // Kitabın var olup olmadığını kontrol et
     	
     	if (comicmanager.isBookIDAvailable(comic.getComicID())) {
     		System.out.println("Böyle Bir Kitap Bulunamadi");
-            return;
+            return null;
         }
         // Kullanıcı adı kontrolü
         if (!isBookNameAvailable(comic.getTitle())) {
             System.out.println("Bu Kitap adı zaten kullanılıyor. Lütfen farklı bir kitap adı seçin.");
-            return;
+            return null;
         }
         
         String Name = comicmanager.getBookTitleByID(comic.getComicID());
@@ -37,16 +37,18 @@ public class WishManager {
         comics.add(comic);
         saveUsersToFile(comics);
         System.out.println("Kitap başarıyla wish listesine eklendi.");
+        
+        return comic.getTitle();
     }
 
     
-    public void listBooks() {
+    public int listBooks() {
     	
     	this.comics = readUsersFromFile();
     	
         if (comics.isEmpty()) {
             System.out.println("Listelenecek kitap bulunamadı.");
-            return;
+            return 0;
         }
 
         System.out.println("----- Kitap Listesi -----");
@@ -58,15 +60,17 @@ public class WishManager {
             System.out.println("Değer: " + comic.getValue());
             System.out.println("-------------------------");
         }
+        
+        return comics.size();
     }
     
-    public void listBooksByUser(String User) {
+    public int listBooksByUser(String User) {
     	
     	this.comics = readUsersFromFile();
     	
         if (comics.isEmpty()) {
             System.out.println("Listelenecek kitap bulunamadı.");
-            return;
+            return 0;
         }
 
         System.out.println("----- " + User + " Durumundaki Kitaplar -----");
@@ -80,9 +84,10 @@ public class WishManager {
                 System.out.println("-------------------------");
             }
         }
+        return comics.size();
     }
     
-    public void deleteBookByID(int bookID) {
+    public int deleteBookByID(int bookID) {
         boolean found = false;
         for (Wish comic : comics) {
             if (comic.getComicID() == bookID) {
@@ -90,15 +95,17 @@ public class WishManager {
                 saveUsersToFile(comics);
                 System.out.println("Kitap başarıyla silindi.");
                 found = true;
-                break;
+                return 0;
             }
         }
         if (!found) {
             System.out.println("Kitap ID'si ile eşleşen kitap bulunamadı.");
+            return -1;
         }
+        return -1;
     }
     
-    public void updateBookTitleByID(int bookID, String newTitle) {
+    public int updateBookTitleByID(int bookID, String newTitle) {
         boolean found = false;
         for (Wish comic : comics) {
             if (comic.getComicID() == bookID) {
@@ -106,12 +113,14 @@ public class WishManager {
                 saveUsersToFile(comics);
                 System.out.println("Kitap başlığı başarıyla güncellendi.");
                 found = true;
-                break;
+                return 0;
             }
         }
         if (!found) {
             System.out.println("Kitap ID'si ile eşleşen kitap bulunamadı.");
+            return -1;
         }
+        return -1;
     }
 
     
@@ -151,19 +160,18 @@ public class WishManager {
         } 
         catch (IOException | ClassNotFoundException e) 
         {
-            //System.out.println("Dosya okuma hatasi: " + e.getMessage());
             return new ArrayList<>();
         }
     }
 
 
-    private void saveUsersToFile(List<Wish> comics2) {
+    private int saveUsersToFile(List<Wish> comics2) {
         try (FileOutputStream fileOut = new FileOutputStream(WISH_FILE_PATH);
              ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
             objectOut.writeObject(comics2);
-            System.out.println("Kitap basariyla dosyaya kaydedildi.");
+            return 0;
         } catch (IOException e) {
-            System.out.println("Dosya yazma hatasi: " + e.getMessage());
+            return -1;
         }
     }
 

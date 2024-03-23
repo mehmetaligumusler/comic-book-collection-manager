@@ -16,25 +16,27 @@ public class EventManager {
 
     //Event Collection
     
-    public void AddEvent(Event comic) {
+    public String AddEvent(Event comic) {
         // Kullanıcı adı kontrolü
         if (!isEventNameAvailable(comic.getTitle())) {
             System.out.println("Bu Event adi zaten kullaniliyor. Lutfen farkli bir Event adi secin.");
-            return;
+            return null;
         }
         
         comics.add(comic);
         saveUsersToFile(comics);
         System.out.println("Event basariyla kaydedildi.");
+        
+        return comic.getTitle();
     }
     
-    public void listEvents() {
+    public int listEvents() {
     	
     	this.comics = readUsersFromFile();
     	
         if (comics.isEmpty()) {
             System.out.println("Listelenecek Event bulunamadı.");
-            return;
+            return 0;
         }
 
         System.out.println("----- Event Listesi -----");
@@ -44,15 +46,16 @@ public class EventManager {
             System.out.println("İçerik: " + comic.getContent());
             System.out.println("-------------------------");
         }
+        return comics.size();
     }
     
-    public void listEventsByCondition(String condition) {
+    public int listEventsByCondition(String condition) {
     	
     	this.comics = readUsersFromFile();
     	
         if (comics.isEmpty()) {
             System.out.println("Listelenecek Event bulunamadı.");
-            return;
+            return 0;
         }
 
         System.out.println("----- " + condition + " Durumundaki Eventlar -----");
@@ -65,9 +68,10 @@ public class EventManager {
                 System.out.println("-------------------------");
             }
         }
+        return comics.size();
     }
     
-    public void deleteEventByID(int EventID) {
+    public int deleteEventByID(int EventID) {
         boolean found = false;
         for (Event comic : comics) {
             if (comic.geteventID() == EventID) {
@@ -75,15 +79,17 @@ public class EventManager {
                 saveUsersToFile(comics);
                 System.out.println("Event başarıyla silindi.");
                 found = true;
-                break;
+                return 0;
             }
         }
         if (!found) {
             System.out.println("Event ID'si ile eşleşen Event bulunamadı.");
+            return -1;
         }
+        return -1;
     }
     
-    public void updateEventTitleByID(int EventID, String newTitle, String newContent) {
+    public int updateEventTitleByID(int EventID, String newTitle, String newContent) {
         boolean found = false;
         for (Event comic : comics) {
             if (comic.geteventID() == EventID) {
@@ -92,13 +98,16 @@ public class EventManager {
                 saveUsersToFile(comics);
                 System.out.println("Event başlığı başarıyla güncellendi.");
                 found = true;
-                break;
+                return 0;
             }
         }
         if (!found) {
             System.out.println("Event ID'si ile eşleşen Event bulunamadı.");
+            return -1;
         }
+        return -1;
     }
+    
 
     
     public boolean isEventNameAvailable(String title) {
@@ -159,13 +168,14 @@ public class EventManager {
     }
 
 
-    private void saveUsersToFile(List<Event> comics2) {
+    private int saveUsersToFile(List<Event> comics2) {
         try (FileOutputStream fileOut = new FileOutputStream(Event_FILE_PATH);
              ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
             objectOut.writeObject(comics2);
-            System.out.println("Event basariyla dosyaya kaydedildi.");
+            return 0;
         } catch (IOException e) {
             System.out.println("Dosya yazma hatasi: " + e.getMessage());
+            return -1;
         }
     }
 

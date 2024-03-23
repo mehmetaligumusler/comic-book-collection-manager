@@ -16,25 +16,23 @@ public class BookManager {
 
     //Book Collection
     
-    public void AddBook(Book comic) {
-        // Kullanıcı adı kontrolü
+    public String AddBook(Book comic) {
         if (!isBookNameAvailable(comic.getTitle())) {
-            System.out.println("Bu Kitap adi zaten kullaniliyor. Lutfen farkli bir kitap adi secin.");
-            return;
+            return null;
         }
         
         comics.add(comic);
         saveUsersToFile(comics);
-        System.out.println("Kitap basariyla kaydedildi.");
+        return comic.getTitle();
     }
     
-    public void listBooks() {
+    public int listBooks() {
     	
     	this.comics = readUsersFromFile();
     	
         if (comics.isEmpty()) {
             System.out.println("Listelenecek kitap bulunamadı.");
-            return;
+            return 0;
         }
 
         System.out.println("----- Kitap Listesi -----");
@@ -46,15 +44,16 @@ public class BookManager {
             System.out.println("Değer: " + comic.getValue());
             System.out.println("-------------------------");
         }
+        return comics.size();
     }
     
-    public void listBooksByCondition(String condition) {
+    public int listBooksByCondition(String condition) {
     	
     	this.comics = readUsersFromFile();
     	
         if (comics.isEmpty()) {
             System.out.println("Listelenecek kitap bulunamadı.");
-            return;
+            return 0;
         }
 
         System.out.println("----- " + condition + " Durumundaki Kitaplar -----");
@@ -68,9 +67,10 @@ public class BookManager {
                 System.out.println("-------------------------");
             }
         }
+        return comics.size();
     }
     
-    public void deleteBookByID(int bookID) {
+    public int deleteBookByID(int bookID) {
         boolean found = false;
         for (Book comic : comics) {
             if (comic.getComicID() == bookID) {
@@ -78,15 +78,17 @@ public class BookManager {
                 saveUsersToFile(comics);
                 System.out.println("Kitap başarıyla silindi.");
                 found = true;
-                break;
+                return 0;
             }
         }
         if (!found) {
             System.out.println("Kitap ID'si ile eşleşen kitap bulunamadı.");
+            return -1;
         }
+        return -1;
     }
     
-    public void updateBookTitleByID(int bookID, String newTitle) {
+    public int updateBookTitleByID(int bookID, String newTitle) {
         boolean found = false;
         for (Book comic : comics) {
             if (comic.getComicID() == bookID) {
@@ -94,22 +96,24 @@ public class BookManager {
                 saveUsersToFile(comics);
                 System.out.println("Kitap başlığı başarıyla güncellendi.");
                 found = true;
-                break;
+                return 0;
             }
         }
         if (!found) {
             System.out.println("Kitap ID'si ile eşleşen kitap bulunamadı.");
+            return -1;
         }
+        return -1;
     }
 
     
     public boolean isBookNameAvailable(String title) {
         for (Book comic : comics) {
             if (comic.getTitle().equals(title)) {
-                return false; // Kitap adı daha önce kullanılmış
+                return false; 
             }
         }
-        return true; // Kitap adı kullanılabilir
+        return true;
     }
     
     public boolean isBookIDAvailable(int ID) {
@@ -161,13 +165,14 @@ public class BookManager {
     }
 
 
-    private void saveUsersToFile(List<Book> comics2) {
+    private int saveUsersToFile(List<Book> comics2) {
         try (FileOutputStream fileOut = new FileOutputStream(BOOK_FILE_PATH);
              ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
             objectOut.writeObject(comics2);
-            //System.out.println("Kitap basariyla dosyaya kaydedildi.");
+            return 0;
         } catch (IOException e) {
             System.out.println("Dosya yazma hatasi: " + e.getMessage());
+            return -1;
         }
     }
 

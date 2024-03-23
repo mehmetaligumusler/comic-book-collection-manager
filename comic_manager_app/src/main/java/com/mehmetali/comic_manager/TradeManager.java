@@ -18,15 +18,15 @@ public class TradeManager {
 
     //Trade Collection
     
-    public void AddTrade(Trade comic) {
+    public String AddTrade(Trade comic) {
     	
     	if (comicmanager.isBookIDAvailable(comic.getComicID())) {
     		System.out.println("Böyle Bir Kitap Bulunamadi");
-            return;
+            return null;
         }
         if (!isTradeNameAvailable(comic.getTitle())) {
             System.out.println("Bu Kitap adi zaten kullaniliyor. Lutfen farkli bir kitap adi secin.");
-            return;
+            return null;
         }
         
         
@@ -39,15 +39,17 @@ public class TradeManager {
         comicmanager.deleteBookByID(comic.getComicID()); // book list den silme
         
         System.out.println("Kitap başarıyla Trade listesine eklendi.");
+        
+        return comic.getTitle();
     }
     
-    public void listAllTradeList() {
+    public int listAllTradeList() {
     	
     	this.comics = readUsersFromFile();
     	
         if (comics.isEmpty()) {
             System.out.println("Listelenecek kitap bulunamadı.");
-            return;
+            return 0;
         }
 
         System.out.println("----- Kitap Listesi -----");
@@ -59,15 +61,16 @@ public class TradeManager {
             System.out.println("Değer: " + comic.getValue());
             System.out.println("-------------------------");
         }
+        return comics.size();
     }
     
-    public void listMyTradeList(String condition) {
+    public int listMyTradeList(String condition) {
     	
     	this.comics = readUsersFromFile();
     	
         if (comics.isEmpty()) {
             System.out.println("Listelenecek kitap bulunamadı.");
-            return;
+            return 0;
         }
 
         System.out.println("----- " + condition + " Durumundaki Kitaplar -----");
@@ -81,9 +84,10 @@ public class TradeManager {
                 System.out.println("-------------------------");
             }
         }
+        return comics.size();
     }
     
-    public void deleteTradeByID(int TradeID) {
+    public int deleteTradeByID(int TradeID) {
         boolean found = false;
         for (Trade comic : comics) {
             if (comic.getComicID() == TradeID) {
@@ -95,15 +99,17 @@ public class TradeManager {
                 Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),comic.getuser(),comic.getValue());
                 comicmanager.AddBook(newUser);
                 
-                break;
+                return 0;
             }
         }
         if (!found) {
             System.out.println("Kitap ID'si ile eşleşen kitap bulunamadı.");
+            return -1;
         }
+        return -1;
     }
     
-    public void BuyTradeByID(int TradeID) {
+    public int BuyTradeByID(int TradeID) {
         boolean found = false;
         for (Trade comic : comics) {
             if (comic.getComicID() == TradeID) 
@@ -138,12 +144,15 @@ public class TradeManager {
             	
             	
                 
-                break;
+                return 0;
             }
         }
         if (!found) {
             System.out.println("Kitap ID'si ile eşleşen kitap bulunamadı.");
+            return -1;
         }
+        
+        return -1;
     }
     
     
@@ -205,13 +214,15 @@ public class TradeManager {
     }
 
 
-    private void saveUsersToFile(List<Trade> comics2) {
+    private int saveUsersToFile(List<Trade> comics2) {
         try (FileOutputStream fileOut = new FileOutputStream(Trade_FILE_PATH);
              ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
             objectOut.writeObject(comics2);
             System.out.println("Kitap basariyla dosyaya kaydedildi.");
+            return 0;
         } catch (IOException e) {
             System.out.println("Dosya yazma hatasi: " + e.getMessage());
+            return -1;
         }
     }
 
