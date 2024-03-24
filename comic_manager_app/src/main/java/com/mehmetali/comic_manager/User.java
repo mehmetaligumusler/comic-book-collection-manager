@@ -4,20 +4,33 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents a user in the comic management system.
+ *
+ * @author mehmetali
+ *
+ * @param <Comic> the type of comic in the user's collection, wishlist, and trade list
+ */
 public class User<Comic> implements Serializable {
   private static final long serialVersionUID = 1L;
 
 
   private String username;
   private String password;
-  private int wallet; 
+  private int wallet;
 
   private List<Comic> collection;
   private List<Comic> wishlist;
   private List<Comic> tradeList;
 
-  
-  // Constructor
+
+  /**
+   * Constructs a user with the specified username, password, and wallet balance.
+   *
+   * @param username the username of the user
+   * @param password the password of the user
+   * @param wallet   the wallet balance of the user
+   */
   public User(String username, String password, int wallet) {
     this.username = username;
     this.password = password;
@@ -26,86 +39,174 @@ public class User<Comic> implements Serializable {
     this.wishlist = new ArrayList<>();
     this.tradeList = new ArrayList<>();
   }
-  
+
+  /**
+   * Gets the wallet balance of the user.
+   *
+   * @return the wallet balance of the user
+   */
   public int getWallet() {
-	    return wallet;
+    return wallet;
   }
 
+  /**
+   * Sets the wallet balance of the user.
+   *
+   * @param wallet the wallet balance of the user to set
+   */
   public void setWallet(int wallet) {
     this.wallet = wallet;
   }
 
+  /**
+   * Gets the username of the user.
+   *
+   * @return the username of the user
+   */
   public String getUsername() {
     return username;
   }
 
+  /**
+   * Sets the username of the user.
+   *
+   * @param username the username of the user to set
+   */
   public void setUsername(String username) {
     this.username = username;
   }
 
+  /**
+   * Gets the password of the user.
+   *
+   * @return the password of the user
+   */
   public String getPassword() {
     return password;
   }
 
+  /**
+   * Sets the password of the user.
+   *
+   * @param password the password of the user to set
+   */
   public void setPassword(String password) {
     this.password = password;
   }
 
+  /**
+   * Gets the collection of comics owned by the user.
+   *
+   * @return the collection of comics owned by the user
+   */
   public List<Comic> getCollection() {
     return collection;
   }
 
+  /**
+   * Sets the collection of comics owned by the user.
+   *
+   * @param collection the collection of comics owned by the user to set
+   */
   public void setCollection(List<Comic> collection) {
     this.collection = collection;
   }
 
+  /**
+   * Gets the wishlist of comics of the user.
+   *
+   * @return the wishlist of comics of the user
+   */
   public List<Comic> getWishlist() {
     return wishlist;
   }
 
+  /**
+   * Sets the wishlist of comics of the user.
+   *
+   * @param wishlist the wishlist of comics of the user to set
+   */
   public void setWishlist(List<Comic> wishlist) {
     this.wishlist = wishlist;
   }
 
+  /**
+   * Gets the trade list of comics of the user.
+   *
+   * @return the trade list of comics of the user
+   */
   public List<Comic> getTradeList() {
     return tradeList;
   }
 
+  /**
+   * Sets the trade list of comics of the user.
+   *
+   * @param tradeList the trade list of comics of the user to set
+   */
   public void setTradeList(List<Comic> tradeList) {
     this.tradeList = tradeList;
   }
 
-  // Add comic to collection
+  /**
+   * Adds a comic to the user's collection.
+   *
+   * @param comic the comic to add to the collection
+   */
   public void addToCollection(Comic comic) {
     collection.add(comic);
   }
 
-  // Remove comic from collection
+  /**
+   * Removes a comic from the user's collection.
+   *
+   * @param comic the comic to remove from the collection
+   */
   public void removeFromCollection(Comic comic) {
     collection.remove(comic);
   }
 
-  // Add comic to wishlist
+  /**
+   * Adds a comic to the user's wishlist.
+   *
+   * @param comic the comic to add to the wishlist
+   */
   public void addToWishlist(Comic comic) {
     wishlist.add(comic);
   }
 
-  // Remove comic from wishlist
+  /**
+   * Removes a comic from the user's wishlist.
+   *
+   * @param comic the comic to remove from the wishlist
+   */
   public void removeFromWishlist(Comic comic) {
     wishlist.remove(comic);
   }
 
-  // Add comic to trade list
+  /**
+   * Adds a comic to the user's trade list.
+   *
+   * @param comic the comic to add to the trade list
+   */
   public void addToTradeList(Comic comic) {
     tradeList.add(comic);
   }
 
-  // Remove comic from trade list
+  /**
+   * Removes a comic from the user's trade list.
+   *
+   * @param comic the comic to remove from the trade list
+   */
   public void removeFromTradeList(Comic comic) {
     tradeList.remove(comic);
   }
 
-  // toString method for printing user details
+  /**
+   * Returns a string representation of the user.
+   *
+   * @return a string representation of the user
+   */
   @Override
   public String toString() {
     return "User{" +
