@@ -12,7 +12,7 @@ public class Trade implements Serializable {
     private int value;
 
     // Constructor
-    public Trade(int comicID, String title, int pageNumber, String user, String coverArt, int value) {
+    public Trade(int comicID, String title, int pageNumber, String user, int value) {
         this.comicID = comicID;
         this.title = title;
         this.pageNumber = pageNumber;

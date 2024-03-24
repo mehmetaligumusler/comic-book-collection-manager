@@ -12,7 +12,7 @@ public class Wish implements Serializable {
     private int value;
 
     // Constructor
-    public Wish(int comicID, String title, int pageNumber, String user, String coverArt, int value) {
+    public Wish(int comicID, String title, int pageNumber, String user, int value) {
         this.comicID = comicID;
         this.title = title;
         this.pageNumber = pageNumber;
