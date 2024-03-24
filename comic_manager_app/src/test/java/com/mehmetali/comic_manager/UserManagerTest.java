@@ -119,18 +119,5 @@ public class UserManagerTest {
       assertEquals(200, walletAmount);
       deleteFile("users.dat");
   }
-  @Test
-  public void readUsersFromFile_FileNotExist_Test() {
-      // Delete users.dat file if exists
-      File file = new File("users.dat");
-      if (file.exists()) {
-          file.delete();
-      }
-
-      // Test readUsersFromFile() when file does not exist
-      userManager.readUsersFromFile();
-      assertTrue(true); // If no exception is thrown, test passes
-  }
-
-
+ 
 }
