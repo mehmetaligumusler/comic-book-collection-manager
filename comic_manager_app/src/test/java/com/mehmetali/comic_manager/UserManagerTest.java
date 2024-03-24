@@ -1,57 +1,83 @@
 package com.mehmetali.comic_manager;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.File;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import java.io.IOException;
+import java.util.List;
 
 public class UserManagerTest {
+  private static final String TEST_USER_FILE_PATH = "test_users.dat";
 
-  private static final UserManager userManager = new UserManager();
-  private static final Main main = new Main();
+  private UserManager userManager;
+  private User testUser;
 
-  public static boolean deleteFile(String filepath) {
-    File file = new File(filepath);
+  @BeforeEach
+  public void setUp() {
+    // Test kullanıcı dosyasının oluşturulması
+    try {
+      File file = new File(TEST_USER_FILE_PATH);
 
-    if (file.exists()) {
-      return file.delete();
-    } else {
-      return false;
+      if (file.exists()) {
+        file.delete();
+      }
+
+      file.createNewFile();
+    } catch (IOException e) {
+      e.printStackTrace();
     }
-  }
 
-  @BeforeClass
-  public static void setUpBeforeClass() throws Exception {
-  }
-
-  @AfterClass
-  public static void tearDownAfterClass() throws Exception {
-  }
-
-  @Before
-  public void setUp() throws Exception {
-  }
-
-  @After
-  public void tearDown() throws Exception {
+    userManager = new UserManager();
+    testUser = new User("testuser", "testpassword", 100);
   }
 
   @Test
-  public void registUserTest() {
-    User newUser = new User("Mehmet", "gokay", 0);
-    String resultString = userManager.registerUser(newUser);
-    assertEquals("Mehmet",resultString);
-    deleteFile("users.dat");
+  public void testRegisterUser() {
+    // Yeni bir kullanıcının kaydedilmesi
+    String registeredUsername = userManager.registerUser(testUser);
+    assertEquals(testUser.getUsername(), registeredUsername);
+    // Aynı kullanıcının tekrar kaydedilmemesi
+    String duplicateRegisteredUsername = userManager.registerUser(testUser);
+    assertNull(duplicateRegisteredUsername);
   }
-  /*
-  @Test
-  public void isusernameavailableTest() {
 
+  @Test
+  public void testIsUsernameAvailable() {
+    // Kayıtlı bir kullanıcı adıyla kontrol edilmesi
+    assertFalse(userManager.isUsernameAvailable("testuser"));
+    // Kayıtlı olmayan bir kullanıcı adıyla kontrol edilmesi
+    assertTrue(userManager.isUsernameAvailable("newuser"));
   }
-  */
+
+  @Test
+  public void testLogin() {
+    // Doğru kullanıcı adı ve şifreyle giriş yapılması
+    User loggedInUser = userManager.login("testuser", "testpassword");
+    assertNotNull(loggedInUser);
+    assertEquals(testUser.getUsername(), loggedInUser.getUsername());
+    // Yanlış kullanıcı adı veya şifreyle giriş yapılması
+    User wrongLogin = userManager.login("wronguser", "wrongpassword");
+    assertNull(wrongLogin);
+  }
+
+  @Test
+  public void testCreditbuyscore() {
+    // Kullanıcıya kredi eklenmesi
+    int initialWallet = userManager.getUserWallet(testUser.getUsername());
+    int creditToAdd = 50;
+    int newWallet = userManager.creditbuyscore(testUser.getUsername(), creditToAdd);
+    assertEquals(initialWallet + creditToAdd, newWallet);
+  }
+
+  @Test
+  public void testCreditSellscore() {
+    // Kullanıcıdan kredi düşülmesi
+    int initialWallet = userManager.getUserWallet(testUser.getUsername());
+    int creditToDeduct = 50;
+    int newWallet = userManager.creditSellscore(testUser.getUsername(), creditToDeduct);
+    assertEquals(initialWallet - creditToDeduct, newWallet);
+  }
 }

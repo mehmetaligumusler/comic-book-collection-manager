@@ -22,6 +22,9 @@
 			<name>Mehmet Ali GUMUSLER</name>
 			<organization>RTEU</organization>
 			<email>mehmetali_gumusler21@erdogan.edu.tr</email>
+			<properties>
+				<picUrl>https://avatars.githubusercontent.com/u/114070526?v=4</picUrl>
+			</properties>
 			<roles>
 				<role>Developer</role>
 				<role>Designer</role>
@@ -31,6 +34,9 @@
 			<name>Gokay DERVISOGLU</name>
 			<organization>RTEU</organization>
 			<email>gokay_dervisoglu21@erdogan.edu.tr</email>
+			<properties>
+				<picUrl>https://avatars.githubusercontent.com/u/114167428?v=4</picUrl>
+			</properties>
 			<roles>
 				<role>Developer</role>
 			</roles>
@@ -41,6 +47,9 @@
 			<name>Mehmet Ali GUMUSLER</name>
 			<email>mehmetali_gumusler21@erdogan.edu.tr</email>
 			<organization>RTEU</organization>
+			<properties>
+				<picUrl>https://avatars.githubusercontent.com/u/114070526?v=4</picUrl>
+			</properties>
 			<roles>
 				<role>Developer</role>
 				<role>Designer</role>
@@ -50,6 +59,9 @@
 			<name>Gokay DERVISOGLU</name>
 			<organization>RTEU</organization>
 			<email>gokay_dervisoglu21@erdogan.edu.tr</email>
+			<properties>
+				<picUrl>https://avatars.githubusercontent.com/u/114167428?v=4</picUrl>
+			</properties>
 			<roles>
 				<role>Developer</role>
 			</roles>
@@ -69,7 +81,7 @@
 		<system>Github</system>
 		<notifiers>
 			<notifier>
-				<address>gumuslermehmetali@gmail</address>
+				<address>gumuslermehmetali@gmail.com</address>
 				<sendOnSuccess>true</sendOnSuccess>
 				<sendOnError>true</sendOnError>
 				<sendOnFailure>true</sendOnFailure>

@@ -29,8 +29,7 @@
 	</bannerRight>
 
 	<poweredBy>
-		<logo name="Maven" href="https://maven.apache.org/"
-			img="https://maven.apache.org/images/logos/maven-feather.png" />
+		<logo name="ETERNALS" img="images/eternals.jpg" />
 	</poweredBy>
 
 	<body>
