@@ -1,231 +1,280 @@
 package com.mehmetali.comic_manager;
 
-
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The TradeManager class manages the trading of comic books.
+ * It handles adding, listing, deleting, and buying/selling comic books.
+ *
+ * @author mehmetali
+ */
 public class TradeManager {
-    private List<Trade> comics;
-    private static final String Trade_FILE_PATH = "trade.dat";
-    private static final BookManager comicmanager = new BookManager();
-    private static final UserManager usermanager = new UserManager();
+  private List<Trade> comics;
+  private static final String Trade_FILE_PATH = "trade.dat";
+  private static final BookManager comicmanager = new BookManager();
+  private static final UserManager usermanager = new UserManager();
 
-    public TradeManager() {
-        this.comics = readUsersFromFile();
+  /**
+   * Constructs a TradeManager object.
+   * Initializes the list of trades by reading from file.
+   */
+  public TradeManager() {
+    this.comics = readUsersFromFile();
+  }
+
+  /**
+   * Adds a comic book to the trade list.
+   * If the book ID is not available or the book title is already used, it returns null.
+   *
+   * @param comic The comic book to add to the trade list.
+   * @return The title of the comic book if added successfully, null otherwise.
+   */
+  public String AddTrade(Trade comic) {
+    if (comicmanager.isBookIDAvailable(comic.getComicID())) {
+      System.out.println("No such book found.");
+      return null;
     }
 
-    //Trade Collection
-    
-    public String AddTrade(Trade comic) {
-    	
-    	if (comicmanager.isBookIDAvailable(comic.getComicID())) {
-    		System.out.println("Böyle Bir Kitap Bulunamadi");
-            return null;
-        }
-        if (!isTradeNameAvailable(comic.getTitle())) {
-            System.out.println("Bu Kitap adi zaten kullaniliyor. Lutfen farkli bir kitap adi secin.");
-            return null;
-        }
-        
-        
-        String Name = comicmanager.getBookTitleByID(comic.getComicID());
-        comic.setTitle(Name);
-        
-        comics.add(comic);
+    if (!isTradeNameAvailable(comic.getTitle())) {
+      System.out.println("This Book name is already in use. Please choose a different book name.");
+      return null;
+    }
+
+    String Name = comicmanager.getBookTitleByID(comic.getComicID());
+    comic.setTitle(Name);
+    comics.add(comic);
+    saveUsersToFile(comics);
+    comicmanager.deleteBookByID(comic.getComicID());
+    System.out.println("The book has been successfully added to the Trade list.");
+    return comic.getTitle();
+  }
+
+  /**
+   * Lists all comic books available for trade.
+   *
+   * @return The number of comic books listed.
+   */
+  public int listAllTradeList() {
+    this.comics = readUsersFromFile();
+
+    if (comics.isEmpty()) {
+      System.out.println("No books found to list.");
+      return 0;
+    }
+
+    System.out.println("----- Book List -----");
+
+    for (Trade comic : comics) {
+      System.out.println("Book ID: " + comic.getComicID());
+      System.out.println("Title: " + comic.getTitle());
+      System.out.println("Page Number: " + comic.getpageNumber());
+      System.out.println("Situation: " + comic.getuser());
+      System.out.println("Value: " + comic.getValue());
+      System.out.println("-------------------------");
+    }
+
+    return comics.size();
+  }
+
+  /**
+   * Lists the comic books available for trade by a specific condition (e.g., user).
+   *
+   * @param condition The condition to filter the comic books (e.g., user).
+   * @return The number of comic books listed.
+   */
+  public int listMyTradeList(String condition) {
+    this.comics = readUsersFromFile();
+
+    if (comics.isEmpty()) {
+      System.out.println("No books found to list.");
+      return 0;
+    }
+
+    System.out.println("----- " + condition + " Books in Condition -----");
+
+    for (Trade comic : comics) {
+      if (comic.getuser().equalsIgnoreCase(condition)) {
+        System.out.println("Book ID: " + comic.getComicID());
+        System.out.println("Title: " + comic.getTitle());
+        System.out.println("Page Number: " + comic.getpageNumber());
+        System.out.println("Situation: " + comic.getuser());
+        System.out.println("Value: " + comic.getValue());
+        System.out.println("-------------------------");
+      }
+    }
+
+    return comics.size();
+  }
+
+  /**
+   * Deletes a comic book from the trade list by its ID.
+   * Moves the book back to the user's book list.
+   *
+   * @param TradeID The ID of the comic book to delete from the trade list.
+   * @return 0 if successfully deleted, -1 otherwise.
+   */
+  public int deleteTradeByID(int TradeID) {
+    boolean found = false;
+
+    for (Trade comic : comics) {
+      if (comic.getComicID() == TradeID) {
+        comics.remove(comic);
         saveUsersToFile(comics);
-        
-        comicmanager.deleteBookByID(comic.getComicID()); // book list den silme
-        
-        System.out.println("Kitap başarıyla Trade listesine eklendi.");
-        
+        System.out.println("Book deleted successfully.");
+        found = true;
+        Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),comic.getuser(),comic.getValue());
+        comicmanager.AddBook(newUser);
+        return 0;
+      }
+    }
+
+    if (!found) {
+      System.out.println("No book matching book ID was found.");
+      return -1;
+    }
+
+    return -1;
+  }
+
+  /**
+   * Buys a comic book from the trade list by its ID.
+   * Transfers the book ownership and credits between users.
+   *
+   * @param TradeID The ID of the comic book to buy from the trade list.
+   * @return 0 if successfully bought, -1 otherwise.
+   */
+  public int BuyTradeByID(int TradeID) {
+    boolean found = false;
+
+    for (Trade comic : comics) {
+      if (comic.getComicID() == TradeID) {
+        Main main = new Main();
+
+        if(Main.LoginWallet >= comic.getValue()) {
+          String oldUser = comic.getuser();
+          System.out.print(oldUser);
+          comics.remove(comic);
+          saveUsersToFile(comics);
+          System.out.println("Book deleted successfully.");
+          found = true;
+          Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());
+          comicmanager.AddBook(newUser);
+          usermanager.creditSellscore(Main.LoginName, comic.getValue());
+          usermanager.creditbuyscore(oldUser, comic.getValue());
+          return 0;
+        } else {
+          System.out.println("Credit Score Insufficient! Could not purchase.");
+          return -1;
+        }
+      }
+    }
+
+    if (!found) {
+      System.out.println("No book matching book ID was found.");
+      return -1;
+    }
+
+    return -1;
+  }
+
+  /**
+   * Checks if a trade name is available (not already used).
+   *
+   * @param title The title to check availability for.
+   * @return True if the title is available, false otherwise.
+   */
+  public boolean isTradeNameAvailable(String title) {
+    for (Trade comic : comics) {
+      if (comic.getTitle().equals(title)) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  /**
+   * Checks if a trade ID is available (not already used).
+   *
+   * @param ID The ID to check availability for.
+   * @return True if the ID is available, false otherwise.
+   */
+  public boolean isTradeIDAvailable(int ID) {
+    for (Trade comic : comics) {
+      if (comic.getComicID() == ID) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  /**
+   * Retrieves the title of a comic book by its ID.
+   *
+   * @param TradeID The ID of the comic book.
+   * @return The title of the comic book if found, null otherwise.
+   */
+  public String getTradeTitleByID(int TradeID) {
+    for (Trade comic : comics) {
+      if (comic.getComicID() == TradeID) {
         return comic.getTitle();
-    }
-    
-    public int listAllTradeList() {
-    	
-    	this.comics = readUsersFromFile();
-    	
-        if (comics.isEmpty()) {
-            System.out.println("Listelenecek kitap bulunamadı.");
-            return 0;
-        }
-
-        System.out.println("----- Kitap Listesi -----");
-        for (Trade comic : comics) {
-            System.out.println("Kitap ID: " + comic.getComicID());
-            System.out.println("Başlık: " + comic.getTitle());
-            System.out.println("Sayı Numarası: " + comic.getpageNumber());
-            System.out.println("Durum: " + comic.getuser());
-            System.out.println("Değer: " + comic.getValue());
-            System.out.println("-------------------------");
-        }
-        return comics.size();
-    }
-    
-    public int listMyTradeList(String condition) {
-    	
-    	this.comics = readUsersFromFile();
-    	
-        if (comics.isEmpty()) {
-            System.out.println("Listelenecek kitap bulunamadı.");
-            return 0;
-        }
-
-        System.out.println("----- " + condition + " Durumundaki Kitaplar -----");
-        for (Trade comic : comics) {
-            if (comic.getuser().equalsIgnoreCase(condition)) {
-                System.out.println("Kitap ID: " + comic.getComicID());
-                System.out.println("Başlık: " + comic.getTitle());
-                System.out.println("Sayı Numarası: " + comic.getpageNumber());
-                System.out.println("Durum: " + comic.getuser());
-                System.out.println("Değer: " + comic.getValue());
-                System.out.println("-------------------------");
-            }
-        }
-        return comics.size();
-    }
-    
-    public int deleteTradeByID(int TradeID) {
-        boolean found = false;
-        for (Trade comic : comics) {
-            if (comic.getComicID() == TradeID) {
-                comics.remove(comic);
-                saveUsersToFile(comics);
-                System.out.println("Kitap başarıyla silindi.");
-                found = true;
-                
-                Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),comic.getuser(),comic.getValue());
-                comicmanager.AddBook(newUser);
-                
-                return 0;
-            }
-        }
-        if (!found) {
-            System.out.println("Kitap ID'si ile eşleşen kitap bulunamadı.");
-            return -1;
-        }
-        return -1;
-    }
-    
-    public int BuyTradeByID(int TradeID) {
-        boolean found = false;
-        for (Trade comic : comics) {
-            if (comic.getComicID() == TradeID) 
-            {
-            	Main main = new Main();
-            	 
-            	if(Main.LoginWallet >= comic.getValue())
-            	{
-            		String oldUser = comic.getuser();
-                	System.out.print(oldUser);
-                	
-                	//kitap satilir.
-                    comics.remove(comic);
-                    saveUsersToFile(comics);
-                    System.out.println("Kitap başarıyla silindi.");
-                    found = true;
-                    
-                    //kitap diger kullaniciye gecer
-                    Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());
-                    comicmanager.AddBook(newUser);
-                    
-                    //kitap parasi alan kullaniciden eksilir.
-                    usermanager.creditSellscore(Main.LoginName, comic.getValue());
-                    
-                    //kitap parasi eklenir satan kullaniciye
-                    usermanager.creditbuyscore(oldUser, comic.getValue());
-                    
-                    return 0;
-                    
-            	}
-            	else {
-            		System.out.println("Kredi Skoru Yetersiz! Satin Alinamadi.");
-            		return -1;
-				}
-            	
-            	
-            }
-        }
-        if (!found) {
-            System.out.println("Kitap ID'si ile eşleşen kitap bulunamadı.");
-            return -1;
-        }
-        
-        return -1;
-    }
-    
-    
-    public boolean isTradeNameAvailable(String title) {
-        for (Trade comic : comics) {
-            if (comic.getTitle().equals(title)) {
-                return false; // Kitap adı daha önce kullanılmış
-            }
-        }
-        return true; // Kitap adı kullanılabilir
-    }
-    
-    public boolean isTradeIDAvailable(int ID) {
-        for (Trade comic : comics) {
-            if (comic.getComicID() == ID) {
-                return false; 
-            }
-        }
-        return true; 
-    }
-    
-    public String getTradeTitleByID(int TradeID) {
-        for (Trade comic : comics) {
-            if (comic.getComicID() == TradeID) {
-                return comic.getTitle();
-            }
-        }
-        return null; 
+      }
     }
 
+    return null;
+  }
 
-    private List<Trade> readUsersFromFile() 
-    {
-        File file = new File(Trade_FILE_PATH);
-        if (!file.exists()) {
-            //System.out.println("Dosya bulunamadi, yeni bir dosya olusturuluyor.");
-            // Dosya yoksa, dosyayı oluştur ve boş bir kitap listesi oluştur
-            try {
-                if (file.createNewFile()) {
-                    System.out.println("Trades.dat dosyasi olusturuldu.");
-                } else {
-                    System.out.println("Trades.dat dosyasi zaten var.");
-                }
-            } catch (IOException e) {
-                System.out.println("Dosya olusturma hatasi: " + e.getMessage());
-            }
-            return new ArrayList<>();
+  /**
+   * Reads the list of trades from the file specified by the Trade_FILE_PATH.
+   * If the file doesn't exist, it creates a new one and returns an empty list.
+   *
+   * @return The list of trades read from the file or an empty list if the file doesn't exist.
+   */
+  private List<Trade> readUsersFromFile() {
+    File file = new File(Trade_FILE_PATH);
+
+    if (!file.exists()) {
+      try {
+        if (file.createNewFile()) {
+          System.out.println("Trades.dat file created.");
+        } else {
+          System.out.println("Trades.dat file already exists.");
         }
-        
-        try (FileInputStream fileIn = new FileInputStream(Trade_FILE_PATH);
-             ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
-            return (List<Trade>) objectIn.readObject();
-        } 
-        catch (IOException | ClassNotFoundException e) 
-        {
-            //System.out.println("Dosya okuma hatasi: " + e.getMessage());
-            return new ArrayList<>();
-        }
+      } catch (IOException e) {
+        System.out.println("File creation error: " + e.getMessage());
+      }
+
+      return new ArrayList<>();
     }
 
-
-    private int saveUsersToFile(List<Trade> comics2) {
-        try (FileOutputStream fileOut = new FileOutputStream(Trade_FILE_PATH);
-             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
-            objectOut.writeObject(comics2);
-            System.out.println("Kitap basariyla dosyaya kaydedildi.");
-            return 0;
-        } catch (IOException e) {
-            System.out.println("Dosya yazma hatasi: " + e.getMessage());
-            return -1;
-        }
+    try (FileInputStream fileIn = new FileInputStream(Trade_FILE_PATH);
+           ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
+      return (List<Trade>) objectIn.readObject();
+    } catch (IOException | ClassNotFoundException e) {
+      return new ArrayList<>();
     }
+  }
+
+  /**
+   * Saves the list of trades to the file specified by the Trade_FILE_PATH.
+   *
+   * @param comics2 The list of trades to be saved to the file.
+   * @return 0 if the trades are successfully saved, -1 otherwise.
+   */
+  private int saveUsersToFile(List<Trade> comics2) {
+    try (FileOutputStream fileOut = new FileOutputStream(Trade_FILE_PATH);
+           ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
+      objectOut.writeObject(comics2);
+      System.out.println("Book successfully saved to file.");
+      return 0;
+    } catch (IOException e) {
+      System.out.println("File write error: " + e.getMessage());
+      return -1;
+    }
+  }
 
 
 }
