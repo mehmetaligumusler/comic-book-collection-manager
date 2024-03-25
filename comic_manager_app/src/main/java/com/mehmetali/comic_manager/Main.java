@@ -213,7 +213,7 @@ public class Main {
     scanner.nextLine();
     
     
-    Wish newUser = new Wish(bookId, null,1,LoginName,"a",10);
+    Wish newUser = new Wish(bookId, null,1,LoginName,10);
     wishmanager.AddBook(newUser);
   }
   
@@ -247,7 +247,7 @@ public class Main {
     int bookId = scanner.nextInt();
     
     
-    Trade newUser = new Trade(bookId, null,1,LoginName,"a",10);
+    Trade newUser = new Trade(bookId, null,1,LoginName,10);
     trademanager.AddTrade(newUser);
     //comicmanager.deleteBookByID(IntBookId); // book list den silme
   }

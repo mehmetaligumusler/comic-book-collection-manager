@@ -16,6 +16,7 @@ public class Trade implements Serializable {
   private String user;
   private int value;
 
+
   /**
    * Constructs a Trade object with the specified attributes.
    *
@@ -23,16 +24,17 @@ public class Trade implements Serializable {
    * @param title      The title of the comic.
    * @param pageNumber The number of pages in the comic.
    * @param user       The user who owns the comic.
-   * @param coverArt   The cover art of the comic.
    * @param value      The value of the comic.
    */
-  public Trade(int comicID, String title, int pageNumber, String user, String coverArt, int value) {
-    this.comicID = comicID;
-    this.title = title;
-    this.pageNumber = pageNumber;
-    this.user = user;
-    this.value = value;
-  }
+    // Constructor
+    public Trade(int comicID, String title, int pageNumber, String user, int value) {
+        this.comicID = comicID;
+        this.title = title;
+        this.pageNumber = pageNumber;
+        this.user = user;
+        this.value = value;
+    }
+
 
   /**
    * Gets the ID of the comic.

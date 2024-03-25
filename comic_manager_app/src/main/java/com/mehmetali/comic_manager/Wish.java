@@ -15,6 +15,7 @@ public class Wish implements Serializable {
   private String user;
   private int value;
 
+
   /**
    * Constructs a Wish object.
    *
@@ -22,10 +23,9 @@ public class Wish implements Serializable {
    * @param title      the title of the comic
    * @param pageNumber the page number of the comic
    * @param user       the user who made the wish
-   * @param coverArt   the cover art of the comic
    * @param value      the value of the comic
    */
-  public Wish(int comicID, String title, int pageNumber, String user, String coverArt, int value) {
+  public Wish(int comicID, String title, int pageNumber, String user, int value) {
     this.comicID = comicID;
     this.title = title;
     this.pageNumber = pageNumber;
