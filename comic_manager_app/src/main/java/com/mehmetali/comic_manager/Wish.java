@@ -15,7 +15,6 @@ public class Wish implements Serializable {
   private String user;
   private int value;
 
-
   /**
    * Constructs a Wish object.
    *
