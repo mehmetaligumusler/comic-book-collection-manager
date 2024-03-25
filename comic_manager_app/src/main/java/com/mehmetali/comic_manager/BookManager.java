@@ -128,14 +128,19 @@ public class BookManager {
    *
    * @param bookID    The ID of the comic book to be updated.
    * @param newTitle    The new title for the comic book.
+   * @param PageNumber    The new PageNumbers for the comic book.
+   * @param value    The new value for the comic book.
    * @return        0 if the comic book title is successfully updated, -1 otherwise.
    */
-  public int updateBookTitleByID(int bookID, String newTitle) {
+  public int updateBookTitleByID(int bookID, String newTitle,int PageNumber,int value) 
+  {
     boolean found = false;
 
     for (Book comic : comics) {
       if (comic.getComicID() == bookID) {
         comic.setTitle(newTitle);
+        comic.setpageNumber(PageNumber);
+        comic.setValue(value);
         saveUsersToFile(comics);
         System.out.println("The book title has been successfully updated.");
         found = true;

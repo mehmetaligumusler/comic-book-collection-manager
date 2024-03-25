@@ -80,7 +80,7 @@ public class BookManagerTest {
     // Test updating book title by ID
     Book newBook = new Book(5,"Title5", 1, "User", 10);
     bookManager.AddBook(newBook);
-    int result = bookManager.updateBookTitleByID(5, "NewTitle");
+    int result = bookManager.updateBookTitleByID(5, "NewTitle", 2 , 10);
     assertEquals(0, result); // Assuming book with ID 5 exists and title is updated
     deleteFile("books.dat");
   }

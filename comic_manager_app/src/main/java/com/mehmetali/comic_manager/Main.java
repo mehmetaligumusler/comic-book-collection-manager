@@ -2,6 +2,7 @@ package com.mehmetali.comic_manager;
 
 import java.util.Scanner;
 import java.io.IOException;
+import java.io.PrintStream;
 
 
 
@@ -24,9 +25,7 @@ public class Main {
 	    System.out.println("|===============================================================================|");
 	    System.out.println("|" + centerText(title, 79) + "|");
 	    System.out.println("|===============================================================================|");
-
-	    // Kullanıcı adı ve parasını sağ üst köşede göster
-	    
+ 
 	    int wallet = userManager.getUserWallet(LoginName);
 	    
 	    if(control == false)
@@ -43,7 +42,6 @@ public class Main {
 	    System.out.print("Enter your choice: ");
 	}
 
-	// Sağa yaslı şekilde metin düzenleme metodu
 	private static String rightPad(String text, int length) {
 	    return String.format("%-" + length + "s", text);
 	}
@@ -74,320 +72,304 @@ public class Main {
         }
     }
 
-  public static void main(String[] args) {
-    boolean exit = false;
-
-    while (!exit) {
-    	
-      control = true;
-      String title = "MAIN MENU";
-      String[] options = {
-        "1. Register",
-        "2. Login",
-        "3. Exit"
-      };
-      printMenu(title, options);
-      int choice = scanner.nextInt();
-      scanner.nextLine(); // Boş satırı oku
-      
-      control = false;
-
-      switch (choice) {
-        case 1:
-          registerMenu();
-          break;
-
-        case 2:
-          User loggedInUser = loginMenu();
-          
-          setLoginName(loggedInUser.getUsername());
-          setWallet(loggedInUser.getWallet());
-          
-          
-          if (loggedInUser != null) {
-            userMenu(loggedInUser);
-          }
-
-          break;
-
-        case 3:
-          exit = true;
-          break;
-
-        default:
-          System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
-          break;
-      }
-    }
-
-    scanner.close();
+  
+  
+  public static void main(String[] args) throws IOException {
+      Scanner scanner = new Scanner(System.in);
+      MainApp(scanner, System.out);
   }
 
-  private static void registerMenu() {
-    System.out.println("Kayit Ol");
-    System.out.print("Kullanici Adi: ");
+  public static int MainApp(Scanner scanner, PrintStream out) throws IOException {
+	  boolean exit = false;
+
+	    while (!exit) {
+	    	
+	      control = true;
+	      String title = "MAIN MENU";
+	      String[] options = {
+	        "1. Register",
+	        "2. Login",
+	        "3. Exit"
+	      };
+	      printMenu(title, options);
+	      int choice = scanner.nextInt();
+	      scanner.nextLine();
+	      
+	      control = false;
+
+	      switch (choice) {
+	        case 1:
+	          registerMenu(scanner, System.out);
+	          break;
+
+	        case 2:
+	          User loggedInUser = loginMenu();
+	          
+	          setLoginName(loggedInUser.getUsername());
+	          setWallet(loggedInUser.getWallet());
+	          
+	          
+	          if (loggedInUser != null) {
+	            userMenu(loggedInUser);
+	          }
+
+	          break;
+
+	        case 3:
+	          exit = true;
+	          break;
+
+	        default:
+	          System.out.println("Invalid election. Please try again.");
+	          break;
+	      }
+	    }
+
+	    scanner.close();
+	    return 0;
+  }
+
+  public static int registerMenu(Scanner scanner, PrintStream out) throws IOException {
+ 
+    System.out.print("UserName: ");
     String username = scanner.nextLine();
-    System.out.print("Sifre: ");
+    System.out.print("Password: ");
     String password = scanner.nextLine();
-    // Kullanıcıyı kaydet
     User newUser = new User(username, password, 0);
     userManager.registerUser(newUser);
-    System.out.println("Kayit basarili!");
+    return 0;
+   
   }
   
   //ComicBook
   
-  private static void AddBookMenu()
+  private static int AddBookMenu()
   {
-  	System.out.println("Kitap Kayit");
   	
-    System.out.print("Kitap ID: ");
+    System.out.print("Book ID: ");
     int bookId = scanner.nextInt();
     scanner.nextLine();
     
-    System.out.print("kitap Adi: ");
+    System.out.print("Book Name: ");
     String bookName = scanner.nextLine();
     
-    System.out.print("kitap Sayfa sayi: ");
+    System.out.print("Book Page Number: ");
     int bookpage = scanner.nextInt();
     
-    System.out.print("kitap değeri: ");
+    System.out.print("Book Value: ");
     int bookvalue = scanner.nextInt();
 
 
     Book newUser = new Book(bookId, bookName,bookpage,LoginName,bookvalue);
     comicmanager.AddBook(newUser);
-    System.out.println("Kayit basarili!");
+    return 0;
   }
   
-  private static void listBookMenu()
+  private static int listBookMenu()
   {
-	  System.out.println("Kitap Liste");
-	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
-	  //comicmanager.listBooks();
+	  System.out.println("Book List");
 	  comicmanager.listBooksByCondition(LoginName);
+	  return 0;
   }
   
-  private static void listAllBookMenu()
+  private static int listAllBookMenu()
   {
-	  
-	  
-	  System.out.println("Kitap Liste");
-	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
-	  //comicmanager.listBooks();
+	  System.out.println("Book All List");
 	  comicmanager.listBooks();
+	  return 0;
   }
   
-  private static void deleteBookMenu()
-  {
-	  System.out.println("Kitap Silme");
-	  
-	  System.out.print("kitap ID: ");
+  private static int deleteBookMenu()
+  { 
+	  System.out.print("Book ID: ");
 	  int bookId = scanner.nextInt();
 	  
 	  comicmanager.deleteBookByID(bookId);
+	  return 0;
   }
   
-  private static void updateBookMenu()
+  private static int updateBookMenu()
   {
-	  System.out.println("Kitap Güncelleme");
-	  
-	  System.out.print("kitap ID: ");
+	  System.out.print("Book ID: ");
 	  int bookId = scanner.nextInt();
 	  scanner.nextLine();
 	  
-	  System.out.print("kitap Adi: ");
+	  System.out.print("New Book Name: ");
 	  String bookName = scanner.nextLine();
 	  
-	  comicmanager.updateBookTitleByID(bookId, bookName);
-	  System.out.println("Güncelleme basarili!");
+	  System.out.print("New Book Value: ");
+	  int bookvalue = scanner.nextInt();
+	  scanner.nextLine();
+
+	  System.out.print("New Book PageNumber: ");
+	  int bookpage = scanner.nextInt();
+	  scanner.nextLine();
+	  
+	  comicmanager.updateBookTitleByID(bookId, bookName,bookpage,bookvalue);
+	  return 0;
   }
 
   //WishList
   
-  private static void WishAddBookMenu()
+  private static int WishAddBookMenu()
   {
-  	System.out.println("Wish Kitap Kayit");
-    System.out.print("Kitap ID: ");
+    System.out.print("Book ID: ");
     int bookId = scanner.nextInt();
     scanner.nextLine();
     
     
     Wish newUser = new Wish(bookId, null,1,LoginName,10);
     wishmanager.AddBook(newUser);
+    return 0;
   }
   
-  private static void WishlistBookMenu()
+  private static int WishlistBookMenu()
   {
-	  System.out.println("Wish Kitap Liste");
-	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
-	  //comicmanager.listBooks();
+	  System.out.println("Wish Book List");
 	  wishmanager.listBooksByUser(LoginName);
+	  return 0;
   }
   
-  private static void WishdeleteBookMenu()
+  private static int WishdeleteBookMenu()
   {
-	  System.out.println("Wish Kitap Silme");
-	  
-	  System.out.print("kitap ID: ");
+	  System.out.print("Book ID: ");
 	  int bookId = scanner.nextInt();
 	  
 	  wishmanager.deleteBookByID(bookId);
+	  return 0;
   }
   
   //TradeList
   
-  //satin alan kisi parasi yetecek
-  // satan kisiye para eklenecek
   
-  private static void TradeAddBookMenu()
+  private static int TradeAddBookMenu()
   {
-  	System.out.println("Trade Kitap Kayit");
-    System.out.print("Kitap ID: ");
+    System.out.print("Book ID: ");
     int bookId = scanner.nextInt();
-    
     
     Trade newUser = new Trade(bookId, null,1,LoginName,10);
     trademanager.AddTrade(newUser);
-    //comicmanager.deleteBookByID(IntBookId); // book list den silme
+    return 0;
   }
   
-  private static void TradeMylistBookMenu()
+  private static int TradeMylistBookMenu()
   {
-	  System.out.println("Trade Kitap Liste");
-	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
-	  //comicmanager.listBooks();
 	  trademanager.listMyTradeList(LoginName);
+	  return 0;
   }
   
-  private static void TradedeleteBookMenu()
+  private static int TradedeleteBookMenu()
   {
-	  System.out.println("Trade Kitap Silme");
-	  
-	  System.out.print("kitap ID: ");
+	  System.out.print("Book ID: ");
 	  int bookId = scanner.nextInt();
 	  
 	  trademanager.deleteTradeByID(bookId);
+	  return 0;
   }
   
-  private static void TradeAllListBookMenu()
+  private static int TradeAllListBookMenu()
   {
-	  System.out.println("Kitap Liste");
-	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
-	  //comicmanager.listBooks();
+	  System.out.println("Book List");
 	  trademanager.listAllTradeList();
+	  return 0;
   }
-  
-  //satin alma
-  
-  private static void TradeBuyBookMenu()
-  {
-	  System.out.println("Trade Kitap Satin Alma");
-	  
-	  System.out.print("kitap ID: ");
+    
+  private static int TradeBuyBookMenu()
+  {	  
+	  System.out.print("Book ID: ");
 	  int bookId = scanner.nextInt();
 	  
 	  trademanager.BuyTradeByID(bookId);
+	  return 0;
   }
   
-  public static void CreditBuyScoreMenu()
+  public static int CreditBuyScoreMenu()
   {
-	  System.out.println("Kredi puanı:");
+	  System.out.println("Credit Score:");
 	  
 	  int score = scanner.nextInt();
 	  
 	  userManager.creditbuyscore(LoginName, score);
+	  return 0;
   }
   
-  
-  //Event Menu
-  
-  private static void EventAddBookMenu()
+ 
+  private static int EventAddBookMenu()
   {
-  	System.out.println("Event Kayit");
     System.out.print("Event ID: ");
     int bookId = scanner.nextInt();
     scanner.nextLine();
     
-    System.out.print("Event Adi: ");
+    System.out.print("Event Name: ");
     String title = scanner.nextLine();
     
-    System.out.print("Event İçerik: ");
+    System.out.print("Event Content: ");
     String content = scanner.nextLine();
-
 
     Event newUser = new Event(bookId, title,content,LoginName);
     eventmanager.AddEvent(newUser);
-    System.out.println("Kayit basarili!");
+    return 0;
   }
   
-  private static void EventlistBookMenu()
+  private static int EventlistBookMenu()
   {
-	  System.out.println("Event Liste");
-	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
-	  //comicmanager.listBooks();
+	  System.out.println("Event List");
 	  eventmanager.listEventsByCondition(LoginName);
+	  return 0;
   }
   
-  private static void EventlistAllBookMenu()
+  private static int EventlistAllBookMenu()
   {
-	  
-	  
-	  System.out.println("Event Liste");
-	  //Comic newUser = new Comic(0, LoginName, 0, LoginName, LoginName, 0);
-	  //comicmanager.listBooks();
+	  System.out.println("Event All List");
 	  eventmanager.listEvents();
+	  return 0;
   }
   
-  private static void EventdeleteBookMenu()
+  private static int EventdeleteBookMenu()
   {
-	  System.out.println("Event Silme");
-	  
 	  System.out.print("Event ID: ");
 	  int bookId = scanner.nextInt();
 	  
 	  eventmanager.deleteEventByID(bookId);
+	  return 0;
   }
   
-  private static void EventupdateBookMenu()
+  private static int EventupdateBookMenu()
   {
-	  System.out.println("Event Güncelleme");
-	  
 	  System.out.print("Event ID: ");
 	  int bookId = scanner.nextInt();
 	  scanner.nextLine();
 	  
-	  System.out.print("Event Adi: ");
+	  System.out.print("New Event Name: ");
 	  String title = scanner.nextLine();
 	
-	  System.out.print("Event İçerik: ");
+	  System.out.print("New Event Content: ");
 	  String content = scanner.nextLine();
 	  
 	  eventmanager.updateEventTitleByID(bookId, title,content);
-	  System.out.println("Güncelleme basarili!");
+	  return 0;
   }
   
-  //Normal Menu
+  //test
 
   private static User loginMenu() {
-    System.out.println("Giris Yap");
-    System.out.print("Kullanici Adi: ");
+    System.out.print("UserName: ");
     String username = scanner.nextLine();
-    System.out.print("Sifre: ");
+    System.out.print("Password: ");
     String password = scanner.nextLine();
-    // Kullanıcıyı kontrol et ve giriş yap
+ 
     User user = userManager.login(username, password);
 
     if (user != null) {
-      System.out.println("Hos geldiniz, " + user.getUsername() + "!");
+      System.out.println("Hello, " + user.getUsername() + "!");
     } else {
-      System.out.println("Kullanici adi veya sifre hatali!");
+      System.out.println("Username or password is wrong!");
     }
 
     return user;
   }
 
-  private static void userMenu(User user) {
+  private static int userMenu(User user) {
     boolean exit = false;
 
     while (!exit) {
@@ -446,7 +428,7 @@ public class Main {
         	  choice = 5;
         	  break;
           default:
-              System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+              System.out.println("Invalid election. Please try again.");
               break;
           }
           
@@ -502,7 +484,7 @@ public class Main {
               case 6:
             	  break;
               default:
-                  System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+                  System.out.println("Invalid election. Please try again.");
                   break;
               }
         	  break;
@@ -547,7 +529,7 @@ public class Main {
                 	  
                 	  break;
                   default:
-                      System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+                      System.out.println("Invalid election. Please try again.");
                       break;
                   }
                   
@@ -590,7 +572,7 @@ public class Main {
                 	  exit = true;
                 	  break;
                   default:
-                      System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+                      System.out.println("Invalid election. Please try again.");
                       break;
                   }
             	  break;
@@ -598,7 +580,7 @@ public class Main {
             	  choice = 5;
             	  break;
               default:
-                  System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+                  System.out.println("Invalid election. Please try again.");
                   break;
               }
               
@@ -608,7 +590,7 @@ public class Main {
         	  choice = 5;
         	  break;
           default:
-              System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+              System.out.println("Invalid election. Please try again.");
               break;
 
           }
@@ -656,7 +638,7 @@ public class Main {
           case 7:
         	  break;
           default:
-              System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+              System.out.println("Invalid election. Please try again.");
               break;
           
           }
@@ -695,7 +677,7 @@ public class Main {
           break;
 
         default:
-          System.out.println("Gecersiz secim. Lutfen tekrar deneyin.");
+          System.out.println("Invalid election. Please try again.");
           choice = 5;
           break;
       	}
@@ -703,6 +685,7 @@ public class Main {
     }
 
     scanner.close(); 
+    return 0;
   }
 
 public static String getLoginName() {
