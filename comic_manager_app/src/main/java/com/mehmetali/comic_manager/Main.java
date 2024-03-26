@@ -103,14 +103,14 @@ public class Main {
 	          break;
 
 	        case 2:
-	          User loggedInUser = loginMenu();
+	          User loggedInUser = loginMenu(scanner, System.out);
 	          
 	          setLoginName(loggedInUser.getUsername());
 	          setWallet(loggedInUser.getWallet());
 	          
 	          
 	          if (loggedInUser != null) {
-	            userMenu(loggedInUser);
+	            userMenu(loggedInUser,scanner, System.out);
 	          }
 
 	          break;
@@ -143,7 +143,7 @@ public class Main {
   
   //ComicBook
   
-  private static int AddBookMenu()
+  public static int AddBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
   	
     System.out.print("Book ID: ");
@@ -165,21 +165,21 @@ public class Main {
     return 0;
   }
   
-  private static int listBookMenu()
+  public static int listBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
 	  System.out.println("Book List");
 	  comicmanager.listBooksByCondition(LoginName);
 	  return 0;
   }
   
-  private static int listAllBookMenu()
+  public static int listAllBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
 	  System.out.println("Book All List");
 	  comicmanager.listBooks();
 	  return 0;
   }
-  
-  private static int deleteBookMenu()
+ 
+  public static int deleteBookMenu(Scanner scanner, PrintStream out) throws IOException
   { 
 	  System.out.print("Book ID: ");
 	  int bookId = scanner.nextInt();
@@ -188,7 +188,7 @@ public class Main {
 	  return 0;
   }
   
-  private static int updateBookMenu()
+  public static int updateBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
 	  System.out.print("Book ID: ");
 	  int bookId = scanner.nextInt();
@@ -197,21 +197,21 @@ public class Main {
 	  System.out.print("New Book Name: ");
 	  String bookName = scanner.nextLine();
 	  
+	  System.out.print("New Book Page Number: ");
+	  int bookpage = scanner.nextInt();
+	  scanner.nextLine();
+	  
 	  System.out.print("New Book Value: ");
 	  int bookvalue = scanner.nextInt();
 	  scanner.nextLine();
 
-	  System.out.print("New Book PageNumber: ");
-	  int bookpage = scanner.nextInt();
-	  scanner.nextLine();
-	  
 	  comicmanager.updateBookTitleByID(bookId, bookName,bookpage,bookvalue);
 	  return 0;
   }
 
   //WishList
   
-  private static int WishAddBookMenu()
+  public static int WishAddBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
     System.out.print("Book ID: ");
     int bookId = scanner.nextInt();
@@ -223,14 +223,14 @@ public class Main {
     return 0;
   }
   
-  private static int WishlistBookMenu()
+  public static int WishlistBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
 	  System.out.println("Wish Book List");
 	  wishmanager.listBooksByUser(LoginName);
 	  return 0;
   }
   
-  private static int WishdeleteBookMenu()
+  public static int WishdeleteBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
 	  System.out.print("Book ID: ");
 	  int bookId = scanner.nextInt();
@@ -242,7 +242,7 @@ public class Main {
   //TradeList
   
   
-  private static int TradeAddBookMenu()
+  public static int TradeAddBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
     System.out.print("Book ID: ");
     int bookId = scanner.nextInt();
@@ -252,13 +252,13 @@ public class Main {
     return 0;
   }
   
-  private static int TradeMylistBookMenu()
+  public static int TradeMylistBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
 	  trademanager.listMyTradeList(LoginName);
 	  return 0;
   }
   
-  private static int TradedeleteBookMenu()
+  public static int TradedeleteBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
 	  System.out.print("Book ID: ");
 	  int bookId = scanner.nextInt();
@@ -267,14 +267,14 @@ public class Main {
 	  return 0;
   }
   
-  private static int TradeAllListBookMenu()
+  public static int TradeAllListBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
 	  System.out.println("Book List");
 	  trademanager.listAllTradeList();
 	  return 0;
   }
     
-  private static int TradeBuyBookMenu()
+  public static int TradeBuyBookMenu(Scanner scanner, PrintStream out) throws IOException
   {	  
 	  System.out.print("Book ID: ");
 	  int bookId = scanner.nextInt();
@@ -283,7 +283,7 @@ public class Main {
 	  return 0;
   }
   
-  public static int CreditBuyScoreMenu()
+  public static int CreditBuyScoreMenu(Scanner scanner, PrintStream out) throws IOException
   {
 	  System.out.println("Credit Score:");
 	  
@@ -294,7 +294,7 @@ public class Main {
   }
   
  
-  private static int EventAddBookMenu()
+  public static int EventAddBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
     System.out.print("Event ID: ");
     int bookId = scanner.nextInt();
@@ -311,21 +311,21 @@ public class Main {
     return 0;
   }
   
-  private static int EventlistBookMenu()
+  public static int EventlistBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
 	  System.out.println("Event List");
 	  eventmanager.listEventsByCondition(LoginName);
 	  return 0;
   }
   
-  private static int EventlistAllBookMenu()
+  public static int EventlistAllBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
 	  System.out.println("Event All List");
 	  eventmanager.listEvents();
 	  return 0;
   }
   
-  private static int EventdeleteBookMenu()
+  public static int EventdeleteBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
 	  System.out.print("Event ID: ");
 	  int bookId = scanner.nextInt();
@@ -334,7 +334,7 @@ public class Main {
 	  return 0;
   }
   
-  private static int EventupdateBookMenu()
+  public static int EventupdateBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
 	  System.out.print("Event ID: ");
 	  int bookId = scanner.nextInt();
@@ -352,7 +352,7 @@ public class Main {
   
   //test
 
-  private static User loginMenu() {
+  public static User loginMenu(Scanner scanner, PrintStream out) throws IOException {
     System.out.print("UserName: ");
     String username = scanner.nextLine();
     System.out.print("Password: ");
@@ -369,7 +369,7 @@ public class Main {
     return user;
   }
 
-  private static int userMenu(User user) {
+  public static int userMenu(User user,Scanner scanner, PrintStream out) throws IOException {
     boolean exit = false;
 
     while (!exit) {
@@ -389,7 +389,7 @@ public class Main {
       scanner.nextLine(); 
 
       
-      while (choice != 5) {
+      while (choice != 6) {
       switch (choice) {
         case 1:
           System.out.println("Cataloging Comic Book Collection");
@@ -409,20 +409,20 @@ public class Main {
           
           switch (choice2) {
           case 1:
-        	  AddBookMenu();
+        	  AddBookMenu(scanner, System.out);
         	  break;
           case 2:
-        	  deleteBookMenu();
+        	  deleteBookMenu(scanner, System.out);
         	  break;
           case 3:
-        	  updateBookMenu();
+        	  updateBookMenu(scanner, System.out);
         	  break;
           case 4:
         	  clearConsole();
-        	  listBookMenu();
+        	  listBookMenu(scanner, System.out);
         	  break;
           case 5:
-        	  listAllBookMenu();
+        	  listAllBookMenu(scanner, System.out);
         	  break;
           case 6:
         	  choice = 5;
@@ -465,18 +465,18 @@ public class Main {
               
               switch (choice4) {
               case 1:
-            	  WishAddBookMenu();
+            	  WishAddBookMenu(scanner, System.out);
             	  
             	  break;
               case 2:
-            	  WishdeleteBookMenu();
+            	  WishdeleteBookMenu(scanner, System.out);
             	  break;
               case 3:
-            	  WishlistBookMenu();
+            	  WishlistBookMenu(scanner, System.out);
             
             	  break;
               case 4:
-            	  listBookMenu();
+            	  listBookMenu(scanner, System.out);
             	  break;
               case 5:
             	  choice = 5;
@@ -517,10 +517,10 @@ public class Main {
                   switch(choice6)
                   {
                   case 1:
-                	  TradeBuyBookMenu();
+                	  TradeBuyBookMenu(scanner, System.out);
                 	  break;
                   case 2:
-                	  TradeAllListBookMenu();
+                	  TradeAllListBookMenu(scanner, System.out);
                 	  break;
                   case 3:
                 	  choice = 5;
@@ -554,16 +554,16 @@ public class Main {
                   switch(choice7)
                   {
                   case 1:
-                	  TradeAddBookMenu();
+                	  TradeAddBookMenu(scanner, System.out);
                 	  break;
                   case 2:
-                	  TradedeleteBookMenu();
+                	  TradedeleteBookMenu(scanner, System.out);
                 	  break;
                   case 3:
-                	  TradeAllListBookMenu();
+                	  TradeAllListBookMenu(scanner, System.out);
                 	  break;
                   case 4:
-                	  TradeMylistBookMenu();
+                	  TradeMylistBookMenu(scanner, System.out);
                 	  break;
                   case 5:
                 	  choice = 5;
@@ -618,19 +618,19 @@ public class Main {
           switch(choice8)
           {
           case 1:
-        	  EventAddBookMenu();
+        	  EventAddBookMenu(scanner, System.out);
         	  break;
           case 2:
-        	  EventdeleteBookMenu();
+        	  EventdeleteBookMenu(scanner, System.out);
         	  break;
           case 3:
-        	  EventupdateBookMenu();
+        	  EventupdateBookMenu(scanner, System.out);
         	  break;
           case 4:
-        	  EventlistBookMenu();
+        	  EventlistBookMenu(scanner, System.out);
         	  break;
           case 5:
-        	  EventlistAllBookMenu();
+        	  EventlistAllBookMenu(scanner, System.out);
         	  break;
           case 6:
         	  choice = 5;
@@ -657,7 +657,7 @@ public class Main {
             switch(choice9)
             {
             case 1:
-          	  CreditBuyScoreMenu();
+          	  CreditBuyScoreMenu(scanner, System.out);
           	  
           	  break;
             case 2:
@@ -669,17 +669,11 @@ public class Main {
       	  break;
 
         case 5:
-          
-        	System.exit(0); 
-
-        	//exit = true;
-        	
-          break;
-
-        default:
-          System.out.println("Invalid election. Please try again.");
-          choice = 5;
-          break;
+    
+        	//System.exit(0);
+        	//return 0;
+        	return 0;
+        
       	}
       }
     }
