@@ -31,24 +31,25 @@ public class TradeManager {
    * @param comic The comic book to add to the trade list.
    * @return The title of the comic book if added successfully, null otherwise.
    */
-  public String AddTrade(Trade comic) {
-    if (comicmanager.isBookIDAvailable(comic.getComicID())) {
-      System.out.println("No such book found.");
-      return null;
-    }
+  public int AddTrade(Trade comic) {
+    
 
     if (!isTradeNameAvailable(comic.getTitle())) {
       System.out.println("This Book name is already in use. Please choose a different book name.");
-      return null;
+      return -1;
     }
 
-    String Name = comicmanager.getBookTitleByID(comic.getComicID());
-    comic.setTitle(Name);
+    /*
+    comic.setTitle(comicmanager.getBookTitleByID(comic.getComicID()));
+    comic.setpageNumber(comicmanager.getBookPageNumberByID(comic.getComicID()));
+    comic.setValue(comicmanager.getBookValueByID(comic.getComicID()));
+    */
+    
     comics.add(comic);
     saveUsersToFile(comics);
     comicmanager.deleteBookByID(comic.getComicID());
     System.out.println("The book has been successfully added to the Trade list.");
-    return comic.getTitle();
+    return 0;
   }
 
   /**
@@ -150,24 +151,18 @@ public class TradeManager {
 
     for (Trade comic : comics) {
       if (comic.getComicID() == TradeID) {
-        Main main = new Main();
-
-        if(Main.LoginWallet >= comic.getValue()) {
-          String oldUser = comic.getuser();
-          System.out.print(oldUser);
-          comics.remove(comic);
-          saveUsersToFile(comics);
-          System.out.println("Book deleted successfully.");
-          found = true;
-          Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());
-          comicmanager.AddBook(newUser);
-          usermanager.creditSellscore(Main.LoginName, comic.getValue());
-          usermanager.creditbuyscore(oldUser, comic.getValue());
-          return 0;
-        } else {
-          System.out.println("Credit Score Insufficient! Could not purchase.");
-          return -1;
-        }
+        
+      String oldUser = comic.getuser();
+      System.out.print(oldUser);
+      comics.remove(comic);
+      saveUsersToFile(comics);
+      System.out.println("Book deleted successfully.");
+      found = true;
+      Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());
+      comicmanager.AddBook(newUser);
+      usermanager.creditSellscore(Main.LoginName, comic.getValue());
+      usermanager.creditbuyscore(oldUser, comic.getValue());
+      return 0;
       }
     }
 
@@ -194,6 +189,16 @@ public class TradeManager {
 
     return true;
   }
+  
+  public int getBookValueByID(int bookID) {
+	    for (Trade comic : comics) {
+	      if (comic.getComicID() == bookID) {
+	        return comic.getValue();
+	      }
+	    }
+
+	    return 0;
+	  }
 
   /**
    * Checks if a trade ID is available (not already used).

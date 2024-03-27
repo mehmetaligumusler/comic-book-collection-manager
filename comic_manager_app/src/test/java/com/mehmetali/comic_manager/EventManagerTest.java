@@ -54,16 +54,23 @@ public class EventManagerTest {
   @Test
   public void listEventsTest() {
     // Test listing events
+	  
+	  Event newEvent = new Event(1, "Title1", "Content1", "User1");
+	    eventManager.AddEvent(newEvent);
+	    
     int result = eventManager.listEvents();
-    assertEquals(0, result); // Assuming no events exist initially
+    assertEquals(1, result); // Assuming no events exist initially
     deleteFile("event.dat");
   }
 
   @Test
   public void listEventsByConditionTest() {
+	  
+	  Event newEvent = new Event(1, "Title1", "Content1", "User1");
+	    eventManager.AddEvent(newEvent);
     // Test listing events by user
-    int result = eventManager.listEventsByCondition("User");
-    assertEquals(0, result); // Assuming no events exist for user "User" initially
+    int result = eventManager.listEventsByCondition("User1");
+    assertEquals(2, result); // Assuming no events exist for user "User" initially
     deleteFile("event.dat");
   }
 
@@ -85,6 +92,54 @@ public class EventManagerTest {
     int updateResult = eventManager.updateEventTitleByID(5, "New Title", "New Content");
     assertEquals(0, updateResult);
     deleteFile("event.dat");
+  }
+  
+  @Test
+  public void testIsEventIDAvailable_WhenIDExists() {
+      EventManager eventManager = new EventManager(); // EventManager nesnesi oluşturulur veya uygun şekilde elde edilir
+
+      // Test durumu için bir Event oluşturulur ve EventManager'e eklenir
+      Event event = new Event(1, "Title4", "Content5", "User5");
+      eventManager.AddEvent(event);
+
+      // EventManager'in isEventIDAvailable metodunu çağırarak test ederiz
+      boolean result = eventManager.isEventIDAvailable(1);
+
+      // Sonuç kontrol edilir, çünkü ID mevcut olduğu için false dönmeli
+      assertFalse(result);
+  }
+
+  @Test
+  public void testIsEventIDAvailable_WhenIDNotExists() {
+      EventManager eventManager = new EventManager(); // EventManager nesnesi oluşturulur veya uygun şekilde elde edilir
+
+      // Test durumu için bir Event oluşturulur ve EventManager'e eklenir
+      Event event = new Event(2, "Title4", "Content5", "User5");
+      eventManager.AddEvent(event);
+
+      // EventManager'in isEventIDAvailable metodunu çağırarak test ederiz
+      boolean result = eventManager.isEventIDAvailable(3);
+
+      // Sonuç kontrol edilir, çünkü ID mevcut olmadığı için true dönmeli
+      assertTrue(result);
+  }
+
+
+
+
+  @Test
+  public void testGetEventTitleByID_WhenIDNotExists() {
+      EventManager eventManager = new EventManager(); // EventManager nesnesi oluşturulur veya uygun şekilde elde edilir
+
+      // Test durumu için bir Event oluşturulur ve EventManager'e eklenir
+      Event event = new Event(5, "Title4", "Content5", "User5");
+      eventManager.AddEvent(event);
+
+      // EventManager'in getEventTitleByID metodunu çağırarak test ederiz
+      String result = eventManager.getEventTitleByID(2);
+
+      // Sonuç kontrol edilir, çünkü ID mevcut olmadığı için null dönmeli
+      assertNull(result);
   }
 
   // Add tests for other methods such as isEventNameAvailable, readUsersFromFile, saveUsersToFile

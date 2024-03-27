@@ -37,7 +37,7 @@ public class Main {
 	    for (String option : options) {
 	        System.out.println("|" + centerText(option, 79) + "|");
 	    }
-
+ 
 	    System.out.println("|===============================================================================|");
 	    System.out.print("Enter your choice: ");
 	}
@@ -119,9 +119,6 @@ public class Main {
 	          exit = true;
 	          break;
 
-	        default:
-	          System.out.println("Invalid election. Please try again.");
-	          break;
 	      }
 	    }
 
@@ -217,8 +214,17 @@ public class Main {
     int bookId = scanner.nextInt();
     scanner.nextLine();
     
+    if (comicmanager.isBookIDAvailable(bookId)) {
+        System.out.println("No such book found.");
+        return -1;
+      }
     
-    Wish newUser = new Wish(bookId, null,1,LoginName,10);
+    
+    int pagenumber = comicmanager.getBookPageNumberByID(bookId);
+    String title = comicmanager.getBookTitleByID(bookId);
+    int value = comicmanager.getBookPageNumberByID(bookId);
+    
+    Wish newUser = new Wish(bookId, title,pagenumber,LoginName,value);
     wishmanager.AddBook(newUser);
     return 0;
   }
@@ -247,7 +253,11 @@ public class Main {
     System.out.print("Book ID: ");
     int bookId = scanner.nextInt();
     
-    Trade newUser = new Trade(bookId, null,1,LoginName,10);
+    int pagenumber = comicmanager.getBookPageNumberByID(bookId);
+    String title = comicmanager.getBookTitleByID(bookId);
+    int value = comicmanager.getBookPageNumberByID(bookId);
+    
+    Trade newUser = new Trade(bookId, title,pagenumber,LoginName,value);
     trademanager.AddTrade(newUser);
     return 0;
   }
@@ -279,7 +289,15 @@ public class Main {
 	  System.out.print("Book ID: ");
 	  int bookId = scanner.nextInt();
 	  
-	  trademanager.BuyTradeByID(bookId);
+	  if(LoginWallet >= trademanager.getBookValueByID(bookId)){
+		  trademanager.BuyTradeByID(bookId);
+	  }
+	  else
+	  {
+		  System.out.println("Credit Score Insufficient! Could not purchase.");
+		  return -1;
+	  }
+	  
 	  return 0;
   }
   
@@ -422,14 +440,12 @@ public class Main {
         	  listBookMenu(scanner, System.out);
         	  break;
           case 5:
+        	  clearConsole();
         	  listAllBookMenu(scanner, System.out);
         	  break;
           case 6:
         	  choice = 5;
         	  break;
-          default:
-              System.out.println("Invalid election. Please try again.");
-              break;
           }
           
           break;
@@ -483,9 +499,6 @@ public class Main {
             	  break;
               case 6:
             	  break;
-              default:
-                  System.out.println("Invalid election. Please try again.");
-                  break;
               }
         	  break;
           case 2:
@@ -528,12 +541,8 @@ public class Main {
                   case 4:
                 	  
                 	  break;
-                  default:
-                      System.out.println("Invalid election. Please try again.");
-                      break;
+                 
                   }
-                  
-                  
                   
             	  break;
               case 2:
@@ -571,17 +580,13 @@ public class Main {
                   case 6:
                 	  exit = true;
                 	  break;
-                  default:
-                      System.out.println("Invalid election. Please try again.");
-                      break;
+                
                   }
             	  break;
               case 3:
             	  choice = 5;
             	  break;
-              default:
-                  System.out.println("Invalid election. Please try again.");
-                  break;
+        
               }
               
         	  break;
@@ -589,10 +594,7 @@ public class Main {
           case 3:
         	  choice = 5;
         	  break;
-          default:
-              System.out.println("Invalid election. Please try again.");
-              break;
-
+       
           }
           
 
@@ -637,9 +639,6 @@ public class Main {
         	  break;
           case 7:
         	  break;
-          default:
-              System.out.println("Invalid election. Please try again.");
-              break;
           
           }
           break;
