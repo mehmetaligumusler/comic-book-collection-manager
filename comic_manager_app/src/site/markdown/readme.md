@@ -35,3 +35,85 @@ The Comic Book Manager application is a software tool designed to assist users i
 **Method Coverage**
 
 - ![Method Coverage](assets/badge_methodcoverage.svg)
+
+## Project Description
+
+CE204, Midterm
+
+## Installation
+
+```
+git clone https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java.git
+```
+
+## Usage
+
+### Build the Project
+
+Enter pom.xml root folder and run following command to test and generate jar file
+
+```bash
+mvn clean test site package
+```
+
+### Run Project
+
+You can run application by specify the Main function
+
+```bash
+java -cp comic_manager_app-1.0-SNAPSHOT.jar com.mehmetali.comic_manager_app.Main
+```
+
+## Contributing
+
+Mehmet Ali GUMUSLER, (mehmetali_gumusler21@erdogan.edu.tr) 
+
+Gökay DERVISOĞLU, (gokay_dervisoglu21@erdogan.edu.tr)
+
+## License
+
+
+
+## Dependencies
+
+- [Doxygen](https://www.doxygen.nl/)
+
+- [Chocolatey](https://chocolatey.org/install)
+
+- [Scoop](https://scoop.sh/)
+
+- [Reportgenerator ](https://reportgenerator.io/)
+
+## Features
+
+
+
+### Testing
+
+Tests are Underdevelopment with Real Environment
+
+### Support
+
+Project can be updated according issues.
+Contact me if you have any questions.
+
+### Contact
+
+- Mehmet Ali GUMUSLER, (mehmetali_gumusler21@erdogan.edu.tr)
+
+- Gökay DERVISOĞLU, (gokay_dervisoglu21@erdogan.edu.tr)
+
+### Instructor: 
+
+- Ugur CORUH
+
+### Acknowledgments
+
+- [Microsoft](https://visualstudio.microsoft.com/tr/vs/community/)
+
+- [Github](https://github.com/)
+
+- [Doxygen](https://www.doxygen.nl/)
+
+## About
+

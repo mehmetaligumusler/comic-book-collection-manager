@@ -15,6 +15,8 @@ import java.util.Scanner;
 
 import static org.junit.Assert.*;
 
+//80
+
 public class MainTest {
   private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
   private final PrintStream originalOut = System.out;
@@ -94,6 +96,7 @@ public class MainTest {
     //assertNotNull(loggedInUser);
     //assertEquals("uername1", loggedInUser.getUsername());
   }
+
 
   @Test
   public void testLoginMenu_WrongCredentials() throws IOException {

@@ -61,12 +61,14 @@ public class UserManager {
    */
   public String registerUser(User user) {
     if (!isUsernameAvailable(user.getUsername())) {
+    	
       System.out.println("This username is already in use. Please choose a different username.");
       return null;
     }
 
     users.add(user);
     saveUsersToFile(users);
+    
     System.out.println("User registered successfully.");
     return user.getUsername();
   }

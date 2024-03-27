@@ -3,6 +3,7 @@
  */
 package com.mehmetali.comic_manager;
 
+//590
 
 import java.util.Scanner;
 import java.io.IOException;
@@ -180,6 +181,7 @@ public class Main {
           setWallet(loggedInUser.getWallet());
 
           if (loggedInUser != null) {
+            //clearConsole();
             userMenu(loggedInUser,scanner, System.out);
           }
 
@@ -577,8 +579,44 @@ public class Main {
     return 0; // Returning 0 to indicate successful update
   }
 
+  /**
+   * Handles the login process for the user.
+   *
+   * @param scanner Scanner object to read user input.
+   * @param out PrintStream object to display output to the user.
+   * @return User object representing the logged-in user, or null if login fails.
+   * @throws IOException if an I/O error occurs.
+   */
+  /*
+  public static User loginMenu(Scanner scanner, PrintStream out) throws IOException {
+      User user = null;
+      boolean loggedIn = false;
 
-  //test
+      do {
+          // Prompting user for username and password
+          out.print("UserName: ");
+          String username = scanner.nextLine();
+          out.print("Password: ");
+          String password = scanner.nextLine();
+
+          // Attempting to log in the user
+         user = userManager.login(username, password);
+
+          // Displaying login result
+          if (user != null) {
+              clearConsole();
+              out.println("Hello, " + user.getUsername() + "!");
+              loggedIn = true;
+          } else {
+              clearConsole();
+              out.println("Username or password is wrong!");
+              out.println("Please try again.");
+          }
+      } while (!loggedIn);
+
+      return user; // Returning the logged-in user object
+  }
+  */
 
   /**
    * Allows a user to log in to the system using their username and password.
@@ -589,6 +627,7 @@ public class Main {
    *         or null if the login attempt fails.
    * @throws IOException Signals that an I/O exception has occurred.
    */
+
   public static User loginMenu(Scanner scanner, PrintStream out) throws IOException {
     // Prompting user for username and password
     out.print("UserName: ");
@@ -600,8 +639,10 @@ public class Main {
 
     // Displaying login result
     if (user != null) {
+      clearConsole();
       out.println("Hello, " + user.getUsername() + "!");
     } else {
+      clearConsole();
       out.println("Username or password is wrong!");
     }
 
@@ -637,6 +678,7 @@ public class Main {
       while (choice != 6) {
         switch (choice) {
           case 1:
+            clearConsole();
             System.out.println("Cataloging Comic Book Collection");
             String title2 = "MY BOOK MENU";
             String[] options2 = {
@@ -653,14 +695,17 @@ public class Main {
 
             switch (choice2) {
               case 1:
+                //clearConsole();
                 AddBookMenu(scanner, System.out);
                 break;
 
               case 2:
+                //clearConsole();
                 deleteBookMenu(scanner, System.out);
                 break;
 
               case 3:
+                //clearConsole();
                 updateBookMenu(scanner, System.out);
                 break;
 
@@ -682,6 +727,7 @@ public class Main {
             break;
 
           case 2:
+            clearConsole();
             System.out.println("Wishlist and Trade List Management");
             String title3 = "WISHLIST OR TRADE MENU";
             String[] options3 = {
@@ -695,6 +741,7 @@ public class Main {
 
             switch (choice3) {
               case 1:
+                clearConsole();
                 String title4 = "MY WISHLIST MENU";
                 String[] options4 = {
                   "1. My Wish Book Add",
@@ -710,18 +757,22 @@ public class Main {
 
                 switch (choice4) {
                   case 1:
+                    clearConsole();
                     WishAddBookMenu(scanner, System.out);
                     break;
 
                   case 2:
+                    clearConsole();
                     WishdeleteBookMenu(scanner, System.out);
                     break;
 
                   case 3:
+                    clearConsole();
                     WishlistBookMenu(scanner, System.out);
                     break;
 
                   case 4:
+                    clearConsole();
                     listBookMenu(scanner, System.out);
                     break;
 
@@ -736,6 +787,7 @@ public class Main {
                 break;
 
               case 2:
+                clearConsole();
                 String title5 = "MY TRADE MENU";
                 String[] options5 = {
                   "1. Buy Book",
@@ -749,12 +801,13 @@ public class Main {
 
                 switch(choice5) {
                   case 1:
+                    clearConsole();
                     String title6 = "MY BUY MENU";
                     String[] options6 = {
                       "1. Buy New Book",
                       "2. Trade Book List",
                       "3. Return",
-                      "3. Exit"
+                      "4. Exit"
                     };
                     printMenu(title6, options6);
                     int choice6 = scanner.nextInt();
@@ -762,10 +815,12 @@ public class Main {
 
                     switch(choice6) {
                       case 1:
+                        clearConsole();
                         TradeBuyBookMenu(scanner, System.out);
                         break;
 
                       case 2:
+                        clearConsole();
                         TradeAllListBookMenu(scanner, System.out);
                         break;
 
@@ -795,18 +850,22 @@ public class Main {
 
                     switch(choice7) {
                       case 1:
+                        clearConsole();
                         TradeAddBookMenu(scanner, System.out);
                         break;
 
                       case 2:
+                        clearConsole();
                         TradedeleteBookMenu(scanner, System.out);
                         break;
 
                       case 3:
+                        clearConsole();
                         TradeAllListBookMenu(scanner, System.out);
                         break;
 
                       case 4:
+                        clearConsole();
                         TradeMylistBookMenu(scanner, System.out);
                         break;
 
@@ -836,6 +895,7 @@ public class Main {
             break;
 
           case 3:
+            clearConsole();
             System.out.println("Comic Book Events and Conventions");
             String title8 = "MY EVENT MENU";
             String[] options8 = {
@@ -853,22 +913,27 @@ public class Main {
 
             switch(choice8) {
               case 1:
+                clearConsole();
                 EventAddBookMenu(scanner, System.out);
                 break;
 
               case 2:
+                clearConsole();
                 EventdeleteBookMenu(scanner, System.out);
                 break;
 
               case 3:
+                clearConsole();
                 EventupdateBookMenu(scanner, System.out);
                 break;
 
               case 4:
+                clearConsole();
                 EventlistBookMenu(scanner, System.out);
                 break;
 
               case 5:
+                clearConsole();
                 EventlistAllBookMenu(scanner, System.out);
                 break;
 
@@ -883,6 +948,7 @@ public class Main {
             break;
 
           case 4:
+            clearConsole();
             String title9 = "MY CREDIT SCORE MENU";
             String[] options9 = {
               "1. Buy Credit Score",
@@ -894,6 +960,7 @@ public class Main {
 
             switch(choice9) {
               case 1:
+                clearConsole();
                 CreditBuyScoreMenu(scanner, System.out);
                 break;
 
