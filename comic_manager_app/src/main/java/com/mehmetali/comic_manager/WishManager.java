@@ -102,7 +102,7 @@ public class WishManager {
   /**
    * Lists books in the wish list owned by a specific user.
    *
-   * @param user the username of the user
+   * @param User the username of the user
    * @return the number of books listed
    */
   public int listBooksByUser(String User) {
