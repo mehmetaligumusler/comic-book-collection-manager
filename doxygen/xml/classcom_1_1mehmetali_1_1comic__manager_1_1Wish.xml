@@ -1,0 +1,454 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish" kind="class" language="Java" prot="public">
+    <compoundname>com::mehmetali::comic_manager::Wish</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ae3164494e76f9b6b7b2c542ca9ff739c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.Wish.comicID</definition>
+        <argsstring></argsstring>
+        <name>comicID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The unique ID of the comic book wished for. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="20" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a1e9c5b215399e1e906acf589fbbb9fce" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.Wish.title</definition>
+        <argsstring></argsstring>
+        <name>title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The title of the comic book wished for. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="21" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1adb729c464428051e612b773946646b85" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.Wish.pageNumber</definition>
+        <argsstring></argsstring>
+        <name>pageNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The page number of the comic book wished for. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="22" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1aee5dfe3b6129b02bd7c53efa6ecacc6d" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.Wish.user</definition>
+        <argsstring></argsstring>
+        <name>user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The user who made the wish. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="23" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1af0e13573f7c3d64a38ab59b306e2c480" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.Wish.value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The value of the comic book wished for. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="24" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a0f73f2b591117bb029ff0bab1353d75d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.mehmetali.comic_manager.Wish.Wish</definition>
+        <argsstring>(int comicID, String title, int pageNumber, String user, int value)</argsstring>
+        <name>Wish</name>
+        <param>
+          <type>int</type>
+          <declname>comicID</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pageNumber</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish" kindref="compound">Wish</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comicID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ID of the comic </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the title of the comic </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pageNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the page number of the comic </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user who made the wish </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value of the comic </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="35" column="10" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="35" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a422b4944d82addfaea204bb93a1858ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.Wish.getComicID</definition>
+        <argsstring>()</argsstring>
+        <name>getComicID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the ID of the comic.</para>
+<para><simplesect kind="return"><para>the ID of the comic </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="48" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="48" bodyend="50"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae16ff49bc0e8293cb87dd8b4286d4994" compoundref="WishManager_8java" startline="61" endline="74">com.mehmetali.comic_manager.WishManager.AddBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a95191ea0d61bfee5d2dc2f561fcc0c6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.Wish.setComicID</definition>
+        <argsstring>(int comicID)</argsstring>
+        <name>setComicID</name>
+        <param>
+          <type>int</type>
+          <declname>comicID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the ID of the comic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comicID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ID of the comic to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="57" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="57" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ad5a5770d230ecfcc2fbb0ea5e1e088ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.Wish.getTitle</definition>
+        <argsstring>()</argsstring>
+        <name>getTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the title of the comic.</para>
+<para><simplesect kind="return"><para>the title of the comic </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="66" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="66" bodyend="68"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae16ff49bc0e8293cb87dd8b4286d4994" compoundref="WishManager_8java" startline="61" endline="74">com.mehmetali.comic_manager.WishManager.AddBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1aa816b2b2887f7e1c8dd7888d9356d9b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.Wish.setTitle</definition>
+        <argsstring>(String title)</argsstring>
+        <name>setTitle</name>
+        <param>
+          <type>String</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the title of the comic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the title of the comic to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="75" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ae7be55862c2fdd3905581753193d643f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.Wish.getpageNumber</definition>
+        <argsstring>()</argsstring>
+        <name>getpageNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the page number of the comic.</para>
+<para><simplesect kind="return"><para>the page number of the comic </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="84" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="84" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a8c867e91f60e255f20bd62e428d7b40d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.Wish.setpageNumber</definition>
+        <argsstring>(int pageNumber)</argsstring>
+        <name>setpageNumber</name>
+        <param>
+          <type>int</type>
+          <declname>pageNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the page number of the comic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pageNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the page number of the comic to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="93" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a9727d55ca5a5deb2aa3107f6d7f45cca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.Wish.getuser</definition>
+        <argsstring>()</argsstring>
+        <name>getuser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the user associated with the comic.</para>
+<para><simplesect kind="return"><para>the user associated with the comic </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="102" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ad649de4f9b34bf9165f7a8321db328bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.Wish.setuser</definition>
+        <argsstring>(String user)</argsstring>
+        <name>setuser</name>
+        <param>
+          <type>String</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the user associated with the comic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user associated with the comic to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="111" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1abb77f1f53727d01206f20eee790b9813" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.Wish.getValue</definition>
+        <argsstring>()</argsstring>
+        <name>getValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the value of the comic.</para>
+<para><simplesect kind="return"><para>the value of the comic </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="120" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="120" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a816bf18cad02f1739e59081017a4ea22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.Wish.setValue</definition>
+        <argsstring>(int value)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the value of the comic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value of the comic to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="129" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a82a86d221699264fed2efb7082b5ee6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.Wish.toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a string representation of the comic wish.</para>
+<para><simplesect kind="return"><para>a string representation of the comic wish </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="139" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="139" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Represents a comic wish.</para>
+<para>This class represents a wish for a comic book. It contains information such as comic ID, title, page number, user, and value.</para>
+<para><simplesect kind="author"><para>mehmetali </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.mehmetali.comic_manager.Wish</label>
+        <link refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.mehmetali.comic_manager.Wish</label>
+        <link refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="19" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="19" bodyend="148"/>
+    <listofallmembers>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ae3164494e76f9b6b7b2c542ca9ff739c" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>comicID</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a422b4944d82addfaea204bb93a1858ec" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>getComicID</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ae7be55862c2fdd3905581753193d643f" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>getpageNumber</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ad5a5770d230ecfcc2fbb0ea5e1e088ad" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>getTitle</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a9727d55ca5a5deb2aa3107f6d7f45cca" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>getuser</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1abb77f1f53727d01206f20eee790b9813" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>getValue</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1adb729c464428051e612b773946646b85" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>pageNumber</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a95191ea0d61bfee5d2dc2f561fcc0c6a" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>setComicID</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a8c867e91f60e255f20bd62e428d7b40d" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>setpageNumber</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1aa816b2b2887f7e1c8dd7888d9356d9b7" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>setTitle</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ad649de4f9b34bf9165f7a8321db328bb" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>setuser</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a816bf18cad02f1739e59081017a4ea22" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>setValue</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a1e9c5b215399e1e906acf589fbbb9fce" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>title</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a82a86d221699264fed2efb7082b5ee6e" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>toString</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1aee5dfe3b6129b02bd7c53efa6ecacc6d" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>user</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1af0e13573f7c3d64a38ab59b306e2c480" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>value</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a0f73f2b591117bb029ff0bab1353d75d" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>Wish</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

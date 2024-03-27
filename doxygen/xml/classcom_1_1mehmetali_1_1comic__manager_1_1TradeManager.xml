@@ -1,0 +1,435 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager" kind="class" language="Java" prot="public">
+    <compoundname>com::mehmetali::comic_manager::TradeManager</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a3b63d75c5cc574e13b8e387c1456cc1e" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade" kindref="compound">Trade</ref> &gt;</type>
+        <definition>List&lt;Trade&gt; com.mehmetali.comic_manager.TradeManager.comics</definition>
+        <argsstring></argsstring>
+        <name>comics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The list of trades managed by the <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager" kindref="compound">TradeManager</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="21" column="16" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a7a66e065ef0deaca972bc8b8ccf95979" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.mehmetali.comic_manager.TradeManager.Trade_FILE_PATH</definition>
+        <argsstring></argsstring>
+        <name>Trade_FILE_PATH</name>
+        <initializer>= &quot;trade.dat&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The file path where the trade data is stored. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="22" column="31" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad4eeb8d72befea92faeedb42a009c0a3" prot="private" static="yes" mutable="no">
+        <type>final <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager" kindref="compound">BookManager</ref></type>
+        <definition>final BookManager com.mehmetali.comic_manager.TradeManager.comicmanager</definition>
+        <argsstring></argsstring>
+        <name>comicmanager</name>
+        <initializer>= new <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager" kindref="compound">BookManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The instance of <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager" kindref="compound">BookManager</ref> for managing comic books. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="23" column="36" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a9c52f43ca3be97fc1a2ee3d42ef25ca9" prot="private" static="yes" mutable="no">
+        <type>final <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager" kindref="compound">UserManager</ref></type>
+        <definition>final UserManager com.mehmetali.comic_manager.TradeManager.usermanager</definition>
+        <argsstring></argsstring>
+        <name>usermanager</name>
+        <initializer>= new <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager" kindref="compound">UserManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The instance of <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager" kindref="compound">UserManager</ref> for managing users. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="24" column="36" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a803052754f7b007ebff013a68c595e1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.mehmetali.comic_manager.TradeManager.TradeManager</definition>
+        <argsstring>()</argsstring>
+        <name>TradeManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager" kindref="compound">TradeManager</ref> object. Initializes the list of trades by reading from file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="32" column="10" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a48a40da38f8ec52bae189d715d17dd20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.TradeManager.AddTrade</definition>
+        <argsstring>(Trade comic)</argsstring>
+        <name>AddTrade</name>
+        <param>
+          <type><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade" kindref="compound">Trade</ref></type>
+          <declname>comic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a comic book to the trade list. If the book ID is not available or the book title is already used, it returns null.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The comic book to add to the trade list. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The title of the comic book if added successfully, null otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="43" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="43" bodyend="62"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1afda42e9be0474bb4040fea48be0af328" compoundref="Trade_8java" startline="65" endline="67">com.mehmetali.comic_manager.Trade.getTitle</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad259624e10c4a3de9a1dcf8eb5680888" compoundref="TradeManager_8java" startline="192" endline="200">com.mehmetali.comic_manager.TradeManager.isTradeNameAvailable</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afb026813deab3ac6eea0237d98b95e3e" compoundref="Main_8java" startline="413" endline="430">com.mehmetali.comic_manager.Main.TradeAddBookMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad32e44a3007bcc5635698bc0c702a749" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.TradeManager.listAllTradeList</definition>
+        <argsstring>()</argsstring>
+        <name>listAllTradeList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lists all comic books available for trade.</para>
+<para><simplesect kind="return"><para>The number of comic books listed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="69" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="69" bodyend="89"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a56e3d96192592fecbf74d82434c7aaa7" compoundref="Main_8java" startline="471" endline="475">com.mehmetali.comic_manager.Main.TradeAllListBookMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a695c52cf05a3e4104b95bd59dabd4733" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.TradeManager.listMyTradeList</definition>
+        <argsstring>(String condition)</argsstring>
+        <name>listMyTradeList</name>
+        <param>
+          <type>String</type>
+          <declname>condition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lists the comic books available for trade by a specific condition (e.g., user).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>condition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition to filter the comic books (e.g., user). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of comic books listed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="97" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="97" bodyend="119"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad446db8ec303baaf6e35a7f3900e460d" compoundref="Main_8java" startline="440" endline="444">com.mehmetali.comic_manager.Main.TradeMylistBookMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ae1566993ba228ecf9ec28929484f3587" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.TradeManager.deleteTradeByID</definition>
+        <argsstring>(int TradeID)</argsstring>
+        <name>deleteTradeByID</name>
+        <param>
+          <type>int</type>
+          <declname>TradeID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes a comic book from the trade list by its ID. Moves the book back to the user&apos;s book list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>TradeID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the comic book to delete from the trade list. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successfully deleted, -1 otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="128" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="128" bodyend="149"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a53c84067810419af16b5efde4e9678e7" compoundref="BookManager_8java" startline="40" endline="49">com.mehmetali.comic_manager.BookManager.AddBook</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a293891bfff342d71ff65bfc9dcd66e38" compoundref="Main_8java" startline="454" endline="460">com.mehmetali.comic_manager.Main.TradedeleteBookMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a1532a842b55a0bea297ae26f0f2761b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.TradeManager.BuyTradeByID</definition>
+        <argsstring>(int TradeID)</argsstring>
+        <name>BuyTradeByID</name>
+        <param>
+          <type>int</type>
+          <declname>TradeID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Buys a comic book from the trade list by its ID. Transfers the book ownership and credits between users.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>TradeID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the comic book to buy from the trade list. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successfully bought, -1 otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="158" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="158" bodyend="184"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a53c84067810419af16b5efde4e9678e7" compoundref="BookManager_8java" startline="40" endline="49">com.mehmetali.comic_manager.BookManager.AddBook</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1aa627b545ada6c4ef7275780b44e34769" compoundref="UserManager_8java" startline="138" endline="158">com.mehmetali.comic_manager.UserManager.creditbuyscore</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ae89c4bc39cb10ab21674fd2d23e2f271" compoundref="UserManager_8java" startline="167" endline="187">com.mehmetali.comic_manager.UserManager.creditSellscore</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" compoundref="Main_8java" startline="26">com.mehmetali.comic_manager.Main.LoginName</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1aab4fead2a8abd5ef36f8da3602bacb69" compoundref="Main_8java" startline="485" endline="498">com.mehmetali.comic_manager.Main.TradeBuyBookMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad259624e10c4a3de9a1dcf8eb5680888" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean com.mehmetali.comic_manager.TradeManager.isTradeNameAvailable</definition>
+        <argsstring>(String title)</argsstring>
+        <name>isTradeNameAvailable</name>
+        <param>
+          <type>String</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if a trade name is available (not already used).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title to check availability for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the title is available, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="192" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="192" bodyend="200"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a48a40da38f8ec52bae189d715d17dd20" compoundref="TradeManager_8java" startline="43" endline="62">com.mehmetali.comic_manager.TradeManager.AddTrade</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a05f687ec8ea2bfd5a2e6eea323540da1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.TradeManager.getBookValueByID</definition>
+        <argsstring>(int bookID)</argsstring>
+        <name>getBookValueByID</name>
+        <param>
+          <type>int</type>
+          <declname>bookID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the value of the book with the specified ID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bookID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the book. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value of the book with the specified ID, or 0 if the book is not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="208" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="208" bodyend="216"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1aab4fead2a8abd5ef36f8da3602bacb69" compoundref="Main_8java" startline="485" endline="498">com.mehmetali.comic_manager.Main.TradeBuyBookMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a65aa70327fab9c08a63cfa32ca821a28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean com.mehmetali.comic_manager.TradeManager.isTradeIDAvailable</definition>
+        <argsstring>(int ID)</argsstring>
+        <name>isTradeIDAvailable</name>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if a trade ID is available (not already used).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID to check availability for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the ID is available, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="225" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="225" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1aaa9d5b3645cd99ccb99624cab7175811" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.TradeManager.getTradeTitleByID</definition>
+        <argsstring>(int TradeID)</argsstring>
+        <name>getTradeTitleByID</name>
+        <param>
+          <type>int</type>
+          <declname>TradeID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the title of a comic book by its ID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>TradeID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the comic book. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The title of the comic book if found, null otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="241" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="241" bodyend="249"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a492ea33abee44d7a8f6e8275817400d0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade" kindref="compound">Trade</ref> &gt;</type>
+        <definition>List&lt;Trade&gt; com.mehmetali.comic_manager.TradeManager.readUsersFromFile</definition>
+        <argsstring>()</argsstring>
+        <name>readUsersFromFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads the list of trades from the file specified by the Trade_FILE_PATH. If the file doesn&apos;t exist, it creates a new one and returns an empty list.</para>
+<para><simplesect kind="return"><para>The list of trades read from the file or an empty list if the file doesn&apos;t exist. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="257" column="16" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="257" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad6ccac05a805d49408e704cdd0587cd0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.TradeManager.saveUsersToFile</definition>
+        <argsstring>(List&lt; Trade &gt; comics2)</argsstring>
+        <name>saveUsersToFile</name>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade" kindref="compound">Trade</ref> &gt;</type>
+          <declname>comics2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves the list of trades to the file specified by the Trade_FILE_PATH.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comics2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of trades to be saved to the file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the trades are successfully saved, -1 otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="288" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="288" bodyend="298"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager" kindref="compound">TradeManager</ref> class manages the trading of comic books. It handles adding, listing, deleting, and buying/selling comic books.</para>
+<para>This class manages the list of trades and provides methods for managing trade operations.</para>
+<para><simplesect kind="author"><para>mehmetali </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="20" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="20" bodyend="301"/>
+    <listofallmembers>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a48a40da38f8ec52bae189d715d17dd20" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>AddTrade</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a1532a842b55a0bea297ae26f0f2761b4" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>BuyTradeByID</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad4eeb8d72befea92faeedb42a009c0a3" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>comicmanager</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a3b63d75c5cc574e13b8e387c1456cc1e" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>comics</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ae1566993ba228ecf9ec28929484f3587" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>deleteTradeByID</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a05f687ec8ea2bfd5a2e6eea323540da1" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>getBookValueByID</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1aaa9d5b3645cd99ccb99624cab7175811" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>getTradeTitleByID</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a65aa70327fab9c08a63cfa32ca821a28" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>isTradeIDAvailable</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad259624e10c4a3de9a1dcf8eb5680888" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>isTradeNameAvailable</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad32e44a3007bcc5635698bc0c702a749" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>listAllTradeList</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a695c52cf05a3e4104b95bd59dabd4733" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>listMyTradeList</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a492ea33abee44d7a8f6e8275817400d0" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>readUsersFromFile</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad6ccac05a805d49408e704cdd0587cd0" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>saveUsersToFile</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a7a66e065ef0deaca972bc8b8ccf95979" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>Trade_FILE_PATH</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a803052754f7b007ebff013a68c595e1f" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>TradeManager</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a9c52f43ca3be97fc1a2ee3d42ef25ca9" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>usermanager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

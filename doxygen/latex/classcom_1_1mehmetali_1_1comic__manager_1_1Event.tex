@@ -1,0 +1,307 @@
+\hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Event}{}\doxysection{com.\+mehmetali.\+comic\+\_\+manager.\+Event Class Reference}
+\label{classcom_1_1mehmetali_1_1comic__manager_1_1Event}\index{com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}}
+Inheritance diagram for com.\+mehmetali.\+comic\+\_\+manager.\+Event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1mehmetali_1_1comic__manager_1_1Event}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a567bcffbf964b389f89bd2dac7d46325}{Event}} (int event\+ID, String title, String content, String user)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event_abc9269e1f971e6476f02577367c1a1c4}{getevent\+ID}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a9da3e798969472fa80d753707e6e92fa}{setevent\+ID}} (int event\+ID)
+\item 
+String \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a38449eab71fc7d11c4d3af71ef6fbefe}{get\+Title}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a4ced4094ac10cb104d8b1d896f76bc4f}{set\+Title}} (String title)
+\item 
+String \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a7b10e719018ca97a80ac4e8333889a85}{get\+Content}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a1fd308125c328e278d396b2c695925ce}{set\+Content}} (String content)
+\item 
+String \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event_aec96153be811e05957be484bab08c33a}{get\+User}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event_aada444938e70d3a059e92095b304ca34}{set\+User}} (String user)
+\item 
+String \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a3fd2a56b713d894ba867d9558721179e}{to\+String}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event}{Event}} class represents an event in the comic manager application. It contains information such as event ID, title, content, and user.
+
+This class implements the Serializable interface to support object serialization.
+
+\begin{DoxyAuthor}{Author}
+mehmetali 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 19 of file Event.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a567bcffbf964b389f89bd2dac7d46325}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a567bcffbf964b389f89bd2dac7d46325}} 
+\index{com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}!Event@{Event}}
+\index{Event@{Event}!com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}}
+\doxysubsubsection{\texorpdfstring{Event()}{Event()}}
+{\footnotesize\ttfamily com.\+mehmetali.\+comic\+\_\+manager.\+Event.\+Event (\begin{DoxyParamCaption}\item[{int}]{event\+ID,  }\item[{String}]{title,  }\item[{String}]{content,  }\item[{String}]{user }\end{DoxyParamCaption})}
+
+Constructs an \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event}{Event}} object with the specified parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+ID} & The unique identifier of the event. \\
+\hline
+{\em title} & The title of the event. \\
+\hline
+{\em content} & The content of the event. \\
+\hline
+{\em user} & The user associated with the event. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file Event.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                                                        \{}
+\DoxyCodeLine{35     this.eventID = eventID;}
+\DoxyCodeLine{36     this.title = title;}
+\DoxyCodeLine{37     this.content = content;}
+\DoxyCodeLine{38     this.user = user;}
+\DoxyCodeLine{39   \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a7b10e719018ca97a80ac4e8333889a85}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a7b10e719018ca97a80ac4e8333889a85}} 
+\index{com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}!getContent@{getContent}}
+\index{getContent@{getContent}!com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}}
+\doxysubsubsection{\texorpdfstring{getContent()}{getContent()}}
+{\footnotesize\ttfamily String com.\+mehmetali.\+comic\+\_\+manager.\+Event.\+get\+Content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the content of the event.
+
+\begin{DoxyReturn}{Returns}
+the content of the event 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file Event.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82                              \{}
+\DoxyCodeLine{83     \textcolor{keywordflow}{return} content;}
+\DoxyCodeLine{84   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Event_abc9269e1f971e6476f02577367c1a1c4}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Event_abc9269e1f971e6476f02577367c1a1c4}} 
+\index{com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}!geteventID@{geteventID}}
+\index{geteventID@{geteventID}!com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}}
+\doxysubsubsection{\texorpdfstring{geteventID()}{geteventID()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Event.\+getevent\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the ID of the event.
+
+\begin{DoxyReturn}{Returns}
+the ID of the event 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Event.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                           \{}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} eventID;}
+\DoxyCodeLine{48   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a38449eab71fc7d11c4d3af71ef6fbefe}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a38449eab71fc7d11c4d3af71ef6fbefe}} 
+\index{com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily String com.\+mehmetali.\+comic\+\_\+manager.\+Event.\+get\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the title of the event.
+
+\begin{DoxyReturn}{Returns}
+the title of the event 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file Event.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                            \{}
+\DoxyCodeLine{65     \textcolor{keywordflow}{return} title;}
+\DoxyCodeLine{66   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Event\+Manager.\+Add\+Event().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Event_aec96153be811e05957be484bab08c33a}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Event_aec96153be811e05957be484bab08c33a}} 
+\index{com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}!getUser@{getUser}}
+\index{getUser@{getUser}!com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}}
+\doxysubsubsection{\texorpdfstring{getUser()}{getUser()}}
+{\footnotesize\ttfamily String com.\+mehmetali.\+comic\+\_\+manager.\+Event.\+get\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the user associated with the event.
+
+\begin{DoxyReturn}{Returns}
+the user associated with the event 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file Event.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{100                           \{}
+\DoxyCodeLine{101     \textcolor{keywordflow}{return} user;}
+\DoxyCodeLine{102   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a1fd308125c328e278d396b2c695925ce}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a1fd308125c328e278d396b2c695925ce}} 
+\index{com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}!setContent@{setContent}}
+\index{setContent@{setContent}!com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}}
+\doxysubsubsection{\texorpdfstring{setContent()}{setContent()}}
+{\footnotesize\ttfamily void com.\+mehmetali.\+comic\+\_\+manager.\+Event.\+set\+Content (\begin{DoxyParamCaption}\item[{String}]{content }\end{DoxyParamCaption})}
+
+Sets the content of the event.
+
+
+\begin{DoxyParams}{Parameters}
+{\em content} & the content of the event to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 91 of file Event.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91                                          \{}
+\DoxyCodeLine{92     this.content = content;}
+\DoxyCodeLine{93   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a9da3e798969472fa80d753707e6e92fa}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a9da3e798969472fa80d753707e6e92fa}} 
+\index{com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}!seteventID@{seteventID}}
+\index{seteventID@{seteventID}!com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}}
+\doxysubsubsection{\texorpdfstring{seteventID()}{seteventID()}}
+{\footnotesize\ttfamily void com.\+mehmetali.\+comic\+\_\+manager.\+Event.\+setevent\+ID (\begin{DoxyParamCaption}\item[{int}]{event\+ID }\end{DoxyParamCaption})}
+
+Sets the ID of the event.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+ID} & the ID of the event to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file Event.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55                                       \{}
+\DoxyCodeLine{56     this.eventID = eventID;}
+\DoxyCodeLine{57   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a4ced4094ac10cb104d8b1d896f76bc4f}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a4ced4094ac10cb104d8b1d896f76bc4f}} 
+\index{com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily void com.\+mehmetali.\+comic\+\_\+manager.\+Event.\+set\+Title (\begin{DoxyParamCaption}\item[{String}]{title }\end{DoxyParamCaption})}
+
+Sets the title of the event.
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & the title of the event to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 73 of file Event.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                                      \{}
+\DoxyCodeLine{74     this.title = title;}
+\DoxyCodeLine{75   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Event_aada444938e70d3a059e92095b304ca34}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Event_aada444938e70d3a059e92095b304ca34}} 
+\index{com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}!setUser@{setUser}}
+\index{setUser@{setUser}!com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}}
+\doxysubsubsection{\texorpdfstring{setUser()}{setUser()}}
+{\footnotesize\ttfamily void com.\+mehmetali.\+comic\+\_\+manager.\+Event.\+set\+User (\begin{DoxyParamCaption}\item[{String}]{user }\end{DoxyParamCaption})}
+
+Sets the user associated with the event.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & the user associated with the event to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 109 of file Event.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109                                    \{}
+\DoxyCodeLine{110       this.user = user;}
+\DoxyCodeLine{111   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a3fd2a56b713d894ba867d9558721179e}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Event_a3fd2a56b713d894ba867d9558721179e}} 
+\index{com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}!toString@{toString}}
+\index{toString@{toString}!com.mehmetali.comic\_manager.Event@{com.mehmetali.comic\_manager.Event}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily String com.\+mehmetali.\+comic\+\_\+manager.\+Event.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a string representation of the \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event}{Event}} object.
+
+\begin{DoxyReturn}{Returns}
+A string containing the event details. 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file Event.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{121                            \{}
+\DoxyCodeLine{122     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}event\{"{}} +}
+\DoxyCodeLine{123            \textcolor{stringliteral}{"{}eventID="{}} + eventID +}
+\DoxyCodeLine{124            \textcolor{stringliteral}{"{}, title='"{}} + title + \textcolor{charliteral}{'\(\backslash\)''} +}
+\DoxyCodeLine{125            \textcolor{stringliteral}{"{}, content="{}} + content +}
+\DoxyCodeLine{126            \textcolor{stringliteral}{"{}, user="{}} + user +}
+\DoxyCodeLine{127            \textcolor{charliteral}{'\}'};}
+\DoxyCodeLine{128   \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+comic\+\_\+manager\+\_\+app/src/main/java/com/mehmetali/comic\+\_\+manager/\mbox{\hyperlink{Event_8java}{Event.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager" kind="class" language="Java" prot="public">
+    <compoundname>com::mehmetali::comic_manager::UserManager</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a3fc0ecf6618d3fc42a5bab229240de28" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1User" kindref="compound">User</ref> &gt;</type>
+        <definition>List&lt;User&gt; com.mehmetali.comic_manager.UserManager.users</definition>
+        <argsstring></argsstring>
+        <name>users</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The list of users managed by the <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager" kindref="compound">UserManager</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" line="21" column="16" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1abd2be23e2a8db1a966fc97bec39797ad" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.mehmetali.comic_manager.UserManager.USER_FILE_PATH</definition>
+        <argsstring></argsstring>
+        <name>USER_FILE_PATH</name>
+        <initializer>= &quot;users.dat&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The file path where user data is stored. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" line="22" column="31" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a91e4b998e8179f6aaa73d66ada128b97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.mehmetali.comic_manager.UserManager.UserManager</definition>
+        <argsstring>()</argsstring>
+        <name>UserManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager" kindref="compound">UserManager</ref> and reads users from the file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" line="29" column="10" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ac7b628a800efefa0a9585181d1e49e5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.UserManager.registerUser</definition>
+        <argsstring>(User user)</argsstring>
+        <name>registerUser</name>
+        <param>
+          <type><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1User" kindref="compound">User</ref></type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers a new user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user to register </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the username of the registered user, or null if registration fails </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" line="39" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" bodystart="39" bodyend="49"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a4fc86647d5efe0bbfae2821208ad58a1" compoundref="User_8java" startline="76" endline="78">com.mehmetali.comic_manager.User&lt; Comic &gt;.getUsername</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a5c046bddd600f8fcc17b2e13ada2681e" compoundref="UserManager_8java" startline="57" endline="65">com.mehmetali.comic_manager.UserManager.isUsernameAvailable</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a8f1c665d17755499530532695097e30a" compoundref="Main_8java" startline="215" endline="225">com.mehmetali.comic_manager.Main.registerMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a5c046bddd600f8fcc17b2e13ada2681e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean com.mehmetali.comic_manager.UserManager.isUsernameAvailable</definition>
+        <argsstring>(String username)</argsstring>
+        <name>isUsernameAvailable</name>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if a username is available.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the username to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the username is available, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" line="57" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" bodystart="57" bodyend="65"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ac7b628a800efefa0a9585181d1e49e5f" compoundref="UserManager_8java" startline="39" endline="49">com.mehmetali.comic_manager.UserManager.registerUser</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a8f560693dadf7c7776e5ca54f8402c3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1User" kindref="compound">User</ref></type>
+        <definition>User com.mehmetali.comic_manager.UserManager.login</definition>
+        <argsstring>(String username, String password)</argsstring>
+        <name>login</name>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Logs in a user with the given username and password.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the username of the user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the password of the user </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the user object if login is successful, null otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" line="121" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" bodystart="121" bodyend="129"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9aed727b7977c1aa386dd0c2142671a1" compoundref="Main_8java" startline="632" endline="650">com.mehmetali.comic_manager.Main.loginMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1aa627b545ada6c4ef7275780b44e34769" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.UserManager.creditbuyscore</definition>
+        <argsstring>(String username, int credit)</argsstring>
+        <name>creditbuyscore</name>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>credit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increases the wallet balance of a user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the username of the user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>credit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the amount of credit to add to the wallet </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new wallet balance of the user, or -1 if the user is not found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" line="138" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" bodystart="138" bodyend="158"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ad1e5700b76c5faba76abaf21fafcdbe8" compoundref="User_8java" startline="58" endline="60">com.mehmetali.comic_manager.User&lt; Comic &gt;.getWallet</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1af8d572dee3c8b46bb786deec41a5e91b" compoundref="User_8java" startline="67" endline="69">com.mehmetali.comic_manager.User&lt; Comic &gt;.setWallet</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a1532a842b55a0bea297ae26f0f2761b4" compoundref="TradeManager_8java" startline="158" endline="184">com.mehmetali.comic_manager.TradeManager.BuyTradeByID</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a814232cee5d0da73e02183991f3e9ccc" compoundref="Main_8java" startline="508" endline="515">com.mehmetali.comic_manager.Main.CreditBuyScoreMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ae89c4bc39cb10ab21674fd2d23e2f271" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.UserManager.creditSellscore</definition>
+        <argsstring>(String username, int credit)</argsstring>
+        <name>creditSellscore</name>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>credit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Decreases the wallet balance of a user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the username of the user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>credit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the amount of credit to deduct from the wallet </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new wallet balance of the user, or -1 if the user is not found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" line="167" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" bodystart="167" bodyend="187"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ad1e5700b76c5faba76abaf21fafcdbe8" compoundref="User_8java" startline="58" endline="60">com.mehmetali.comic_manager.User&lt; Comic &gt;.getWallet</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1af8d572dee3c8b46bb786deec41a5e91b" compoundref="User_8java" startline="67" endline="69">com.mehmetali.comic_manager.User&lt; Comic &gt;.setWallet</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a1532a842b55a0bea297ae26f0f2761b4" compoundref="TradeManager_8java" startline="158" endline="184">com.mehmetali.comic_manager.TradeManager.BuyTradeByID</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ade3d8bd9a78ed865a2c2855b97b9f61e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.UserManager.getUserWallet</definition>
+        <argsstring>(String username)</argsstring>
+        <name>getUserWallet</name>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the wallet balance of a user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the username of the user </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the wallet balance of the user, or -1 if the user is not found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" line="194" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" bodystart="194" bodyend="202"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a332e556af0c95c69fd5cd4c7418bf026" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1User" kindref="compound">User</ref> &gt;</type>
+        <definition>List&lt;User&gt; com.mehmetali.comic_manager.UserManager.readUsersFromFile</definition>
+        <argsstring>()</argsstring>
+        <name>readUsersFromFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads users from the file.</para>
+<para><simplesect kind="return"><para>the list of users read from the file, or an empty list if the file doesn&apos;t exist </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" line="72" column="16" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" bodystart="72" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1acdb61b0d0706362d1d341b81cd9b1035" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.UserManager.saveUsersToFile</definition>
+        <argsstring>(List&lt; User &gt; userList)</argsstring>
+        <name>saveUsersToFile</name>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1User" kindref="compound">User</ref> &gt;</type>
+          <declname>userList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves users to the file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>userList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of users to save </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if saving is successful, -1 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" line="103" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" bodystart="103" bodyend="112"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Manages user operations such as registration, login, and credit manipulation.</para>
+<para>This class provides functionalities to manage users including registration, login, and manipulation of user credits.</para>
+<para><simplesect kind="author"><para>mehmetali </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" line="20" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/UserManager.java" bodystart="20" bodyend="204"/>
+    <listofallmembers>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1aa627b545ada6c4ef7275780b44e34769" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::UserManager</scope><name>creditbuyscore</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ae89c4bc39cb10ab21674fd2d23e2f271" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::UserManager</scope><name>creditSellscore</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ade3d8bd9a78ed865a2c2855b97b9f61e" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::UserManager</scope><name>getUserWallet</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a5c046bddd600f8fcc17b2e13ada2681e" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::UserManager</scope><name>isUsernameAvailable</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a8f560693dadf7c7776e5ca54f8402c3b" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::UserManager</scope><name>login</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a332e556af0c95c69fd5cd4c7418bf026" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::UserManager</scope><name>readUsersFromFile</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ac7b628a800efefa0a9585181d1e49e5f" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::UserManager</scope><name>registerUser</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1acdb61b0d0706362d1d341b81cd9b1035" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::UserManager</scope><name>saveUsersToFile</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1abd2be23e2a8db1a966fc97bec39797ad" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::UserManager</scope><name>USER_FILE_PATH</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a91e4b998e8179f6aaa73d66ada128b97" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::UserManager</scope><name>UserManager</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a3fc0ecf6618d3fc42a5bab229240de28" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::UserManager</scope><name>users</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

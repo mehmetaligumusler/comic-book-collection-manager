@@ -1,0 +1,12 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+comic_manager_app,com.mehmetali.comic_manager,Main,54,1162,12,60,15,305,14,72,2,32
+comic_manager_app,com.mehmetali.comic_manager,UserManager,40,241,1,31,8,66,1,24,0,9
+comic_manager_app,com.mehmetali.comic_manager,User,0,141,0,0,0,39,0,20,0,20
+comic_manager_app,com.mehmetali.comic_manager,EventManager,13,393,6,34,6,88,6,25,0,11
+comic_manager_app,com.mehmetali.comic_manager,TradeManager,58,489,10,34,15,102,9,26,1,12
+comic_manager_app,com.mehmetali.comic_manager,Event,0,72,0,0,0,19,0,10,0,10
+comic_manager_app,com.mehmetali.comic_manager,WishManager,52,376,4,22,10,74,4,18,0,9
+comic_manager_app,com.mehmetali.comic_manager,Wish,36,53,0,0,1,22,1,11,1,11
+comic_manager_app,com.mehmetali.comic_manager,BookManager,59,495,8,40,14,103,8,30,0,14
+comic_manager_app,com.mehmetali.comic_manager,Trade,36,53,0,0,1,22,1,11,1,11
+comic_manager_app,com.mehmetali.comic_manager,Book,36,53,0,0,1,22,1,11,1,11

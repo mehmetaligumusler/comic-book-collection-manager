@@ -1,0 +1,1792 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1mehmetali_1_1comic__manager_1_1Main" kind="class" language="Java" prot="public">
+    <compoundname>com::mehmetali::comic_manager::Main</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" prot="public" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.Main.LoginName</definition>
+        <argsstring></argsstring>
+        <name>LoginName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The username of the logged-in user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="26" column="22" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9819fa2e25b6147b679f52508ef935ac" compoundref="Main_8java" startline="236" endline="256">com.mehmetali.comic_manager.Main.AddBookMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a1532a842b55a0bea297ae26f0f2761b4" compoundref="TradeManager_8java" startline="158" endline="184">com.mehmetali.comic_manager.TradeManager.BuyTradeByID</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a814232cee5d0da73e02183991f3e9ccc" compoundref="Main_8java" startline="508" endline="515">com.mehmetali.comic_manager.Main.CreditBuyScoreMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a5077840ac159d4f6c8c03325dbd8c86c" compoundref="Main_8java" startline="527" endline="546">com.mehmetali.comic_manager.Main.EventAddBookMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a616ef6317be731a8fcadb7443decaccd" compoundref="Main_8java" startline="556" endline="560">com.mehmetali.comic_manager.Main.EventlistBookMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ab57f3abdd3c1c08ce5341985b192ac6d" compoundref="Main_8java" startline="961" endline="963">com.mehmetali.comic_manager.Main.getLoginName</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a60456e5cf06b028a51fa3bfd1efe5595" compoundref="Main_8java" startline="266" endline="270">com.mehmetali.comic_manager.Main.listBookMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a78bb166b97a1ff138aff53d10be2b891" compoundref="Main_8java" startline="970" endline="972">com.mehmetali.comic_manager.Main.setLoginName</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afb026813deab3ac6eea0237d98b95e3e" compoundref="Main_8java" startline="413" endline="430">com.mehmetali.comic_manager.Main.TradeAddBookMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad446db8ec303baaf6e35a7f3900e460d" compoundref="Main_8java" startline="440" endline="444">com.mehmetali.comic_manager.Main.TradeMylistBookMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1acce50654a239e2528271c7683221a389" compoundref="Main_8java" startline="346" endline="368">com.mehmetali.comic_manager.Main.WishAddBookMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9d1930b53d5fb23b30186978f27db3fe" compoundref="Main_8java" startline="379" endline="383">com.mehmetali.comic_manager.Main.WishlistBookMenu</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a7dd20b8059d23bc1ca4b78eadd0d8f3a" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.Main.LoginWallet</definition>
+        <argsstring></argsstring>
+        <name>LoginWallet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The wallet balance of the logged-in user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="31" column="19" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1abac3cc99dc13e83cd6a864d793e7d9fb" compoundref="Main_8java" startline="979" endline="981">com.mehmetali.comic_manager.Main.getWallet</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad6f1316e8a2df021d2642d1481c31059" compoundref="Main_8java" startline="988" endline="990">com.mehmetali.comic_manager.Main.setWallet</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1aab4fead2a8abd5ef36f8da3602bacb69" compoundref="Main_8java" startline="485" endline="498">com.mehmetali.comic_manager.Main.TradeBuyBookMenu</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ae2508e0386aeaf94ad28320fcce5dddf" prot="public" static="yes" mutable="no">
+        <type>boolean</type>
+        <definition>boolean com.mehmetali.comic_manager.Main.control</definition>
+        <argsstring></argsstring>
+        <name>control</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Boolean variable indicating control status. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="52" column="23" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" compoundref="Main_8java" startline="158" endline="203">com.mehmetali.comic_manager.Main.MainApp</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a28e08105ddea881917ed7501a95c68d1" prot="private" static="yes" mutable="no">
+        <type>final Scanner</type>
+        <definition>final Scanner com.mehmetali.comic_manager.Main.scanner</definition>
+        <argsstring></argsstring>
+        <name>scanner</name>
+        <initializer>= new Scanner(System.in)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The scanner object used for user input. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="34" column="30" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a6ff2597f577405395b5949d4ff80407b" prot="private" static="yes" mutable="no">
+        <type>final <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager" kindref="compound">UserManager</ref></type>
+        <definition>final UserManager com.mehmetali.comic_manager.Main.userManager</definition>
+        <argsstring></argsstring>
+        <name>userManager</name>
+        <initializer>= new <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager" kindref="compound">UserManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The user manager instance for managing user-related operations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="37" column="34" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a1163c36d2f9263e0dcccac445777a3d5" prot="private" static="yes" mutable="no">
+        <type>final <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager" kindref="compound">BookManager</ref></type>
+        <definition>final BookManager com.mehmetali.comic_manager.Main.comicmanager</definition>
+        <argsstring></argsstring>
+        <name>comicmanager</name>
+        <initializer>= new <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager" kindref="compound">BookManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The comic manager instance for managing comic book-related operations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="40" column="34" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a91c5229436c07badacf8ea49198dd885" prot="private" static="yes" mutable="no">
+        <type>final <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager" kindref="compound">WishManager</ref></type>
+        <definition>final WishManager com.mehmetali.comic_manager.Main.wishmanager</definition>
+        <argsstring></argsstring>
+        <name>wishmanager</name>
+        <initializer>= new <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager" kindref="compound">WishManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The wish manager instance for managing wish-related operations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="43" column="34" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad480eb3cb344d784ddb2756a13d62023" prot="private" static="yes" mutable="no">
+        <type>final <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager" kindref="compound">TradeManager</ref></type>
+        <definition>final TradeManager com.mehmetali.comic_manager.Main.trademanager</definition>
+        <argsstring></argsstring>
+        <name>trademanager</name>
+        <initializer>= new <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager" kindref="compound">TradeManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The trade manager instance for managing trade-related operations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="46" column="35" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad28ab82cca1e24b5b1231e11b3f82925" prot="private" static="yes" mutable="no">
+        <type>final <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager" kindref="compound">EventManager</ref></type>
+        <definition>final EventManager com.mehmetali.comic_manager.Main.eventmanager</definition>
+        <argsstring></argsstring>
+        <name>eventmanager</name>
+        <initializer>= new <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager" kindref="compound">EventManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The event manager instance for managing event-related operations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="49" column="35" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a7dab6da432a0efd93c902e990195935f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.mehmetali.comic_manager.Main.printMenu</definition>
+        <argsstring>(String title, String[] options)</argsstring>
+        <name>printMenu</name>
+        <param>
+          <type>String</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>String[]</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints the menu with the specified title and options.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title of the menu. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of strings representing the menu options. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="64" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="64" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad7e2f4823207e0250a69bf65c9a441a2" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String com.mehmetali.comic_manager.Main.rightPad</definition>
+        <argsstring>(String text, int length)</argsstring>
+        <name>rightPad</name>
+        <param>
+          <type>String</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pads the given text on the right side with spaces to make its length equal to the specified length.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to pad. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired length of the padded text. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The padded text. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="93" column="23" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a899bff22fe8e82939a8d6a11910f5ddf" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String com.mehmetali.comic_manager.Main.centerText</definition>
+        <argsstring>(String text, int length)</argsstring>
+        <name>centerText</name>
+        <param>
+          <type>String</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Centers the given text within a string of the specified length by padding it with spaces on both sides.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to center. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired length of the string containing the centered text. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string containing the centered text. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="106" column="25" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="106" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0755a9c2beb9098786f1365c146b799f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.mehmetali.comic_manager.Main.clearConsole</definition>
+        <argsstring>()</argsstring>
+        <name>clearConsole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the console screen. </para>
+<para>On Windows, it uses the &quot;cls&quot; command through the command prompt. On Unix/Linux/Mac systems, it clears the console screen by printing specific escape characters. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="121" column="24" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="121" bodyend="136"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a89b228946b71e33274679cb13530bbdd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.mehmetali.comic_manager.Main.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The entry point of the application.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The command line arguments. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If an I/O error occurs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="144" column="22" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="144" bodyend="147"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" compoundref="Main_8java" startline="158" endline="203">com.mehmetali.comic_manager.Main.MainApp</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.MainApp</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>MainApp</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Runs the main application loop.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scanner object for input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream for printing. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An integer indicating the success status of the application. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If an I/O error occurs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="158" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="158" bodyend="203"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ae2508e0386aeaf94ad28320fcce5dddf" compoundref="Main_8java" startline="52">com.mehmetali.comic_manager.Main.control</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a4fc86647d5efe0bbfae2821208ad58a1" compoundref="User_8java" startline="76" endline="78">com.mehmetali.comic_manager.User&lt; Comic &gt;.getUsername</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ad1e5700b76c5faba76abaf21fafcdbe8" compoundref="User_8java" startline="58" endline="60">com.mehmetali.comic_manager.User&lt; Comic &gt;.getWallet</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9aed727b7977c1aa386dd0c2142671a1" compoundref="Main_8java" startline="632" endline="650">com.mehmetali.comic_manager.Main.loginMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a8f1c665d17755499530532695097e30a" compoundref="Main_8java" startline="215" endline="225">com.mehmetali.comic_manager.Main.registerMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a78bb166b97a1ff138aff53d10be2b891" compoundref="Main_8java" startline="970" endline="972">com.mehmetali.comic_manager.Main.setLoginName</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad6f1316e8a2df021d2642d1481c31059" compoundref="Main_8java" startline="988" endline="990">com.mehmetali.comic_manager.Main.setWallet</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a89b228946b71e33274679cb13530bbdd" compoundref="Main_8java" startline="144" endline="147">com.mehmetali.comic_manager.Main.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a8f1c665d17755499530532695097e30a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.registerMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>registerMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers a new user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scanner object for input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream for printing. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An integer indicating the success status of the registration process. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If an I/O error occurs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="215" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="215" bodyend="225"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ac7b628a800efefa0a9585181d1e49e5f" compoundref="UserManager_8java" startline="39" endline="49">com.mehmetali.comic_manager.UserManager.registerUser</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" compoundref="Main_8java" startline="158" endline="203">com.mehmetali.comic_manager.Main.MainApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9819fa2e25b6147b679f52508ef935ac" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.AddBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>AddBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException   </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new book to the book management system.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful addition of the book. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="236" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="236" bodyend="256"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a53c84067810419af16b5efde4e9678e7" compoundref="BookManager_8java" startline="40" endline="49">com.mehmetali.comic_manager.BookManager.AddBook</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" compoundref="Main_8java" startline="26">com.mehmetali.comic_manager.Main.LoginName</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a60456e5cf06b028a51fa3bfd1efe5595" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.listBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>listBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the list of books owned by the current user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful display of the book list. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="266" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="266" bodyend="270"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a8b03d25b5631fb17417823385a5b8807" compoundref="BookManager_8java" startline="84" endline="107">com.mehmetali.comic_manager.BookManager.listBooksByCondition</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" compoundref="Main_8java" startline="26">com.mehmetali.comic_manager.Main.LoginName</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ac88bdeaa2127ef5672d9d4e99b7b9e63" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.listAllBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>listAllBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the list of all books in the system.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful display of the book list. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="280" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="280" bodyend="284"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a05e7d513cab59b0138a451dcbc2cf362" compoundref="BookManager_8java" startline="56" endline="76">com.mehmetali.comic_manager.BookManager.listBooks</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ab8a528144a5bc611683854fb60a34fa3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.deleteBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>deleteBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes a book from the system by its ID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful deletion of the book. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="294" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="294" bodyend="300"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a84452f9e0c10fa5b6d5faf0991db35fe" compoundref="BookManager_8java" startline="115" endline="134">com.mehmetali.comic_manager.BookManager.deleteBookByID</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a96a36283628d6106351a77d01dd21541" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.updateBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>updateBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the details of a book in the system by its ID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful update of the book details. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="311" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="311" bodyend="332"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a6fe2153aa0dac7fa2c77554da18ba4b5" compoundref="BookManager_8java" startline="145" endline="167">com.mehmetali.comic_manager.BookManager.updateBookTitleByID</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1acce50654a239e2528271c7683221a389" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.WishAddBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>WishAddBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a book to the wish list of the current user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful addition of the book to the wish list, or -1 if the book ID is not available in the system. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="346" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="346" bodyend="368"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae16ff49bc0e8293cb87dd8b4286d4994" compoundref="WishManager_8java" startline="61" endline="74">com.mehmetali.comic_manager.WishManager.AddBook</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1ac4bffcdd2ab85c2db27d5f7235c43d53" compoundref="BookManager_8java" startline="221" endline="228">com.mehmetali.comic_manager.BookManager.getBookPageNumberByID</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1aa61f6486ec8521cd614d974a58635c22" compoundref="BookManager_8java" startline="204" endline="212">com.mehmetali.comic_manager.BookManager.getBookTitleByID</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a4262d61aed612e85828c72d94401d01a" compoundref="BookManager_8java" startline="189" endline="197">com.mehmetali.comic_manager.BookManager.isBookIDAvailable</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" compoundref="Main_8java" startline="26">com.mehmetali.comic_manager.Main.LoginName</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9d1930b53d5fb23b30186978f27db3fe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.WishlistBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>WishlistBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the wish list of books owned by the current user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful display of the wish list. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="379" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="379" bodyend="383"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1a742124a4b6632f71f4537418154ceaa5" compoundref="WishManager_8java" startline="109" endline="131">com.mehmetali.comic_manager.WishManager.listBooksByUser</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" compoundref="Main_8java" startline="26">com.mehmetali.comic_manager.Main.LoginName</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a436b3d62b9a7e98f9972d86c3fab7bfe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.WishdeleteBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>WishdeleteBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes a book from the wish list by its ID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful deletion of the book from the wish list. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="393" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="393" bodyend="399"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1affccdb63c5a7f1f94c677c50354c8181" compoundref="WishManager_8java" startline="139" endline="158">com.mehmetali.comic_manager.WishManager.deleteBookByID</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afb026813deab3ac6eea0237d98b95e3e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.TradeAddBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>TradeAddBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a book to the trade list of the current user and removes it from their collection.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful addition of the book to the trade list. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="413" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="413" bodyend="430"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a48a40da38f8ec52bae189d715d17dd20" compoundref="TradeManager_8java" startline="43" endline="62">com.mehmetali.comic_manager.TradeManager.AddTrade</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a84452f9e0c10fa5b6d5faf0991db35fe" compoundref="BookManager_8java" startline="115" endline="134">com.mehmetali.comic_manager.BookManager.deleteBookByID</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1ac4bffcdd2ab85c2db27d5f7235c43d53" compoundref="BookManager_8java" startline="221" endline="228">com.mehmetali.comic_manager.BookManager.getBookPageNumberByID</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1aa61f6486ec8521cd614d974a58635c22" compoundref="BookManager_8java" startline="204" endline="212">com.mehmetali.comic_manager.BookManager.getBookTitleByID</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a3c92e1e760b49031c5f4fdf9da42cd5f" compoundref="BookManager_8java" startline="236" endline="243">com.mehmetali.comic_manager.BookManager.getBookValueByID</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" compoundref="Main_8java" startline="26">com.mehmetali.comic_manager.Main.LoginName</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad446db8ec303baaf6e35a7f3900e460d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.TradeMylistBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>TradeMylistBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the trade list of books owned by the current user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful display of the trade list. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="440" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="440" bodyend="444"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a695c52cf05a3e4104b95bd59dabd4733" compoundref="TradeManager_8java" startline="97" endline="119">com.mehmetali.comic_manager.TradeManager.listMyTradeList</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" compoundref="Main_8java" startline="26">com.mehmetali.comic_manager.Main.LoginName</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a293891bfff342d71ff65bfc9dcd66e38" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.TradedeleteBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>TradedeleteBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes a book from the trade list by its ID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful deletion of the book from the trade list. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="454" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="454" bodyend="460"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ae1566993ba228ecf9ec28929484f3587" compoundref="TradeManager_8java" startline="128" endline="149">com.mehmetali.comic_manager.TradeManager.deleteTradeByID</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a56e3d96192592fecbf74d82434c7aaa7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.TradeAllListBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>TradeAllListBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the list of all books available for trade.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful display of the trade list. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="471" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="471" bodyend="475"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad32e44a3007bcc5635698bc0c702a749" compoundref="TradeManager_8java" startline="69" endline="89">com.mehmetali.comic_manager.TradeManager.listAllTradeList</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1aab4fead2a8abd5ef36f8da3602bacb69" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.TradeBuyBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>TradeBuyBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Buys a book from the trade list by its ID if the user&apos;s credit score is sufficient.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful purchase of the book, or -1 if the user&apos;s credit score is insufficient. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="485" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="485" bodyend="498"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a1532a842b55a0bea297ae26f0f2761b4" compoundref="TradeManager_8java" startline="158" endline="184">com.mehmetali.comic_manager.TradeManager.BuyTradeByID</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a05f687ec8ea2bfd5a2e6eea323540da1" compoundref="TradeManager_8java" startline="208" endline="216">com.mehmetali.comic_manager.TradeManager.getBookValueByID</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a7dd20b8059d23bc1ca4b78eadd0d8f3a" compoundref="Main_8java" startline="31">com.mehmetali.comic_manager.Main.LoginWallet</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a814232cee5d0da73e02183991f3e9ccc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.CreditBuyScoreMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>CreditBuyScoreMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increases the user&apos;s credit score by the specified amount.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful update of the user&apos;s credit score. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="508" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="508" bodyend="515"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1aa627b545ada6c4ef7275780b44e34769" compoundref="UserManager_8java" startline="138" endline="158">com.mehmetali.comic_manager.UserManager.creditbuyscore</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" compoundref="Main_8java" startline="26">com.mehmetali.comic_manager.Main.LoginName</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a5077840ac159d4f6c8c03325dbd8c86c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.EventAddBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>EventAddBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new event to the event management system.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful addition of the event. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="527" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="527" bodyend="546"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a7f3523855546199753ac5c8a8c4af16f" compoundref="EventManager_8java" startline="40" endline="50">com.mehmetali.comic_manager.EventManager.AddEvent</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" compoundref="Main_8java" startline="26">com.mehmetali.comic_manager.Main.LoginName</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a616ef6317be731a8fcadb7443decaccd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.EventlistBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>EventlistBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the list of events related to the current user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful display of the event list. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="556" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="556" bodyend="560"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1ad622fee5585662014ad6c190fbc5c5ae" compoundref="EventManager_8java" startline="83" endline="104">com.mehmetali.comic_manager.EventManager.listEventsByCondition</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" compoundref="Main_8java" startline="26">com.mehmetali.comic_manager.Main.LoginName</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ae1ebd27a4d9d23c28b5a2fd3beb0205f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.EventlistAllBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>EventlistAllBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the list of all events in the system.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful display of all events. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="570" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="570" bodyend="574"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a01eb58f4ac8908f9fcf41d2eee4cebf8" compoundref="EventManager_8java" startline="57" endline="75">com.mehmetali.comic_manager.EventManager.listEvents</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a761438ee4546023c6236602326a489dd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.EventdeleteBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>EventdeleteBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes an event from the event management system by its ID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful deletion of the event. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="585" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="585" bodyend="592"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1af990a5fffaf20a62a1c5b38d233362ab" compoundref="EventManager_8java" startline="112" endline="131">com.mehmetali.comic_manager.EventManager.deleteEventByID</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a6c3db295c714a3d76b8db2007cf57137" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.EventupdateBookMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>EventupdateBookMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the details of an event in the event management system by its ID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful update of the event details. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="602" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="602" bodyend="618"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a0368a83c16cac9edba503026117a6964" compoundref="EventManager_8java" startline="141" endline="161">com.mehmetali.comic_manager.EventManager.updateEventTitleByID</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" compoundref="Main_8java" startline="662" endline="954">com.mehmetali.comic_manager.Main.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9aed727b7977c1aa386dd0c2142671a1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1User" kindref="compound">User</ref></type>
+        <definition>static User com.mehmetali.comic_manager.Main.loginMenu</definition>
+        <argsstring>(Scanner scanner, PrintStream out)</argsstring>
+        <name>loginMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows a user to log in to the system using their username and password.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1User" kindref="compound">User</ref> object corresponding to the logged-in user if successful, or null if the login attempt fails. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="632" column="22" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="632" bodyend="650"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a4fc86647d5efe0bbfae2821208ad58a1" compoundref="User_8java" startline="76" endline="78">com.mehmetali.comic_manager.User&lt; Comic &gt;.getUsername</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a8f560693dadf7c7776e5ca54f8402c3b" compoundref="UserManager_8java" startline="121" endline="129">com.mehmetali.comic_manager.UserManager.login</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" compoundref="Main_8java" startline="158" endline="203">com.mehmetali.comic_manager.Main.MainApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.userMenu</definition>
+        <argsstring>(User user, Scanner scanner, PrintStream out)</argsstring>
+        <name>userMenu</name>
+        <param>
+          <type><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1User" kindref="compound">User</ref></type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <param>
+          <type>PrintStream</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the user menu and allows the user to interact with the system based on their role.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1User" kindref="compound">User</ref> object representing the currently logged-in user. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PrintStream object for output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 upon successful completion of user interaction. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signals that an I/O exception has occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="662" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="662" bodyend="954"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9819fa2e25b6147b679f52508ef935ac" compoundref="Main_8java" startline="236" endline="256">com.mehmetali.comic_manager.Main.AddBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0755a9c2beb9098786f1365c146b799f" compoundref="Main_8java" startline="121" endline="136">com.mehmetali.comic_manager.Main.clearConsole</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a814232cee5d0da73e02183991f3e9ccc" compoundref="Main_8java" startline="508" endline="515">com.mehmetali.comic_manager.Main.CreditBuyScoreMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ab8a528144a5bc611683854fb60a34fa3" compoundref="Main_8java" startline="294" endline="300">com.mehmetali.comic_manager.Main.deleteBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a5077840ac159d4f6c8c03325dbd8c86c" compoundref="Main_8java" startline="527" endline="546">com.mehmetali.comic_manager.Main.EventAddBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a761438ee4546023c6236602326a489dd" compoundref="Main_8java" startline="585" endline="592">com.mehmetali.comic_manager.Main.EventdeleteBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ae1ebd27a4d9d23c28b5a2fd3beb0205f" compoundref="Main_8java" startline="570" endline="574">com.mehmetali.comic_manager.Main.EventlistAllBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a616ef6317be731a8fcadb7443decaccd" compoundref="Main_8java" startline="556" endline="560">com.mehmetali.comic_manager.Main.EventlistBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a6c3db295c714a3d76b8db2007cf57137" compoundref="Main_8java" startline="602" endline="618">com.mehmetali.comic_manager.Main.EventupdateBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ac88bdeaa2127ef5672d9d4e99b7b9e63" compoundref="Main_8java" startline="280" endline="284">com.mehmetali.comic_manager.Main.listAllBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a60456e5cf06b028a51fa3bfd1efe5595" compoundref="Main_8java" startline="266" endline="270">com.mehmetali.comic_manager.Main.listBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afb026813deab3ac6eea0237d98b95e3e" compoundref="Main_8java" startline="413" endline="430">com.mehmetali.comic_manager.Main.TradeAddBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a56e3d96192592fecbf74d82434c7aaa7" compoundref="Main_8java" startline="471" endline="475">com.mehmetali.comic_manager.Main.TradeAllListBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1aab4fead2a8abd5ef36f8da3602bacb69" compoundref="Main_8java" startline="485" endline="498">com.mehmetali.comic_manager.Main.TradeBuyBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a293891bfff342d71ff65bfc9dcd66e38" compoundref="Main_8java" startline="454" endline="460">com.mehmetali.comic_manager.Main.TradedeleteBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad446db8ec303baaf6e35a7f3900e460d" compoundref="Main_8java" startline="440" endline="444">com.mehmetali.comic_manager.Main.TradeMylistBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a96a36283628d6106351a77d01dd21541" compoundref="Main_8java" startline="311" endline="332">com.mehmetali.comic_manager.Main.updateBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1acce50654a239e2528271c7683221a389" compoundref="Main_8java" startline="346" endline="368">com.mehmetali.comic_manager.Main.WishAddBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a436b3d62b9a7e98f9972d86c3fab7bfe" compoundref="Main_8java" startline="393" endline="399">com.mehmetali.comic_manager.Main.WishdeleteBookMenu</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9d1930b53d5fb23b30186978f27db3fe" compoundref="Main_8java" startline="379" endline="383">com.mehmetali.comic_manager.Main.WishlistBookMenu</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" compoundref="Main_8java" startline="158" endline="203">com.mehmetali.comic_manager.Main.MainApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ab57f3abdd3c1c08ce5341985b192ac6d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String com.mehmetali.comic_manager.Main.getLoginName</definition>
+        <argsstring>()</argsstring>
+        <name>getLoginName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the login name of the current user.</para>
+<para><simplesect kind="return"><para>The login name of the current user. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="961" column="24" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="961" bodyend="963"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" compoundref="Main_8java" startline="26">com.mehmetali.comic_manager.Main.LoginName</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a78bb166b97a1ff138aff53d10be2b891" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.mehmetali.comic_manager.Main.setLoginName</definition>
+        <argsstring>(String loginName)</argsstring>
+        <name>setLoginName</name>
+        <param>
+          <type>String</type>
+          <declname>loginName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the login name of the current user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>loginName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The login name to be set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="970" column="22" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="970" bodyend="972"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" compoundref="Main_8java" startline="26">com.mehmetali.comic_manager.Main.LoginName</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" compoundref="Main_8java" startline="158" endline="203">com.mehmetali.comic_manager.Main.MainApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1abac3cc99dc13e83cd6a864d793e7d9fb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.mehmetali.comic_manager.Main.getWallet</definition>
+        <argsstring>()</argsstring>
+        <name>getWallet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the wallet balance of the current user.</para>
+<para><simplesect kind="return"><para>The wallet balance of the current user. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="979" column="21" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="979" bodyend="981"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a7dd20b8059d23bc1ca4b78eadd0d8f3a" compoundref="Main_8java" startline="31">com.mehmetali.comic_manager.Main.LoginWallet</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad6f1316e8a2df021d2642d1481c31059" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.mehmetali.comic_manager.Main.setWallet</definition>
+        <argsstring>(int loginWallet)</argsstring>
+        <name>setWallet</name>
+        <param>
+          <type>int</type>
+          <declname>loginWallet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the wallet balance of the current user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>loginWallet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The wallet balance to be set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="988" column="22" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="988" bodyend="990"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a7dd20b8059d23bc1ca4b78eadd0d8f3a" compoundref="Main_8java" startline="31">com.mehmetali.comic_manager.Main.LoginWallet</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" compoundref="Main_8java" startline="158" endline="203">com.mehmetali.comic_manager.Main.MainApp</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main" kindref="compound">Main</ref> class for managing the comic manager application. This class provides methods for user interaction and menu navigation.</para>
+<para>The <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main" kindref="compound">Main</ref> class serves as the entry point for the application and orchestrates user interaction.</para>
+<para><simplesect kind="author"><para>mehmetali </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" line="21" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Main.java" bodystart="21" bodyend="994"/>
+    <listofallmembers>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9819fa2e25b6147b679f52508ef935ac" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>AddBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a899bff22fe8e82939a8d6a11910f5ddf" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>centerText</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0755a9c2beb9098786f1365c146b799f" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>clearConsole</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a1163c36d2f9263e0dcccac445777a3d5" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>comicmanager</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ae2508e0386aeaf94ad28320fcce5dddf" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>control</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a814232cee5d0da73e02183991f3e9ccc" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>CreditBuyScoreMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ab8a528144a5bc611683854fb60a34fa3" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>deleteBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a5077840ac159d4f6c8c03325dbd8c86c" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>EventAddBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a761438ee4546023c6236602326a489dd" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>EventdeleteBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ae1ebd27a4d9d23c28b5a2fd3beb0205f" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>EventlistAllBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a616ef6317be731a8fcadb7443decaccd" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>EventlistBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad28ab82cca1e24b5b1231e11b3f82925" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>eventmanager</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a6c3db295c714a3d76b8db2007cf57137" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>EventupdateBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ab57f3abdd3c1c08ce5341985b192ac6d" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>getLoginName</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1abac3cc99dc13e83cd6a864d793e7d9fb" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>getWallet</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ac88bdeaa2127ef5672d9d4e99b7b9e63" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>listAllBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a60456e5cf06b028a51fa3bfd1efe5595" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>listBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9aed727b7977c1aa386dd0c2142671a1" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>loginMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>LoginName</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a7dd20b8059d23bc1ca4b78eadd0d8f3a" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>LoginWallet</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a89b228946b71e33274679cb13530bbdd" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>main</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>MainApp</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a7dab6da432a0efd93c902e990195935f" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>printMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a8f1c665d17755499530532695097e30a" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>registerMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad7e2f4823207e0250a69bf65c9a441a2" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>rightPad</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a28e08105ddea881917ed7501a95c68d1" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>scanner</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a78bb166b97a1ff138aff53d10be2b891" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>setLoginName</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad6f1316e8a2df021d2642d1481c31059" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>setWallet</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afb026813deab3ac6eea0237d98b95e3e" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>TradeAddBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a56e3d96192592fecbf74d82434c7aaa7" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>TradeAllListBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1aab4fead2a8abd5ef36f8da3602bacb69" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>TradeBuyBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a293891bfff342d71ff65bfc9dcd66e38" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>TradedeleteBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad480eb3cb344d784ddb2756a13d62023" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>trademanager</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad446db8ec303baaf6e35a7f3900e460d" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>TradeMylistBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a96a36283628d6106351a77d01dd21541" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>updateBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a6ff2597f577405395b5949d4ff80407b" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>userManager</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>userMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1acce50654a239e2528271c7683221a389" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>WishAddBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a436b3d62b9a7e98f9972d86c3fab7bfe" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>WishdeleteBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9d1930b53d5fb23b30186978f27db3fe" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>WishlistBookMenu</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a91c5229436c07badacf8ea49198dd885" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Main</scope><name>wishmanager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

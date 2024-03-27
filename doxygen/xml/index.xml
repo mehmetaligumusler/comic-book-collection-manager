@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book" kind="class"><name>com::mehmetali::comic_manager::Book</name>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a704c02e092521fca4d62fc0ecc22b3af" kind="variable"><name>comicID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a1f1a2346794a9235008bd7bf92d8c658" kind="variable"><name>title</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a4e69b1295daa45b8769ae27fe1e3a957" kind="variable"><name>pageNumber</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a0f0493e3ba7bebd9f9e8cb9379e79922" kind="variable"><name>user</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1acba90735452013f88509a06da6d3d6fb" kind="variable"><name>value</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1abed0aba305f0158f85f1d665db7c11a3" kind="function"><name>Book</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a873434646b077c70811144d85954ce93" kind="function"><name>getComicID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1ac4f90f4faa55931f74a6483709518556" kind="function"><name>setComicID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1ade33be84035c99f858572a9a612e47cf" kind="function"><name>getTitle</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1aa6c1cf8c550f1e43c5981741fcc055b9" kind="function"><name>setTitle</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a5427f21361f4053b4118e684a8f01f72" kind="function"><name>getpageNumber</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a3fd7b898c9d4c1493ae45e943a626d45" kind="function"><name>setpageNumber</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a4c379167be1431c9aba1f2080d13b5fa" kind="function"><name>getuser</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a319ca84c2a9032c86f96574bcdac56be" kind="function"><name>setuser</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a621a5357f4554c62a00f62ec42934eb5" kind="function"><name>getValue</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a0d6e00e684c8bfc1468f39d83799205e" kind="function"><name>setValue</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a8280ec0ba12adcde64b0f01803809575" kind="function"><name>toString</name></member>
+  </compound>
+  <compound refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager" kind="class"><name>com::mehmetali::comic_manager::BookManager</name>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a82c28cd228b8c6f9403d23885ebb8190" kind="variable"><name>BOOK_FILE_PATH</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a9ec1034828c7b27560af0527716cfff8" kind="variable"><name>comicmanager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a6d2e95107782db4e145d6218f42a83a9" kind="variable"><name>comics</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a50864ca14c4218540b35fc02ef7662bf" kind="variable"><name>result</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a50c24ecf4901fbdb74046ef01e839d13" kind="function"><name>BookManager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a53c84067810419af16b5efde4e9678e7" kind="function"><name>AddBook</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a05e7d513cab59b0138a451dcbc2cf362" kind="function"><name>listBooks</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a8b03d25b5631fb17417823385a5b8807" kind="function"><name>listBooksByCondition</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a84452f9e0c10fa5b6d5faf0991db35fe" kind="function"><name>deleteBookByID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a6fe2153aa0dac7fa2c77554da18ba4b5" kind="function"><name>updateBookTitleByID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a4526ccccef9cd291deeeab8b7285135b" kind="function"><name>isBookNameAvailable</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a4262d61aed612e85828c72d94401d01a" kind="function"><name>isBookIDAvailable</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1aa61f6486ec8521cd614d974a58635c22" kind="function"><name>getBookTitleByID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1ac4bffcdd2ab85c2db27d5f7235c43d53" kind="function"><name>getBookPageNumberByID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a3c92e1e760b49031c5f4fdf9da42cd5f" kind="function"><name>getBookValueByID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a57ed906c280988f9115479fb082b8c6b" kind="function"><name>readUsersFromFile</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1ae827b7d9a9738d0c86e35ae939f04644" kind="function"><name>saveUsersToFile</name></member>
+  </compound>
+  <compound refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event" kind="class"><name>com::mehmetali::comic_manager::Event</name>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1ac5f8aff497dbb41a629967f363f9db8c" kind="variable"><name>eventID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1a5bdbb20d9b78c5049edc72ce3ca95b09" kind="variable"><name>title</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1ab34d0e1960df8a57a359d111e5e470f9" kind="variable"><name>content</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1a03533f6a132dedc9e914a330aa3dc9d2" kind="variable"><name>user</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1a567bcffbf964b389f89bd2dac7d46325" kind="function"><name>Event</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1abc9269e1f971e6476f02577367c1a1c4" kind="function"><name>geteventID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1a9da3e798969472fa80d753707e6e92fa" kind="function"><name>seteventID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1a38449eab71fc7d11c4d3af71ef6fbefe" kind="function"><name>getTitle</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1a4ced4094ac10cb104d8b1d896f76bc4f" kind="function"><name>setTitle</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1a7b10e719018ca97a80ac4e8333889a85" kind="function"><name>getContent</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1a1fd308125c328e278d396b2c695925ce" kind="function"><name>setContent</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1aec96153be811e05957be484bab08c33a" kind="function"><name>getUser</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1aada444938e70d3a059e92095b304ca34" kind="function"><name>setUser</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1a3fd2a56b713d894ba867d9558721179e" kind="function"><name>toString</name></member>
+  </compound>
+  <compound refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager" kind="class"><name>com::mehmetali::comic_manager::EventManager</name>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1ada4ce9ae239021c27e7fb48dcc760e9e" kind="variable"><name>comics</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1acf25dd14a493d12400c14bc60b7de876" kind="variable"><name>Event_FILE_PATH</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a96c6ac04c64ce023b52f9cbc5b4d90b9" kind="function"><name>EventManager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a7f3523855546199753ac5c8a8c4af16f" kind="function"><name>AddEvent</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a01eb58f4ac8908f9fcf41d2eee4cebf8" kind="function"><name>listEvents</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1ad622fee5585662014ad6c190fbc5c5ae" kind="function"><name>listEventsByCondition</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1af990a5fffaf20a62a1c5b38d233362ab" kind="function"><name>deleteEventByID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a0368a83c16cac9edba503026117a6964" kind="function"><name>updateEventTitleByID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1adbde9cfdfafdc847c4a6e84e59ef2d24" kind="function"><name>isEventNameAvailable</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a896725dbd2310e5ef93fc99d12c3c191" kind="function"><name>isEventIDAvailable</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1acbef6e6afa5d6d438efb2096e05b292a" kind="function"><name>getEventTitleByID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1ae4e05a57b5a72935e1893186620b7148" kind="function"><name>readUsersFromFile</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1aa2c98d448f280dafc40721b11d37c3f8" kind="function"><name>saveUsersToFile</name></member>
+  </compound>
+  <compound refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main" kind="class"><name>com::mehmetali::comic_manager::Main</name>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" kind="variable"><name>LoginName</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a7dd20b8059d23bc1ca4b78eadd0d8f3a" kind="variable"><name>LoginWallet</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ae2508e0386aeaf94ad28320fcce5dddf" kind="variable"><name>control</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a28e08105ddea881917ed7501a95c68d1" kind="variable"><name>scanner</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a6ff2597f577405395b5949d4ff80407b" kind="variable"><name>userManager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a1163c36d2f9263e0dcccac445777a3d5" kind="variable"><name>comicmanager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a91c5229436c07badacf8ea49198dd885" kind="variable"><name>wishmanager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad480eb3cb344d784ddb2756a13d62023" kind="variable"><name>trademanager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad28ab82cca1e24b5b1231e11b3f82925" kind="variable"><name>eventmanager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a7dab6da432a0efd93c902e990195935f" kind="function"><name>printMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad7e2f4823207e0250a69bf65c9a441a2" kind="function"><name>rightPad</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a899bff22fe8e82939a8d6a11910f5ddf" kind="function"><name>centerText</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0755a9c2beb9098786f1365c146b799f" kind="function"><name>clearConsole</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a89b228946b71e33274679cb13530bbdd" kind="function"><name>main</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" kind="function"><name>MainApp</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a8f1c665d17755499530532695097e30a" kind="function"><name>registerMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9819fa2e25b6147b679f52508ef935ac" kind="function"><name>AddBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a60456e5cf06b028a51fa3bfd1efe5595" kind="function"><name>listBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ac88bdeaa2127ef5672d9d4e99b7b9e63" kind="function"><name>listAllBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ab8a528144a5bc611683854fb60a34fa3" kind="function"><name>deleteBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a96a36283628d6106351a77d01dd21541" kind="function"><name>updateBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1acce50654a239e2528271c7683221a389" kind="function"><name>WishAddBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9d1930b53d5fb23b30186978f27db3fe" kind="function"><name>WishlistBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a436b3d62b9a7e98f9972d86c3fab7bfe" kind="function"><name>WishdeleteBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afb026813deab3ac6eea0237d98b95e3e" kind="function"><name>TradeAddBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad446db8ec303baaf6e35a7f3900e460d" kind="function"><name>TradeMylistBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a293891bfff342d71ff65bfc9dcd66e38" kind="function"><name>TradedeleteBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a56e3d96192592fecbf74d82434c7aaa7" kind="function"><name>TradeAllListBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1aab4fead2a8abd5ef36f8da3602bacb69" kind="function"><name>TradeBuyBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a814232cee5d0da73e02183991f3e9ccc" kind="function"><name>CreditBuyScoreMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a5077840ac159d4f6c8c03325dbd8c86c" kind="function"><name>EventAddBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a616ef6317be731a8fcadb7443decaccd" kind="function"><name>EventlistBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ae1ebd27a4d9d23c28b5a2fd3beb0205f" kind="function"><name>EventlistAllBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a761438ee4546023c6236602326a489dd" kind="function"><name>EventdeleteBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a6c3db295c714a3d76b8db2007cf57137" kind="function"><name>EventupdateBookMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9aed727b7977c1aa386dd0c2142671a1" kind="function"><name>loginMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a0843bcc385ce545650fa936f95b89412" kind="function"><name>userMenu</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ab57f3abdd3c1c08ce5341985b192ac6d" kind="function"><name>getLoginName</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a78bb166b97a1ff138aff53d10be2b891" kind="function"><name>setLoginName</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1abac3cc99dc13e83cd6a864d793e7d9fb" kind="function"><name>getWallet</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad6f1316e8a2df021d2642d1481c31059" kind="function"><name>setWallet</name></member>
+  </compound>
+  <compound refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade" kind="class"><name>com::mehmetali::comic_manager::Trade</name>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1ac02f4c74f5e5533bd98a9b3016ab01cd" kind="variable"><name>comicID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1a1f5488e0cbf2d61f7036b9101e4ab418" kind="variable"><name>title</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1a4babf46cf43af0114930349283e92f6f" kind="variable"><name>pageNumber</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1af9f43c81c00e77c7d4bba7ce2d23eabe" kind="variable"><name>user</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1a49094f5b57e2f2ead34ca0c6c17f2d97" kind="variable"><name>value</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1a8935ad7946f1c438285cae93b628d594" kind="function"><name>Trade</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1a37e0499bdda0c3f4b58bb0f4c8a3dfc0" kind="function"><name>getComicID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1ab62d3b62e02e1c0d12f043129ae8f039" kind="function"><name>setComicID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1afda42e9be0474bb4040fea48be0af328" kind="function"><name>getTitle</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1a2eb3738f4d01c56374908626fac35bff" kind="function"><name>setTitle</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1aab878bcd4f5b3ce3b08412fc0736db3b" kind="function"><name>getpageNumber</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1adf5ed2df452619a5ba3e2ff25e22f753" kind="function"><name>setpageNumber</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1aacdbca09025a78707ffd05a2b228339e" kind="function"><name>getuser</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1a2c80187a0914d4c71b30a590bb2786d7" kind="function"><name>setuser</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1a9efcf7370bea8cbbb149163451d06ab2" kind="function"><name>getValue</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1a0fa7b11466c7d75b7d7fc30671368ae5" kind="function"><name>setValue</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1aaea60a87f01de198c2aacdcc113b5525" kind="function"><name>toString</name></member>
+  </compound>
+  <compound refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager" kind="class"><name>com::mehmetali::comic_manager::TradeManager</name>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a3b63d75c5cc574e13b8e387c1456cc1e" kind="variable"><name>comics</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a7a66e065ef0deaca972bc8b8ccf95979" kind="variable"><name>Trade_FILE_PATH</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad4eeb8d72befea92faeedb42a009c0a3" kind="variable"><name>comicmanager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a9c52f43ca3be97fc1a2ee3d42ef25ca9" kind="variable"><name>usermanager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a803052754f7b007ebff013a68c595e1f" kind="function"><name>TradeManager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a48a40da38f8ec52bae189d715d17dd20" kind="function"><name>AddTrade</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad32e44a3007bcc5635698bc0c702a749" kind="function"><name>listAllTradeList</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a695c52cf05a3e4104b95bd59dabd4733" kind="function"><name>listMyTradeList</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ae1566993ba228ecf9ec28929484f3587" kind="function"><name>deleteTradeByID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a1532a842b55a0bea297ae26f0f2761b4" kind="function"><name>BuyTradeByID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad259624e10c4a3de9a1dcf8eb5680888" kind="function"><name>isTradeNameAvailable</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a05f687ec8ea2bfd5a2e6eea323540da1" kind="function"><name>getBookValueByID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a65aa70327fab9c08a63cfa32ca821a28" kind="function"><name>isTradeIDAvailable</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1aaa9d5b3645cd99ccb99624cab7175811" kind="function"><name>getTradeTitleByID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a492ea33abee44d7a8f6e8275817400d0" kind="function"><name>readUsersFromFile</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad6ccac05a805d49408e704cdd0587cd0" kind="function"><name>saveUsersToFile</name></member>
+  </compound>
+  <compound refid="classcom_1_1mehmetali_1_1comic__manager_1_1User" kind="class"><name>com::mehmetali::comic_manager::User</name>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a3bf93475c336dedd63a4038290ce0971" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a13182f525f553d848c10b164be2392ea" kind="variable"><name>username</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a4b1637a0a639897cf4538c75290330bd" kind="variable"><name>password</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a9061dd1d5e719ae0675b940f7a58d7d9" kind="variable"><name>wallet</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a28cdc22f41cf8ba1a3aeb911839e79d2" kind="variable"><name>collection</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a6af77a3ae252f5c0768d7472f84aeb49" kind="variable"><name>wishlist</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a75f2dc05ee6ad19549f83fc58d330448" kind="variable"><name>tradeList</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ad876d57c709229f8b8254baa21fd3ac8" kind="function"><name>User</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ad1e5700b76c5faba76abaf21fafcdbe8" kind="function"><name>getWallet</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1af8d572dee3c8b46bb786deec41a5e91b" kind="function"><name>setWallet</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a4fc86647d5efe0bbfae2821208ad58a1" kind="function"><name>getUsername</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ae405364198712afbc3ef7c6cdca20a46" kind="function"><name>setUsername</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a78df07c91d5306d023cb39214e7bd30f" kind="function"><name>getPassword</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a6700dc26a9c03ede69d49725b3b47cb8" kind="function"><name>setPassword</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a903825b2d5fc2367e998b93e10d00055" kind="function"><name>getCollection</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1aded3a2aa90fe281f926c8e254e937296" kind="function"><name>setCollection</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a6662b428e555f623608cd2ddafbcd6f6" kind="function"><name>getWishlist</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a57527e5d64fa188cd9362799a9002dd1" kind="function"><name>setWishlist</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ae899321686693b9a0e60c528a5eac6c4" kind="function"><name>getTradeList</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ae01dc51c5ca4f452038e52fcbe5ed855" kind="function"><name>setTradeList</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1aec7e1d667c48ebc488e7f762338aaa98" kind="function"><name>addToCollection</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a188c5b6e0acba978161a7dd11825ba89" kind="function"><name>removeFromCollection</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a412cb725e963a94d8efafcb2e88fd297" kind="function"><name>addToWishlist</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a78aef8ee3e3f48789f6d78d52f5a1595" kind="function"><name>removeFromWishlist</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a2066bf0460fb8c8781b3aa3b20a61a16" kind="function"><name>addToTradeList</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a638c500168f19e95e003645052b45d98" kind="function"><name>removeFromTradeList</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a315327aac90557d095a631ca660ae70b" kind="function"><name>toString</name></member>
+  </compound>
+  <compound refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager" kind="class"><name>com::mehmetali::comic_manager::UserManager</name>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a3fc0ecf6618d3fc42a5bab229240de28" kind="variable"><name>users</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1abd2be23e2a8db1a966fc97bec39797ad" kind="variable"><name>USER_FILE_PATH</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a91e4b998e8179f6aaa73d66ada128b97" kind="function"><name>UserManager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ac7b628a800efefa0a9585181d1e49e5f" kind="function"><name>registerUser</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a5c046bddd600f8fcc17b2e13ada2681e" kind="function"><name>isUsernameAvailable</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a8f560693dadf7c7776e5ca54f8402c3b" kind="function"><name>login</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1aa627b545ada6c4ef7275780b44e34769" kind="function"><name>creditbuyscore</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ae89c4bc39cb10ab21674fd2d23e2f271" kind="function"><name>creditSellscore</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ade3d8bd9a78ed865a2c2855b97b9f61e" kind="function"><name>getUserWallet</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1a332e556af0c95c69fd5cd4c7418bf026" kind="function"><name>readUsersFromFile</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1acdb61b0d0706362d1d341b81cd9b1035" kind="function"><name>saveUsersToFile</name></member>
+  </compound>
+  <compound refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish" kind="class"><name>com::mehmetali::comic_manager::Wish</name>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ae3164494e76f9b6b7b2c542ca9ff739c" kind="variable"><name>comicID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a1e9c5b215399e1e906acf589fbbb9fce" kind="variable"><name>title</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1adb729c464428051e612b773946646b85" kind="variable"><name>pageNumber</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1aee5dfe3b6129b02bd7c53efa6ecacc6d" kind="variable"><name>user</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1af0e13573f7c3d64a38ab59b306e2c480" kind="variable"><name>value</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a0f73f2b591117bb029ff0bab1353d75d" kind="function"><name>Wish</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a422b4944d82addfaea204bb93a1858ec" kind="function"><name>getComicID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a95191ea0d61bfee5d2dc2f561fcc0c6a" kind="function"><name>setComicID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ad5a5770d230ecfcc2fbb0ea5e1e088ad" kind="function"><name>getTitle</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1aa816b2b2887f7e1c8dd7888d9356d9b7" kind="function"><name>setTitle</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ae7be55862c2fdd3905581753193d643f" kind="function"><name>getpageNumber</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a8c867e91f60e255f20bd62e428d7b40d" kind="function"><name>setpageNumber</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a9727d55ca5a5deb2aa3107f6d7f45cca" kind="function"><name>getuser</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ad649de4f9b34bf9165f7a8321db328bb" kind="function"><name>setuser</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1abb77f1f53727d01206f20eee790b9813" kind="function"><name>getValue</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a816bf18cad02f1739e59081017a4ea22" kind="function"><name>setValue</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a82a86d221699264fed2efb7082b5ee6e" kind="function"><name>toString</name></member>
+  </compound>
+  <compound refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager" kind="class"><name>com::mehmetali::comic_manager::WishManager</name>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1a445a491da3ad4670142766f595862042" kind="variable"><name>WISH_FILE_PATH</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1a38948c1e4f2f576b74c533a7978758a1" kind="variable"><name>comicmanager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1a40546ee37ee043d14111c3347eb26bf6" kind="variable"><name>comics</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1a83ed6c2afdd35a9641551e16258d83b4" kind="variable"><name>result</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1a37526dcf7e51c9b68ce4e2b498364cbf" kind="function"><name>WishManager</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae16ff49bc0e8293cb87dd8b4286d4994" kind="function"><name>AddBook</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae495b9c01f9d119c30d3ade91e4f7906" kind="function"><name>listBooks</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1a742124a4b6632f71f4537418154ceaa5" kind="function"><name>listBooksByUser</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1affccdb63c5a7f1f94c677c50354c8181" kind="function"><name>deleteBookByID</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1a33c38b04fbb3dbe255cc83a05b293d1e" kind="function"><name>isBookNameAvailable</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae7b6b1a3ee7965c2eef6e300c1eef3d6" kind="function"><name>readFromFile</name></member>
+    <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ac450d180af41217c56c034e4d5a83d81" kind="function"><name>writeToFile</name></member>
+  </compound>
+  <compound refid="interfacecom_1_1mehmetali_1_1comic__manager_1_1WishManager_1_1WishWriter" kind="interface"><name>com::mehmetali::comic_manager::WishManager::WishWriter</name>
+    <member refid="interfacecom_1_1mehmetali_1_1comic__manager_1_1WishManager_1_1WishWriter_1a26c1e233caa345179f13982a937370de" kind="function"><name>saveUsersToFile2</name></member>
+  </compound>
+  <compound refid="namespacecom" kind="namespace"><name>com</name>
+  </compound>
+  <compound refid="namespacecom_1_1mehmetali" kind="namespace"><name>com::mehmetali</name>
+  </compound>
+  <compound refid="namespacecom_1_1mehmetali_1_1comic__manager" kind="namespace"><name>com::mehmetali::comic_manager</name>
+  </compound>
+  <compound refid="namespacejava_1_1io" kind="namespace"><name>java::io</name>
+  </compound>
+  <compound refid="Book_8java" kind="file"><name>Book.java</name>
+  </compound>
+  <compound refid="BookManager_8java" kind="file"><name>BookManager.java</name>
+  </compound>
+  <compound refid="Event_8java" kind="file"><name>Event.java</name>
+  </compound>
+  <compound refid="EventManager_8java" kind="file"><name>EventManager.java</name>
+  </compound>
+  <compound refid="Main_8java" kind="file"><name>Main.java</name>
+  </compound>
+  <compound refid="Trade_8java" kind="file"><name>Trade.java</name>
+  </compound>
+  <compound refid="TradeManager_8java" kind="file"><name>TradeManager.java</name>
+  </compound>
+  <compound refid="User_8java" kind="file"><name>User.java</name>
+  </compound>
+  <compound refid="UserManager_8java" kind="file"><name>UserManager.java</name>
+  </compound>
+  <compound refid="Wish_8java" kind="file"><name>Wish.java</name>
+  </compound>
+  <compound refid="WishManager_8java" kind="file"><name>WishManager.java</name>
+  </compound>
+  <compound refid="dir_dea29856742d0645b4a08086c0b87104" kind="dir"><name>comic_manager_app/src/main/java/com</name>
+  </compound>
+  <compound refid="dir_c1109ce587b19de1d466cbec5ba42c73" kind="dir"><name>comic_manager_app/src/main/java/com/mehmetali/comic_manager</name>
+  </compound>
+  <compound refid="dir_301b1a7b9a8e90adc734826e5034ef58" kind="dir"><name>comic_manager_app</name>
+  </compound>
+  <compound refid="dir_29051205ba7359532b5c06343945287e" kind="dir"><name>comic_manager_app/src/main/java</name>
+  </compound>
+  <compound refid="dir_d560026b4046142fb7e330b39dac08a9" kind="dir"><name>comic_manager_app/src/main</name>
+  </compound>
+  <compound refid="dir_9add1e7f1f6eee3e15419b63e7b2d38e" kind="dir"><name>comic_manager_app/src/main/java/com/mehmetali</name>
+  </compound>
+  <compound refid="dir_429501c8357fbb65adebb0dd6cad6b77" kind="dir"><name>comic_manager_app/src</name>
+  </compound>
+</doxygenindex>

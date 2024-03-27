@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TradeManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">comic_manager_app</a> &gt; <a href="index.source.html" class="el_package">com.mehmetali.comic_manager</a> &gt; <span class="el_source">TradeManager.java</span></div><h1>TradeManager.java</h1><pre class="source lang-java linenums">/**
+ * The com.mehmetali.comic_manager package contains classes related to the Comic Manager application.
+ */
+package com.mehmetali.comic_manager;
+
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * The TradeManager class manages the trading of comic books.
+ * It handles adding, listing, deleting, and buying/selling comic books.
+ *
+ * This class manages the list of trades and provides methods for managing trade operations.
+ *
+ * @author mehmetali
+ * @version 1.0
+ */
+public class TradeManager {
+  private List&lt;Trade&gt; comics; /**&lt; The list of trades managed by the TradeManager. */
+  private static final String Trade_FILE_PATH = &quot;trade.dat&quot;; /**&lt; The file path where the trade data is stored. */
+<span class="fc" id="L23">  private static final BookManager comicmanager = new BookManager(); /**&lt; The instance of BookManager for managing comic books. */</span>
+<span class="fc" id="L24">  private static final UserManager usermanager = new UserManager(); /**&lt; The instance of UserManager for managing users. */</span>
+
+
+
+  /**
+   * Constructs a TradeManager object.
+   * Initializes the list of trades by reading from file.
+   */
+<span class="fc" id="L32">  public TradeManager() {</span>
+<span class="fc" id="L33">    this.comics = readUsersFromFile();</span>
+<span class="fc" id="L34">  }</span>
+
+  /**
+   * Adds a comic book to the trade list.
+   * If the book ID is not available or the book title is already used, it returns null.
+   *
+   * @param comic The comic book to add to the trade list.
+   * @return The title of the comic book if added successfully, null otherwise.
+   */
+  public int AddTrade(Trade comic) {
+    
+
+<span class="fc bfc" id="L46" title="All 2 branches covered.">    if (!isTradeNameAvailable(comic.getTitle())) {</span>
+<span class="fc" id="L47">      System.out.println(&quot;This Book name is already in use. Please choose a different book name.&quot;);</span>
+<span class="fc" id="L48">      return -1;</span>
+    }
+
+    /*
+    comic.setTitle(comicmanager.getBookTitleByID(comic.getComicID()));
+    comic.setpageNumber(comicmanager.getBookPageNumberByID(comic.getComicID()));
+    comic.setValue(comicmanager.getBookValueByID(comic.getComicID()));
+    */
+    
+<span class="fc" id="L57">    comics.add(comic);</span>
+<span class="fc" id="L58">    saveUsersToFile(comics);</span>
+    //comicmanager.deleteBookByID(comic.getComicID());
+<span class="fc" id="L60">    System.out.println(&quot;The book has been successfully added to the Trade list.&quot;);</span>
+<span class="fc" id="L61">    return 0;</span>
+  }
+
+  /**
+   * Lists all comic books available for trade.
+   *
+   * @return The number of comic books listed.
+   */
+  public int listAllTradeList() {
+<span class="fc" id="L70">    this.comics = readUsersFromFile();</span>
+
+<span class="fc bfc" id="L72" title="All 2 branches covered.">    if (comics.isEmpty()) {</span>
+<span class="fc" id="L73">      System.out.println(&quot;No books found to list.&quot;);</span>
+<span class="fc" id="L74">      return 0;</span>
+    }
+
+<span class="fc" id="L77">    System.out.println(&quot;----- Book List -----&quot;);</span>
+
+<span class="fc bfc" id="L79" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
+<span class="fc" id="L80">      System.out.println(&quot;Book ID: &quot; + comic.getComicID());</span>
+<span class="fc" id="L81">      System.out.println(&quot;Title: &quot; + comic.getTitle());</span>
+<span class="fc" id="L82">      System.out.println(&quot;Page Number: &quot; + comic.getpageNumber());</span>
+<span class="fc" id="L83">      System.out.println(&quot;Situation: &quot; + comic.getuser());</span>
+<span class="fc" id="L84">      System.out.println(&quot;Value: &quot; + comic.getValue());</span>
+<span class="fc" id="L85">      System.out.println(&quot;-------------------------&quot;);</span>
+<span class="fc" id="L86">    }</span>
+
+<span class="fc" id="L88">    return comics.size();</span>
+  }
+
+  /**
+   * Lists the comic books available for trade by a specific condition (e.g., user).
+   *
+   * @param condition The condition to filter the comic books (e.g., user).
+   * @return The number of comic books listed.
+   */
+  public int listMyTradeList(String condition) {
+<span class="fc" id="L98">    this.comics = readUsersFromFile();</span>
+
+<span class="fc bfc" id="L100" title="All 2 branches covered.">    if (comics.isEmpty()) {</span>
+<span class="fc" id="L101">      System.out.println(&quot;No books found to list.&quot;);</span>
+<span class="fc" id="L102">      return 0;</span>
+    }
+
+<span class="fc" id="L105">    System.out.println(&quot;----- &quot; + condition + &quot; Books in Condition -----&quot;);</span>
+
+<span class="fc bfc" id="L107" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
+<span class="pc bpc" id="L108" title="1 of 2 branches missed.">      if (comic.getuser().equalsIgnoreCase(condition)) {</span>
+<span class="fc" id="L109">        System.out.println(&quot;Book ID: &quot; + comic.getComicID());</span>
+<span class="fc" id="L110">        System.out.println(&quot;Title: &quot; + comic.getTitle());</span>
+<span class="fc" id="L111">        System.out.println(&quot;Page Number: &quot; + comic.getpageNumber());</span>
+<span class="fc" id="L112">        System.out.println(&quot;Situation: &quot; + comic.getuser());</span>
+<span class="fc" id="L113">        System.out.println(&quot;Value: &quot; + comic.getValue());</span>
+<span class="fc" id="L114">        System.out.println(&quot;-------------------------&quot;);</span>
+      }
+<span class="fc" id="L116">    }</span>
+
+<span class="fc" id="L118">    return comics.size();</span>
+  }
+
+  /**
+   * Deletes a comic book from the trade list by its ID.
+   * Moves the book back to the user's book list.
+   *
+   * @param TradeID The ID of the comic book to delete from the trade list.
+   * @return 0 if successfully deleted, -1 otherwise.
+   */
+  public int deleteTradeByID(int TradeID) {
+<span class="fc" id="L129">    boolean found = false;</span>
+
+<span class="fc bfc" id="L131" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
+<span class="pc bpc" id="L132" title="1 of 2 branches missed.">      if (comic.getComicID() == TradeID) {</span>
+<span class="fc" id="L133">        comics.remove(comic);</span>
+<span class="fc" id="L134">        saveUsersToFile(comics);</span>
+<span class="fc" id="L135">        System.out.println(&quot;Book deleted successfully.&quot;);</span>
+<span class="fc" id="L136">        found = true;</span>
+<span class="fc" id="L137">        Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),comic.getuser(),comic.getValue());</span>
+<span class="fc" id="L138">        comicmanager.AddBook(newUser);</span>
+<span class="fc" id="L139">        return 0;</span>
+      }
+<span class="nc" id="L141">    }</span>
+
+<span class="pc bpc" id="L143" title="1 of 2 branches missed.">    if (!found) {</span>
+<span class="fc" id="L144">      System.out.println(&quot;No book matching book ID was found.&quot;);</span>
+<span class="fc" id="L145">      return -1;</span>
+    }
+
+<span class="nc" id="L148">    return -1;</span>
+  }
+
+  /**
+   * Buys a comic book from the trade list by its ID.
+   * Transfers the book ownership and credits between users.
+   *
+   * @param TradeID The ID of the comic book to buy from the trade list.
+   * @return 0 if successfully bought, -1 otherwise.
+   */
+  public int BuyTradeByID(int TradeID) {
+<span class="fc" id="L159">    boolean found = false;</span>
+
+<span class="fc bfc" id="L161" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
+<span class="fc bfc" id="L162" title="All 2 branches covered.">      if (comic.getComicID() == TradeID) {</span>
+        
+<span class="fc" id="L164">      String oldUser = comic.getuser();</span>
+<span class="fc" id="L165">      System.out.print(oldUser);</span>
+<span class="fc" id="L166">      comics.remove(comic);</span>
+<span class="fc" id="L167">      saveUsersToFile(comics);</span>
+<span class="fc" id="L168">      System.out.println(&quot;Book deleted successfully.&quot;);</span>
+<span class="fc" id="L169">      found = true;</span>
+<span class="fc" id="L170">      Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());</span>
+<span class="fc" id="L171">      comicmanager.AddBook(newUser);</span>
+<span class="fc" id="L172">      usermanager.creditSellscore(Main.LoginName, comic.getValue());</span>
+<span class="fc" id="L173">      usermanager.creditbuyscore(oldUser, comic.getValue());</span>
+<span class="fc" id="L174">      return 0;</span>
+      }
+<span class="fc" id="L176">    }</span>
+
+<span class="pc bpc" id="L178" title="1 of 2 branches missed.">    if (!found) {</span>
+<span class="fc" id="L179">      System.out.println(&quot;No book matching book ID was found.&quot;);</span>
+<span class="fc" id="L180">      return -1;</span>
+    }
+
+<span class="nc" id="L183">    return -1;</span>
+  }
+
+  /**
+   * Checks if a trade name is available (not already used).
+   *
+   * @param title The title to check availability for.
+   * @return True if the title is available, false otherwise.
+   */
+  public boolean isTradeNameAvailable(String title) {
+<span class="fc bfc" id="L193" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
+<span class="fc bfc" id="L194" title="All 2 branches covered.">      if (comic.getTitle().equals(title)) {</span>
+<span class="fc" id="L195">        return false;</span>
+      }
+<span class="fc" id="L197">    }</span>
+
+<span class="fc" id="L199">    return true;</span>
+  }
+  
+  /**
+   * Returns the value of the book with the specified ID.
+   * 
+   * @param bookID The ID of the book.
+   * @return The value of the book with the specified ID, or 0 if the book is not found.
+   */
+  public int getBookValueByID(int bookID) {
+<span class="fc bfc" id="L209" title="All 2 branches covered.">      for (Trade comic : comics) {</span>
+<span class="pc bpc" id="L210" title="1 of 2 branches missed.">          if (comic.getComicID() == bookID) {</span>
+<span class="nc" id="L211">              return comic.getValue();</span>
+          }
+<span class="fc" id="L213">      }</span>
+
+<span class="fc" id="L215">      return 0;</span>
+  }
+
+
+  /**
+   * Checks if a trade ID is available (not already used).
+   *
+   * @param ID The ID to check availability for.
+   * @return True if the ID is available, false otherwise.
+   */
+  public boolean isTradeIDAvailable(int ID) {
+<span class="fc bfc" id="L226" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
+<span class="fc bfc" id="L227" title="All 2 branches covered.">      if (comic.getComicID() == ID) {</span>
+<span class="fc" id="L228">        return false;</span>
+      }
+<span class="fc" id="L230">    }</span>
+
+<span class="fc" id="L232">    return true;</span>
+  }
+
+  /**
+   * Retrieves the title of a comic book by its ID.
+   *
+   * @param TradeID The ID of the comic book.
+   * @return The title of the comic book if found, null otherwise.
+   */
+  public String getTradeTitleByID(int TradeID) {
+<span class="nc bnc" id="L242" title="All 2 branches missed.">    for (Trade comic : comics) {</span>
+<span class="nc bnc" id="L243" title="All 2 branches missed.">      if (comic.getComicID() == TradeID) {</span>
+<span class="nc" id="L244">        return comic.getTitle();</span>
+      }
+<span class="nc" id="L246">    }</span>
+
+<span class="nc" id="L248">    return null;</span>
+  }
+
+  /**
+   * Reads the list of trades from the file specified by the Trade_FILE_PATH.
+   * If the file doesn't exist, it creates a new one and returns an empty list.
+   *
+   * @return The list of trades read from the file or an empty list if the file doesn't exist.
+   */
+  private List&lt;Trade&gt; readUsersFromFile() {
+<span class="fc" id="L258">    File file = new File(Trade_FILE_PATH);</span>
+
+<span class="fc bfc" id="L260" title="All 2 branches covered.">    if (!file.exists()) {</span>
+      try {
+<span class="pc bpc" id="L262" title="1 of 2 branches missed.">        if (file.createNewFile()) {</span>
+<span class="fc" id="L263">          System.out.println(&quot;Trades.dat file created.&quot;);</span>
+        } else {
+<span class="nc" id="L265">          System.out.println(&quot;Trades.dat file already exists.&quot;);</span>
+        }
+<span class="nc" id="L267">      } catch (IOException e) {</span>
+<span class="nc" id="L268">        System.out.println(&quot;File creation error: &quot; + e.getMessage());</span>
+<span class="fc" id="L269">      }</span>
+
+<span class="fc" id="L271">      return new ArrayList&lt;&gt;();</span>
+    }
+
+<span class="fc" id="L274">    try (FileInputStream fileIn = new FileInputStream(Trade_FILE_PATH);</span>
+<span class="fc" id="L275">           ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {</span>
+<span class="fc" id="L276">      return (List&lt;Trade&gt;) objectIn.readObject();</span>
+<span class="fc" id="L277">    } catch (IOException | ClassNotFoundException e) {</span>
+<span class="fc" id="L278">      return new ArrayList&lt;&gt;();</span>
+    }
+  }
+
+  /**
+   * Saves the list of trades to the file specified by the Trade_FILE_PATH.
+   *
+   * @param comics2 The list of trades to be saved to the file.
+   * @return 0 if the trades are successfully saved, -1 otherwise.
+   */
+  private int saveUsersToFile(List&lt;Trade&gt; comics2) {
+<span class="fc" id="L289">    try (FileOutputStream fileOut = new FileOutputStream(Trade_FILE_PATH);</span>
+<span class="fc" id="L290">           ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {</span>
+<span class="fc" id="L291">      objectOut.writeObject(comics2);</span>
+<span class="fc" id="L292">      System.out.println(&quot;Book successfully saved to file.&quot;);</span>
+<span class="fc" id="L293">      return 0;</span>
+<span class="nc" id="L294">    } catch (IOException e) {</span>
+<span class="nc" id="L295">      System.out.println(&quot;File write error: &quot; + e.getMessage());</span>
+<span class="nc" id="L296">      return -1;</span>
+    }
+  }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

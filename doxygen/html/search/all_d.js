@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['wish_115',['Wish',['../classcom_1_1mehmetali_1_1comic__manager_1_1Wish.html',1,'com.mehmetali.comic_manager.Wish'],['../classcom_1_1mehmetali_1_1comic__manager_1_1Wish.html#a0f73f2b591117bb029ff0bab1353d75d',1,'com.mehmetali.comic_manager.Wish.Wish()']]],
+  ['wish_2ejava_116',['Wish.java',['../Wish_8java.html',1,'']]],
+  ['wishaddbookmenu_117',['WishAddBookMenu',['../classcom_1_1mehmetali_1_1comic__manager_1_1Main.html#acce50654a239e2528271c7683221a389',1,'com::mehmetali::comic_manager::Main']]],
+  ['wishdeletebookmenu_118',['WishdeleteBookMenu',['../classcom_1_1mehmetali_1_1comic__manager_1_1Main.html#a436b3d62b9a7e98f9972d86c3fab7bfe',1,'com::mehmetali::comic_manager::Main']]],
+  ['wishlistbookmenu_119',['WishlistBookMenu',['../classcom_1_1mehmetali_1_1comic__manager_1_1Main.html#a9d1930b53d5fb23b30186978f27db3fe',1,'com::mehmetali::comic_manager::Main']]],
+  ['wishmanager_120',['WishManager',['../classcom_1_1mehmetali_1_1comic__manager_1_1WishManager.html',1,'com.mehmetali.comic_manager.WishManager'],['../classcom_1_1mehmetali_1_1comic__manager_1_1WishManager.html#a37526dcf7e51c9b68ce4e2b498364cbf',1,'com.mehmetali.comic_manager.WishManager.WishManager()']]],
+  ['wishmanager_2ejava_121',['WishManager.java',['../WishManager_8java.html',1,'']]],
+  ['wishwriter_122',['WishWriter',['../interfacecom_1_1mehmetali_1_1comic__manager_1_1WishManager_1_1WishWriter.html',1,'com::mehmetali::comic_manager::WishManager']]]
+];

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacecom_1_1mehmetali_1_1comic__manager" kind="namespace" language="Java">
+    <compoundname>com::mehmetali::comic_manager</compoundname>
+    <innerclass refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book" prot="public">com::mehmetali::comic_manager::Book</innerclass>
+    <innerclass refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager" prot="public">com::mehmetali::comic_manager::BookManager</innerclass>
+    <innerclass refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event" prot="public">com::mehmetali::comic_manager::Event</innerclass>
+    <innerclass refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager" prot="public">com::mehmetali::comic_manager::EventManager</innerclass>
+    <innerclass refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main" prot="public">com::mehmetali::comic_manager::Main</innerclass>
+    <innerclass refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade" prot="public">com::mehmetali::comic_manager::Trade</innerclass>
+    <innerclass refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager" prot="public">com::mehmetali::comic_manager::TradeManager</innerclass>
+    <innerclass refid="classcom_1_1mehmetali_1_1comic__manager_1_1User" prot="public">com::mehmetali::comic_manager::User</innerclass>
+    <innerclass refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager" prot="public">com::mehmetali::comic_manager::UserManager</innerclass>
+    <innerclass refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish" prot="public">com::mehmetali::comic_manager::Wish</innerclass>
+    <innerclass refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager" prot="public">com::mehmetali::comic_manager::WishManager</innerclass>
+    <briefdescription>
+<para>package </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespacecom_1_1mehmetali_1_1comic__manager" kindref="compound">com.mehmetali.comic_manager</ref> is a group of bar utils for operating on foo things.</para>
+<para>The <ref refid="namespacecom_1_1mehmetali_1_1comic__manager" kindref="compound">com.mehmetali.comic_manager</ref> package contains classes related to the Comic Manager application. </para>
+    </detaileddescription>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="2" column="1"/>
+  </compounddef>
+</doxygen>

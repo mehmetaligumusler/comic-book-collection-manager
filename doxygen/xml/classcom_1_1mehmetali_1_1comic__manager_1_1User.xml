@@ -1,0 +1,705 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1mehmetali_1_1comic__manager_1_1User" kind="class" language="Java" prot="public">
+    <compoundname>com::mehmetali::comic_manager::User</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>Comic</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a3bf93475c336dedd63a4038290ce0971" prot="private" static="yes" mutable="no">
+        <type>final long</type>
+        <definition>final long com.mehmetali.comic_manager.User&lt; Comic &gt;.serialVersionUID</definition>
+        <argsstring></argsstring>
+        <name>serialVersionUID</name>
+        <initializer>= 1L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The serial version UID for object serialization. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="24" column="29" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a13182f525f553d848c10b164be2392ea" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.User&lt; Comic &gt;.username</definition>
+        <argsstring></argsstring>
+        <name>username</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The username of the user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="26" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a4b1637a0a639897cf4538c75290330bd" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.User&lt; Comic &gt;.password</definition>
+        <argsstring></argsstring>
+        <name>password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The password of the user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="27" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a9061dd1d5e719ae0675b940f7a58d7d9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.User&lt; Comic &gt;.wallet</definition>
+        <argsstring></argsstring>
+        <name>wallet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The wallet balance of the user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="28" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a28cdc22f41cf8ba1a3aeb911839e79d2" prot="private" static="no" mutable="no">
+        <type>List&lt; Comic &gt;</type>
+        <definition>List&lt;Comic&gt; com.mehmetali.comic_manager.User&lt; Comic &gt;.collection</definition>
+        <argsstring></argsstring>
+        <name>collection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The collection of comics owned by the user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="30" column="16" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a6af77a3ae252f5c0768d7472f84aeb49" prot="private" static="no" mutable="no">
+        <type>List&lt; Comic &gt;</type>
+        <definition>List&lt;Comic&gt; com.mehmetali.comic_manager.User&lt; Comic &gt;.wishlist</definition>
+        <argsstring></argsstring>
+        <name>wishlist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The wishlist of comics desired by the user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="31" column="16" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a75f2dc05ee6ad19549f83fc58d330448" prot="private" static="no" mutable="no">
+        <type>List&lt; Comic &gt;</type>
+        <definition>List&lt;Comic&gt; com.mehmetali.comic_manager.User&lt; Comic &gt;.tradeList</definition>
+        <argsstring></argsstring>
+        <name>tradeList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The list of comics available for trade by the user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="32" column="16" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ad876d57c709229f8b8254baa21fd3ac8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.mehmetali.comic_manager.User&lt; Comic &gt;.User</definition>
+        <argsstring>(String username, String password, int wallet)</argsstring>
+        <name>User</name>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>wallet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a user with the specified username, password, and wallet balance.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the username of the user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the password of the user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wallet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the wallet balance of the user </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="44" column="10" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="44" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ad1e5700b76c5faba76abaf21fafcdbe8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.User&lt; Comic &gt;.getWallet</definition>
+        <argsstring>()</argsstring>
+        <name>getWallet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the wallet balance of the user.</para>
+<para><simplesect kind="return"><para>the wallet balance of the user </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="58" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="58" bodyend="60"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1aa627b545ada6c4ef7275780b44e34769" compoundref="UserManager_8java" startline="138" endline="158">com.mehmetali.comic_manager.UserManager.creditbuyscore</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ae89c4bc39cb10ab21674fd2d23e2f271" compoundref="UserManager_8java" startline="167" endline="187">com.mehmetali.comic_manager.UserManager.creditSellscore</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" compoundref="Main_8java" startline="158" endline="203">com.mehmetali.comic_manager.Main.MainApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1af8d572dee3c8b46bb786deec41a5e91b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.User&lt; Comic &gt;.setWallet</definition>
+        <argsstring>(int wallet)</argsstring>
+        <name>setWallet</name>
+        <param>
+          <type>int</type>
+          <declname>wallet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the wallet balance of the user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wallet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the wallet balance of the user to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="67" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="67" bodyend="69"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1aa627b545ada6c4ef7275780b44e34769" compoundref="UserManager_8java" startline="138" endline="158">com.mehmetali.comic_manager.UserManager.creditbuyscore</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ae89c4bc39cb10ab21674fd2d23e2f271" compoundref="UserManager_8java" startline="167" endline="187">com.mehmetali.comic_manager.UserManager.creditSellscore</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a4fc86647d5efe0bbfae2821208ad58a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.User&lt; Comic &gt;.getUsername</definition>
+        <argsstring>()</argsstring>
+        <name>getUsername</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the username of the user.</para>
+<para><simplesect kind="return"><para>the username of the user </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="76" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="76" bodyend="78"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9aed727b7977c1aa386dd0c2142671a1" compoundref="Main_8java" startline="632" endline="650">com.mehmetali.comic_manager.Main.loginMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" compoundref="Main_8java" startline="158" endline="203">com.mehmetali.comic_manager.Main.MainApp</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ac7b628a800efefa0a9585181d1e49e5f" compoundref="UserManager_8java" startline="39" endline="49">com.mehmetali.comic_manager.UserManager.registerUser</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ae405364198712afbc3ef7c6cdca20a46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.User&lt; Comic &gt;.setUsername</definition>
+        <argsstring>(String username)</argsstring>
+        <name>setUsername</name>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the username of the user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the username of the user to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="85" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a78df07c91d5306d023cb39214e7bd30f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.User&lt; Comic &gt;.getPassword</definition>
+        <argsstring>()</argsstring>
+        <name>getPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the password of the user.</para>
+<para><simplesect kind="return"><para>the password of the user </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="94" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a6700dc26a9c03ede69d49725b3b47cb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.User&lt; Comic &gt;.setPassword</definition>
+        <argsstring>(String password)</argsstring>
+        <name>setPassword</name>
+        <param>
+          <type>String</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the password of the user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the password of the user to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="103" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a903825b2d5fc2367e998b93e10d00055" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; Comic &gt;</type>
+        <definition>List&lt;Comic&gt; com.mehmetali.comic_manager.User&lt; Comic &gt;.getCollection</definition>
+        <argsstring>()</argsstring>
+        <name>getCollection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the collection of comics owned by the user.</para>
+<para><simplesect kind="return"><para>the collection of comics owned by the user </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="112" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="112" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1aded3a2aa90fe281f926c8e254e937296" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.User&lt; Comic &gt;.setCollection</definition>
+        <argsstring>(List&lt; Comic &gt; collection)</argsstring>
+        <name>setCollection</name>
+        <param>
+          <type>List&lt; Comic &gt;</type>
+          <declname>collection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the collection of comics owned by the user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>collection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the collection of comics owned by the user to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="121" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="121" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a6662b428e555f623608cd2ddafbcd6f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; Comic &gt;</type>
+        <definition>List&lt;Comic&gt; com.mehmetali.comic_manager.User&lt; Comic &gt;.getWishlist</definition>
+        <argsstring>()</argsstring>
+        <name>getWishlist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the wishlist of comics of the user.</para>
+<para><simplesect kind="return"><para>the wishlist of comics of the user </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="130" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="130" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a57527e5d64fa188cd9362799a9002dd1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.User&lt; Comic &gt;.setWishlist</definition>
+        <argsstring>(List&lt; Comic &gt; wishlist)</argsstring>
+        <name>setWishlist</name>
+        <param>
+          <type>List&lt; Comic &gt;</type>
+          <declname>wishlist</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the wishlist of comics of the user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wishlist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the wishlist of comics of the user to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="139" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ae899321686693b9a0e60c528a5eac6c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; Comic &gt;</type>
+        <definition>List&lt;Comic&gt; com.mehmetali.comic_manager.User&lt; Comic &gt;.getTradeList</definition>
+        <argsstring>()</argsstring>
+        <name>getTradeList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the trade list of comics of the user.</para>
+<para><simplesect kind="return"><para>the trade list of comics of the user </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="148" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="148" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ae01dc51c5ca4f452038e52fcbe5ed855" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.User&lt; Comic &gt;.setTradeList</definition>
+        <argsstring>(List&lt; Comic &gt; tradeList)</argsstring>
+        <name>setTradeList</name>
+        <param>
+          <type>List&lt; Comic &gt;</type>
+          <declname>tradeList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the trade list of comics of the user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tradeList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the trade list of comics of the user to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="157" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="157" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1aec7e1d667c48ebc488e7f762338aaa98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.User&lt; Comic &gt;.addToCollection</definition>
+        <argsstring>(Comic comic)</argsstring>
+        <name>addToCollection</name>
+        <param>
+          <type>Comic</type>
+          <declname>comic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a comic to the user&apos;s collection.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the comic to add to the collection </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="166" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="166" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a188c5b6e0acba978161a7dd11825ba89" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.User&lt; Comic &gt;.removeFromCollection</definition>
+        <argsstring>(Comic comic)</argsstring>
+        <name>removeFromCollection</name>
+        <param>
+          <type>Comic</type>
+          <declname>comic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes a comic from the user&apos;s collection.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the comic to remove from the collection </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="175" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="175" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a412cb725e963a94d8efafcb2e88fd297" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.User&lt; Comic &gt;.addToWishlist</definition>
+        <argsstring>(Comic comic)</argsstring>
+        <name>addToWishlist</name>
+        <param>
+          <type>Comic</type>
+          <declname>comic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a comic to the user&apos;s wishlist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the comic to add to the wishlist </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="184" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="184" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a78aef8ee3e3f48789f6d78d52f5a1595" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.User&lt; Comic &gt;.removeFromWishlist</definition>
+        <argsstring>(Comic comic)</argsstring>
+        <name>removeFromWishlist</name>
+        <param>
+          <type>Comic</type>
+          <declname>comic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes a comic from the user&apos;s wishlist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the comic to remove from the wishlist </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="193" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="193" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a2066bf0460fb8c8781b3aa3b20a61a16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.User&lt; Comic &gt;.addToTradeList</definition>
+        <argsstring>(Comic comic)</argsstring>
+        <name>addToTradeList</name>
+        <param>
+          <type>Comic</type>
+          <declname>comic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a comic to the user&apos;s trade list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the comic to add to the trade list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="202" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="202" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a638c500168f19e95e003645052b45d98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.User&lt; Comic &gt;.removeFromTradeList</definition>
+        <argsstring>(Comic comic)</argsstring>
+        <name>removeFromTradeList</name>
+        <param>
+          <type>Comic</type>
+          <declname>comic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes a comic from the user&apos;s trade list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the comic to remove from the trade list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="211" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="211" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a315327aac90557d095a631ca660ae70b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.User&lt; Comic &gt;.toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a string representation of the user.</para>
+<para><simplesect kind="return"><para>a string representation of the user </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="221" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="221" bodyend="229"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Represents a user in the comic management system.</para>
+<para>This class represents a user in the comic management system. It contains information such as username, password, wallet balance, collection of comics, wishlist, and trade list.</para>
+<para>The class implements the Serializable interface to support object serialization.</para>
+<para><simplesect kind="author"><para>mehmetali </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;Comic&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of comic in the user&apos;s collection, wishlist, and trade list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.mehmetali.comic_manager.User&lt; Comic &gt;</label>
+        <link refid="classcom_1_1mehmetali_1_1comic__manager_1_1User"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.mehmetali.comic_manager.User&lt; Comic &gt;</label>
+        <link refid="classcom_1_1mehmetali_1_1comic__manager_1_1User"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="23" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="23" bodyend="230"/>
+    <listofallmembers>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1aec7e1d667c48ebc488e7f762338aaa98" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>addToCollection</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a2066bf0460fb8c8781b3aa3b20a61a16" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>addToTradeList</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a412cb725e963a94d8efafcb2e88fd297" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>addToWishlist</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a28cdc22f41cf8ba1a3aeb911839e79d2" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>collection</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a903825b2d5fc2367e998b93e10d00055" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>getCollection</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a78df07c91d5306d023cb39214e7bd30f" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>getPassword</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ae899321686693b9a0e60c528a5eac6c4" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>getTradeList</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a4fc86647d5efe0bbfae2821208ad58a1" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>getUsername</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ad1e5700b76c5faba76abaf21fafcdbe8" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>getWallet</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a6662b428e555f623608cd2ddafbcd6f6" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>getWishlist</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a4b1637a0a639897cf4538c75290330bd" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>password</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a188c5b6e0acba978161a7dd11825ba89" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>removeFromCollection</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a638c500168f19e95e003645052b45d98" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>removeFromTradeList</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a78aef8ee3e3f48789f6d78d52f5a1595" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>removeFromWishlist</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a3bf93475c336dedd63a4038290ce0971" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>serialVersionUID</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1aded3a2aa90fe281f926c8e254e937296" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>setCollection</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a6700dc26a9c03ede69d49725b3b47cb8" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>setPassword</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ae01dc51c5ca4f452038e52fcbe5ed855" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>setTradeList</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ae405364198712afbc3ef7c6cdca20a46" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>setUsername</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1af8d572dee3c8b46bb786deec41a5e91b" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>setWallet</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a57527e5d64fa188cd9362799a9002dd1" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>setWishlist</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a315327aac90557d095a631ca660ae70b" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>toString</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a75f2dc05ee6ad19549f83fc58d330448" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>tradeList</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ad876d57c709229f8b8254baa21fd3ac8" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>User</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a13182f525f553d848c10b164be2392ea" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>username</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a9061dd1d5e719ae0675b940f7a58d7d9" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>wallet</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a6af77a3ae252f5c0768d7472f84aeb49" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::User</scope><name>wishlist</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

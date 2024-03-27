@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_c1109ce587b19de1d466cbec5ba42c73" kind="dir">
+    <compoundname>comic_manager_app/src/main/java/com/mehmetali/comic_manager</compoundname>
+    <innerfile refid="Book_8java">Book.java</innerfile>
+    <innerfile refid="BookManager_8java">BookManager.java</innerfile>
+    <innerfile refid="Event_8java">Event.java</innerfile>
+    <innerfile refid="EventManager_8java">EventManager.java</innerfile>
+    <innerfile refid="Main_8java">Main.java</innerfile>
+    <innerfile refid="Trade_8java">Trade.java</innerfile>
+    <innerfile refid="TradeManager_8java">TradeManager.java</innerfile>
+    <innerfile refid="User_8java">User.java</innerfile>
+    <innerfile refid="UserManager_8java">UserManager.java</innerfile>
+    <innerfile refid="Wish_8java">Wish.java</innerfile>
+    <innerfile refid="WishManager_8java">WishManager.java</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/"/>
+  </compounddef>
+</doxygen>

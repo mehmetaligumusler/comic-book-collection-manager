@@ -1,0 +1,291 @@
+\hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager}{}\doxysection{com.\+mehmetali.\+comic\+\_\+manager.\+Wish\+Manager Class Reference}
+\label{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager}\index{com.mehmetali.comic\_manager.WishManager@{com.mehmetali.comic\_manager.WishManager}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{interfacecom_1_1mehmetali_1_1comic__manager_1_1WishManager_1_1WishWriter}{Wish\+Writer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_a37526dcf7e51c9b68ce4e2b498364cbf}{Wish\+Manager}} ()
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_ae16ff49bc0e8293cb87dd8b4286d4994}{Add\+Book}} (\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Wish}{Wish}} comic)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_ae495b9c01f9d119c30d3ade91e4f7906}{list\+Books}} ()
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_a742124a4b6632f71f4537418154ceaa5}{list\+Books\+By\+User}} (String \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1User}{User}})
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_affccdb63c5a7f1f94c677c50354c8181}{delete\+Book\+By\+ID}} (int book\+ID)
+\item 
+boolean \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_a33c38b04fbb3dbe255cc83a05b293d1e}{is\+Book\+Name\+Available}} (String title)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the wish list of comics.
+
+This class provides functionalities to manage the wish list of comics, including reading from and writing to a file, and interacting with the \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager}{Book\+Manager}}.
+
+The class also includes an interface for writing wish data to a file.
+
+\begin{DoxyAuthor}{Author}
+mehmetali 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 24 of file Wish\+Manager.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_a37526dcf7e51c9b68ce4e2b498364cbf}\label{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_a37526dcf7e51c9b68ce4e2b498364cbf}} 
+\index{com.mehmetali.comic\_manager.WishManager@{com.mehmetali.comic\_manager.WishManager}!WishManager@{WishManager}}
+\index{WishManager@{WishManager}!com.mehmetali.comic\_manager.WishManager@{com.mehmetali.comic\_manager.WishManager}}
+\doxysubsubsection{\texorpdfstring{WishManager()}{WishManager()}}
+{\footnotesize\ttfamily com.\+mehmetali.\+comic\+\_\+manager.\+Wish\+Manager.\+Wish\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs a \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager}{Wish\+Manager}} object and reads wish list from file. 
+
+Definition at line 50 of file Wish\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                        \{}
+\DoxyCodeLine{51     this.comics = readFromFile(WISH\_FILE\_PATH);}
+\DoxyCodeLine{52   \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_ae16ff49bc0e8293cb87dd8b4286d4994}\label{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_ae16ff49bc0e8293cb87dd8b4286d4994}} 
+\index{com.mehmetali.comic\_manager.WishManager@{com.mehmetali.comic\_manager.WishManager}!AddBook@{AddBook}}
+\index{AddBook@{AddBook}!com.mehmetali.comic\_manager.WishManager@{com.mehmetali.comic\_manager.WishManager}}
+\doxysubsubsection{\texorpdfstring{AddBook()}{AddBook()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Wish\+Manager.\+Add\+Book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Wish}{Wish}}}]{comic }\end{DoxyParamCaption})}
+
+Adds a book wish to the wish list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em comic} & the wish to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the title of the added wish 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file Wish\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                                  \{}
+\DoxyCodeLine{62       }
+\DoxyCodeLine{63     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_a33c38b04fbb3dbe255cc83a05b293d1e}{isBookNameAvailable}}(comic.getTitle())) \{}
+\DoxyCodeLine{64       System.out.println(\textcolor{stringliteral}{"{}This Book name is already in use. Please choose a different book title."{}});}
+\DoxyCodeLine{65       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_aa61f6486ec8521cd614d974a58635c22}{getBookTitleByID}}(comic.getComicID());}
+\DoxyCodeLine{69     \textcolor{comment}{//comic.setTitle(Name); }}
+\DoxyCodeLine{70     comics.add(comic);}
+\DoxyCodeLine{71     writeToFile(comics, WISH\_FILE\_PATH);}
+\DoxyCodeLine{72     System.out.println(\textcolor{stringliteral}{"{}The book has been successfully added to the wish list."{}});}
+\DoxyCodeLine{73     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{74   \}}
+
+\end{DoxyCode}
+
+
+References com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+get\+Book\+Title\+By\+ID(), com.\+mehmetali.\+comic\+\_\+manager.\+Wish.\+get\+Comic\+ID(), com.\+mehmetali.\+comic\+\_\+manager.\+Wish.\+get\+Title(), and com.\+mehmetali.\+comic\+\_\+manager.\+Wish\+Manager.\+is\+Book\+Name\+Available().
+
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Wish\+Add\+Book\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_affccdb63c5a7f1f94c677c50354c8181}\label{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_affccdb63c5a7f1f94c677c50354c8181}} 
+\index{com.mehmetali.comic\_manager.WishManager@{com.mehmetali.comic\_manager.WishManager}!deleteBookByID@{deleteBookByID}}
+\index{deleteBookByID@{deleteBookByID}!com.mehmetali.comic\_manager.WishManager@{com.mehmetali.comic\_manager.WishManager}}
+\doxysubsubsection{\texorpdfstring{deleteBookByID()}{deleteBookByID()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Wish\+Manager.\+delete\+Book\+By\+ID (\begin{DoxyParamCaption}\item[{int}]{book\+ID }\end{DoxyParamCaption})}
+
+Deletes a book wish from the wish list by its ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em book\+ID} & the ID of the book to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the book is deleted successfully, -\/1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 139 of file Wish\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{139                                         \{}
+\DoxyCodeLine{140     \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     \textcolor{keywordflow}{for} (Wish comic : comics) \{}
+\DoxyCodeLine{143       \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
+\DoxyCodeLine{144         comics.remove(comic);}
+\DoxyCodeLine{145         writeToFile(comics, WISH\_FILE\_PATH);}
+\DoxyCodeLine{146         System.out.println(\textcolor{stringliteral}{"{}Book deleted successfully."{}});}
+\DoxyCodeLine{147         found = \textcolor{keyword}{true};}
+\DoxyCodeLine{148         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{149       \}}
+\DoxyCodeLine{150     \}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152     \textcolor{keywordflow}{if} (!found) \{}
+\DoxyCodeLine{153       System.out.println(\textcolor{stringliteral}{"{}No book matching book ID was found."{}});}
+\DoxyCodeLine{154       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{155     \}}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{158   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Wishdelete\+Book\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_a33c38b04fbb3dbe255cc83a05b293d1e}\label{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_a33c38b04fbb3dbe255cc83a05b293d1e}} 
+\index{com.mehmetali.comic\_manager.WishManager@{com.mehmetali.comic\_manager.WishManager}!isBookNameAvailable@{isBookNameAvailable}}
+\index{isBookNameAvailable@{isBookNameAvailable}!com.mehmetali.comic\_manager.WishManager@{com.mehmetali.comic\_manager.WishManager}}
+\doxysubsubsection{\texorpdfstring{isBookNameAvailable()}{isBookNameAvailable()}}
+{\footnotesize\ttfamily boolean com.\+mehmetali.\+comic\+\_\+manager.\+Wish\+Manager.\+is\+Book\+Name\+Available (\begin{DoxyParamCaption}\item[{String}]{title }\end{DoxyParamCaption})}
+
+Checks if a book name is available in the wish list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & the title to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the title is available, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 172 of file Wish\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{172                                                    \{}
+\DoxyCodeLine{173     \textcolor{keywordflow}{for} (Wish comic : comics) \{}
+\DoxyCodeLine{174       \textcolor{keywordflow}{if} (comic.getTitle().equals(title)) \{}
+\DoxyCodeLine{175         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{176       \}}
+\DoxyCodeLine{177     \}}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{180   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Wish\+Manager.\+Add\+Book().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_ae495b9c01f9d119c30d3ade91e4f7906}\label{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_ae495b9c01f9d119c30d3ade91e4f7906}} 
+\index{com.mehmetali.comic\_manager.WishManager@{com.mehmetali.comic\_manager.WishManager}!listBooks@{listBooks}}
+\index{listBooks@{listBooks}!com.mehmetali.comic\_manager.WishManager@{com.mehmetali.comic\_manager.WishManager}}
+\doxysubsubsection{\texorpdfstring{listBooks()}{listBooks()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Wish\+Manager.\+list\+Books (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lists all books in the wish list.
+
+\begin{DoxyReturn}{Returns}
+the number of books listed 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file Wish\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{81                          \{}
+\DoxyCodeLine{82     this.comics = readFromFile(WISH\_FILE\_PATH);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     \textcolor{keywordflow}{if} (comics.isEmpty()) \{}
+\DoxyCodeLine{85       System.out.println(\textcolor{stringliteral}{"{}No books found to list."{}});}
+\DoxyCodeLine{86       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{87     \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ Book List -\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91     \textcolor{keywordflow}{for} (Wish comic : comics) \{}
+\DoxyCodeLine{92       System.out.println(\textcolor{stringliteral}{"{}Book ID: "{}} + comic.getComicID());}
+\DoxyCodeLine{93       System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + comic.getTitle());}
+\DoxyCodeLine{94       System.out.println(\textcolor{stringliteral}{"{}Page Number: "{}} + comic.getpageNumber());}
+\DoxyCodeLine{95       System.out.println(\textcolor{stringliteral}{"{}Situation: "{}} + comic.getuser());}
+\DoxyCodeLine{96       System.out.println(\textcolor{stringliteral}{"{}Value: "{}} + comic.getValue());}
+\DoxyCodeLine{97       System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100     \textcolor{keywordflow}{return} comics.size();}
+\DoxyCodeLine{101   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_a742124a4b6632f71f4537418154ceaa5}\label{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_a742124a4b6632f71f4537418154ceaa5}} 
+\index{com.mehmetali.comic\_manager.WishManager@{com.mehmetali.comic\_manager.WishManager}!listBooksByUser@{listBooksByUser}}
+\index{listBooksByUser@{listBooksByUser}!com.mehmetali.comic\_manager.WishManager@{com.mehmetali.comic\_manager.WishManager}}
+\doxysubsubsection{\texorpdfstring{listBooksByUser()}{listBooksByUser()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Wish\+Manager.\+list\+Books\+By\+User (\begin{DoxyParamCaption}\item[{String}]{User }\end{DoxyParamCaption})}
+
+Lists books in the wish list owned by a specific user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & the username of the user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of books listed 
+\end{DoxyReturn}
+
+
+Definition at line 109 of file Wish\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109                                           \{}
+\DoxyCodeLine{110     this.comics = readFromFile(WISH\_FILE\_PATH);}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112     \textcolor{keywordflow}{if} (comics.isEmpty()) \{}
+\DoxyCodeLine{113       System.out.println(\textcolor{stringliteral}{"{}No books found to list."{}});}
+\DoxyCodeLine{114       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{115     \}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ "{}} + User + \textcolor{stringliteral}{"{} Books in Condition -\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119     \textcolor{keywordflow}{for} (Wish comic : comics) \{}
+\DoxyCodeLine{120       \textcolor{keywordflow}{if} (comic.getuser().equalsIgnoreCase(User)) \{}
+\DoxyCodeLine{121         System.out.println(\textcolor{stringliteral}{"{}Book ID: "{}} + comic.getComicID());}
+\DoxyCodeLine{122         System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + comic.getTitle());}
+\DoxyCodeLine{123         System.out.println(\textcolor{stringliteral}{"{}Page Number: "{}} + comic.getpageNumber());}
+\DoxyCodeLine{124         System.out.println(\textcolor{stringliteral}{"{}Situation: "{}} + comic.getuser());}
+\DoxyCodeLine{125         System.out.println(\textcolor{stringliteral}{"{}Value: "{}} + comic.getValue());}
+\DoxyCodeLine{126         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{127       \}}
+\DoxyCodeLine{128     \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130     \textcolor{keywordflow}{return} comics.size();}
+\DoxyCodeLine{131   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Wishlist\+Book\+Menu().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+comic\+\_\+manager\+\_\+app/src/main/java/com/mehmetali/comic\+\_\+manager/\mbox{\hyperlink{WishManager_8java}{Wish\+Manager.\+java}}\end{DoxyCompactItemize}

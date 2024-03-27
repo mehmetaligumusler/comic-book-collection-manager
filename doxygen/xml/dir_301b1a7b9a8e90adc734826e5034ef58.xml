@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_301b1a7b9a8e90adc734826e5034ef58" kind="dir">
+    <compoundname>comic_manager_app</compoundname>
+    <innerdir refid="dir_429501c8357fbb65adebb0dd6cad6b77">comic_manager_app/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="comic_manager_app/"/>
+  </compounddef>
+</doxygen>

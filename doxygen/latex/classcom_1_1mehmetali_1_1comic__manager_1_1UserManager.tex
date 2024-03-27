@@ -1,0 +1,326 @@
+\hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager}{}\doxysection{com.\+mehmetali.\+comic\+\_\+manager.\+User\+Manager Class Reference}
+\label{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager}\index{com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a91e4b998e8179f6aaa73d66ada128b97}{User\+Manager}} ()
+\item 
+String \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_ac7b628a800efefa0a9585181d1e49e5f}{register\+User}} (\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1User}{User}} user)
+\item 
+boolean \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a5c046bddd600f8fcc17b2e13ada2681e}{is\+Username\+Available}} (String username)
+\item 
+\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1User}{User}} \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a8f560693dadf7c7776e5ca54f8402c3b}{login}} (String username, String password)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_aa627b545ada6c4ef7275780b44e34769}{creditbuyscore}} (String username, int credit)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_ae89c4bc39cb10ab21674fd2d23e2f271}{credit\+Sellscore}} (String username, int credit)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_ade3d8bd9a78ed865a2c2855b97b9f61e}{get\+User\+Wallet}} (String username)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages user operations such as registration, login, and credit manipulation.
+
+This class provides functionalities to manage users including registration, login, and manipulation of user credits.
+
+\begin{DoxyAuthor}{Author}
+mehmetali 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 20 of file User\+Manager.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a91e4b998e8179f6aaa73d66ada128b97}\label{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a91e4b998e8179f6aaa73d66ada128b97}} 
+\index{com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}!UserManager@{UserManager}}
+\index{UserManager@{UserManager}!com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}}
+\doxysubsubsection{\texorpdfstring{UserManager()}{UserManager()}}
+{\footnotesize\ttfamily com.\+mehmetali.\+comic\+\_\+manager.\+User\+Manager.\+User\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs a \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager}{User\+Manager}} and reads users from the file. 
+
+Definition at line 29 of file User\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                        \{}
+\DoxyCodeLine{30     this.users = readUsersFromFile();}
+\DoxyCodeLine{31   \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_aa627b545ada6c4ef7275780b44e34769}\label{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_aa627b545ada6c4ef7275780b44e34769}} 
+\index{com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}!creditbuyscore@{creditbuyscore}}
+\index{creditbuyscore@{creditbuyscore}!com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}}
+\doxysubsubsection{\texorpdfstring{creditbuyscore()}{creditbuyscore()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+User\+Manager.\+creditbuyscore (\begin{DoxyParamCaption}\item[{String}]{username,  }\item[{int}]{credit }\end{DoxyParamCaption})}
+
+Increases the wallet balance of a user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & the username of the user \\
+\hline
+{\em credit} & the amount of credit to add to the wallet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new wallet balance of the user, or -\/1 if the user is not found 
+\end{DoxyReturn}
+
+
+Definition at line 138 of file User\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138                                                          \{}
+\DoxyCodeLine{139     User foundUser = \textcolor{keyword}{null};}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141     \textcolor{keywordflow}{for} (User user : users) \{}
+\DoxyCodeLine{142       \textcolor{keywordflow}{if} (user.getUsername().equals(username)) \{}
+\DoxyCodeLine{143         foundUser = user;}
+\DoxyCodeLine{144         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{145       \}}
+\DoxyCodeLine{146     \}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148     \textcolor{keywordflow}{if} (foundUser == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{149       System.out.println(\textcolor{stringliteral}{"{}User not found."{}});}
+\DoxyCodeLine{150       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{151     \}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153     \textcolor{keywordtype}{int} currentWallet = foundUser.getWallet();}
+\DoxyCodeLine{154     \textcolor{keywordtype}{int} newWallet = currentWallet + credit;}
+\DoxyCodeLine{155     foundUser.setWallet(newWallet);}
+\DoxyCodeLine{156     saveUsersToFile(users);}
+\DoxyCodeLine{157     \textcolor{keywordflow}{return} newWallet;}
+\DoxyCodeLine{158   \}}
+
+\end{DoxyCode}
+
+
+References com.\+mehmetali.\+comic\+\_\+manager.\+User$<$ Comic $>$.\+get\+Wallet(), and com.\+mehmetali.\+comic\+\_\+manager.\+User$<$ Comic $>$.\+set\+Wallet().
+
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Trade\+Manager.\+Buy\+Trade\+By\+ID(), and com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Credit\+Buy\+Score\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_ae89c4bc39cb10ab21674fd2d23e2f271}\label{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_ae89c4bc39cb10ab21674fd2d23e2f271}} 
+\index{com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}!creditSellscore@{creditSellscore}}
+\index{creditSellscore@{creditSellscore}!com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}}
+\doxysubsubsection{\texorpdfstring{creditSellscore()}{creditSellscore()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+User\+Manager.\+credit\+Sellscore (\begin{DoxyParamCaption}\item[{String}]{username,  }\item[{int}]{credit }\end{DoxyParamCaption})}
+
+Decreases the wallet balance of a user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & the username of the user \\
+\hline
+{\em credit} & the amount of credit to deduct from the wallet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new wallet balance of the user, or -\/1 if the user is not found 
+\end{DoxyReturn}
+
+
+Definition at line 167 of file User\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{167                                                           \{}
+\DoxyCodeLine{168     User foundUser = \textcolor{keyword}{null};}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170     \textcolor{keywordflow}{for} (User user : users) \{}
+\DoxyCodeLine{171       \textcolor{keywordflow}{if} (user.getUsername().equals(username)) \{}
+\DoxyCodeLine{172         foundUser = user;}
+\DoxyCodeLine{173         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{174       \}}
+\DoxyCodeLine{175     \}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177     \textcolor{keywordflow}{if} (foundUser == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{178       System.out.println(\textcolor{stringliteral}{"{}User not found."{}});}
+\DoxyCodeLine{179       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{180     \}}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182     \textcolor{keywordtype}{int} currentWallet = foundUser.getWallet();}
+\DoxyCodeLine{183     \textcolor{keywordtype}{int} newWallet = currentWallet -\/ credit;}
+\DoxyCodeLine{184     foundUser.setWallet(newWallet);}
+\DoxyCodeLine{185     saveUsersToFile(users);}
+\DoxyCodeLine{186     \textcolor{keywordflow}{return} newWallet;}
+\DoxyCodeLine{187   \}}
+
+\end{DoxyCode}
+
+
+References com.\+mehmetali.\+comic\+\_\+manager.\+User$<$ Comic $>$.\+get\+Wallet(), and com.\+mehmetali.\+comic\+\_\+manager.\+User$<$ Comic $>$.\+set\+Wallet().
+
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Trade\+Manager.\+Buy\+Trade\+By\+ID().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_ade3d8bd9a78ed865a2c2855b97b9f61e}\label{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_ade3d8bd9a78ed865a2c2855b97b9f61e}} 
+\index{com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}!getUserWallet@{getUserWallet}}
+\index{getUserWallet@{getUserWallet}!com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}}
+\doxysubsubsection{\texorpdfstring{getUserWallet()}{getUserWallet()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+User\+Manager.\+get\+User\+Wallet (\begin{DoxyParamCaption}\item[{String}]{username }\end{DoxyParamCaption})}
+
+Gets the wallet balance of a user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & the username of the user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the wallet balance of the user, or -\/1 if the user is not found 
+\end{DoxyReturn}
+
+
+Definition at line 194 of file User\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{194                                             \{}
+\DoxyCodeLine{195     \textcolor{keywordflow}{for} (User user : users) \{}
+\DoxyCodeLine{196       \textcolor{keywordflow}{if} (user.getUsername().equals(username)) \{}
+\DoxyCodeLine{197         \textcolor{keywordflow}{return} user.getWallet();}
+\DoxyCodeLine{198       \}}
+\DoxyCodeLine{199     \}}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{202   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a5c046bddd600f8fcc17b2e13ada2681e}\label{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a5c046bddd600f8fcc17b2e13ada2681e}} 
+\index{com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}!isUsernameAvailable@{isUsernameAvailable}}
+\index{isUsernameAvailable@{isUsernameAvailable}!com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}}
+\doxysubsubsection{\texorpdfstring{isUsernameAvailable()}{isUsernameAvailable()}}
+{\footnotesize\ttfamily boolean com.\+mehmetali.\+comic\+\_\+manager.\+User\+Manager.\+is\+Username\+Available (\begin{DoxyParamCaption}\item[{String}]{username }\end{DoxyParamCaption})}
+
+Checks if a username is available.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & the username to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the username is available, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file User\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                                       \{}
+\DoxyCodeLine{58     \textcolor{keywordflow}{for} (User user : users) \{}
+\DoxyCodeLine{59       \textcolor{keywordflow}{if} (user.getUsername().equals(username)) \{}
+\DoxyCodeLine{60         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{61       \}}
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{65   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+User\+Manager.\+register\+User().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a8f560693dadf7c7776e5ca54f8402c3b}\label{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a8f560693dadf7c7776e5ca54f8402c3b}} 
+\index{com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}!login@{login}}
+\index{login@{login}!com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1User}{User}} com.\+mehmetali.\+comic\+\_\+manager.\+User\+Manager.\+login (\begin{DoxyParamCaption}\item[{String}]{username,  }\item[{String}]{password }\end{DoxyParamCaption})}
+
+Logs in a user with the given username and password.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & the username of the user \\
+\hline
+{\em password} & the password of the user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the user object if login is successful, null otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file User\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{121                                                       \{}
+\DoxyCodeLine{122     \textcolor{keywordflow}{for} (User user : users) \{}
+\DoxyCodeLine{123       \textcolor{keywordflow}{if} (user.getUsername().equals(username) \&\& user.getPassword().equals(password)) \{}
+\DoxyCodeLine{124         \textcolor{keywordflow}{return} user;}
+\DoxyCodeLine{125       \}}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128     \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{129   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+login\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_ac7b628a800efefa0a9585181d1e49e5f}\label{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_ac7b628a800efefa0a9585181d1e49e5f}} 
+\index{com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}!registerUser@{registerUser}}
+\index{registerUser@{registerUser}!com.mehmetali.comic\_manager.UserManager@{com.mehmetali.comic\_manager.UserManager}}
+\doxysubsubsection{\texorpdfstring{registerUser()}{registerUser()}}
+{\footnotesize\ttfamily String com.\+mehmetali.\+comic\+\_\+manager.\+User\+Manager.\+register\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1User}{User}}}]{user }\end{DoxyParamCaption})}
+
+Registers a new user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & the user to register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the username of the registered user, or null if registration fails 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file User\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39                                         \{}
+\DoxyCodeLine{40     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a5c046bddd600f8fcc17b2e13ada2681e}{isUsernameAvailable}}(user.getUsername())) \{}
+\DoxyCodeLine{41       System.out.println(\textcolor{stringliteral}{"{}This username is already in use. Please choose a different username."{}});}
+\DoxyCodeLine{42       \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     users.add(user);}
+\DoxyCodeLine{46     saveUsersToFile(users);}
+\DoxyCodeLine{47     System.out.println(\textcolor{stringliteral}{"{}User registered successfully."{}});}
+\DoxyCodeLine{48     \textcolor{keywordflow}{return} user.getUsername();}
+\DoxyCodeLine{49   \}}
+
+\end{DoxyCode}
+
+
+References com.\+mehmetali.\+comic\+\_\+manager.\+User$<$ Comic $>$.\+get\+Username(), and com.\+mehmetali.\+comic\+\_\+manager.\+User\+Manager.\+is\+Username\+Available().
+
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+register\+Menu().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+comic\+\_\+manager\+\_\+app/src/main/java/com/mehmetali/comic\+\_\+manager/\mbox{\hyperlink{UserManager_8java}{User\+Manager.\+java}}\end{DoxyCompactItemize}

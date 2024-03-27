@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>User.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">comic_manager_app</a> &gt; <a href="index.source.html" class="el_package">com.mehmetali.comic_manager</a> &gt; <span class="el_source">User.java</span></div><h1>User.java</h1><pre class="source lang-java linenums">/**
+ * The com.mehmetali.comic_manager package contains classes related to the Comic Manager application.
+ */
+package com.mehmetali.comic_manager;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Represents a user in the comic management system.
+ *
+ * This class represents a user in the comic management system.
+ * It contains information such as username, password, wallet balance,
+ * collection of comics, wishlist, and trade list.
+ *
+ * The class implements the Serializable interface to support object serialization.
+ *
+ * @author mehmetali
+ * @version 1.0
+ * @param &lt;Comic&gt; the type of comic in the user's collection, wishlist, and trade list
+ */
+public class User&lt;Comic&gt; implements Serializable {
+  private static final long serialVersionUID = 1L; /**&lt; The serial version UID for object serialization. */
+
+  private String username; /**&lt; The username of the user. */
+  private String password; /**&lt; The password of the user. */
+  private int wallet; /**&lt; The wallet balance of the user. */
+
+  private List&lt;Comic&gt; collection; /**&lt; The collection of comics owned by the user. */
+  private List&lt;Comic&gt; wishlist; /**&lt; The wishlist of comics desired by the user. */
+  private List&lt;Comic&gt; tradeList; /**&lt; The list of comics available for trade by the user. */
+
+
+
+
+  /**
+   * Constructs a user with the specified username, password, and wallet balance.
+   *
+   * @param username the username of the user
+   * @param password the password of the user
+   * @param wallet   the wallet balance of the user
+   */
+<span class="fc" id="L44">  public User(String username, String password, int wallet) {</span>
+<span class="fc" id="L45">    this.username = username;</span>
+<span class="fc" id="L46">    this.password = password;</span>
+<span class="fc" id="L47">    this.wallet = wallet;</span>
+<span class="fc" id="L48">    this.collection = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L49">    this.wishlist = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L50">    this.tradeList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L51">  }</span>
+
+  /**
+   * Gets the wallet balance of the user.
+   *
+   * @return the wallet balance of the user
+   */
+  public int getWallet() {
+<span class="fc" id="L59">    return wallet;</span>
+  }
+
+  /**
+   * Sets the wallet balance of the user.
+   *
+   * @param wallet the wallet balance of the user to set
+   */
+  public void setWallet(int wallet) {
+<span class="fc" id="L68">    this.wallet = wallet;</span>
+<span class="fc" id="L69">  }</span>
+
+  /**
+   * Gets the username of the user.
+   *
+   * @return the username of the user
+   */
+  public String getUsername() {
+<span class="fc" id="L77">    return username;</span>
+  }
+
+  /**
+   * Sets the username of the user.
+   *
+   * @param username the username of the user to set
+   */
+  public void setUsername(String username) {
+<span class="fc" id="L86">    this.username = username;</span>
+<span class="fc" id="L87">  }</span>
+
+  /**
+   * Gets the password of the user.
+   *
+   * @return the password of the user
+   */
+  public String getPassword() {
+<span class="fc" id="L95">    return password;</span>
+  }
+
+  /**
+   * Sets the password of the user.
+   *
+   * @param password the password of the user to set
+   */
+  public void setPassword(String password) {
+<span class="fc" id="L104">    this.password = password;</span>
+<span class="fc" id="L105">  }</span>
+
+  /**
+   * Gets the collection of comics owned by the user.
+   *
+   * @return the collection of comics owned by the user
+   */
+  public List&lt;Comic&gt; getCollection() {
+<span class="fc" id="L113">    return collection;</span>
+  }
+
+  /**
+   * Sets the collection of comics owned by the user.
+   *
+   * @param collection the collection of comics owned by the user to set
+   */
+  public void setCollection(List&lt;Comic&gt; collection) {
+<span class="fc" id="L122">    this.collection = collection;</span>
+<span class="fc" id="L123">  }</span>
+
+  /**
+   * Gets the wishlist of comics of the user.
+   *
+   * @return the wishlist of comics of the user
+   */
+  public List&lt;Comic&gt; getWishlist() {
+<span class="fc" id="L131">    return wishlist;</span>
+  }
+
+  /**
+   * Sets the wishlist of comics of the user.
+   *
+   * @param wishlist the wishlist of comics of the user to set
+   */
+  public void setWishlist(List&lt;Comic&gt; wishlist) {
+<span class="fc" id="L140">    this.wishlist = wishlist;</span>
+<span class="fc" id="L141">  }</span>
+
+  /**
+   * Gets the trade list of comics of the user.
+   *
+   * @return the trade list of comics of the user
+   */
+  public List&lt;Comic&gt; getTradeList() {
+<span class="fc" id="L149">    return tradeList;</span>
+  }
+
+  /**
+   * Sets the trade list of comics of the user.
+   *
+   * @param tradeList the trade list of comics of the user to set
+   */
+  public void setTradeList(List&lt;Comic&gt; tradeList) {
+<span class="fc" id="L158">    this.tradeList = tradeList;</span>
+<span class="fc" id="L159">  }</span>
+
+  /**
+   * Adds a comic to the user's collection.
+   *
+   * @param comic the comic to add to the collection
+   */
+  public void addToCollection(Comic comic) {
+<span class="fc" id="L167">    collection.add(comic);</span>
+<span class="fc" id="L168">  }</span>
+
+  /**
+   * Removes a comic from the user's collection.
+   *
+   * @param comic the comic to remove from the collection
+   */
+  public void removeFromCollection(Comic comic) {
+<span class="fc" id="L176">    collection.remove(comic);</span>
+<span class="fc" id="L177">  }</span>
+
+  /**
+   * Adds a comic to the user's wishlist.
+   *
+   * @param comic the comic to add to the wishlist
+   */
+  public void addToWishlist(Comic comic) {
+<span class="fc" id="L185">    wishlist.add(comic);</span>
+<span class="fc" id="L186">  }</span>
+
+  /**
+   * Removes a comic from the user's wishlist.
+   *
+   * @param comic the comic to remove from the wishlist
+   */
+  public void removeFromWishlist(Comic comic) {
+<span class="fc" id="L194">    wishlist.remove(comic);</span>
+<span class="fc" id="L195">  }</span>
+
+  /**
+   * Adds a comic to the user's trade list.
+   *
+   * @param comic the comic to add to the trade list
+   */
+  public void addToTradeList(Comic comic) {
+<span class="fc" id="L203">    tradeList.add(comic);</span>
+<span class="fc" id="L204">  }</span>
+
+  /**
+   * Removes a comic from the user's trade list.
+   *
+   * @param comic the comic to remove from the trade list
+   */
+  public void removeFromTradeList(Comic comic) {
+<span class="fc" id="L212">    tradeList.remove(comic);</span>
+<span class="fc" id="L213">  }</span>
+
+  /**
+   * Returns a string representation of the user.
+   *
+   * @return a string representation of the user
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L222">    return &quot;User{&quot; +</span>
+           &quot;username='&quot; + username + '\'' +
+           &quot;, password='&quot; + password + '\'' +
+           &quot;, collection=&quot; + collection +
+           &quot;, wishlist=&quot; + wishlist +
+           &quot;, tradeList=&quot; + tradeList +
+           '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

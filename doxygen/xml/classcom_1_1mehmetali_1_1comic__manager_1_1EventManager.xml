@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager" kind="class" language="Java" prot="public">
+    <compoundname>com::mehmetali::comic_manager::EventManager</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1ada4ce9ae239021c27e7fb48dcc760e9e" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event" kindref="compound">Event</ref> &gt;</type>
+        <definition>List&lt;Event&gt; com.mehmetali.comic_manager.EventManager.comics</definition>
+        <argsstring></argsstring>
+        <name>comics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The list of events managed by the <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager" kindref="compound">EventManager</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="21" column="16" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1acf25dd14a493d12400c14bc60b7de876" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.mehmetali.comic_manager.EventManager.Event_FILE_PATH</definition>
+        <argsstring></argsstring>
+        <name>Event_FILE_PATH</name>
+        <initializer>= &quot;event.dat&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The file path where the event data is stored. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="22" column="31" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a96c6ac04c64ce023b52f9cbc5b4d90b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.mehmetali.comic_manager.EventManager.EventManager</definition>
+        <argsstring>()</argsstring>
+        <name>EventManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager" kindref="compound">EventManager</ref> object. Initializes the list of events by reading from a file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="30" column="10" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="30" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a7f3523855546199753ac5c8a8c4af16f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.EventManager.AddEvent</definition>
+        <argsstring>(Event comic)</argsstring>
+        <name>AddEvent</name>
+        <param>
+          <type><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event" kindref="compound">Event</ref></type>
+          <declname>comic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new event to the collection. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event to be added. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The title of the added event if successful, null otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="40" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="40" bodyend="50"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1a38449eab71fc7d11c4d3af71ef6fbefe" compoundref="Event_8java" startline="64" endline="66">com.mehmetali.comic_manager.Event.getTitle</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1adbde9cfdfafdc847c4a6e84e59ef2d24" compoundref="EventManager_8java" startline="170" endline="178">com.mehmetali.comic_manager.EventManager.isEventNameAvailable</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a5077840ac159d4f6c8c03325dbd8c86c" compoundref="Main_8java" startline="527" endline="546">com.mehmetali.comic_manager.Main.EventAddBookMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a01eb58f4ac8908f9fcf41d2eee4cebf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.EventManager.listEvents</definition>
+        <argsstring>()</argsstring>
+        <name>listEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lists all events.</para>
+<para><simplesect kind="return"><para>The number of events listed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="57" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="57" bodyend="75"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ae1ebd27a4d9d23c28b5a2fd3beb0205f" compoundref="Main_8java" startline="570" endline="574">com.mehmetali.comic_manager.Main.EventlistAllBookMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1ad622fee5585662014ad6c190fbc5c5ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.EventManager.listEventsByCondition</definition>
+        <argsstring>(String condition)</argsstring>
+        <name>listEventsByCondition</name>
+        <param>
+          <type>String</type>
+          <declname>condition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lists events based on a condition.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>condition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition to filter events. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of events listed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="83" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="83" bodyend="104"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a616ef6317be731a8fcadb7443decaccd" compoundref="Main_8java" startline="556" endline="560">com.mehmetali.comic_manager.Main.EventlistBookMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1af990a5fffaf20a62a1c5b38d233362ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.EventManager.deleteEventByID</definition>
+        <argsstring>(int EventID)</argsstring>
+        <name>deleteEventByID</name>
+        <param>
+          <type>int</type>
+          <declname>EventID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes an event by its ID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>EventID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the event to be deleted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the event is successfully deleted, -1 otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="112" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="112" bodyend="131"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a761438ee4546023c6236602326a489dd" compoundref="Main_8java" startline="585" endline="592">com.mehmetali.comic_manager.Main.EventdeleteBookMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a0368a83c16cac9edba503026117a6964" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.EventManager.updateEventTitleByID</definition>
+        <argsstring>(int EventID, String newTitle, String newContent)</argsstring>
+        <name>updateEventTitleByID</name>
+        <param>
+          <type>int</type>
+          <declname>EventID</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>newTitle</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>newContent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the title and content of an event by its ID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>EventID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the event to be updated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newTitle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new title for the event. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newContent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new content for the event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the event title is successfully updated, -1 otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="141" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="141" bodyend="161"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a6c3db295c714a3d76b8db2007cf57137" compoundref="Main_8java" startline="602" endline="618">com.mehmetali.comic_manager.Main.EventupdateBookMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1adbde9cfdfafdc847c4a6e84e59ef2d24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean com.mehmetali.comic_manager.EventManager.isEventNameAvailable</definition>
+        <argsstring>(String title)</argsstring>
+        <name>isEventNameAvailable</name>
+        <param>
+          <type>String</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if an event name is available.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title of the event to be checked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the event name is available, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="170" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="170" bodyend="178"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a7f3523855546199753ac5c8a8c4af16f" compoundref="EventManager_8java" startline="40" endline="50">com.mehmetali.comic_manager.EventManager.AddEvent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a896725dbd2310e5ef93fc99d12c3c191" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean com.mehmetali.comic_manager.EventManager.isEventIDAvailable</definition>
+        <argsstring>(int ID)</argsstring>
+        <name>isEventIDAvailable</name>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if an event ID is available.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the event to be checked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the event ID is available, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="186" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="186" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1acbef6e6afa5d6d438efb2096e05b292a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.EventManager.getEventTitleByID</definition>
+        <argsstring>(int EventID)</argsstring>
+        <name>getEventTitleByID</name>
+        <param>
+          <type>int</type>
+          <declname>EventID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the title of an event by its ID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>EventID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The title of the event if found, null otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="202" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="202" bodyend="210"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1ae4e05a57b5a72935e1893186620b7148" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event" kindref="compound">Event</ref> &gt;</type>
+        <definition>List&lt;Event&gt; com.mehmetali.comic_manager.EventManager.readUsersFromFile</definition>
+        <argsstring>()</argsstring>
+        <name>readUsersFromFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads events from a file.</para>
+<para><simplesect kind="return"><para>The list of events read from the file. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="217" column="16" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="217" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1aa2c98d448f280dafc40721b11d37c3f8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.EventManager.saveUsersToFile</definition>
+        <argsstring>(List&lt; Event &gt; comics2)</argsstring>
+        <name>saveUsersToFile</name>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event" kindref="compound">Event</ref> &gt;</type>
+          <declname>comics2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes the list of events to a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comics2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of events to be written to the file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the events are successfully written to the file, -1 otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="244" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="244" bodyend="250"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager" kindref="compound">EventManager</ref> class manages events in the comic manager application. It provides functionalities to add, list, delete, and update events.</para>
+<para>This class manages the list of events and provides methods for managing events.</para>
+<para><simplesect kind="author"><para>mehmetali </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="20" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="20" bodyend="253"/>
+    <listofallmembers>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a7f3523855546199753ac5c8a8c4af16f" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>AddEvent</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1ada4ce9ae239021c27e7fb48dcc760e9e" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>comics</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1af990a5fffaf20a62a1c5b38d233362ab" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>deleteEventByID</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1acf25dd14a493d12400c14bc60b7de876" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>Event_FILE_PATH</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a96c6ac04c64ce023b52f9cbc5b4d90b9" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>EventManager</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1acbef6e6afa5d6d438efb2096e05b292a" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>getEventTitleByID</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a896725dbd2310e5ef93fc99d12c3c191" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>isEventIDAvailable</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1adbde9cfdfafdc847c4a6e84e59ef2d24" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>isEventNameAvailable</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a01eb58f4ac8908f9fcf41d2eee4cebf8" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>listEvents</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1ad622fee5585662014ad6c190fbc5c5ae" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>listEventsByCondition</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1ae4e05a57b5a72935e1893186620b7148" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>readUsersFromFile</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1aa2c98d448f280dafc40721b11d37c3f8" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>saveUsersToFile</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a0368a83c16cac9edba503026117a6964" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>updateEventTitleByID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

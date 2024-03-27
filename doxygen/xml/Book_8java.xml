@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="Book_8java" kind="file" language="Java">
+    <compoundname>Book.java</compoundname>
+    <innerclass refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book" prot="public">com::mehmetali::comic_manager::Book</innerclass>
+    <innernamespace refid="namespacecom_1_1mehmetali_1_1comic__manager">com::mehmetali::comic_manager</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">com.mehmetali.comic_manager;<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.io.Serializable;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">@SuppressWarnings(</highlight><highlight class="stringliteral">&quot;serial&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="19" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book" refkind="compound"><highlight class="normal">public<sp/>class<sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book" kindref="compound">Book</ref><sp/>implements<sp/>Serializable<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comicID;<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>String<sp/>title;<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageNumber;<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>String<sp/>user;<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value;<sp/></highlight></codeline>
+<codeline lineno="35" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1abed0aba305f0158f85f1d665db7c11a3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1abed0aba305f0158f85f1d665db7c11a3" kindref="member">Book</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comicID,<sp/>String<sp/>title,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageNumber,<sp/>String<sp/>user,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>this.comicID<sp/>=<sp/>comicID;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>this.title<sp/>=<sp/>title;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>this.pageNumber<sp/>=<sp/>pageNumber;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>this.user<sp/>=<sp/>user;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>this.value<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a873434646b077c70811144d85954ce93" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a873434646b077c70811144d85954ce93" kindref="member">getComicID</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>comicID;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1ac4f90f4faa55931f74a6483709518556" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1ac4f90f4faa55931f74a6483709518556" kindref="member">setComicID</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comicID)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>this.comicID<sp/>=<sp/>comicID;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1ade33be84035c99f858572a9a612e47cf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1ade33be84035c99f858572a9a612e47cf" kindref="member">getTitle</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>title;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1aa6c1cf8c550f1e43c5981741fcc055b9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1aa6c1cf8c550f1e43c5981741fcc055b9" kindref="member">setTitle</ref>(String<sp/>title)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>this.title<sp/>=<sp/>title;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a5427f21361f4053b4118e684a8f01f72" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a5427f21361f4053b4118e684a8f01f72" kindref="member">getpageNumber</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pageNumber;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a3fd7b898c9d4c1493ae45e943a626d45" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a3fd7b898c9d4c1493ae45e943a626d45" kindref="member">setpageNumber</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageNumber)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>this.pageNumber<sp/>=<sp/>pageNumber;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a4c379167be1431c9aba1f2080d13b5fa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a4c379167be1431c9aba1f2080d13b5fa" kindref="member">getuser</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>user;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a319ca84c2a9032c86f96574bcdac56be" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a319ca84c2a9032c86f96574bcdac56be" kindref="member">setuser</ref>(String<sp/>user)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>this.user<sp/>=<sp/>user;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a621a5357f4554c62a00f62ec42934eb5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a621a5357f4554c62a00f62ec42934eb5" kindref="member">getValue</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a0d6e00e684c8bfc1468f39d83799205e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a0d6e00e684c8bfc1468f39d83799205e" kindref="member">setValue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>this.value<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="139" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a8280ec0ba12adcde64b0f01803809575" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a8280ec0ba12adcde64b0f01803809575" kindref="member">toString</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Comic{&quot;</highlight><highlight class="normal"><sp/>+</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;comicID=&quot;</highlight><highlight class="normal"><sp/>+<sp/>comicID<sp/>+</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;,<sp/>title=&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>title<sp/>+<sp/></highlight><highlight class="charliteral">&apos;\&apos;&apos;</highlight><highlight class="normal"><sp/>+</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;,<sp/>pageNumber=&quot;</highlight><highlight class="normal"><sp/>+<sp/>pageNumber<sp/>+</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;,<sp/>user=&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>user<sp/>+<sp/></highlight><highlight class="charliteral">&apos;\&apos;&apos;</highlight><highlight class="normal"><sp/>+</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;,<sp/>value=&quot;</highlight><highlight class="normal"><sp/>+<sp/>value<sp/>+</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;}&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java"/>
+  </compounddef>
+</doxygen>

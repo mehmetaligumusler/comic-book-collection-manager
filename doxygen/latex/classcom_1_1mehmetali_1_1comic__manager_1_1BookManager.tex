@@ -1,0 +1,486 @@
+\hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager}{}\doxysection{com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager Class Reference}
+\label{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager}\index{com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a50c24ecf4901fbdb74046ef01e839d13}{Book\+Manager}} ()
+\item 
+String \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a53c84067810419af16b5efde4e9678e7}{Add\+Book}} (\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Book}{Book}} comic)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a05e7d513cab59b0138a451dcbc2cf362}{list\+Books}} ()
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a8b03d25b5631fb17417823385a5b8807}{list\+Books\+By\+Condition}} (String condition)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a84452f9e0c10fa5b6d5faf0991db35fe}{delete\+Book\+By\+ID}} (int book\+ID)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a6fe2153aa0dac7fa2c77554da18ba4b5}{update\+Book\+Title\+By\+ID}} (int book\+ID, String new\+Title, int Page\+Number, int value)
+\item 
+boolean \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a4526ccccef9cd291deeeab8b7285135b}{is\+Book\+Name\+Available}} (String title)
+\item 
+boolean \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a4262d61aed612e85828c72d94401d01a}{is\+Book\+IDAvailable}} (int ID)
+\item 
+String \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_aa61f6486ec8521cd614d974a58635c22}{get\+Book\+Title\+By\+ID}} (int book\+ID)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_ac4bffcdd2ab85c2db27d5f7235c43d53}{get\+Book\+Page\+Number\+By\+ID}} (int book\+ID)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a3c92e1e760b49031c5f4fdf9da42cd5f}{get\+Book\+Value\+By\+ID}} (int book\+ID)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager}{Book\+Manager}} class manages the collection of comic books. It provides methods for adding, listing, deleting, and updating comic books.
+
+\begin{DoxyAuthor}{Author}
+mehmetali 
+\end{DoxyAuthor}
+
+
+Definition at line 18 of file Book\+Manager.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a50c24ecf4901fbdb74046ef01e839d13}\label{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a50c24ecf4901fbdb74046ef01e839d13}} 
+\index{com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}!BookManager@{BookManager}}
+\index{BookManager@{BookManager}!com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}}
+\doxysubsubsection{\texorpdfstring{BookManager()}{BookManager()}}
+{\footnotesize\ttfamily com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+Book\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs a \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager}{Book\+Manager}} object and initializes the list of comic books by reading from a file. 
+
+Definition at line 29 of file Book\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                        \{}
+\DoxyCodeLine{30     this.comics = readUsersFromFile(BOOK\_FILE\_PATH);}
+\DoxyCodeLine{31   \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a53c84067810419af16b5efde4e9678e7}\label{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a53c84067810419af16b5efde4e9678e7}} 
+\index{com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}!AddBook@{AddBook}}
+\index{AddBook@{AddBook}!com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}}
+\doxysubsubsection{\texorpdfstring{AddBook()}{AddBook()}}
+{\footnotesize\ttfamily String com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+Add\+Book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Book}{Book}}}]{comic }\end{DoxyParamCaption})}
+
+Adds a new comic book to the collection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em comic} & The comic book to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The title of the added comic book, or null if the comic book already exists. 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file Book\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                                     \{}
+\DoxyCodeLine{41     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a4526ccccef9cd291deeeab8b7285135b}{isBookNameAvailable}}(comic.getTitle())) \{}
+\DoxyCodeLine{42       \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     comics.add(comic);}
+\DoxyCodeLine{46     saveUsersToFile(comics,BOOK\_FILE\_PATH);}
+\DoxyCodeLine{47     readUsersFromFile(BOOK\_FILE\_PATH);}
+\DoxyCodeLine{48     \textcolor{keywordflow}{return} comic.getTitle();}
+\DoxyCodeLine{49   \}}
+
+\end{DoxyCode}
+
+
+References com.\+mehmetali.\+comic\+\_\+manager.\+Book.\+get\+Title(), and com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+is\+Book\+Name\+Available().
+
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Add\+Book\+Menu(), com.\+mehmetali.\+comic\+\_\+manager.\+Trade\+Manager.\+Buy\+Trade\+By\+ID(), and com.\+mehmetali.\+comic\+\_\+manager.\+Trade\+Manager.\+delete\+Trade\+By\+ID().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a84452f9e0c10fa5b6d5faf0991db35fe}\label{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a84452f9e0c10fa5b6d5faf0991db35fe}} 
+\index{com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}!deleteBookByID@{deleteBookByID}}
+\index{deleteBookByID@{deleteBookByID}!com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}}
+\doxysubsubsection{\texorpdfstring{deleteBookByID()}{deleteBookByID()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+delete\+Book\+By\+ID (\begin{DoxyParamCaption}\item[{int}]{book\+ID }\end{DoxyParamCaption})}
+
+Deletes a comic book from the collection based on its ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em book\+ID} & The ID of the comic book to be deleted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the comic book is successfully deleted, -\/1 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 115 of file Book\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{115                                         \{}
+\DoxyCodeLine{116     \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{119       \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
+\DoxyCodeLine{120         comics.remove(comic);}
+\DoxyCodeLine{121         saveUsersToFile(comics,BOOK\_FILE\_PATH);}
+\DoxyCodeLine{122         System.out.println(\textcolor{stringliteral}{"{}Book deleted successfully."{}});}
+\DoxyCodeLine{123         found = \textcolor{keyword}{true};}
+\DoxyCodeLine{124         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{125       \}}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128     \textcolor{keywordflow}{if} (!found) \{}
+\DoxyCodeLine{129       System.out.println(\textcolor{stringliteral}{"{}No book matching the book ID was found."{}});}
+\DoxyCodeLine{130       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{131     \}}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{134   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+delete\+Book\+Menu(), and com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Trade\+Add\+Book\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_ac4bffcdd2ab85c2db27d5f7235c43d53}\label{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_ac4bffcdd2ab85c2db27d5f7235c43d53}} 
+\index{com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}!getBookPageNumberByID@{getBookPageNumberByID}}
+\index{getBookPageNumberByID@{getBookPageNumberByID}!com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}}
+\doxysubsubsection{\texorpdfstring{getBookPageNumberByID()}{getBookPageNumberByID()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+get\+Book\+Page\+Number\+By\+ID (\begin{DoxyParamCaption}\item[{int}]{book\+ID }\end{DoxyParamCaption})}
+
+Retrieves the page number of the book with the specified ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em book\+ID} & The ID of the book. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The page number of the book with the specified ID, or 0 if the book is not found. 
+\end{DoxyReturn}
+
+
+Definition at line 221 of file Book\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{221                                                \{}
+\DoxyCodeLine{222       \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{223           \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
+\DoxyCodeLine{224               \textcolor{keywordflow}{return} comic.getpageNumber();}
+\DoxyCodeLine{225           \}}
+\DoxyCodeLine{226       \}}
+\DoxyCodeLine{227       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{228   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Trade\+Add\+Book\+Menu(), and com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Wish\+Add\+Book\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_aa61f6486ec8521cd614d974a58635c22}\label{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_aa61f6486ec8521cd614d974a58635c22}} 
+\index{com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}!getBookTitleByID@{getBookTitleByID}}
+\index{getBookTitleByID@{getBookTitleByID}!com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}}
+\doxysubsubsection{\texorpdfstring{getBookTitleByID()}{getBookTitleByID()}}
+{\footnotesize\ttfamily String com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+get\+Book\+Title\+By\+ID (\begin{DoxyParamCaption}\item[{int}]{book\+ID }\end{DoxyParamCaption})}
+
+Retrieves the title of a comic book based on its ID. 
+\begin{DoxyParams}{Parameters}
+{\em book\+ID} & The ID of the comic book. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The title of the comic book, or null if not found. 
+\end{DoxyReturn}
+
+
+Definition at line 204 of file Book\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{204                                              \{}
+\DoxyCodeLine{205     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{206       \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
+\DoxyCodeLine{207         \textcolor{keywordflow}{return} comic.getTitle();}
+\DoxyCodeLine{208       \}}
+\DoxyCodeLine{209     \}}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211     \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{212   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Wish\+Manager.\+Add\+Book(), com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Trade\+Add\+Book\+Menu(), and com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Wish\+Add\+Book\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a3c92e1e760b49031c5f4fdf9da42cd5f}\label{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a3c92e1e760b49031c5f4fdf9da42cd5f}} 
+\index{com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}!getBookValueByID@{getBookValueByID}}
+\index{getBookValueByID@{getBookValueByID}!com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}}
+\doxysubsubsection{\texorpdfstring{getBookValueByID()}{getBookValueByID()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+get\+Book\+Value\+By\+ID (\begin{DoxyParamCaption}\item[{int}]{book\+ID }\end{DoxyParamCaption})}
+
+Retrieves the value of the book with the specified ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em book\+ID} & The ID of the book. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the book with the specified ID, or 0 if the book is not found. 
+\end{DoxyReturn}
+
+
+Definition at line 236 of file Book\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{236                                           \{}
+\DoxyCodeLine{237       \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{238           \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
+\DoxyCodeLine{239               \textcolor{keywordflow}{return} comic.getValue();}
+\DoxyCodeLine{240           \}}
+\DoxyCodeLine{241       \}}
+\DoxyCodeLine{242       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{243   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Trade\+Add\+Book\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a4262d61aed612e85828c72d94401d01a}\label{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a4262d61aed612e85828c72d94401d01a}} 
+\index{com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}!isBookIDAvailable@{isBookIDAvailable}}
+\index{isBookIDAvailable@{isBookIDAvailable}!com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}}
+\doxysubsubsection{\texorpdfstring{isBookIDAvailable()}{isBookIDAvailable()}}
+{\footnotesize\ttfamily boolean com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+is\+Book\+IDAvailable (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+Checks if a given comic book ID is available in the collection. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the comic book. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the ID is available, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 189 of file Book\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{189                                            \{}
+\DoxyCodeLine{190     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{191       \textcolor{keywordflow}{if} (comic.getComicID() == ID) \{}
+\DoxyCodeLine{192         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{193       \}}
+\DoxyCodeLine{194     \}}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{197   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Wish\+Add\+Book\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a4526ccccef9cd291deeeab8b7285135b}\label{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a4526ccccef9cd291deeeab8b7285135b}} 
+\index{com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}!isBookNameAvailable@{isBookNameAvailable}}
+\index{isBookNameAvailable@{isBookNameAvailable}!com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}}
+\doxysubsubsection{\texorpdfstring{isBookNameAvailable()}{isBookNameAvailable()}}
+{\footnotesize\ttfamily boolean com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+is\+Book\+Name\+Available (\begin{DoxyParamCaption}\item[{String}]{title }\end{DoxyParamCaption})}
+
+Checks if a given comic book title is available in the collection. 
+\begin{DoxyParams}{Parameters}
+{\em title} & The title of the comic book. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the title is available, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 174 of file Book\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{174                                                    \{}
+\DoxyCodeLine{175     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{176       \textcolor{keywordflow}{if} (comic.getTitle().equals(title)) \{}
+\DoxyCodeLine{177         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{178       \}}
+\DoxyCodeLine{179     \}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{182   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+Add\+Book().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a05e7d513cab59b0138a451dcbc2cf362}\label{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a05e7d513cab59b0138a451dcbc2cf362}} 
+\index{com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}!listBooks@{listBooks}}
+\index{listBooks@{listBooks}!com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}}
+\doxysubsubsection{\texorpdfstring{listBooks()}{listBooks()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+list\+Books (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lists all comic books in the collection.
+
+\begin{DoxyReturn}{Returns}
+The number of comic books in the collection. 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file Book\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                          \{}
+\DoxyCodeLine{57     this.comics = readUsersFromFile(BOOK\_FILE\_PATH);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{keywordflow}{if} (comics.isEmpty()) \{}
+\DoxyCodeLine{60       System.out.println(\textcolor{stringliteral}{"{}No books found to list."{}});}
+\DoxyCodeLine{61       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ Book List -\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{67       System.out.println(\textcolor{stringliteral}{"{}Book ID: "{}} + comic.getComicID());}
+\DoxyCodeLine{68       System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + comic.getTitle());}
+\DoxyCodeLine{69       System.out.println(\textcolor{stringliteral}{"{}Page Number: "{}} + comic.getpageNumber());}
+\DoxyCodeLine{70       System.out.println(\textcolor{stringliteral}{"{}Situation: "{}} + comic.getuser());}
+\DoxyCodeLine{71       System.out.println(\textcolor{stringliteral}{"{}Value: "{}} + comic.getValue());}
+\DoxyCodeLine{72       System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{73     \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     \textcolor{keywordflow}{return} comics.size();}
+\DoxyCodeLine{76   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+list\+All\+Book\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a8b03d25b5631fb17417823385a5b8807}\label{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a8b03d25b5631fb17417823385a5b8807}} 
+\index{com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}!listBooksByCondition@{listBooksByCondition}}
+\index{listBooksByCondition@{listBooksByCondition}!com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}}
+\doxysubsubsection{\texorpdfstring{listBooksByCondition()}{listBooksByCondition()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+list\+Books\+By\+Condition (\begin{DoxyParamCaption}\item[{String}]{condition }\end{DoxyParamCaption})}
+
+Lists comic books in the collection based on a specific condition.
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition} & The condition to filter comic books. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of comic books satisfying the condition. 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file Book\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                                                     \{}
+\DoxyCodeLine{85     this.comics = readUsersFromFile(BOOK\_FILE\_PATH);}
+\DoxyCodeLine{86     }
+\DoxyCodeLine{87    }
+\DoxyCodeLine{88     \textcolor{keywordflow}{if} (comics.isEmpty()) \{}
+\DoxyCodeLine{89       System.out.println(\textcolor{stringliteral}{"{}No books found to list.."{}});}
+\DoxyCodeLine{90       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ "{}} + condition + \textcolor{stringliteral}{"{} Books in Condition -\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{96       \textcolor{keywordflow}{if} (comic.getuser().equalsIgnoreCase(condition)) \{}
+\DoxyCodeLine{97         System.out.println(\textcolor{stringliteral}{"{}Book ID: "{}} + comic.getComicID());}
+\DoxyCodeLine{98         System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + comic.getTitle());}
+\DoxyCodeLine{99         System.out.println(\textcolor{stringliteral}{"{}Page Number: "{}} + comic.getpageNumber());}
+\DoxyCodeLine{100         System.out.println(\textcolor{stringliteral}{"{}Situation: "{}} + comic.getuser());}
+\DoxyCodeLine{101         System.out.println(\textcolor{stringliteral}{"{}Value: "{}} + comic.getValue());}
+\DoxyCodeLine{102         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{103       \}}
+\DoxyCodeLine{104     \}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106     \textcolor{keywordflow}{return} comics.size();}
+\DoxyCodeLine{107   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+list\+Book\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a6fe2153aa0dac7fa2c77554da18ba4b5}\label{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a6fe2153aa0dac7fa2c77554da18ba4b5}} 
+\index{com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}!updateBookTitleByID@{updateBookTitleByID}}
+\index{updateBookTitleByID@{updateBookTitleByID}!com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}}
+\doxysubsubsection{\texorpdfstring{updateBookTitleByID()}{updateBookTitleByID()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager.\+update\+Book\+Title\+By\+ID (\begin{DoxyParamCaption}\item[{int}]{book\+ID,  }\item[{String}]{new\+Title,  }\item[{int}]{Page\+Number,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+Updates the title of a comic book in the collection based on its ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em book\+ID} & The ID of the comic book to be updated. \\
+\hline
+{\em new\+Title} & The new title for the comic book. \\
+\hline
+{\em Page\+Number} & The new Page\+Numbers for the comic book. \\
+\hline
+{\em value} & The new value for the comic book. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the comic book title is successfully updated, -\/1 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 145 of file Book\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{146   \{}
+\DoxyCodeLine{147     \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{150       \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
+\DoxyCodeLine{151         comic.setTitle(newTitle);}
+\DoxyCodeLine{152         comic.setpageNumber(PageNumber);}
+\DoxyCodeLine{153         comic.setValue(value);}
+\DoxyCodeLine{154         saveUsersToFile(comics,BOOK\_FILE\_PATH);}
+\DoxyCodeLine{155         System.out.println(\textcolor{stringliteral}{"{}The book title has been successfully updated."{}});}
+\DoxyCodeLine{156         found = \textcolor{keyword}{true};}
+\DoxyCodeLine{157         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{158       \}}
+\DoxyCodeLine{159     \}}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161     \textcolor{keywordflow}{if} (!found) \{}
+\DoxyCodeLine{162       System.out.println(\textcolor{stringliteral}{"{}No book matching the book ID was found."{}});}
+\DoxyCodeLine{163       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{164     \}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{167   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+update\+Book\+Menu().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+comic\+\_\+manager\+\_\+app/src/main/java/com/mehmetali/comic\+\_\+manager/\mbox{\hyperlink{BookManager_8java}{Book\+Manager.\+java}}\end{DoxyCompactItemize}

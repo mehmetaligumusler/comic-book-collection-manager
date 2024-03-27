@@ -1,0 +1,361 @@
+\hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Trade}{}\doxysection{com.\+mehmetali.\+comic\+\_\+manager.\+Trade Class Reference}
+\label{classcom_1_1mehmetali_1_1comic__manager_1_1Trade}\index{com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}}
+Inheritance diagram for com.\+mehmetali.\+comic\+\_\+manager.\+Trade\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1mehmetali_1_1comic__manager_1_1Trade}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a8935ad7946f1c438285cae93b628d594}{Trade}} (int comic\+ID, String title, int page\+Number, String user, int value)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a37e0499bdda0c3f4b58bb0f4c8a3dfc0}{get\+Comic\+ID}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_ab62d3b62e02e1c0d12f043129ae8f039}{set\+Comic\+ID}} (int comic\+ID)
+\item 
+String \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_afda42e9be0474bb4040fea48be0af328}{get\+Title}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a2eb3738f4d01c56374908626fac35bff}{set\+Title}} (String title)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_aab878bcd4f5b3ce3b08412fc0736db3b}{getpage\+Number}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_adf5ed2df452619a5ba3e2ff25e22f753}{setpage\+Number}} (int page\+Number)
+\item 
+String \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_aacdbca09025a78707ffd05a2b228339e}{getuser}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a2c80187a0914d4c71b30a590bb2786d7}{setuser}} (String user)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a9efcf7370bea8cbbb149163451d06ab2}{get\+Value}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a0fa7b11466c7d75b7d7fc30671368ae5}{set\+Value}} (int value)
+\item 
+String \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_aaea60a87f01de198c2aacdcc113b5525}{to\+String}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade}{Trade}} class represents a comic book available for trading. It implements the Serializable interface to support serialization.
+
+This class contains information such as comic ID, title, page number, user, and value.
+
+\begin{DoxyAuthor}{Author}
+mehmetali 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 18 of file Trade.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a8935ad7946f1c438285cae93b628d594}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a8935ad7946f1c438285cae93b628d594}} 
+\index{com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}!Trade@{Trade}}
+\index{Trade@{Trade}!com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}}
+\doxysubsubsection{\texorpdfstring{Trade()}{Trade()}}
+{\footnotesize\ttfamily com.\+mehmetali.\+comic\+\_\+manager.\+Trade.\+Trade (\begin{DoxyParamCaption}\item[{int}]{comic\+ID,  }\item[{String}]{title,  }\item[{int}]{page\+Number,  }\item[{String}]{user,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+Constructs a \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade}{Trade}} object with the specified attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em comic\+ID} & The ID of the comic. \\
+\hline
+{\em title} & The title of the comic. \\
+\hline
+{\em page\+Number} & The number of pages in the comic. \\
+\hline
+{\em user} & The user who owns the comic. \\
+\hline
+{\em value} & The value of the comic. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file Trade.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                                                                   \{}
+\DoxyCodeLine{35     this.comicID = comicID;}
+\DoxyCodeLine{36     this.title = title;}
+\DoxyCodeLine{37     this.pageNumber = pageNumber;}
+\DoxyCodeLine{38     this.user = user;}
+\DoxyCodeLine{39     this.value = value;}
+\DoxyCodeLine{40   \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a37e0499bdda0c3f4b58bb0f4c8a3dfc0}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a37e0499bdda0c3f4b58bb0f4c8a3dfc0}} 
+\index{com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}!getComicID@{getComicID}}
+\index{getComicID@{getComicID}!com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}}
+\doxysubsubsection{\texorpdfstring{getComicID()}{getComicID()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Trade.\+get\+Comic\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the ID of the comic.
+
+\begin{DoxyReturn}{Returns}
+the ID of the comic 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file Trade.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                           \{}
+\DoxyCodeLine{48     \textcolor{keywordflow}{return} comicID;}
+\DoxyCodeLine{49   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_aab878bcd4f5b3ce3b08412fc0736db3b}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_aab878bcd4f5b3ce3b08412fc0736db3b}} 
+\index{com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}!getpageNumber@{getpageNumber}}
+\index{getpageNumber@{getpageNumber}!com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}}
+\doxysubsubsection{\texorpdfstring{getpageNumber()}{getpageNumber()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Trade.\+getpage\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the page number of the comic.
+
+\begin{DoxyReturn}{Returns}
+the page number of the comic 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Trade.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83                              \{}
+\DoxyCodeLine{84     \textcolor{keywordflow}{return} pageNumber;}
+\DoxyCodeLine{85   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_afda42e9be0474bb4040fea48be0af328}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_afda42e9be0474bb4040fea48be0af328}} 
+\index{com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily String com.\+mehmetali.\+comic\+\_\+manager.\+Trade.\+get\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the title of the comic.
+
+\begin{DoxyReturn}{Returns}
+the title of the comic 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file Trade.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                            \{}
+\DoxyCodeLine{66     \textcolor{keywordflow}{return} title;}
+\DoxyCodeLine{67   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Trade\+Manager.\+Add\+Trade().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_aacdbca09025a78707ffd05a2b228339e}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_aacdbca09025a78707ffd05a2b228339e}} 
+\index{com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}!getuser@{getuser}}
+\index{getuser@{getuser}!com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}}
+\doxysubsubsection{\texorpdfstring{getuser()}{getuser()}}
+{\footnotesize\ttfamily String com.\+mehmetali.\+comic\+\_\+manager.\+Trade.\+getuser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the user associated with the comic.
+
+\begin{DoxyReturn}{Returns}
+the user associated with the comic 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file Trade.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{101                           \{}
+\DoxyCodeLine{102     \textcolor{keywordflow}{return} user;}
+\DoxyCodeLine{103   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a9efcf7370bea8cbbb149163451d06ab2}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a9efcf7370bea8cbbb149163451d06ab2}} 
+\index{com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}!getValue@{getValue}}
+\index{getValue@{getValue}!com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Trade.\+get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the value of the comic.
+
+\begin{DoxyReturn}{Returns}
+the value of the comic 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file Trade.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119                         \{}
+\DoxyCodeLine{120     \textcolor{keywordflow}{return} value;}
+\DoxyCodeLine{121   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_ab62d3b62e02e1c0d12f043129ae8f039}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_ab62d3b62e02e1c0d12f043129ae8f039}} 
+\index{com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}!setComicID@{setComicID}}
+\index{setComicID@{setComicID}!com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}}
+\doxysubsubsection{\texorpdfstring{setComicID()}{setComicID()}}
+{\footnotesize\ttfamily void com.\+mehmetali.\+comic\+\_\+manager.\+Trade.\+set\+Comic\+ID (\begin{DoxyParamCaption}\item[{int}]{comic\+ID }\end{DoxyParamCaption})}
+
+Sets the ID of the comic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em comic\+ID} & the ID of the comic to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 56 of file Trade.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                       \{}
+\DoxyCodeLine{57     this.comicID = comicID;}
+\DoxyCodeLine{58   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_adf5ed2df452619a5ba3e2ff25e22f753}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_adf5ed2df452619a5ba3e2ff25e22f753}} 
+\index{com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}!setpageNumber@{setpageNumber}}
+\index{setpageNumber@{setpageNumber}!com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}}
+\doxysubsubsection{\texorpdfstring{setpageNumber()}{setpageNumber()}}
+{\footnotesize\ttfamily void com.\+mehmetali.\+comic\+\_\+manager.\+Trade.\+setpage\+Number (\begin{DoxyParamCaption}\item[{int}]{page\+Number }\end{DoxyParamCaption})}
+
+Sets the page number of the comic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+Number} & the page number of the comic to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 92 of file Trade.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{92                                             \{}
+\DoxyCodeLine{93     this.pageNumber = pageNumber;}
+\DoxyCodeLine{94   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a2eb3738f4d01c56374908626fac35bff}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a2eb3738f4d01c56374908626fac35bff}} 
+\index{com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily void com.\+mehmetali.\+comic\+\_\+manager.\+Trade.\+set\+Title (\begin{DoxyParamCaption}\item[{String}]{title }\end{DoxyParamCaption})}
+
+Sets the title of the comic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & the title of the comic to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 74 of file Trade.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74                                      \{}
+\DoxyCodeLine{75     this.title = title;}
+\DoxyCodeLine{76   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a2c80187a0914d4c71b30a590bb2786d7}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a2c80187a0914d4c71b30a590bb2786d7}} 
+\index{com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}!setuser@{setuser}}
+\index{setuser@{setuser}!com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}}
+\doxysubsubsection{\texorpdfstring{setuser()}{setuser()}}
+{\footnotesize\ttfamily void com.\+mehmetali.\+comic\+\_\+manager.\+Trade.\+setuser (\begin{DoxyParamCaption}\item[{String}]{user }\end{DoxyParamCaption})}
+
+Sets the user associated with the comic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & the user associated with the comic to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 110 of file Trade.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{110                                    \{}
+\DoxyCodeLine{111     this.user = user;}
+\DoxyCodeLine{112   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a0fa7b11466c7d75b7d7fc30671368ae5}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_a0fa7b11466c7d75b7d7fc30671368ae5}} 
+\index{com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}!setValue@{setValue}}
+\index{setValue@{setValue}!com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void com.\+mehmetali.\+comic\+\_\+manager.\+Trade.\+set\+Value (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+Sets the value of the comic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the value of the comic to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 128 of file Trade.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{128                                   \{}
+\DoxyCodeLine{129     this.value = value;}
+\DoxyCodeLine{130   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_aaea60a87f01de198c2aacdcc113b5525}\label{classcom_1_1mehmetali_1_1comic__manager_1_1Trade_aaea60a87f01de198c2aacdcc113b5525}} 
+\index{com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}!toString@{toString}}
+\index{toString@{toString}!com.mehmetali.comic\_manager.Trade@{com.mehmetali.comic\_manager.Trade}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily String com.\+mehmetali.\+comic\+\_\+manager.\+Trade.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a string representation of the \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade}{Trade}} object.
+
+\begin{DoxyReturn}{Returns}
+A string representation of the \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Trade}{Trade}} object. 
+\end{DoxyReturn}
+
+
+Definition at line 138 of file Trade.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138                            \{}
+\DoxyCodeLine{139     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Comic\{"{}} +}
+\DoxyCodeLine{140            \textcolor{stringliteral}{"{}comicID="{}} + comicID +}
+\DoxyCodeLine{141            \textcolor{stringliteral}{"{}, title='"{}} + title + \textcolor{charliteral}{'\(\backslash\)''} +}
+\DoxyCodeLine{142            \textcolor{stringliteral}{"{}, pageNumber="{}} + pageNumber +}
+\DoxyCodeLine{143            \textcolor{stringliteral}{"{}, user='"{}} + user + \textcolor{charliteral}{'\(\backslash\)''} +}
+\DoxyCodeLine{144            \textcolor{stringliteral}{"{}, value="{}} + value +}
+\DoxyCodeLine{145            \textcolor{charliteral}{'\}'};}
+\DoxyCodeLine{146   \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+comic\+\_\+manager\+\_\+app/src/main/java/com/mehmetali/comic\+\_\+manager/\mbox{\hyperlink{Trade_8java}{Trade.\+java}}\end{DoxyCompactItemize}

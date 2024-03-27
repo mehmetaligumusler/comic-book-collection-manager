@@ -1,0 +1,405 @@
+\hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager}{}\doxysection{com.\+mehmetali.\+comic\+\_\+manager.\+Event\+Manager Class Reference}
+\label{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager}\index{com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a96c6ac04c64ce023b52f9cbc5b4d90b9}{Event\+Manager}} ()
+\item 
+String \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a7f3523855546199753ac5c8a8c4af16f}{Add\+Event}} (\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event}{Event}} comic)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a01eb58f4ac8908f9fcf41d2eee4cebf8}{list\+Events}} ()
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_ad622fee5585662014ad6c190fbc5c5ae}{list\+Events\+By\+Condition}} (String condition)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_af990a5fffaf20a62a1c5b38d233362ab}{delete\+Event\+By\+ID}} (int Event\+ID)
+\item 
+int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a0368a83c16cac9edba503026117a6964}{update\+Event\+Title\+By\+ID}} (int Event\+ID, String new\+Title, String new\+Content)
+\item 
+boolean \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_adbde9cfdfafdc847c4a6e84e59ef2d24}{is\+Event\+Name\+Available}} (String title)
+\item 
+boolean \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a896725dbd2310e5ef93fc99d12c3c191}{is\+Event\+IDAvailable}} (int ID)
+\item 
+String \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_acbef6e6afa5d6d438efb2096e05b292a}{get\+Event\+Title\+By\+ID}} (int Event\+ID)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager}{Event\+Manager}} class manages events in the comic manager application. It provides functionalities to add, list, delete, and update events.
+
+This class manages the list of events and provides methods for managing events.
+
+\begin{DoxyAuthor}{Author}
+mehmetali 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition at line 20 of file Event\+Manager.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a96c6ac04c64ce023b52f9cbc5b4d90b9}\label{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a96c6ac04c64ce023b52f9cbc5b4d90b9}} 
+\index{com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}!EventManager@{EventManager}}
+\index{EventManager@{EventManager}!com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}}
+\doxysubsubsection{\texorpdfstring{EventManager()}{EventManager()}}
+{\footnotesize\ttfamily com.\+mehmetali.\+comic\+\_\+manager.\+Event\+Manager.\+Event\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs an \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager}{Event\+Manager}} object. Initializes the list of events by reading from a file. 
+
+Definition at line 30 of file Event\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                         \{}
+\DoxyCodeLine{31     this.comics = readUsersFromFile();}
+\DoxyCodeLine{32   \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a7f3523855546199753ac5c8a8c4af16f}\label{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a7f3523855546199753ac5c8a8c4af16f}} 
+\index{com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}!AddEvent@{AddEvent}}
+\index{AddEvent@{AddEvent}!com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}}
+\doxysubsubsection{\texorpdfstring{AddEvent()}{AddEvent()}}
+{\footnotesize\ttfamily String com.\+mehmetali.\+comic\+\_\+manager.\+Event\+Manager.\+Add\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Event}{Event}}}]{comic }\end{DoxyParamCaption})}
+
+Adds a new event to the collection. 
+\begin{DoxyParams}{Parameters}
+{\em comic} & The event to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The title of the added event if successful, null otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file Event\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                                       \{}
+\DoxyCodeLine{41     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_adbde9cfdfafdc847c4a6e84e59ef2d24}{isEventNameAvailable}}(comic.getTitle())) \{}
+\DoxyCodeLine{42       System.out.println(\textcolor{stringliteral}{"{}This Event name is already in use. Please choose a different Event name."{}});}
+\DoxyCodeLine{43       \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{44     \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     comics.add(comic);}
+\DoxyCodeLine{47     saveUsersToFile(comics);}
+\DoxyCodeLine{48     System.out.println(\textcolor{stringliteral}{"{}Event saved successfully."{}});}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} comic.getTitle();}
+\DoxyCodeLine{50   \}}
+
+\end{DoxyCode}
+
+
+References com.\+mehmetali.\+comic\+\_\+manager.\+Event.\+get\+Title(), and com.\+mehmetali.\+comic\+\_\+manager.\+Event\+Manager.\+is\+Event\+Name\+Available().
+
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Event\+Add\+Book\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_af990a5fffaf20a62a1c5b38d233362ab}\label{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_af990a5fffaf20a62a1c5b38d233362ab}} 
+\index{com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}!deleteEventByID@{deleteEventByID}}
+\index{deleteEventByID@{deleteEventByID}!com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}}
+\doxysubsubsection{\texorpdfstring{deleteEventByID()}{deleteEventByID()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Event\+Manager.\+delete\+Event\+By\+ID (\begin{DoxyParamCaption}\item[{int}]{Event\+ID }\end{DoxyParamCaption})}
+
+Deletes an event by its ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Event\+ID} & The ID of the event to be deleted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the event is successfully deleted, -\/1 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 112 of file Event\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{112                                           \{}
+\DoxyCodeLine{113     \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115     \textcolor{keywordflow}{for} (Event comic : comics) \{}
+\DoxyCodeLine{116       \textcolor{keywordflow}{if} (comic.geteventID() == EventID) \{}
+\DoxyCodeLine{117         comics.remove(comic);}
+\DoxyCodeLine{118         saveUsersToFile(comics);}
+\DoxyCodeLine{119         System.out.println(\textcolor{stringliteral}{"{}Event deleted successfully."{}});}
+\DoxyCodeLine{120         found = \textcolor{keyword}{true};}
+\DoxyCodeLine{121         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{122       \}}
+\DoxyCodeLine{123     \}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125     \textcolor{keywordflow}{if} (!found) \{}
+\DoxyCodeLine{126       System.out.println(\textcolor{stringliteral}{"{}No Event matching Event ID was found.."{}});}
+\DoxyCodeLine{127       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{128     \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{131   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Eventdelete\+Book\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_acbef6e6afa5d6d438efb2096e05b292a}\label{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_acbef6e6afa5d6d438efb2096e05b292a}} 
+\index{com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}!getEventTitleByID@{getEventTitleByID}}
+\index{getEventTitleByID@{getEventTitleByID}!com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}}
+\doxysubsubsection{\texorpdfstring{getEventTitleByID()}{getEventTitleByID()}}
+{\footnotesize\ttfamily String com.\+mehmetali.\+comic\+\_\+manager.\+Event\+Manager.\+get\+Event\+Title\+By\+ID (\begin{DoxyParamCaption}\item[{int}]{Event\+ID }\end{DoxyParamCaption})}
+
+Retrieves the title of an event by its ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Event\+ID} & The ID of the event. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The title of the event if found, null otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 202 of file Event\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{202                                                \{}
+\DoxyCodeLine{203     \textcolor{keywordflow}{for} (Event comic : comics) \{}
+\DoxyCodeLine{204       \textcolor{keywordflow}{if} (comic.geteventID() == EventID) \{}
+\DoxyCodeLine{205         \textcolor{keywordflow}{return} comic.getTitle();}
+\DoxyCodeLine{206       \}}
+\DoxyCodeLine{207     \}}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209     \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{210   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a896725dbd2310e5ef93fc99d12c3c191}\label{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a896725dbd2310e5ef93fc99d12c3c191}} 
+\index{com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}!isEventIDAvailable@{isEventIDAvailable}}
+\index{isEventIDAvailable@{isEventIDAvailable}!com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}}
+\doxysubsubsection{\texorpdfstring{isEventIDAvailable()}{isEventIDAvailable()}}
+{\footnotesize\ttfamily boolean com.\+mehmetali.\+comic\+\_\+manager.\+Event\+Manager.\+is\+Event\+IDAvailable (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+Checks if an event ID is available.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the event to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the event ID is available, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 186 of file Event\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{186                                             \{}
+\DoxyCodeLine{187     \textcolor{keywordflow}{for} (Event comic : comics) \{}
+\DoxyCodeLine{188       \textcolor{keywordflow}{if} (comic.geteventID() == ID) \{}
+\DoxyCodeLine{189         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{190       \}}
+\DoxyCodeLine{191     \}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{194   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_adbde9cfdfafdc847c4a6e84e59ef2d24}\label{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_adbde9cfdfafdc847c4a6e84e59ef2d24}} 
+\index{com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}!isEventNameAvailable@{isEventNameAvailable}}
+\index{isEventNameAvailable@{isEventNameAvailable}!com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}}
+\doxysubsubsection{\texorpdfstring{isEventNameAvailable()}{isEventNameAvailable()}}
+{\footnotesize\ttfamily boolean com.\+mehmetali.\+comic\+\_\+manager.\+Event\+Manager.\+is\+Event\+Name\+Available (\begin{DoxyParamCaption}\item[{String}]{title }\end{DoxyParamCaption})}
+
+Checks if an event name is available.
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The title of the event to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the event name is available, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 170 of file Event\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{170                                                     \{}
+\DoxyCodeLine{171     \textcolor{keywordflow}{for} (Event comic : comics) \{}
+\DoxyCodeLine{172       \textcolor{keywordflow}{if} (comic.getTitle().equals(title)) \{}
+\DoxyCodeLine{173         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{174       \}}
+\DoxyCodeLine{175     \}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{178   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Event\+Manager.\+Add\+Event().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a01eb58f4ac8908f9fcf41d2eee4cebf8}\label{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a01eb58f4ac8908f9fcf41d2eee4cebf8}} 
+\index{com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}!listEvents@{listEvents}}
+\index{listEvents@{listEvents}!com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}}
+\doxysubsubsection{\texorpdfstring{listEvents()}{listEvents()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Event\+Manager.\+list\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lists all events.
+
+\begin{DoxyReturn}{Returns}
+The number of events listed. 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Event\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                           \{}
+\DoxyCodeLine{58     this.comics = readUsersFromFile();}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{keywordflow}{if} (comics.isEmpty()) \{}
+\DoxyCodeLine{61       System.out.println(\textcolor{stringliteral}{"{}No Events found to list."{}});}
+\DoxyCodeLine{62       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ Event List -\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \textcolor{keywordflow}{for} (Event comic : comics) \{}
+\DoxyCodeLine{68       System.out.println(\textcolor{stringliteral}{"{}Event ID: "{}} + comic.geteventID());}
+\DoxyCodeLine{69       System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + comic.getTitle());}
+\DoxyCodeLine{70       System.out.println(\textcolor{stringliteral}{"{}Content: "{}} + comic.getContent());}
+\DoxyCodeLine{71       System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{72     \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \textcolor{keywordflow}{return} comics.size();}
+\DoxyCodeLine{75   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Eventlist\+All\+Book\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_ad622fee5585662014ad6c190fbc5c5ae}\label{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_ad622fee5585662014ad6c190fbc5c5ae}} 
+\index{com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}!listEventsByCondition@{listEventsByCondition}}
+\index{listEventsByCondition@{listEventsByCondition}!com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}}
+\doxysubsubsection{\texorpdfstring{listEventsByCondition()}{listEventsByCondition()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Event\+Manager.\+list\+Events\+By\+Condition (\begin{DoxyParamCaption}\item[{String}]{condition }\end{DoxyParamCaption})}
+
+Lists events based on a condition.
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition} & The condition to filter events. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of events listed. 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Event\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83                                                      \{}
+\DoxyCodeLine{84     this.comics = readUsersFromFile();}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     \textcolor{keywordflow}{if} (comics.isEmpty()) \{}
+\DoxyCodeLine{87       System.out.println(\textcolor{stringliteral}{"{}No Events found to list."{}});}
+\DoxyCodeLine{88       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{89     \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ "{}} + condition + \textcolor{stringliteral}{"{} Events in Status -\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     \textcolor{keywordflow}{for} (Event comic : comics) \{}
+\DoxyCodeLine{94       \textcolor{keywordflow}{if} (comic.getUser().equalsIgnoreCase(condition)) \{}
+\DoxyCodeLine{95         System.out.println(\textcolor{stringliteral}{"{}Event ID: "{}} + comic.geteventID());}
+\DoxyCodeLine{96         System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + comic.getTitle());}
+\DoxyCodeLine{97         System.out.println(\textcolor{stringliteral}{"{}Content "{}} + comic.getContent());}
+\DoxyCodeLine{98         System.out.println(\textcolor{stringliteral}{"{}User: "{}} + comic.getUser());}
+\DoxyCodeLine{99         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{100       \}}
+\DoxyCodeLine{101     \}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103     \textcolor{keywordflow}{return} comics.size();}
+\DoxyCodeLine{104   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Eventlist\+Book\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a0368a83c16cac9edba503026117a6964}\label{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a0368a83c16cac9edba503026117a6964}} 
+\index{com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}!updateEventTitleByID@{updateEventTitleByID}}
+\index{updateEventTitleByID@{updateEventTitleByID}!com.mehmetali.comic\_manager.EventManager@{com.mehmetali.comic\_manager.EventManager}}
+\doxysubsubsection{\texorpdfstring{updateEventTitleByID()}{updateEventTitleByID()}}
+{\footnotesize\ttfamily int com.\+mehmetali.\+comic\+\_\+manager.\+Event\+Manager.\+update\+Event\+Title\+By\+ID (\begin{DoxyParamCaption}\item[{int}]{Event\+ID,  }\item[{String}]{new\+Title,  }\item[{String}]{new\+Content }\end{DoxyParamCaption})}
+
+Updates the title and content of an event by its ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Event\+ID} & The ID of the event to be updated. \\
+\hline
+{\em new\+Title} & The new title for the event. \\
+\hline
+{\em new\+Content} & The new content for the event. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the event title is successfully updated, -\/1 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 141 of file Event\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{141                                                                                    \{}
+\DoxyCodeLine{142     \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     \textcolor{keywordflow}{for} (Event comic : comics) \{}
+\DoxyCodeLine{145       \textcolor{keywordflow}{if} (comic.geteventID() == EventID) \{}
+\DoxyCodeLine{146         comic.setContent(newContent);}
+\DoxyCodeLine{147         comic.setTitle(newTitle);}
+\DoxyCodeLine{148         saveUsersToFile(comics);}
+\DoxyCodeLine{149         System.out.println(\textcolor{stringliteral}{"{}Event title updated successfully."{}});}
+\DoxyCodeLine{150         found = \textcolor{keyword}{true};}
+\DoxyCodeLine{151         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{152       \}}
+\DoxyCodeLine{153     \}}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155     \textcolor{keywordflow}{if} (!found) \{}
+\DoxyCodeLine{156       System.out.println(\textcolor{stringliteral}{"{}No Event matching Event ID was found."{}});}
+\DoxyCodeLine{157       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{158     \}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{161   \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+mehmetali.\+comic\+\_\+manager.\+Main.\+Eventupdate\+Book\+Menu().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+comic\+\_\+manager\+\_\+app/src/main/java/com/mehmetali/comic\+\_\+manager/\mbox{\hyperlink{EventManager_8java}{Event\+Manager.\+java}}\end{DoxyCompactItemize}

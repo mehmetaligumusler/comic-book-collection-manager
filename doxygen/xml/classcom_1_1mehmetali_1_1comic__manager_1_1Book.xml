@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1mehmetali_1_1comic__manager_1_1Book" kind="class" language="Java" prot="public">
+    <compoundname>com::mehmetali::comic_manager::Book</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a704c02e092521fca4d62fc0ecc22b3af" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.Book.comicID</definition>
+        <argsstring></argsstring>
+        <name>comicID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The unique ID of the comic book. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="20" column="13" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a1f1a2346794a9235008bd7bf92d8c658" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.Book.title</definition>
+        <argsstring></argsstring>
+        <name>title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The title of the comic book. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="21" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a4e69b1295daa45b8769ae27fe1e3a957" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.Book.pageNumber</definition>
+        <argsstring></argsstring>
+        <name>pageNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of pages in the comic book. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="22" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a0f0493e3ba7bebd9f9e8cb9379e79922" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.Book.user</definition>
+        <argsstring></argsstring>
+        <name>user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The user who owns the comic book. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="23" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1acba90735452013f88509a06da6d3d6fb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.Book.value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The value of the comic book. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="24" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1abed0aba305f0158f85f1d665db7c11a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.mehmetali.comic_manager.Book.Book</definition>
+        <argsstring>(int comicID, String title, int pageNumber, String user, int value)</argsstring>
+        <name>Book</name>
+        <param>
+          <type>int</type>
+          <declname>comicID</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pageNumber</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book" kindref="compound">Book</ref> object with the specified parameters.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comicID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier of the comic. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title of the comic. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pageNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of pages in the comic. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user who owns the comic. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the comic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="35" column="10" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="35" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a873434646b077c70811144d85954ce93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.Book.getComicID</definition>
+        <argsstring>()</argsstring>
+        <name>getComicID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the ID of the comic.</para>
+<para><simplesect kind="return"><para>the ID of the comic </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="48" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="48" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1ac4f90f4faa55931f74a6483709518556" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.Book.setComicID</definition>
+        <argsstring>(int comicID)</argsstring>
+        <name>setComicID</name>
+        <param>
+          <type>int</type>
+          <declname>comicID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the ID of the comic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comicID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ID of the comic to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="57" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="57" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1ade33be84035c99f858572a9a612e47cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.Book.getTitle</definition>
+        <argsstring>()</argsstring>
+        <name>getTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the title of the comic.</para>
+<para><simplesect kind="return"><para>the title of the comic </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="66" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="66" bodyend="68"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a53c84067810419af16b5efde4e9678e7" compoundref="BookManager_8java" startline="40" endline="49">com.mehmetali.comic_manager.BookManager.AddBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1aa6c1cf8c550f1e43c5981741fcc055b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.Book.setTitle</definition>
+        <argsstring>(String title)</argsstring>
+        <name>setTitle</name>
+        <param>
+          <type>String</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the title of the comic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the title of the comic to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="75" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a5427f21361f4053b4118e684a8f01f72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.Book.getpageNumber</definition>
+        <argsstring>()</argsstring>
+        <name>getpageNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the page number of the comic.</para>
+<para><simplesect kind="return"><para>the page number of the comic </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="84" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="84" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a3fd7b898c9d4c1493ae45e943a626d45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.Book.setpageNumber</definition>
+        <argsstring>(int pageNumber)</argsstring>
+        <name>setpageNumber</name>
+        <param>
+          <type>int</type>
+          <declname>pageNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the page number of the comic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pageNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the page number of the comic to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="93" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a4c379167be1431c9aba1f2080d13b5fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.Book.getuser</definition>
+        <argsstring>()</argsstring>
+        <name>getuser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the user associated with the comic.</para>
+<para><simplesect kind="return"><para>the user associated with the comic </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="102" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a319ca84c2a9032c86f96574bcdac56be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.Book.setuser</definition>
+        <argsstring>(String user)</argsstring>
+        <name>setuser</name>
+        <param>
+          <type>String</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the user associated with the comic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user associated with the comic to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="111" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a621a5357f4554c62a00f62ec42934eb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.mehmetali.comic_manager.Book.getValue</definition>
+        <argsstring>()</argsstring>
+        <name>getValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the value of the comic.</para>
+<para><simplesect kind="return"><para>the value of the comic </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="120" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="120" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a0d6e00e684c8bfc1468f39d83799205e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.mehmetali.comic_manager.Book.setValue</definition>
+        <argsstring>(int value)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the value of the comic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value of the comic to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="129" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a8280ec0ba12adcde64b0f01803809575" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.mehmetali.comic_manager.Book.toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a string representation of the <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book" kindref="compound">Book</ref> object.</para>
+<para><simplesect kind="return"><para>A string containing the comic details. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="139" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="139" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book" kindref="compound">Book</ref> class represents a comic book in the comic manager application. It contains information such as comic ID, title, page number, user, and value.</para>
+<para>This class implements the Serializable interface to support object serialization.</para>
+<para><simplesect kind="author"><para>mehmetali </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>com.mehmetali.comic_manager.Book</label>
+        <link refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>com.mehmetali.comic_manager.Book</label>
+        <link refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+    </collaborationgraph>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="19" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="19" bodyend="148"/>
+    <listofallmembers>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1abed0aba305f0158f85f1d665db7c11a3" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>Book</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a704c02e092521fca4d62fc0ecc22b3af" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>comicID</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a873434646b077c70811144d85954ce93" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>getComicID</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a5427f21361f4053b4118e684a8f01f72" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>getpageNumber</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1ade33be84035c99f858572a9a612e47cf" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>getTitle</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a4c379167be1431c9aba1f2080d13b5fa" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>getuser</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a621a5357f4554c62a00f62ec42934eb5" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>getValue</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a4e69b1295daa45b8769ae27fe1e3a957" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>pageNumber</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1ac4f90f4faa55931f74a6483709518556" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>setComicID</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a3fd7b898c9d4c1493ae45e943a626d45" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>setpageNumber</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1aa6c1cf8c550f1e43c5981741fcc055b9" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>setTitle</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a319ca84c2a9032c86f96574bcdac56be" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>setuser</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a0d6e00e684c8bfc1468f39d83799205e" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>setValue</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a1f1a2346794a9235008bd7bf92d8c658" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>title</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a8280ec0ba12adcde64b0f01803809575" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>toString</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a0f0493e3ba7bebd9f9e8cb9379e79922" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>user</name></member>
+      <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1acba90735452013f88509a06da6d3d6fb" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
