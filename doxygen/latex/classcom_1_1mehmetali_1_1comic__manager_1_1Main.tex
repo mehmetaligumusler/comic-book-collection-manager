@@ -1,5 +1,9 @@
 \hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1Main}{}\doxysection{com.\+mehmetali.\+comic\+\_\+manager.\+Main Class Reference}
 \label{classcom_1_1mehmetali_1_1comic__manager_1_1Main}\index{com.mehmetali.comic\_manager.Main@{com.mehmetali.comic\_manager.Main}}
+
+
+Collaboration diagram for com.\+mehmetali.\+comic\+\_\+manager.\+Main\+:
+% FIG 0
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -11,7 +15,7 @@ static int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_afd3
 \item 
 static int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a8f1c665d17755499530532695097e30a}{register\+Menu}} (Scanner scanner, Print\+Stream out)  throws IOException 
 \item 
-static int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a9819fa2e25b6147b679f52508ef935ac}{Add\+Book\+Menu}} (Scanner scanner, Print\+Stream out)  throws IOException   
+static int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a9819fa2e25b6147b679f52508ef935ac}{Add\+Book\+Menu}} (Scanner scanner, Print\+Stream out)  throws IOException 
 \item 
 static int \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a60456e5cf06b028a51fa3bfd1efe5595}{list\+Book\+Menu}} (Scanner scanner, Print\+Stream out)  throws IOException 
 \item 
@@ -115,30 +119,24 @@ Returns 0 upon successful addition of the book.
 \end{DoxyExceptions}
 
 
-Definition at line 236 of file Main.\+java.
+Definition at line 227 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{237   \{}
-\DoxyCodeLine{238     }
-\DoxyCodeLine{239     System.out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
-\DoxyCodeLine{240     \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
-\DoxyCodeLine{241     scanner.nextLine();}
-\DoxyCodeLine{242     }
-\DoxyCodeLine{243     System.out.print(\textcolor{stringliteral}{"{}Book Name: "{}});}
-\DoxyCodeLine{244     String bookName = scanner.nextLine();}
-\DoxyCodeLine{245     }
-\DoxyCodeLine{246     System.out.print(\textcolor{stringliteral}{"{}Book Page Number: "{}});}
-\DoxyCodeLine{247     \textcolor{keywordtype}{int} bookpage = scanner.nextInt();}
-\DoxyCodeLine{248     }
-\DoxyCodeLine{249     System.out.print(\textcolor{stringliteral}{"{}Book Value: "{}});}
-\DoxyCodeLine{250     \textcolor{keywordtype}{int} bookvalue = scanner.nextInt();}
-\DoxyCodeLine{251 }
-\DoxyCodeLine{252 }
-\DoxyCodeLine{253     Book newUser = \textcolor{keyword}{new} Book(bookId, bookName,bookpage,\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}},bookvalue);}
-\DoxyCodeLine{254     comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a53c84067810419af16b5efde4e9678e7}{AddBook}}(newUser);}
-\DoxyCodeLine{255     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{256   \}}
+\DoxyCodeLine{227                                                                                      \{}
+\DoxyCodeLine{228     System.out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
+\DoxyCodeLine{229     \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
+\DoxyCodeLine{230     scanner.nextLine();}
+\DoxyCodeLine{231     System.out.print(\textcolor{stringliteral}{"{}Book Name: "{}});}
+\DoxyCodeLine{232     String bookName = scanner.nextLine();}
+\DoxyCodeLine{233     System.out.print(\textcolor{stringliteral}{"{}Book Page Number: "{}});}
+\DoxyCodeLine{234     \textcolor{keywordtype}{int} bookpage = scanner.nextInt();}
+\DoxyCodeLine{235     System.out.print(\textcolor{stringliteral}{"{}Book Value: "{}});}
+\DoxyCodeLine{236     \textcolor{keywordtype}{int} bookvalue = scanner.nextInt();}
+\DoxyCodeLine{237     Book newUser = \textcolor{keyword}{new} Book(bookId, bookName,bookpage,\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}},bookvalue);}
+\DoxyCodeLine{238     comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a53c84067810419af16b5efde4e9678e7}{AddBook}}(newUser);}
+\DoxyCodeLine{239     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{240   \}}
 
 \end{DoxyCode}
 
@@ -159,26 +157,26 @@ Clears the console screen.
 
 On Windows, it uses the \char`\"{}cls\char`\"{} command through the command prompt. On Unix/\+Linux/\+Mac systems, it clears the console screen by printing specific escape characters. 
 
-Definition at line 121 of file Main.\+java.
+Definition at line 119 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{121                                       \{}
-\DoxyCodeLine{122         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{123             \textcolor{comment}{// Windows}}
-\DoxyCodeLine{124             \textcolor{keywordflow}{if} (System.getProperty(\textcolor{stringliteral}{"{}os.name"{}}).contains(\textcolor{stringliteral}{"{}Windows"{}})) \{}
-\DoxyCodeLine{125                 \textcolor{keyword}{new} ProcessBuilder(\textcolor{stringliteral}{"{}cmd"{}}, \textcolor{stringliteral}{"{}/c"{}}, \textcolor{stringliteral}{"{}cls"{}}).inheritIO().start().waitFor();}
-\DoxyCodeLine{126             \}}
-\DoxyCodeLine{127             \textcolor{comment}{// Unix/Linux/Mac}}
-\DoxyCodeLine{128             \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{129                 System.out.print(\textcolor{stringliteral}{"{}\(\backslash\)033[H\(\backslash\)033[2J"{}});}
-\DoxyCodeLine{130                 System.out.flush();}
-\DoxyCodeLine{131             \}}
-\DoxyCodeLine{132         \} \textcolor{keywordflow}{catch} (IOException | InterruptedException ex) \{}
-\DoxyCodeLine{133             \textcolor{comment}{// Handle exception}}
-\DoxyCodeLine{134             ex.printStackTrace();}
-\DoxyCodeLine{135         \}}
-\DoxyCodeLine{136     \}}
+\DoxyCodeLine{119                                     \{}
+\DoxyCodeLine{120     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{121       \textcolor{comment}{// Windows}}
+\DoxyCodeLine{122       \textcolor{keywordflow}{if} (System.getProperty(\textcolor{stringliteral}{"{}os.name"{}}).contains(\textcolor{stringliteral}{"{}Windows"{}})) \{}
+\DoxyCodeLine{123         \textcolor{keyword}{new} ProcessBuilder(\textcolor{stringliteral}{"{}cmd"{}}, \textcolor{stringliteral}{"{}/c"{}}, \textcolor{stringliteral}{"{}cls"{}}).inheritIO().start().waitFor();}
+\DoxyCodeLine{124       \}}
+\DoxyCodeLine{125       \textcolor{comment}{// Unix/Linux/Mac}}
+\DoxyCodeLine{126       \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{127         System.out.print(\textcolor{stringliteral}{"{}\(\backslash\)033[H\(\backslash\)033[2J"{}});}
+\DoxyCodeLine{128         System.out.flush();}
+\DoxyCodeLine{129       \}}
+\DoxyCodeLine{130     \} \textcolor{keywordflow}{catch} (IOException | InterruptedException ex) \{}
+\DoxyCodeLine{131       \textcolor{comment}{// Handle exception}}
+\DoxyCodeLine{132       ex.printStackTrace();}
+\DoxyCodeLine{133     \}}
+\DoxyCodeLine{134   \}}
 
 \end{DoxyCode}
 
@@ -210,18 +208,16 @@ Returns 0 upon successful update of the user\textquotesingle{}s credit score.
 \end{DoxyExceptions}
 
 
-Definition at line 508 of file Main.\+java.
+Definition at line 479 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{508                                                                                             \{}
-\DoxyCodeLine{509       out.println(\textcolor{stringliteral}{"{}Credit Score:"{}});}
-\DoxyCodeLine{510       }
-\DoxyCodeLine{511       \textcolor{keywordtype}{int} score = scanner.nextInt();}
-\DoxyCodeLine{512       }
-\DoxyCodeLine{513       userManager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_aa627b545ada6c4ef7275780b44e34769}{creditbuyscore}}(\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}}, score);}
-\DoxyCodeLine{514       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{515   \}}
+\DoxyCodeLine{479                                                                                             \{}
+\DoxyCodeLine{480     out.println(\textcolor{stringliteral}{"{}Credit Score:"{}});}
+\DoxyCodeLine{481     \textcolor{keywordtype}{int} score = scanner.nextInt();}
+\DoxyCodeLine{482     userManager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_aa627b545ada6c4ef7275780b44e34769}{creditbuyscore}}(\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}}, score);}
+\DoxyCodeLine{483     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{484   \}}
 
 \end{DoxyCode}
 
@@ -257,17 +253,16 @@ Returns 0 upon successful deletion of the book.
 \end{DoxyExceptions}
 
 
-Definition at line 294 of file Main.\+java.
+Definition at line 278 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{294                                                                                         \{}
-\DoxyCodeLine{295       out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
-\DoxyCodeLine{296       \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
-\DoxyCodeLine{297       }
-\DoxyCodeLine{298       comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a84452f9e0c10fa5b6d5faf0991db35fe}{deleteBookByID}}(bookId);}
-\DoxyCodeLine{299       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{300   \}}
+\DoxyCodeLine{278                                                                                         \{}
+\DoxyCodeLine{279     out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
+\DoxyCodeLine{280     \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
+\DoxyCodeLine{281     comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a84452f9e0c10fa5b6d5faf0991db35fe}{deleteBookByID}}(bookId);}
+\DoxyCodeLine{282     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{283   \}}
 
 \end{DoxyCode}
 
@@ -303,30 +298,25 @@ Returns 0 upon successful addition of the event.
 \end{DoxyExceptions}
 
 
-Definition at line 527 of file Main.\+java.
+Definition at line 496 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{527                                                                                           \{}
-\DoxyCodeLine{528       \textcolor{comment}{// Prompting user for event details}}
-\DoxyCodeLine{529       out.print(\textcolor{stringliteral}{"{}Event ID: "{}});}
-\DoxyCodeLine{530       \textcolor{keywordtype}{int} eventId = scanner.nextInt();}
-\DoxyCodeLine{531       scanner.nextLine(); \textcolor{comment}{// Consume newline character}}
-\DoxyCodeLine{532       }
-\DoxyCodeLine{533       out.print(\textcolor{stringliteral}{"{}Event Name: "{}});}
-\DoxyCodeLine{534       String eventName = scanner.nextLine();}
-\DoxyCodeLine{535       }
-\DoxyCodeLine{536       out.print(\textcolor{stringliteral}{"{}Event Content: "{}});}
-\DoxyCodeLine{537       String eventContent = scanner.nextLine();}
-\DoxyCodeLine{538 }
-\DoxyCodeLine{539       \textcolor{comment}{// Creating a new Event object with the provided details}}
-\DoxyCodeLine{540       Event newEvent = \textcolor{keyword}{new} Event(eventId, eventName, eventContent, \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}});}
-\DoxyCodeLine{541       }
-\DoxyCodeLine{542       \textcolor{comment}{// Adding the new event to the event management system}}
-\DoxyCodeLine{543       eventmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a7f3523855546199753ac5c8a8c4af16f}{AddEvent}}(newEvent);}
-\DoxyCodeLine{544       }
-\DoxyCodeLine{545       \textcolor{keywordflow}{return} 0; \textcolor{comment}{// Returning 0 to indicate successful addition}}
-\DoxyCodeLine{546   \}}
+\DoxyCodeLine{496                                                                                           \{}
+\DoxyCodeLine{497     \textcolor{comment}{// Prompting user for event details}}
+\DoxyCodeLine{498     out.print(\textcolor{stringliteral}{"{}Event ID: "{}});}
+\DoxyCodeLine{499     \textcolor{keywordtype}{int} eventId = scanner.nextInt();}
+\DoxyCodeLine{500     scanner.nextLine(); \textcolor{comment}{// Consume newline character}}
+\DoxyCodeLine{501     out.print(\textcolor{stringliteral}{"{}Event Name: "{}});}
+\DoxyCodeLine{502     String eventName = scanner.nextLine();}
+\DoxyCodeLine{503     out.print(\textcolor{stringliteral}{"{}Event Content: "{}});}
+\DoxyCodeLine{504     String eventContent = scanner.nextLine();}
+\DoxyCodeLine{505     \textcolor{comment}{// Creating a new Event object with the provided details}}
+\DoxyCodeLine{506     Event newEvent = \textcolor{keyword}{new} Event(eventId, eventName, eventContent, \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}});}
+\DoxyCodeLine{507     \textcolor{comment}{// Adding the new event to the event management system}}
+\DoxyCodeLine{508     eventmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a7f3523855546199753ac5c8a8c4af16f}{AddEvent}}(newEvent);}
+\DoxyCodeLine{509     \textcolor{keywordflow}{return} 0; \textcolor{comment}{// Returning 0 to indicate successful addition}}
+\DoxyCodeLine{510   \}}
 
 \end{DoxyCode}
 
@@ -362,18 +352,17 @@ Returns 0 upon successful deletion of the event.
 \end{DoxyExceptions}
 
 
-Definition at line 585 of file Main.\+java.
+Definition at line 549 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{585                                                                                              \{}
-\DoxyCodeLine{586       out.print(\textcolor{stringliteral}{"{}Event ID: "{}});}
-\DoxyCodeLine{587       \textcolor{keywordtype}{int} eventId = scanner.nextInt();}
-\DoxyCodeLine{588       }
-\DoxyCodeLine{589       \textcolor{comment}{// Deleting the event from the event management system}}
-\DoxyCodeLine{590       eventmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_af990a5fffaf20a62a1c5b38d233362ab}{deleteEventByID}}(eventId);}
-\DoxyCodeLine{591       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{592   \}}
+\DoxyCodeLine{549                                                                                              \{}
+\DoxyCodeLine{550     out.print(\textcolor{stringliteral}{"{}Event ID: "{}});}
+\DoxyCodeLine{551     \textcolor{keywordtype}{int} eventId = scanner.nextInt();}
+\DoxyCodeLine{552     \textcolor{comment}{// Deleting the event from the event management system}}
+\DoxyCodeLine{553     eventmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_af990a5fffaf20a62a1c5b38d233362ab}{deleteEventByID}}(eventId);}
+\DoxyCodeLine{554     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{555   \}}
 
 \end{DoxyCode}
 
@@ -409,15 +398,15 @@ Returns 0 upon successful display of all events.
 \end{DoxyExceptions}
 
 
-Definition at line 570 of file Main.\+java.
+Definition at line 534 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{570                                                                                               \{}
-\DoxyCodeLine{571       out.println(\textcolor{stringliteral}{"{}Event All List"{}});}
-\DoxyCodeLine{572       eventmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a01eb58f4ac8908f9fcf41d2eee4cebf8}{listEvents}}();}
-\DoxyCodeLine{573       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{574   \}}
+\DoxyCodeLine{534                                                                                               \{}
+\DoxyCodeLine{535     out.println(\textcolor{stringliteral}{"{}Event All List"{}});}
+\DoxyCodeLine{536     eventmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a01eb58f4ac8908f9fcf41d2eee4cebf8}{listEvents}}();}
+\DoxyCodeLine{537     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{538   \}}
 
 \end{DoxyCode}
 
@@ -453,15 +442,15 @@ Returns 0 upon successful display of the event list.
 \end{DoxyExceptions}
 
 
-Definition at line 556 of file Main.\+java.
+Definition at line 520 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{556                                                                                            \{}
-\DoxyCodeLine{557       out.println(\textcolor{stringliteral}{"{}Event List"{}});}
-\DoxyCodeLine{558       eventmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_ad622fee5585662014ad6c190fbc5c5ae}{listEventsByCondition}}(\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}});}
-\DoxyCodeLine{559       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{560   \}}
+\DoxyCodeLine{520                                                                                            \{}
+\DoxyCodeLine{521     out.println(\textcolor{stringliteral}{"{}Event List"{}});}
+\DoxyCodeLine{522     eventmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_ad622fee5585662014ad6c190fbc5c5ae}{listEventsByCondition}}(\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}});}
+\DoxyCodeLine{523     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{524   \}}
 
 \end{DoxyCode}
 
@@ -497,27 +486,24 @@ Returns 0 upon successful update of the event details.
 \end{DoxyExceptions}
 
 
-Definition at line 602 of file Main.\+java.
+Definition at line 565 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{602                                                                                              \{}
-\DoxyCodeLine{603       \textcolor{comment}{// Prompting user for the ID of the event to be updated}}
-\DoxyCodeLine{604       out.print(\textcolor{stringliteral}{"{}Event ID: "{}});}
-\DoxyCodeLine{605       \textcolor{keywordtype}{int} eventId = scanner.nextInt();}
-\DoxyCodeLine{606       scanner.nextLine(); \textcolor{comment}{// Consume newline character}}
-\DoxyCodeLine{607       }
-\DoxyCodeLine{608       \textcolor{comment}{// Prompting user for the new details of the event}}
-\DoxyCodeLine{609       out.print(\textcolor{stringliteral}{"{}New Event Name: "{}});}
-\DoxyCodeLine{610       String eventName = scanner.nextLine();}
-\DoxyCodeLine{611       }
-\DoxyCodeLine{612       out.print(\textcolor{stringliteral}{"{}New Event Content: "{}});}
-\DoxyCodeLine{613       String eventContent = scanner.nextLine();}
-\DoxyCodeLine{614       }
-\DoxyCodeLine{615       \textcolor{comment}{// Updating the details of the event in the event management system}}
-\DoxyCodeLine{616       eventmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a0368a83c16cac9edba503026117a6964}{updateEventTitleByID}}(eventId, eventName, eventContent);}
-\DoxyCodeLine{617       \textcolor{keywordflow}{return} 0; \textcolor{comment}{// Returning 0 to indicate successful update}}
-\DoxyCodeLine{618   \}}
+\DoxyCodeLine{565                                                                                              \{}
+\DoxyCodeLine{566     \textcolor{comment}{// Prompting user for the ID of the event to be updated}}
+\DoxyCodeLine{567     out.print(\textcolor{stringliteral}{"{}Event ID: "{}});}
+\DoxyCodeLine{568     \textcolor{keywordtype}{int} eventId = scanner.nextInt();}
+\DoxyCodeLine{569     scanner.nextLine(); \textcolor{comment}{// Consume newline character}}
+\DoxyCodeLine{570     \textcolor{comment}{// Prompting user for the new details of the event}}
+\DoxyCodeLine{571     out.print(\textcolor{stringliteral}{"{}New Event Name: "{}});}
+\DoxyCodeLine{572     String eventName = scanner.nextLine();}
+\DoxyCodeLine{573     out.print(\textcolor{stringliteral}{"{}New Event Content: "{}});}
+\DoxyCodeLine{574     String eventContent = scanner.nextLine();}
+\DoxyCodeLine{575     \textcolor{comment}{// Updating the details of the event in the event management system}}
+\DoxyCodeLine{576     eventmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_a0368a83c16cac9edba503026117a6964}{updateEventTitleByID}}(eventId, eventName, eventContent);}
+\DoxyCodeLine{577     \textcolor{keywordflow}{return} 0; \textcolor{comment}{// Returning 0 to indicate successful update}}
+\DoxyCodeLine{578   \}}
 
 \end{DoxyCode}
 
@@ -541,13 +527,13 @@ The login name of the current user.
 \end{DoxyReturn}
 
 
-Definition at line 961 of file Main.\+java.
+Definition at line 924 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{961                                       \{}
-\DoxyCodeLine{962       \textcolor{keywordflow}{return} \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}};}
-\DoxyCodeLine{963   \}}
+\DoxyCodeLine{924                                       \{}
+\DoxyCodeLine{925     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}};}
+\DoxyCodeLine{926   \}}
 
 \end{DoxyCode}
 
@@ -567,13 +553,13 @@ The wallet balance of the current user.
 \end{DoxyReturn}
 
 
-Definition at line 979 of file Main.\+java.
+Definition at line 942 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{979                                 \{}
-\DoxyCodeLine{980       \textcolor{keywordflow}{return} \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a7dd20b8059d23bc1ca4b78eadd0d8f3a}{LoginWallet}};}
-\DoxyCodeLine{981   \}}
+\DoxyCodeLine{942                                 \{}
+\DoxyCodeLine{943     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a7dd20b8059d23bc1ca4b78eadd0d8f3a}{LoginWallet}};}
+\DoxyCodeLine{944   \}}
 
 \end{DoxyCode}
 
@@ -605,15 +591,15 @@ Returns 0 upon successful display of the book list.
 \end{DoxyExceptions}
 
 
-Definition at line 280 of file Main.\+java.
+Definition at line 264 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{280                                                                                          \{}
-\DoxyCodeLine{281       out.println(\textcolor{stringliteral}{"{}Book All List"{}});}
-\DoxyCodeLine{282       comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a05e7d513cab59b0138a451dcbc2cf362}{listBooks}}();}
-\DoxyCodeLine{283       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{284   \}}
+\DoxyCodeLine{264                                                                                          \{}
+\DoxyCodeLine{265     out.println(\textcolor{stringliteral}{"{}Book All List"{}});}
+\DoxyCodeLine{266     comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a05e7d513cab59b0138a451dcbc2cf362}{listBooks}}();}
+\DoxyCodeLine{267     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{268   \}}
 
 \end{DoxyCode}
 
@@ -649,15 +635,15 @@ Returns 0 upon successful display of the book list.
 \end{DoxyExceptions}
 
 
-Definition at line 266 of file Main.\+java.
+Definition at line 250 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{266                                                                                       \{}
-\DoxyCodeLine{267       out.println(\textcolor{stringliteral}{"{}Book List"{}});}
-\DoxyCodeLine{268       comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a8b03d25b5631fb17417823385a5b8807}{listBooksByCondition}}(\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}});}
-\DoxyCodeLine{269       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{270   \}}
+\DoxyCodeLine{250                                                                                       \{}
+\DoxyCodeLine{251     out.println(\textcolor{stringliteral}{"{}Book List"{}});}
+\DoxyCodeLine{252     comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a8b03d25b5631fb17417823385a5b8807}{listBooksByCondition}}(\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}});}
+\DoxyCodeLine{253     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{254   \}}
 
 \end{DoxyCode}
 
@@ -693,29 +679,28 @@ Returns the \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1User}{Us
 \end{DoxyExceptions}
 
 
-Definition at line 632 of file Main.\+java.
+Definition at line 592 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{632                                                                                     \{}
-\DoxyCodeLine{633       \textcolor{comment}{// Prompting user for username and password}}
-\DoxyCodeLine{634       out.print(\textcolor{stringliteral}{"{}UserName: "{}});}
-\DoxyCodeLine{635       String username = scanner.nextLine();}
-\DoxyCodeLine{636       out.print(\textcolor{stringliteral}{"{}Password: "{}});}
-\DoxyCodeLine{637       String password = scanner.nextLine();}
-\DoxyCodeLine{638 }
-\DoxyCodeLine{639       \textcolor{comment}{// Attempting to log in the user}}
-\DoxyCodeLine{640       User user = userManager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a8f560693dadf7c7776e5ca54f8402c3b}{login}}(username, password);}
-\DoxyCodeLine{641 }
-\DoxyCodeLine{642       \textcolor{comment}{// Displaying login result}}
-\DoxyCodeLine{643       \textcolor{keywordflow}{if} (user != \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{644           out.println(\textcolor{stringliteral}{"{}Hello, "{}} + user.getUsername() + \textcolor{stringliteral}{"{}!"{}});}
-\DoxyCodeLine{645       \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{646           out.println(\textcolor{stringliteral}{"{}Username or password is wrong!"{}});}
-\DoxyCodeLine{647       \}}
-\DoxyCodeLine{648 }
-\DoxyCodeLine{649       \textcolor{keywordflow}{return} user; \textcolor{comment}{// Returning the logged-\/in user object or null if login fails}}
-\DoxyCodeLine{650   \}}
+\DoxyCodeLine{592                                                                                     \{}
+\DoxyCodeLine{593     \textcolor{comment}{// Prompting user for username and password}}
+\DoxyCodeLine{594     out.print(\textcolor{stringliteral}{"{}UserName: "{}});}
+\DoxyCodeLine{595     String username = scanner.nextLine();}
+\DoxyCodeLine{596     out.print(\textcolor{stringliteral}{"{}Password: "{}});}
+\DoxyCodeLine{597     String password = scanner.nextLine();}
+\DoxyCodeLine{598     \textcolor{comment}{// Attempting to log in the user}}
+\DoxyCodeLine{599     User user = userManager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a8f560693dadf7c7776e5ca54f8402c3b}{login}}(username, password);}
+\DoxyCodeLine{600 }
+\DoxyCodeLine{601     \textcolor{comment}{// Displaying login result}}
+\DoxyCodeLine{602     \textcolor{keywordflow}{if} (user != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{603       out.println(\textcolor{stringliteral}{"{}Hello, "{}} + user.getUsername() + \textcolor{stringliteral}{"{}!"{}});}
+\DoxyCodeLine{604     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{605       out.println(\textcolor{stringliteral}{"{}Username or password is wrong!"{}});}
+\DoxyCodeLine{606     \}}
+\DoxyCodeLine{607 }
+\DoxyCodeLine{608     \textcolor{keywordflow}{return} user; \textcolor{comment}{// Returning the logged-\/in user object or null if login fails}}
+\DoxyCodeLine{609   \}}
 
 \end{DoxyCode}
 
@@ -746,14 +731,14 @@ The entry point of the application.
 \end{DoxyExceptions}
 
 
-Definition at line 144 of file Main.\+java.
+Definition at line 142 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{144                                                             \{}
-\DoxyCodeLine{145       Scanner scanner = \textcolor{keyword}{new} Scanner(System.in);}
-\DoxyCodeLine{146       \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_afd3a4df6d687db75318d40908e4291e8}{MainApp}}(scanner, System.out);}
-\DoxyCodeLine{147   \}}
+\DoxyCodeLine{142                                                             \{}
+\DoxyCodeLine{143     Scanner scanner = \textcolor{keyword}{new} Scanner(System.in);}
+\DoxyCodeLine{144     \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_afd3a4df6d687db75318d40908e4291e8}{MainApp}}(scanner, System.out);}
+\DoxyCodeLine{145   \}}
 
 \end{DoxyCode}
 
@@ -785,56 +770,51 @@ An integer indicating the success status of the application.
 \end{DoxyExceptions}
 
 
-Definition at line 158 of file Main.\+java.
+Definition at line 156 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{158                                                                                  \{}
-\DoxyCodeLine{159       \textcolor{keywordtype}{boolean} exit = \textcolor{keyword}{false};}
-\DoxyCodeLine{160 }
-\DoxyCodeLine{161         \textcolor{keywordflow}{while} (!exit) \{}
-\DoxyCodeLine{162             }
-\DoxyCodeLine{163           \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ae2508e0386aeaf94ad28320fcce5dddf}{control}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{164           String title = \textcolor{stringliteral}{"{}MAIN MENU"{}};}
-\DoxyCodeLine{165           String[] options = \{}
-\DoxyCodeLine{166             \textcolor{stringliteral}{"{}1. Register"{}},}
-\DoxyCodeLine{167             \textcolor{stringliteral}{"{}2. Login"{}},}
-\DoxyCodeLine{168             \textcolor{stringliteral}{"{}3. Exit"{}}}
-\DoxyCodeLine{169           \};}
-\DoxyCodeLine{170           printMenu(title, options);}
-\DoxyCodeLine{171           \textcolor{keywordtype}{int} choice = scanner.nextInt();}
-\DoxyCodeLine{172           scanner.nextLine();}
-\DoxyCodeLine{173           }
-\DoxyCodeLine{174           \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ae2508e0386aeaf94ad28320fcce5dddf}{control}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{175 }
-\DoxyCodeLine{176           \textcolor{keywordflow}{switch} (choice) \{}
-\DoxyCodeLine{177             \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{178               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a8f1c665d17755499530532695097e30a}{registerMenu}}(scanner, System.out);}
-\DoxyCodeLine{179               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{180 }
-\DoxyCodeLine{181             \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{182               User loggedInUser = \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a9aed727b7977c1aa386dd0c2142671a1}{loginMenu}}(scanner, System.out);}
-\DoxyCodeLine{183               }
-\DoxyCodeLine{184               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a78bb166b97a1ff138aff53d10be2b891}{setLoginName}}(loggedInUser.getUsername());}
-\DoxyCodeLine{185               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ad6f1316e8a2df021d2642d1481c31059}{setWallet}}(loggedInUser.getWallet());}
-\DoxyCodeLine{186               }
-\DoxyCodeLine{187               }
-\DoxyCodeLine{188               \textcolor{keywordflow}{if} (loggedInUser != \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{189                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a0843bcc385ce545650fa936f95b89412}{userMenu}}(loggedInUser,scanner, System.out);}
-\DoxyCodeLine{190               \}}
-\DoxyCodeLine{191 }
-\DoxyCodeLine{192               \textcolor{keywordflow}{break};}
+\DoxyCodeLine{156                                                                                  \{}
+\DoxyCodeLine{157     \textcolor{keywordtype}{boolean} exit = \textcolor{keyword}{false};}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159     \textcolor{keywordflow}{while} (!exit) \{}
+\DoxyCodeLine{160       \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ae2508e0386aeaf94ad28320fcce5dddf}{control}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{161       String title = \textcolor{stringliteral}{"{}MAIN MENU"{}};}
+\DoxyCodeLine{162       String[] options = \{}
+\DoxyCodeLine{163         \textcolor{stringliteral}{"{}1. Register"{}},}
+\DoxyCodeLine{164         \textcolor{stringliteral}{"{}2. Login"{}},}
+\DoxyCodeLine{165         \textcolor{stringliteral}{"{}3. Exit"{}}}
+\DoxyCodeLine{166       \};}
+\DoxyCodeLine{167       printMenu(title, options);}
+\DoxyCodeLine{168       \textcolor{keywordtype}{int} choice = scanner.nextInt();}
+\DoxyCodeLine{169       scanner.nextLine();}
+\DoxyCodeLine{170       \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ae2508e0386aeaf94ad28320fcce5dddf}{control}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172       \textcolor{keywordflow}{switch} (choice) \{}
+\DoxyCodeLine{173         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{174           \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a8f1c665d17755499530532695097e30a}{registerMenu}}(scanner, System.out);}
+\DoxyCodeLine{175           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{178           User loggedInUser = \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a9aed727b7977c1aa386dd0c2142671a1}{loginMenu}}(scanner, System.out);}
+\DoxyCodeLine{179           \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a78bb166b97a1ff138aff53d10be2b891}{setLoginName}}(loggedInUser.getUsername());}
+\DoxyCodeLine{180           \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ad6f1316e8a2df021d2642d1481c31059}{setWallet}}(loggedInUser.getWallet());}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182           \textcolor{keywordflow}{if} (loggedInUser != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{183             \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a0843bcc385ce545650fa936f95b89412}{userMenu}}(loggedInUser,scanner, System.out);}
+\DoxyCodeLine{184           \}}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{189           exit = \textcolor{keyword}{true};}
+\DoxyCodeLine{190           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{191       \}}
+\DoxyCodeLine{192     \}}
 \DoxyCodeLine{193 }
-\DoxyCodeLine{194             \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{195               exit = \textcolor{keyword}{true};}
-\DoxyCodeLine{196               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{197 }
-\DoxyCodeLine{198           \}}
-\DoxyCodeLine{199         \}}
-\DoxyCodeLine{200 }
-\DoxyCodeLine{201         scanner.close();}
-\DoxyCodeLine{202         \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{203   \}}
+\DoxyCodeLine{194     scanner.close();}
+\DoxyCodeLine{195     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{196   \}}
 
 \end{DoxyCode}
 
@@ -870,21 +850,19 @@ An integer indicating the success status of the registration process.
 \end{DoxyExceptions}
 
 
-Definition at line 215 of file Main.\+java.
+Definition at line 208 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{215                                                                                       \{}
-\DoxyCodeLine{216  }
-\DoxyCodeLine{217     System.out.print(\textcolor{stringliteral}{"{}UserName: "{}});}
-\DoxyCodeLine{218     String username = scanner.nextLine();}
-\DoxyCodeLine{219     System.out.print(\textcolor{stringliteral}{"{}Password: "{}});}
-\DoxyCodeLine{220     String password = scanner.nextLine();}
-\DoxyCodeLine{221     User newUser = \textcolor{keyword}{new} User(username, password, 0);}
-\DoxyCodeLine{222     userManager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_ac7b628a800efefa0a9585181d1e49e5f}{registerUser}}(newUser);}
-\DoxyCodeLine{223     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{224    }
-\DoxyCodeLine{225   \}}
+\DoxyCodeLine{208                                                                                       \{}
+\DoxyCodeLine{209     System.out.print(\textcolor{stringliteral}{"{}UserName: "{}});}
+\DoxyCodeLine{210     String username = scanner.nextLine();}
+\DoxyCodeLine{211     System.out.print(\textcolor{stringliteral}{"{}Password: "{}});}
+\DoxyCodeLine{212     String password = scanner.nextLine();}
+\DoxyCodeLine{213     User newUser = \textcolor{keyword}{new} User(username, password, 0);}
+\DoxyCodeLine{214     userManager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_ac7b628a800efefa0a9585181d1e49e5f}{registerUser}}(newUser);}
+\DoxyCodeLine{215     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{216   \}}
 
 \end{DoxyCode}
 
@@ -910,13 +888,13 @@ Sets the login name of the current user.
 \end{DoxyParams}
 
 
-Definition at line 970 of file Main.\+java.
+Definition at line 933 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{970                                                     \{}
-\DoxyCodeLine{971       \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}} = loginName;}
-\DoxyCodeLine{972   \}}
+\DoxyCodeLine{933                                                     \{}
+\DoxyCodeLine{934     \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}} = loginName;}
+\DoxyCodeLine{935   \}}
 
 \end{DoxyCode}
 
@@ -942,13 +920,13 @@ Sets the wallet balance of the current user.
 \end{DoxyParams}
 
 
-Definition at line 988 of file Main.\+java.
+Definition at line 951 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{988                                                 \{}
-\DoxyCodeLine{989       \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a7dd20b8059d23bc1ca4b78eadd0d8f3a}{LoginWallet}} = loginWallet;}
-\DoxyCodeLine{990   \}}
+\DoxyCodeLine{951                                                 \{}
+\DoxyCodeLine{952     \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a7dd20b8059d23bc1ca4b78eadd0d8f3a}{LoginWallet}} = loginWallet;}
+\DoxyCodeLine{953   \}}
 
 \end{DoxyCode}
 
@@ -984,28 +962,24 @@ Returns 0 upon successful addition of the book to the trade list.
 \end{DoxyExceptions}
 
 
-Definition at line 413 of file Main.\+java.
+Definition at line 389 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{413                                                                                           \{}
-\DoxyCodeLine{414       out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
-\DoxyCodeLine{415       \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
-\DoxyCodeLine{416       }
-\DoxyCodeLine{417       \textcolor{comment}{// Retrieving book details for trade list entry}}
-\DoxyCodeLine{418       \textcolor{keywordtype}{int} pageNumber = comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_ac4bffcdd2ab85c2db27d5f7235c43d53}{getBookPageNumberByID}}(bookId);}
-\DoxyCodeLine{419       String title = comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_aa61f6486ec8521cd614d974a58635c22}{getBookTitleByID}}(bookId);}
-\DoxyCodeLine{420       \textcolor{keywordtype}{int} value = comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a3c92e1e760b49031c5f4fdf9da42cd5f}{getBookValueByID}}(bookId);}
-\DoxyCodeLine{421       }
-\DoxyCodeLine{422       \textcolor{comment}{// Creating a new Trade object and adding it to the trade list}}
-\DoxyCodeLine{423       Trade newUser = \textcolor{keyword}{new} Trade(bookId, title, pageNumber, \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}}, value);}
-\DoxyCodeLine{424       trademanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_a48a40da38f8ec52bae189d715d17dd20}{AddTrade}}(newUser);}
-\DoxyCodeLine{425       }
-\DoxyCodeLine{426       \textcolor{comment}{// Deleting the book from the collection}}
-\DoxyCodeLine{427       comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a84452f9e0c10fa5b6d5faf0991db35fe}{deleteBookByID}}(bookId);}
-\DoxyCodeLine{428       }
-\DoxyCodeLine{429       \textcolor{keywordflow}{return} 0; \textcolor{comment}{// Returning 0 to indicate successful addition to the trade list}}
-\DoxyCodeLine{430   \}}
+\DoxyCodeLine{389                                                                                           \{}
+\DoxyCodeLine{390     out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
+\DoxyCodeLine{391     \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
+\DoxyCodeLine{392     \textcolor{comment}{// Retrieving book details for trade list entry}}
+\DoxyCodeLine{393     \textcolor{keywordtype}{int} pageNumber = comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_ac4bffcdd2ab85c2db27d5f7235c43d53}{getBookPageNumberByID}}(bookId);}
+\DoxyCodeLine{394     String title = comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_aa61f6486ec8521cd614d974a58635c22}{getBookTitleByID}}(bookId);}
+\DoxyCodeLine{395     \textcolor{keywordtype}{int} value = comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a3c92e1e760b49031c5f4fdf9da42cd5f}{getBookValueByID}}(bookId);}
+\DoxyCodeLine{396     \textcolor{comment}{// Creating a new Trade object and adding it to the trade list}}
+\DoxyCodeLine{397     Trade newUser = \textcolor{keyword}{new} Trade(bookId, title, pageNumber, \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}}, value);}
+\DoxyCodeLine{398     trademanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_a48a40da38f8ec52bae189d715d17dd20}{AddTrade}}(newUser);}
+\DoxyCodeLine{399     \textcolor{comment}{// Deleting the book from the collection}}
+\DoxyCodeLine{400     comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a84452f9e0c10fa5b6d5faf0991db35fe}{deleteBookByID}}(bookId);}
+\DoxyCodeLine{401     \textcolor{keywordflow}{return} 0; \textcolor{comment}{// Returning 0 to indicate successful addition to the trade list}}
+\DoxyCodeLine{402   \}}
 
 \end{DoxyCode}
 
@@ -1041,15 +1015,15 @@ Returns 0 upon successful display of the trade list.
 \end{DoxyExceptions}
 
 
-Definition at line 471 of file Main.\+java.
+Definition at line 442 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{471                                                                                               \{}
-\DoxyCodeLine{472       out.println(\textcolor{stringliteral}{"{}Book List"{}});}
-\DoxyCodeLine{473       trademanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_ad32e44a3007bcc5635698bc0c702a749}{listAllTradeList}}();}
-\DoxyCodeLine{474       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{475   \}}
+\DoxyCodeLine{442                                                                                               \{}
+\DoxyCodeLine{443     out.println(\textcolor{stringliteral}{"{}Book List"{}});}
+\DoxyCodeLine{444     trademanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_ad32e44a3007bcc5635698bc0c702a749}{listAllTradeList}}();}
+\DoxyCodeLine{445     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{446   \}}
 
 \end{DoxyCode}
 
@@ -1085,24 +1059,24 @@ Returns 0 upon successful purchase of the book, or -\/1 if the user\textquotesin
 \end{DoxyExceptions}
 
 
-Definition at line 485 of file Main.\+java.
+Definition at line 456 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{485                                                                                           \{}
-\DoxyCodeLine{486       out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
-\DoxyCodeLine{487       \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
-\DoxyCodeLine{488       }
-\DoxyCodeLine{489       \textcolor{comment}{// Checking if the user's credit score is sufficient to buy the book}}
-\DoxyCodeLine{490       \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a7dd20b8059d23bc1ca4b78eadd0d8f3a}{LoginWallet}} >= trademanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_a05f687ec8ea2bfd5a2e6eea323540da1}{getBookValueByID}}(bookId)) \{}
-\DoxyCodeLine{491           trademanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_a1532a842b55a0bea297ae26f0f2761b4}{BuyTradeByID}}(bookId);}
-\DoxyCodeLine{492       \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{493           out.println(\textcolor{stringliteral}{"{}Credit Score Insufficient! Could not purchase."{}});}
-\DoxyCodeLine{494           \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{495       \}}
-\DoxyCodeLine{496       }
-\DoxyCodeLine{497       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{498   \}}
+\DoxyCodeLine{456                                                                                           \{}
+\DoxyCodeLine{457     out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
+\DoxyCodeLine{458     \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
+\DoxyCodeLine{459 }
+\DoxyCodeLine{460     \textcolor{comment}{// Checking if the user's credit score is sufficient to buy the book}}
+\DoxyCodeLine{461     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a7dd20b8059d23bc1ca4b78eadd0d8f3a}{LoginWallet}} >= trademanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_a05f687ec8ea2bfd5a2e6eea323540da1}{getBookValueByID}}(bookId)) \{}
+\DoxyCodeLine{462       trademanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_a1532a842b55a0bea297ae26f0f2761b4}{BuyTradeByID}}(bookId);}
+\DoxyCodeLine{463     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{464       out.println(\textcolor{stringliteral}{"{}Credit Score Insufficient! Could not purchase."{}});}
+\DoxyCodeLine{465       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{466     \}}
+\DoxyCodeLine{467 }
+\DoxyCodeLine{468     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{469   \}}
 
 \end{DoxyCode}
 
@@ -1138,17 +1112,16 @@ Returns 0 upon successful deletion of the book from the trade list.
 \end{DoxyExceptions}
 
 
-Definition at line 454 of file Main.\+java.
+Definition at line 426 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{454                                                                                              \{}
-\DoxyCodeLine{455       out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
-\DoxyCodeLine{456       \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
-\DoxyCodeLine{457       }
-\DoxyCodeLine{458       trademanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_ae1566993ba228ecf9ec28929484f3587}{deleteTradeByID}}(bookId);}
-\DoxyCodeLine{459       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{460   \}}
+\DoxyCodeLine{426                                                                                              \{}
+\DoxyCodeLine{427     out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
+\DoxyCodeLine{428     \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
+\DoxyCodeLine{429     trademanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_ae1566993ba228ecf9ec28929484f3587}{deleteTradeByID}}(bookId);}
+\DoxyCodeLine{430     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{431   \}}
 
 \end{DoxyCode}
 
@@ -1184,15 +1157,15 @@ Returns 0 upon successful display of the trade list.
 \end{DoxyExceptions}
 
 
-Definition at line 440 of file Main.\+java.
+Definition at line 412 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{440                                                                                              \{}
-\DoxyCodeLine{441       \textcolor{comment}{// Displaying the trade list of the current user}}
-\DoxyCodeLine{442       trademanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_a695c52cf05a3e4104b95bd59dabd4733}{listMyTradeList}}(\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}});}
-\DoxyCodeLine{443       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{444   \}}
+\DoxyCodeLine{412                                                                                              \{}
+\DoxyCodeLine{413     \textcolor{comment}{// Displaying the trade list of the current user}}
+\DoxyCodeLine{414     trademanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_a695c52cf05a3e4104b95bd59dabd4733}{listMyTradeList}}(\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}});}
+\DoxyCodeLine{415     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{416   \}}
 
 \end{DoxyCode}
 
@@ -1228,32 +1201,28 @@ Returns 0 upon successful update of the book details.
 \end{DoxyExceptions}
 
 
-Definition at line 311 of file Main.\+java.
+Definition at line 294 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{311                                                                                         \{}
-\DoxyCodeLine{312       \textcolor{comment}{// Prompting user for the ID of the book to be updated}}
-\DoxyCodeLine{313       out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
-\DoxyCodeLine{314       \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
-\DoxyCodeLine{315       scanner.nextLine(); \textcolor{comment}{// Consume newline character}}
-\DoxyCodeLine{316       }
-\DoxyCodeLine{317       \textcolor{comment}{// Prompting user for the new details of the book}}
-\DoxyCodeLine{318       out.print(\textcolor{stringliteral}{"{}New Book Name: "{}});}
-\DoxyCodeLine{319       String bookName = scanner.nextLine();}
-\DoxyCodeLine{320       }
-\DoxyCodeLine{321       out.print(\textcolor{stringliteral}{"{}New Book Page Number: "{}});}
-\DoxyCodeLine{322       \textcolor{keywordtype}{int} bookpage = scanner.nextInt();}
-\DoxyCodeLine{323       scanner.nextLine(); \textcolor{comment}{// Consume newline character}}
-\DoxyCodeLine{324       }
-\DoxyCodeLine{325       out.print(\textcolor{stringliteral}{"{}New Book Value: "{}});}
-\DoxyCodeLine{326       \textcolor{keywordtype}{int} bookvalue = scanner.nextInt();}
-\DoxyCodeLine{327       scanner.nextLine(); \textcolor{comment}{// Consume newline character}}
-\DoxyCodeLine{328 }
-\DoxyCodeLine{329       \textcolor{comment}{// Updating the details of the book in the system}}
-\DoxyCodeLine{330       comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a6fe2153aa0dac7fa2c77554da18ba4b5}{updateBookTitleByID}}(bookId, bookName, bookpage, bookvalue);}
-\DoxyCodeLine{331       \textcolor{keywordflow}{return} 0; \textcolor{comment}{// Returning 0 to indicate successful update}}
-\DoxyCodeLine{332   \}}
+\DoxyCodeLine{294                                                                                         \{}
+\DoxyCodeLine{295     \textcolor{comment}{// Prompting user for the ID of the book to be updated}}
+\DoxyCodeLine{296     out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
+\DoxyCodeLine{297     \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
+\DoxyCodeLine{298     scanner.nextLine(); \textcolor{comment}{// Consume newline character}}
+\DoxyCodeLine{299     \textcolor{comment}{// Prompting user for the new details of the book}}
+\DoxyCodeLine{300     out.print(\textcolor{stringliteral}{"{}New Book Name: "{}});}
+\DoxyCodeLine{301     String bookName = scanner.nextLine();}
+\DoxyCodeLine{302     out.print(\textcolor{stringliteral}{"{}New Book Page Number: "{}});}
+\DoxyCodeLine{303     \textcolor{keywordtype}{int} bookpage = scanner.nextInt();}
+\DoxyCodeLine{304     scanner.nextLine(); \textcolor{comment}{// Consume newline character}}
+\DoxyCodeLine{305     out.print(\textcolor{stringliteral}{"{}New Book Value: "{}});}
+\DoxyCodeLine{306     \textcolor{keywordtype}{int} bookvalue = scanner.nextInt();}
+\DoxyCodeLine{307     scanner.nextLine(); \textcolor{comment}{// Consume newline character}}
+\DoxyCodeLine{308     \textcolor{comment}{// Updating the details of the book in the system}}
+\DoxyCodeLine{309     comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a6fe2153aa0dac7fa2c77554da18ba4b5}{updateBookTitleByID}}(bookId, bookName, bookpage, bookvalue);}
+\DoxyCodeLine{310     \textcolor{keywordflow}{return} 0; \textcolor{comment}{// Returning 0 to indicate successful update}}
+\DoxyCodeLine{311   \}}
 
 \end{DoxyCode}
 
@@ -1291,303 +1260,307 @@ Returns 0 upon successful completion of user interaction.
 \end{DoxyExceptions}
 
 
-Definition at line 662 of file Main.\+java.
+Definition at line 621 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{662                                                                                             \{}
-\DoxyCodeLine{663     \textcolor{keywordtype}{boolean} exit = \textcolor{keyword}{false};}
-\DoxyCodeLine{664 }
-\DoxyCodeLine{665     \textcolor{keywordflow}{while} (!exit) \{}
-\DoxyCodeLine{666         }
-\DoxyCodeLine{667       String title = \textcolor{stringliteral}{"{}USER MENU"{}};}
-\DoxyCodeLine{668       String[] options = \{}
-\DoxyCodeLine{669         \textcolor{stringliteral}{"{}1. Cataloging Comic Book Collection"{}},}
-\DoxyCodeLine{670         \textcolor{stringliteral}{"{}2. Wishlist and Trade List Management"{}},}
-\DoxyCodeLine{671         \textcolor{stringliteral}{"{}3. Comic Book Events and Conventions"{}},}
-\DoxyCodeLine{672         \textcolor{stringliteral}{"{}4. Buy Credit Score"{}},}
-\DoxyCodeLine{673         \textcolor{stringliteral}{"{}5. Exit"{}}}
-\DoxyCodeLine{674       \};}
-\DoxyCodeLine{675       }
-\DoxyCodeLine{676       }
-\DoxyCodeLine{677       printMenu(title, options);}
-\DoxyCodeLine{678       \textcolor{keywordtype}{int} choice = scanner.nextInt();}
-\DoxyCodeLine{679       scanner.nextLine(); }
-\DoxyCodeLine{680 }
-\DoxyCodeLine{681       }
-\DoxyCodeLine{682       \textcolor{keywordflow}{while} (choice != 6) \{}
-\DoxyCodeLine{683       \textcolor{keywordflow}{switch} (choice) \{}
-\DoxyCodeLine{684         \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{685           System.out.println(\textcolor{stringliteral}{"{}Cataloging Comic Book Collection"{}});}
-\DoxyCodeLine{686           }
-\DoxyCodeLine{687           String title2 = \textcolor{stringliteral}{"{}MY BOOK MENU"{}};}
-\DoxyCodeLine{688           String[] options2 = \{}
-\DoxyCodeLine{689             \textcolor{stringliteral}{"{}1. My Book Add"{}},}
-\DoxyCodeLine{690             \textcolor{stringliteral}{"{}2. My Book Delete"{}},}
-\DoxyCodeLine{691             \textcolor{stringliteral}{"{}3. My Book Update"{}},}
-\DoxyCodeLine{692             \textcolor{stringliteral}{"{}4. My Book List"{}},}
-\DoxyCodeLine{693             \textcolor{stringliteral}{"{}5. All Book List"{}},}
-\DoxyCodeLine{694             \textcolor{stringliteral}{"{}6. Exit"{}}}
-\DoxyCodeLine{695           \};}
-\DoxyCodeLine{696           printMenu(title2, options2);}
-\DoxyCodeLine{697           \textcolor{keywordtype}{int} choice2 = scanner.nextInt();}
-\DoxyCodeLine{698           scanner.nextLine(); }
-\DoxyCodeLine{699           }
-\DoxyCodeLine{700           \textcolor{keywordflow}{switch} (choice2) \{}
-\DoxyCodeLine{701           \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{702               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a9819fa2e25b6147b679f52508ef935ac}{AddBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{703               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{704           \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{705               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ab8a528144a5bc611683854fb60a34fa3}{deleteBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{706               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{707           \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{708               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a96a36283628d6106351a77d01dd21541}{updateBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{709               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{710           \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{711               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a0755a9c2beb9098786f1365c146b799f}{clearConsole}}();}
-\DoxyCodeLine{712               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a60456e5cf06b028a51fa3bfd1efe5595}{listBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{713               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{714           \textcolor{keywordflow}{case} 5:}
-\DoxyCodeLine{715               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a0755a9c2beb9098786f1365c146b799f}{clearConsole}}();}
-\DoxyCodeLine{716               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ac88bdeaa2127ef5672d9d4e99b7b9e63}{listAllBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{717               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{718           \textcolor{keywordflow}{case} 6:}
-\DoxyCodeLine{719               choice = 5;}
-\DoxyCodeLine{720               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{721           \}}
-\DoxyCodeLine{722           }
-\DoxyCodeLine{723           \textcolor{keywordflow}{break};}
-\DoxyCodeLine{724           }
-\DoxyCodeLine{725 }
-\DoxyCodeLine{726         \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{727           System.out.println(\textcolor{stringliteral}{"{}Wishlist and Trade List Management"{}});}
-\DoxyCodeLine{728           }
-\DoxyCodeLine{729           String title3 = \textcolor{stringliteral}{"{}WISHLIST OR TRADE MENU"{}};}
-\DoxyCodeLine{730           String[] options3 = \{}
-\DoxyCodeLine{731             \textcolor{stringliteral}{"{}1. My Wish List"{}},}
-\DoxyCodeLine{732             \textcolor{stringliteral}{"{}2. My Trade List"{}},}
-\DoxyCodeLine{733             \textcolor{stringliteral}{"{}3. Exit"{}}}
-\DoxyCodeLine{734           \};}
-\DoxyCodeLine{735           printMenu(title3, options3);}
-\DoxyCodeLine{736           \textcolor{keywordtype}{int} choice3 = scanner.nextInt();}
-\DoxyCodeLine{737           scanner.nextLine(); }
-\DoxyCodeLine{738           }
-\DoxyCodeLine{739           \textcolor{keywordflow}{switch} (choice3) \{}
-\DoxyCodeLine{740           \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{741               String title4 = \textcolor{stringliteral}{"{}MY WISHLIST MENU"{}};}
-\DoxyCodeLine{742               String[] options4 = \{}
-\DoxyCodeLine{743                 \textcolor{stringliteral}{"{}1. My Wish Book Add"{}},}
-\DoxyCodeLine{744                 \textcolor{stringliteral}{"{}2. My Wish Book Delete"{}},}
-\DoxyCodeLine{745                 \textcolor{stringliteral}{"{}3. My Wish Book List"{}},}
-\DoxyCodeLine{746                 \textcolor{stringliteral}{"{}4. My Book List"{}},}
-\DoxyCodeLine{747                 \textcolor{stringliteral}{"{}5. Return"{}},}
-\DoxyCodeLine{748                 \textcolor{stringliteral}{"{}5. Exit"{}}}
-\DoxyCodeLine{749               \};}
-\DoxyCodeLine{750               printMenu(title4, options4);}
-\DoxyCodeLine{751               \textcolor{keywordtype}{int} choice4 = scanner.nextInt();}
-\DoxyCodeLine{752               scanner.nextLine(); }
-\DoxyCodeLine{753               }
-\DoxyCodeLine{754               \textcolor{keywordflow}{switch} (choice4) \{}
-\DoxyCodeLine{755               \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{756                   \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_acce50654a239e2528271c7683221a389}{WishAddBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{757                   }
-\DoxyCodeLine{758                   \textcolor{keywordflow}{break};}
-\DoxyCodeLine{759               \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{760                   \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a436b3d62b9a7e98f9972d86c3fab7bfe}{WishdeleteBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{761                   \textcolor{keywordflow}{break};}
-\DoxyCodeLine{762               \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{763                   \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a9d1930b53d5fb23b30186978f27db3fe}{WishlistBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{764             }
-\DoxyCodeLine{765                   \textcolor{keywordflow}{break};}
-\DoxyCodeLine{766               \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{767                   \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a60456e5cf06b028a51fa3bfd1efe5595}{listBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{768                   \textcolor{keywordflow}{break};}
-\DoxyCodeLine{769               \textcolor{keywordflow}{case} 5:}
-\DoxyCodeLine{770                   choice = 5;}
-\DoxyCodeLine{771                   \textcolor{keywordflow}{break};}
-\DoxyCodeLine{772               \textcolor{keywordflow}{case} 6:}
-\DoxyCodeLine{773                   \textcolor{keywordflow}{break};}
-\DoxyCodeLine{774               \}}
-\DoxyCodeLine{775               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{776           \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{777               String title5 = \textcolor{stringliteral}{"{}MY TRADE MENU"{}};}
-\DoxyCodeLine{778               String[] options5 = \{}
-\DoxyCodeLine{779                 \textcolor{stringliteral}{"{}1. Buy Book"{}},}
-\DoxyCodeLine{780                 \textcolor{stringliteral}{"{}2. Sell Book"{}},}
-\DoxyCodeLine{781                 \textcolor{stringliteral}{"{}3. Return"{}},}
-\DoxyCodeLine{782                 \textcolor{stringliteral}{"{}4. Exit"{}}}
-\DoxyCodeLine{783               \};}
-\DoxyCodeLine{784               printMenu(title5, options5);}
-\DoxyCodeLine{785               \textcolor{keywordtype}{int} choice5 = scanner.nextInt();}
-\DoxyCodeLine{786               scanner.nextLine(); }
-\DoxyCodeLine{787               }
-\DoxyCodeLine{788               \textcolor{keywordflow}{switch}(choice5)}
-\DoxyCodeLine{789               \{}
-\DoxyCodeLine{790               \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{791                   String title6 = \textcolor{stringliteral}{"{}MY BUY MENU"{}};}
-\DoxyCodeLine{792                   String[] options6 = \{}
-\DoxyCodeLine{793                     \textcolor{stringliteral}{"{}1. Buy New Book"{}},}
-\DoxyCodeLine{794                     \textcolor{stringliteral}{"{}2. Trade Book List"{}},}
-\DoxyCodeLine{795                     \textcolor{stringliteral}{"{}3. Return"{}},}
-\DoxyCodeLine{796                     \textcolor{stringliteral}{"{}3. Exit"{}}}
-\DoxyCodeLine{797                   \};}
-\DoxyCodeLine{798                   printMenu(title6, options6);}
-\DoxyCodeLine{799                   \textcolor{keywordtype}{int} choice6 = scanner.nextInt();}
-\DoxyCodeLine{800                   scanner.nextLine(); }
-\DoxyCodeLine{801                   }
-\DoxyCodeLine{802                   \textcolor{keywordflow}{switch}(choice6)}
-\DoxyCodeLine{803                   \{}
-\DoxyCodeLine{804                   \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{805                       \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_aab4fead2a8abd5ef36f8da3602bacb69}{TradeBuyBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{806                       \textcolor{keywordflow}{break};}
-\DoxyCodeLine{807                   \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{808                       \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a56e3d96192592fecbf74d82434c7aaa7}{TradeAllListBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{809                       \textcolor{keywordflow}{break};}
-\DoxyCodeLine{810                   \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{811                       choice = 5;}
-\DoxyCodeLine{812                       \textcolor{keywordflow}{break};}
-\DoxyCodeLine{813                   \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{814                       }
-\DoxyCodeLine{815                       \textcolor{keywordflow}{break};}
-\DoxyCodeLine{816                  }
-\DoxyCodeLine{817                   \}}
-\DoxyCodeLine{818                   }
-\DoxyCodeLine{819                   \textcolor{keywordflow}{break};}
-\DoxyCodeLine{820               \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{821                   }
-\DoxyCodeLine{822                   String title7 = \textcolor{stringliteral}{"{}MY SELL MENU"{}};}
-\DoxyCodeLine{823                   String[] options7 = \{}
-\DoxyCodeLine{824                     \textcolor{stringliteral}{"{}1. Add Sell New Book"{}},}
-\DoxyCodeLine{825                     \textcolor{stringliteral}{"{}2. Delete Sell Book"{}},}
-\DoxyCodeLine{826                     \textcolor{stringliteral}{"{}3. Trade Book List"{}},}
-\DoxyCodeLine{827                     \textcolor{stringliteral}{"{}4. My Trade Book List"{}},}
-\DoxyCodeLine{828                     \textcolor{stringliteral}{"{}5. Return"{}},}
-\DoxyCodeLine{829                     \textcolor{stringliteral}{"{}6. Exit"{}}}
-\DoxyCodeLine{830                   \};}
-\DoxyCodeLine{831                   printMenu(title7, options7);}
-\DoxyCodeLine{832                   \textcolor{keywordtype}{int} choice7 = scanner.nextInt();}
-\DoxyCodeLine{833                   scanner.nextLine(); }
-\DoxyCodeLine{834                   }
-\DoxyCodeLine{835                   \textcolor{keywordflow}{switch}(choice7)}
-\DoxyCodeLine{836                   \{}
-\DoxyCodeLine{837                   \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{838                       \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_afb026813deab3ac6eea0237d98b95e3e}{TradeAddBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{839                       \textcolor{keywordflow}{break};}
-\DoxyCodeLine{840                   \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{841                       \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a293891bfff342d71ff65bfc9dcd66e38}{TradedeleteBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{842                       \textcolor{keywordflow}{break};}
-\DoxyCodeLine{843                   \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{844                       \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a56e3d96192592fecbf74d82434c7aaa7}{TradeAllListBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{845                       \textcolor{keywordflow}{break};}
-\DoxyCodeLine{846                   \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{847                       \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ad446db8ec303baaf6e35a7f3900e460d}{TradeMylistBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{848                       \textcolor{keywordflow}{break};}
-\DoxyCodeLine{849                   \textcolor{keywordflow}{case} 5:}
-\DoxyCodeLine{850                       choice = 5;}
-\DoxyCodeLine{851                       \textcolor{keywordflow}{break};}
-\DoxyCodeLine{852                   \textcolor{keywordflow}{case} 6:}
-\DoxyCodeLine{853                       exit = \textcolor{keyword}{true};}
-\DoxyCodeLine{854                       \textcolor{keywordflow}{break};}
-\DoxyCodeLine{855                 }
-\DoxyCodeLine{856                   \}}
-\DoxyCodeLine{857                   \textcolor{keywordflow}{break};}
-\DoxyCodeLine{858               \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{859                   choice = 5;}
-\DoxyCodeLine{860                   \textcolor{keywordflow}{break};}
-\DoxyCodeLine{861         }
-\DoxyCodeLine{862               \}}
-\DoxyCodeLine{863               }
-\DoxyCodeLine{864               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{865             }
-\DoxyCodeLine{866           \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{867               choice = 5;}
-\DoxyCodeLine{868               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{869        }
-\DoxyCodeLine{870           \}}
-\DoxyCodeLine{871           }
-\DoxyCodeLine{872 }
-\DoxyCodeLine{873           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{621                                                                                             \{}
+\DoxyCodeLine{622     \textcolor{keywordtype}{boolean} exit = \textcolor{keyword}{false};}
+\DoxyCodeLine{623 }
+\DoxyCodeLine{624     \textcolor{keywordflow}{while} (!exit) \{}
+\DoxyCodeLine{625       String title = \textcolor{stringliteral}{"{}USER MENU"{}};}
+\DoxyCodeLine{626       String[] options = \{}
+\DoxyCodeLine{627         \textcolor{stringliteral}{"{}1. Cataloging Comic Book Collection"{}},}
+\DoxyCodeLine{628         \textcolor{stringliteral}{"{}2. Wishlist and Trade List Management"{}},}
+\DoxyCodeLine{629         \textcolor{stringliteral}{"{}3. Comic Book Events and Conventions"{}},}
+\DoxyCodeLine{630         \textcolor{stringliteral}{"{}4. Buy Credit Score"{}},}
+\DoxyCodeLine{631         \textcolor{stringliteral}{"{}5. Exit"{}}}
+\DoxyCodeLine{632       \};}
+\DoxyCodeLine{633       printMenu(title, options);}
+\DoxyCodeLine{634       \textcolor{keywordtype}{int} choice = scanner.nextInt();}
+\DoxyCodeLine{635       scanner.nextLine();}
+\DoxyCodeLine{636 }
+\DoxyCodeLine{637       \textcolor{keywordflow}{while} (choice != 6) \{}
+\DoxyCodeLine{638         \textcolor{keywordflow}{switch} (choice) \{}
+\DoxyCodeLine{639           \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{640             System.out.println(\textcolor{stringliteral}{"{}Cataloging Comic Book Collection"{}});}
+\DoxyCodeLine{641             String title2 = \textcolor{stringliteral}{"{}MY BOOK MENU"{}};}
+\DoxyCodeLine{642             String[] options2 = \{}
+\DoxyCodeLine{643               \textcolor{stringliteral}{"{}1. My Book Add"{}},}
+\DoxyCodeLine{644               \textcolor{stringliteral}{"{}2. My Book Delete"{}},}
+\DoxyCodeLine{645               \textcolor{stringliteral}{"{}3. My Book Update"{}},}
+\DoxyCodeLine{646               \textcolor{stringliteral}{"{}4. My Book List"{}},}
+\DoxyCodeLine{647               \textcolor{stringliteral}{"{}5. All Book List"{}},}
+\DoxyCodeLine{648               \textcolor{stringliteral}{"{}6. Exit"{}}}
+\DoxyCodeLine{649             \};}
+\DoxyCodeLine{650             printMenu(title2, options2);}
+\DoxyCodeLine{651             \textcolor{keywordtype}{int} choice2 = scanner.nextInt();}
+\DoxyCodeLine{652             scanner.nextLine();}
+\DoxyCodeLine{653 }
+\DoxyCodeLine{654             \textcolor{keywordflow}{switch} (choice2) \{}
+\DoxyCodeLine{655               \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{656                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a9819fa2e25b6147b679f52508ef935ac}{AddBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{657                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{658 }
+\DoxyCodeLine{659               \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{660                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ab8a528144a5bc611683854fb60a34fa3}{deleteBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{661                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{662 }
+\DoxyCodeLine{663               \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{664                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a96a36283628d6106351a77d01dd21541}{updateBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{665                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{666 }
+\DoxyCodeLine{667               \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{668                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a0755a9c2beb9098786f1365c146b799f}{clearConsole}}();}
+\DoxyCodeLine{669                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a60456e5cf06b028a51fa3bfd1efe5595}{listBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{670                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{671 }
+\DoxyCodeLine{672               \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{673                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a0755a9c2beb9098786f1365c146b799f}{clearConsole}}();}
+\DoxyCodeLine{674                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ac88bdeaa2127ef5672d9d4e99b7b9e63}{listAllBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{675                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{676 }
+\DoxyCodeLine{677               \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{678                 choice = 5;}
+\DoxyCodeLine{679                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{680             \}}
+\DoxyCodeLine{681 }
+\DoxyCodeLine{682             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{683 }
+\DoxyCodeLine{684           \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{685             System.out.println(\textcolor{stringliteral}{"{}Wishlist and Trade List Management"{}});}
+\DoxyCodeLine{686             String title3 = \textcolor{stringliteral}{"{}WISHLIST OR TRADE MENU"{}};}
+\DoxyCodeLine{687             String[] options3 = \{}
+\DoxyCodeLine{688               \textcolor{stringliteral}{"{}1. My Wish List"{}},}
+\DoxyCodeLine{689               \textcolor{stringliteral}{"{}2. My Trade List"{}},}
+\DoxyCodeLine{690               \textcolor{stringliteral}{"{}3. Exit"{}}}
+\DoxyCodeLine{691             \};}
+\DoxyCodeLine{692             printMenu(title3, options3);}
+\DoxyCodeLine{693             \textcolor{keywordtype}{int} choice3 = scanner.nextInt();}
+\DoxyCodeLine{694             scanner.nextLine();}
+\DoxyCodeLine{695 }
+\DoxyCodeLine{696             \textcolor{keywordflow}{switch} (choice3) \{}
+\DoxyCodeLine{697               \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{698                 String title4 = \textcolor{stringliteral}{"{}MY WISHLIST MENU"{}};}
+\DoxyCodeLine{699                 String[] options4 = \{}
+\DoxyCodeLine{700                   \textcolor{stringliteral}{"{}1. My Wish Book Add"{}},}
+\DoxyCodeLine{701                   \textcolor{stringliteral}{"{}2. My Wish Book Delete"{}},}
+\DoxyCodeLine{702                   \textcolor{stringliteral}{"{}3. My Wish Book List"{}},}
+\DoxyCodeLine{703                   \textcolor{stringliteral}{"{}4. My Book List"{}},}
+\DoxyCodeLine{704                   \textcolor{stringliteral}{"{}5. Return"{}},}
+\DoxyCodeLine{705                   \textcolor{stringliteral}{"{}5. Exit"{}}}
+\DoxyCodeLine{706                 \};}
+\DoxyCodeLine{707                 printMenu(title4, options4);}
+\DoxyCodeLine{708                 \textcolor{keywordtype}{int} choice4 = scanner.nextInt();}
+\DoxyCodeLine{709                 scanner.nextLine();}
+\DoxyCodeLine{710 }
+\DoxyCodeLine{711                 \textcolor{keywordflow}{switch} (choice4) \{}
+\DoxyCodeLine{712                   \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{713                     \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_acce50654a239e2528271c7683221a389}{WishAddBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{714                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{715 }
+\DoxyCodeLine{716                   \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{717                     \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a436b3d62b9a7e98f9972d86c3fab7bfe}{WishdeleteBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{718                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{719 }
+\DoxyCodeLine{720                   \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{721                     \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a9d1930b53d5fb23b30186978f27db3fe}{WishlistBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{722                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{723 }
+\DoxyCodeLine{724                   \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{725                     \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a60456e5cf06b028a51fa3bfd1efe5595}{listBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{726                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{727 }
+\DoxyCodeLine{728                   \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{729                     choice = 5;}
+\DoxyCodeLine{730                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{731 }
+\DoxyCodeLine{732                   \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{733                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{734                 \}}
+\DoxyCodeLine{735 }
+\DoxyCodeLine{736                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{737 }
+\DoxyCodeLine{738               \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{739                 String title5 = \textcolor{stringliteral}{"{}MY TRADE MENU"{}};}
+\DoxyCodeLine{740                 String[] options5 = \{}
+\DoxyCodeLine{741                   \textcolor{stringliteral}{"{}1. Buy Book"{}},}
+\DoxyCodeLine{742                   \textcolor{stringliteral}{"{}2. Sell Book"{}},}
+\DoxyCodeLine{743                   \textcolor{stringliteral}{"{}3. Return"{}},}
+\DoxyCodeLine{744                   \textcolor{stringliteral}{"{}4. Exit"{}}}
+\DoxyCodeLine{745                 \};}
+\DoxyCodeLine{746                 printMenu(title5, options5);}
+\DoxyCodeLine{747                 \textcolor{keywordtype}{int} choice5 = scanner.nextInt();}
+\DoxyCodeLine{748                 scanner.nextLine();}
+\DoxyCodeLine{749 }
+\DoxyCodeLine{750                 \textcolor{keywordflow}{switch}(choice5) \{}
+\DoxyCodeLine{751                   \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{752                     String title6 = \textcolor{stringliteral}{"{}MY BUY MENU"{}};}
+\DoxyCodeLine{753                     String[] options6 = \{}
+\DoxyCodeLine{754                       \textcolor{stringliteral}{"{}1. Buy New Book"{}},}
+\DoxyCodeLine{755                       \textcolor{stringliteral}{"{}2. Trade Book List"{}},}
+\DoxyCodeLine{756                       \textcolor{stringliteral}{"{}3. Return"{}},}
+\DoxyCodeLine{757                       \textcolor{stringliteral}{"{}3. Exit"{}}}
+\DoxyCodeLine{758                     \};}
+\DoxyCodeLine{759                     printMenu(title6, options6);}
+\DoxyCodeLine{760                     \textcolor{keywordtype}{int} choice6 = scanner.nextInt();}
+\DoxyCodeLine{761                     scanner.nextLine();}
+\DoxyCodeLine{762 }
+\DoxyCodeLine{763                     \textcolor{keywordflow}{switch}(choice6) \{}
+\DoxyCodeLine{764                       \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{765                         \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_aab4fead2a8abd5ef36f8da3602bacb69}{TradeBuyBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{766                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{767 }
+\DoxyCodeLine{768                       \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{769                         \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a56e3d96192592fecbf74d82434c7aaa7}{TradeAllListBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{770                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{771 }
+\DoxyCodeLine{772                       \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{773                         choice = 5;}
+\DoxyCodeLine{774                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{775 }
+\DoxyCodeLine{776                       \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{777                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{778                     \}}
+\DoxyCodeLine{779 }
+\DoxyCodeLine{780                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{781 }
+\DoxyCodeLine{782                   \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{783                     String title7 = \textcolor{stringliteral}{"{}MY SELL MENU"{}};}
+\DoxyCodeLine{784                     String[] options7 = \{}
+\DoxyCodeLine{785                       \textcolor{stringliteral}{"{}1. Add Sell New Book"{}},}
+\DoxyCodeLine{786                       \textcolor{stringliteral}{"{}2. Delete Sell Book"{}},}
+\DoxyCodeLine{787                       \textcolor{stringliteral}{"{}3. Trade Book List"{}},}
+\DoxyCodeLine{788                       \textcolor{stringliteral}{"{}4. My Trade Book List"{}},}
+\DoxyCodeLine{789                       \textcolor{stringliteral}{"{}5. Return"{}},}
+\DoxyCodeLine{790                       \textcolor{stringliteral}{"{}6. Exit"{}}}
+\DoxyCodeLine{791                     \};}
+\DoxyCodeLine{792                     printMenu(title7, options7);}
+\DoxyCodeLine{793                     \textcolor{keywordtype}{int} choice7 = scanner.nextInt();}
+\DoxyCodeLine{794                     scanner.nextLine();}
+\DoxyCodeLine{795 }
+\DoxyCodeLine{796                     \textcolor{keywordflow}{switch}(choice7) \{}
+\DoxyCodeLine{797                       \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{798                         \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_afb026813deab3ac6eea0237d98b95e3e}{TradeAddBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{799                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{800 }
+\DoxyCodeLine{801                       \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{802                         \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a293891bfff342d71ff65bfc9dcd66e38}{TradedeleteBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{803                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{804 }
+\DoxyCodeLine{805                       \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{806                         \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a56e3d96192592fecbf74d82434c7aaa7}{TradeAllListBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{807                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{808 }
+\DoxyCodeLine{809                       \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{810                         \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ad446db8ec303baaf6e35a7f3900e460d}{TradeMylistBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{811                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{812 }
+\DoxyCodeLine{813                       \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{814                         choice = 5;}
+\DoxyCodeLine{815                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{816 }
+\DoxyCodeLine{817                       \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{818                         exit = \textcolor{keyword}{true};}
+\DoxyCodeLine{819                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{820                     \}}
+\DoxyCodeLine{821 }
+\DoxyCodeLine{822                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{823 }
+\DoxyCodeLine{824                   \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{825                     choice = 5;}
+\DoxyCodeLine{826                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{827                 \}}
+\DoxyCodeLine{828 }
+\DoxyCodeLine{829                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{830 }
+\DoxyCodeLine{831               \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{832                 choice = 5;}
+\DoxyCodeLine{833                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{834             \}}
+\DoxyCodeLine{835 }
+\DoxyCodeLine{836             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{837 }
+\DoxyCodeLine{838           \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{839             System.out.println(\textcolor{stringliteral}{"{}Comic Book Events and Conventions"{}});}
+\DoxyCodeLine{840             String title8 = \textcolor{stringliteral}{"{}MY EVENT MENU"{}};}
+\DoxyCodeLine{841             String[] options8 = \{}
+\DoxyCodeLine{842               \textcolor{stringliteral}{"{}1. Add My Event"{}},}
+\DoxyCodeLine{843               \textcolor{stringliteral}{"{}2. Sell My Event"{}},}
+\DoxyCodeLine{844               \textcolor{stringliteral}{"{}3. Update My Event"{}},}
+\DoxyCodeLine{845               \textcolor{stringliteral}{"{}4. My Event List"{}},}
+\DoxyCodeLine{846               \textcolor{stringliteral}{"{}5. All Event List"{}},}
+\DoxyCodeLine{847               \textcolor{stringliteral}{"{}6. Return"{}},}
+\DoxyCodeLine{848               \textcolor{stringliteral}{"{}7. Exit"{}}}
+\DoxyCodeLine{849             \};}
+\DoxyCodeLine{850             printMenu(title8, options8);}
+\DoxyCodeLine{851             \textcolor{keywordtype}{int} choice8 = scanner.nextInt();}
+\DoxyCodeLine{852             scanner.nextLine();}
+\DoxyCodeLine{853 }
+\DoxyCodeLine{854             \textcolor{keywordflow}{switch}(choice8) \{}
+\DoxyCodeLine{855               \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{856                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a5077840ac159d4f6c8c03325dbd8c86c}{EventAddBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{857                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{858 }
+\DoxyCodeLine{859               \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{860                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a761438ee4546023c6236602326a489dd}{EventdeleteBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{861                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{862 }
+\DoxyCodeLine{863               \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{864                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a6c3db295c714a3d76b8db2007cf57137}{EventupdateBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{865                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{866 }
+\DoxyCodeLine{867               \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{868                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a616ef6317be731a8fcadb7443decaccd}{EventlistBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{869                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{870 }
+\DoxyCodeLine{871               \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{872                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ae1ebd27a4d9d23c28b5a2fd3beb0205f}{EventlistAllBookMenu}}(scanner, System.out);}
+\DoxyCodeLine{873                 \textcolor{keywordflow}{break};}
 \DoxyCodeLine{874 }
-\DoxyCodeLine{875         \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{876           System.out.println(\textcolor{stringliteral}{"{}Comic Book Events and Conventions"{}});}
-\DoxyCodeLine{877           }
-\DoxyCodeLine{878           String title8 = \textcolor{stringliteral}{"{}MY EVENT MENU"{}};}
-\DoxyCodeLine{879           String[] options8 = \{}
-\DoxyCodeLine{880             \textcolor{stringliteral}{"{}1. Add My Event"{}},}
-\DoxyCodeLine{881             \textcolor{stringliteral}{"{}2. Sell My Event"{}},}
-\DoxyCodeLine{882             \textcolor{stringliteral}{"{}3. Update My Event"{}},}
-\DoxyCodeLine{883             \textcolor{stringliteral}{"{}4. My Event List"{}},}
-\DoxyCodeLine{884             \textcolor{stringliteral}{"{}5. All Event List"{}},}
-\DoxyCodeLine{885             \textcolor{stringliteral}{"{}6. Return"{}},}
-\DoxyCodeLine{886             \textcolor{stringliteral}{"{}7. Exit"{}}}
-\DoxyCodeLine{887           \};}
-\DoxyCodeLine{888           printMenu(title8, options8);}
-\DoxyCodeLine{889           \textcolor{keywordtype}{int} choice8 = scanner.nextInt();}
-\DoxyCodeLine{890           scanner.nextLine(); }
-\DoxyCodeLine{891           }
-\DoxyCodeLine{892           \textcolor{keywordflow}{switch}(choice8)}
-\DoxyCodeLine{893           \{}
-\DoxyCodeLine{894           \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{895               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a5077840ac159d4f6c8c03325dbd8c86c}{EventAddBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{896               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{897           \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{898               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a761438ee4546023c6236602326a489dd}{EventdeleteBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{899               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{900           \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{901               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a6c3db295c714a3d76b8db2007cf57137}{EventupdateBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{902               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{903           \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{904               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a616ef6317be731a8fcadb7443decaccd}{EventlistBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{905               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{906           \textcolor{keywordflow}{case} 5:}
-\DoxyCodeLine{907               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_ae1ebd27a4d9d23c28b5a2fd3beb0205f}{EventlistAllBookMenu}}(scanner, System.out);}
-\DoxyCodeLine{908               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{909           \textcolor{keywordflow}{case} 6:}
-\DoxyCodeLine{910               choice = 5;}
-\DoxyCodeLine{911               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{912           \textcolor{keywordflow}{case} 7:}
-\DoxyCodeLine{913               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{914           }
-\DoxyCodeLine{915           \}}
-\DoxyCodeLine{916           \textcolor{keywordflow}{break};}
-\DoxyCodeLine{917           }
-\DoxyCodeLine{918         \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{919           String title9 = \textcolor{stringliteral}{"{}MY CREDIT SCORE MENU"{}};}
-\DoxyCodeLine{920             String[] options9 = \{}
-\DoxyCodeLine{921               \textcolor{stringliteral}{"{}1. Buy Credit Score"{}},}
-\DoxyCodeLine{922               \textcolor{stringliteral}{"{}2. Exit"{}}}
-\DoxyCodeLine{923             \};}
-\DoxyCodeLine{924             printMenu(title9, options9);}
-\DoxyCodeLine{925             \textcolor{keywordtype}{int} choice9 = scanner.nextInt();}
-\DoxyCodeLine{926             scanner.nextLine(); }
-\DoxyCodeLine{927             }
-\DoxyCodeLine{928             \textcolor{keywordflow}{switch}(choice9)}
-\DoxyCodeLine{929             \{}
-\DoxyCodeLine{930             \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{931               \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a814232cee5d0da73e02183991f3e9ccc}{CreditBuyScoreMenu}}(scanner, System.out);}
-\DoxyCodeLine{932               }
-\DoxyCodeLine{933               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{934             \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{935              choice = 5;}
-\DoxyCodeLine{936               \textcolor{keywordflow}{break};}
-\DoxyCodeLine{937             \}}
-\DoxyCodeLine{938             }
-\DoxyCodeLine{939           }
-\DoxyCodeLine{940           \textcolor{keywordflow}{break};}
-\DoxyCodeLine{941 }
-\DoxyCodeLine{942         \textcolor{keywordflow}{case} 5:}
-\DoxyCodeLine{943     }
-\DoxyCodeLine{944             \textcolor{comment}{//System.exit(0);}}
-\DoxyCodeLine{945             \textcolor{comment}{//return 0;}}
-\DoxyCodeLine{946             \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{947         }
-\DoxyCodeLine{948         \}}
-\DoxyCodeLine{949       \}}
-\DoxyCodeLine{950     \}}
-\DoxyCodeLine{951 }
-\DoxyCodeLine{952     scanner.close(); }
-\DoxyCodeLine{953     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{954   \}}
+\DoxyCodeLine{875               \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{876                 choice = 5;}
+\DoxyCodeLine{877                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{878 }
+\DoxyCodeLine{879               \textcolor{keywordflow}{case} 7:}
+\DoxyCodeLine{880                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{881             \}}
+\DoxyCodeLine{882 }
+\DoxyCodeLine{883             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{884 }
+\DoxyCodeLine{885           \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{886             String title9 = \textcolor{stringliteral}{"{}MY CREDIT SCORE MENU"{}};}
+\DoxyCodeLine{887             String[] options9 = \{}
+\DoxyCodeLine{888               \textcolor{stringliteral}{"{}1. Buy Credit Score"{}},}
+\DoxyCodeLine{889               \textcolor{stringliteral}{"{}2. Exit"{}}}
+\DoxyCodeLine{890             \};}
+\DoxyCodeLine{891             printMenu(title9, options9);}
+\DoxyCodeLine{892             \textcolor{keywordtype}{int} choice9 = scanner.nextInt();}
+\DoxyCodeLine{893             scanner.nextLine();}
+\DoxyCodeLine{894 }
+\DoxyCodeLine{895             \textcolor{keywordflow}{switch}(choice9) \{}
+\DoxyCodeLine{896               \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{897                 \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a814232cee5d0da73e02183991f3e9ccc}{CreditBuyScoreMenu}}(scanner, System.out);}
+\DoxyCodeLine{898                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{899 }
+\DoxyCodeLine{900               \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{901                 choice = 5;}
+\DoxyCodeLine{902                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{903             \}}
+\DoxyCodeLine{904 }
+\DoxyCodeLine{905             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{906 }
+\DoxyCodeLine{907           \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{908             \textcolor{comment}{//System.exit(0);}}
+\DoxyCodeLine{909             \textcolor{comment}{//return 0;}}
+\DoxyCodeLine{910             \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{911         \}}
+\DoxyCodeLine{912       \}}
+\DoxyCodeLine{913     \}}
+\DoxyCodeLine{914 }
+\DoxyCodeLine{915     scanner.close();}
+\DoxyCodeLine{916     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{917   \}}
 
 \end{DoxyCode}
 
@@ -1623,33 +1596,31 @@ Returns 0 upon successful addition of the book to the wish list, or -\/1 if the 
 \end{DoxyExceptions}
 
 
-Definition at line 346 of file Main.\+java.
+Definition at line 325 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{346                                                                                          \{}
-\DoxyCodeLine{347       \textcolor{comment}{// Prompting user for the ID of the book to be added to the wish list}}
-\DoxyCodeLine{348       out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
-\DoxyCodeLine{349       \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
-\DoxyCodeLine{350       scanner.nextLine(); \textcolor{comment}{// Consume newline character}}
-\DoxyCodeLine{351       }
-\DoxyCodeLine{352       \textcolor{comment}{// Checking if the book ID is available in the system}}
-\DoxyCodeLine{353       \textcolor{keywordflow}{if} (comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a4262d61aed612e85828c72d94401d01a}{isBookIDAvailable}}(bookId)) \{}
-\DoxyCodeLine{354           out.println(\textcolor{stringliteral}{"{}No such book found."{}});}
-\DoxyCodeLine{355           \textcolor{keywordflow}{return} -\/1; \textcolor{comment}{// Returning -\/1 if the book ID is not available}}
-\DoxyCodeLine{356       \}}
-\DoxyCodeLine{357       }
-\DoxyCodeLine{358       \textcolor{comment}{// Retrieving book details for wish list entry}}
-\DoxyCodeLine{359       \textcolor{keywordtype}{int} pageNumber = comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_ac4bffcdd2ab85c2db27d5f7235c43d53}{getBookPageNumberByID}}(bookId);}
-\DoxyCodeLine{360       String title = comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_aa61f6486ec8521cd614d974a58635c22}{getBookTitleByID}}(bookId);}
-\DoxyCodeLine{361       \textcolor{keywordtype}{int} value = comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_ac4bffcdd2ab85c2db27d5f7235c43d53}{getBookPageNumberByID}}(bookId);}
-\DoxyCodeLine{362       }
-\DoxyCodeLine{363       \textcolor{comment}{// Creating a new Wish object and adding it to the wish list}}
-\DoxyCodeLine{364       Wish newUser = \textcolor{keyword}{new} Wish(bookId, title, pageNumber, \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}}, value);}
-\DoxyCodeLine{365       wishmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_ae16ff49bc0e8293cb87dd8b4286d4994}{AddBook}}(newUser);}
-\DoxyCodeLine{366       }
-\DoxyCodeLine{367       \textcolor{keywordflow}{return} 0; \textcolor{comment}{// Returning 0 to indicate successful addition to the wish list}}
-\DoxyCodeLine{368   \}}
+\DoxyCodeLine{325                                                                                          \{}
+\DoxyCodeLine{326     \textcolor{comment}{// Prompting user for the ID of the book to be added to the wish list}}
+\DoxyCodeLine{327     out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
+\DoxyCodeLine{328     \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
+\DoxyCodeLine{329     scanner.nextLine(); \textcolor{comment}{// Consume newline character}}
+\DoxyCodeLine{330 }
+\DoxyCodeLine{331     \textcolor{comment}{// Checking if the book ID is available in the system}}
+\DoxyCodeLine{332     \textcolor{keywordflow}{if} (comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a4262d61aed612e85828c72d94401d01a}{isBookIDAvailable}}(bookId)) \{}
+\DoxyCodeLine{333       out.println(\textcolor{stringliteral}{"{}No such book found."{}});}
+\DoxyCodeLine{334       \textcolor{keywordflow}{return} -\/1; \textcolor{comment}{// Returning -\/1 if the book ID is not available}}
+\DoxyCodeLine{335     \}}
+\DoxyCodeLine{336 }
+\DoxyCodeLine{337     \textcolor{comment}{// Retrieving book details for wish list entry}}
+\DoxyCodeLine{338     \textcolor{keywordtype}{int} pageNumber = comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_ac4bffcdd2ab85c2db27d5f7235c43d53}{getBookPageNumberByID}}(bookId);}
+\DoxyCodeLine{339     String title = comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_aa61f6486ec8521cd614d974a58635c22}{getBookTitleByID}}(bookId);}
+\DoxyCodeLine{340     \textcolor{keywordtype}{int} value = comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_ac4bffcdd2ab85c2db27d5f7235c43d53}{getBookPageNumberByID}}(bookId);}
+\DoxyCodeLine{341     \textcolor{comment}{// Creating a new Wish object and adding it to the wish list}}
+\DoxyCodeLine{342     Wish newUser = \textcolor{keyword}{new} Wish(bookId, title, pageNumber, \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}}, value);}
+\DoxyCodeLine{343     wishmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_ae16ff49bc0e8293cb87dd8b4286d4994}{AddBook}}(newUser);}
+\DoxyCodeLine{344     \textcolor{keywordflow}{return} 0; \textcolor{comment}{// Returning 0 to indicate successful addition to the wish list}}
+\DoxyCodeLine{345   \}}
 
 \end{DoxyCode}
 
@@ -1685,17 +1656,16 @@ Returns 0 upon successful deletion of the book from the wish list.
 \end{DoxyExceptions}
 
 
-Definition at line 393 of file Main.\+java.
+Definition at line 370 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{393                                                                                             \{}
-\DoxyCodeLine{394       out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
-\DoxyCodeLine{395       \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
-\DoxyCodeLine{396       }
-\DoxyCodeLine{397       wishmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_affccdb63c5a7f1f94c677c50354c8181}{deleteBookByID}}(bookId);}
-\DoxyCodeLine{398       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{399   \}}
+\DoxyCodeLine{370                                                                                             \{}
+\DoxyCodeLine{371     out.print(\textcolor{stringliteral}{"{}Book ID: "{}});}
+\DoxyCodeLine{372     \textcolor{keywordtype}{int} bookId = scanner.nextInt();}
+\DoxyCodeLine{373     wishmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_affccdb63c5a7f1f94c677c50354c8181}{deleteBookByID}}(bookId);}
+\DoxyCodeLine{374     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{375   \}}
 
 \end{DoxyCode}
 
@@ -1731,15 +1701,15 @@ Returns 0 upon successful display of the wish list.
 \end{DoxyExceptions}
 
 
-Definition at line 379 of file Main.\+java.
+Definition at line 356 of file Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{379                                                                                           \{}
-\DoxyCodeLine{380       out.println(\textcolor{stringliteral}{"{}Wish Book List"{}});}
-\DoxyCodeLine{381       wishmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_a742124a4b6632f71f4537418154ceaa5}{listBooksByUser}}(\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}});}
-\DoxyCodeLine{382       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{383   \}}
+\DoxyCodeLine{356                                                                                           \{}
+\DoxyCodeLine{357     out.println(\textcolor{stringliteral}{"{}Wish Book List"{}});}
+\DoxyCodeLine{358     wishmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_a742124a4b6632f71f4537418154ceaa5}{listBooksByUser}}(\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1Main_a14f1070c79196a3da97886922cd60590}{LoginName}});}
+\DoxyCodeLine{359     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{360   \}}
 
 \end{DoxyCode}
 

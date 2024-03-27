@@ -1,5 +1,9 @@
 \hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager}{}\doxysection{com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager Class Reference}
 \label{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager}\index{com.mehmetali.comic\_manager.BookManager@{com.mehmetali.comic\_manager.BookManager}}
+
+
+Collaboration diagram for com.\+mehmetali.\+comic\+\_\+manager.\+Book\+Manager\+:
+% FIG 0
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -120,30 +124,30 @@ Deletes a comic book from the collection based on its ID.
 \end{DoxyReturn}
 
 
-Definition at line 115 of file Book\+Manager.\+java.
+Definition at line 114 of file Book\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{115                                         \{}
-\DoxyCodeLine{116     \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
-\DoxyCodeLine{117 }
-\DoxyCodeLine{118     \textcolor{keywordflow}{for} (Book comic : comics) \{}
-\DoxyCodeLine{119       \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
-\DoxyCodeLine{120         comics.remove(comic);}
-\DoxyCodeLine{121         saveUsersToFile(comics,BOOK\_FILE\_PATH);}
-\DoxyCodeLine{122         System.out.println(\textcolor{stringliteral}{"{}Book deleted successfully."{}});}
-\DoxyCodeLine{123         found = \textcolor{keyword}{true};}
-\DoxyCodeLine{124         \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{125       \}}
-\DoxyCodeLine{126     \}}
-\DoxyCodeLine{127 }
-\DoxyCodeLine{128     \textcolor{keywordflow}{if} (!found) \{}
-\DoxyCodeLine{129       System.out.println(\textcolor{stringliteral}{"{}No book matching the book ID was found."{}});}
-\DoxyCodeLine{130       \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{131     \}}
-\DoxyCodeLine{132 }
-\DoxyCodeLine{133     \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{134   \}}
+\DoxyCodeLine{114                                         \{}
+\DoxyCodeLine{115     \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{118       \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
+\DoxyCodeLine{119         comics.remove(comic);}
+\DoxyCodeLine{120         saveUsersToFile(comics,BOOK\_FILE\_PATH);}
+\DoxyCodeLine{121         System.out.println(\textcolor{stringliteral}{"{}Book deleted successfully."{}});}
+\DoxyCodeLine{122         found = \textcolor{keyword}{true};}
+\DoxyCodeLine{123         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{124       \}}
+\DoxyCodeLine{125     \}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     \textcolor{keywordflow}{if} (!found) \{}
+\DoxyCodeLine{128       System.out.println(\textcolor{stringliteral}{"{}No book matching the book ID was found."{}});}
+\DoxyCodeLine{129       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{130     \}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{133   \}}
 
 \end{DoxyCode}
 
@@ -168,18 +172,19 @@ The page number of the book with the specified ID, or 0 if the book is not found
 \end{DoxyReturn}
 
 
-Definition at line 221 of file Book\+Manager.\+java.
+Definition at line 219 of file Book\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{221                                                \{}
-\DoxyCodeLine{222       \textcolor{keywordflow}{for} (Book comic : comics) \{}
-\DoxyCodeLine{223           \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
-\DoxyCodeLine{224               \textcolor{keywordflow}{return} comic.getpageNumber();}
-\DoxyCodeLine{225           \}}
-\DoxyCodeLine{226       \}}
-\DoxyCodeLine{227       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{228   \}}
+\DoxyCodeLine{219                                                \{}
+\DoxyCodeLine{220     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{221       \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
+\DoxyCodeLine{222         \textcolor{keywordflow}{return} comic.getpageNumber();}
+\DoxyCodeLine{223       \}}
+\DoxyCodeLine{224     \}}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{227   \}}
 
 \end{DoxyCode}
 
@@ -202,19 +207,19 @@ The title of the comic book, or null if not found.
 \end{DoxyReturn}
 
 
-Definition at line 204 of file Book\+Manager.\+java.
+Definition at line 202 of file Book\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{204                                              \{}
-\DoxyCodeLine{205     \textcolor{keywordflow}{for} (Book comic : comics) \{}
-\DoxyCodeLine{206       \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
-\DoxyCodeLine{207         \textcolor{keywordflow}{return} comic.getTitle();}
-\DoxyCodeLine{208       \}}
-\DoxyCodeLine{209     \}}
-\DoxyCodeLine{210 }
-\DoxyCodeLine{211     \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
-\DoxyCodeLine{212   \}}
+\DoxyCodeLine{202                                              \{}
+\DoxyCodeLine{203     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{204       \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
+\DoxyCodeLine{205         \textcolor{keywordflow}{return} comic.getTitle();}
+\DoxyCodeLine{206       \}}
+\DoxyCodeLine{207     \}}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209     \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{210   \}}
 
 \end{DoxyCode}
 
@@ -239,17 +244,18 @@ The value of the book with the specified ID, or 0 if the book is not found.
 \end{DoxyReturn}
 
 
-Definition at line 236 of file Book\+Manager.\+java.
+Definition at line 235 of file Book\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{236                                           \{}
-\DoxyCodeLine{237       \textcolor{keywordflow}{for} (Book comic : comics) \{}
-\DoxyCodeLine{238           \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
-\DoxyCodeLine{239               \textcolor{keywordflow}{return} comic.getValue();}
-\DoxyCodeLine{240           \}}
-\DoxyCodeLine{241       \}}
-\DoxyCodeLine{242       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{235                                           \{}
+\DoxyCodeLine{236     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{237       \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
+\DoxyCodeLine{238         \textcolor{keywordflow}{return} comic.getValue();}
+\DoxyCodeLine{239       \}}
+\DoxyCodeLine{240     \}}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242     \textcolor{keywordflow}{return} 0;}
 \DoxyCodeLine{243   \}}
 
 \end{DoxyCode}
@@ -273,19 +279,19 @@ true if the ID is available, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 189 of file Book\+Manager.\+java.
+Definition at line 187 of file Book\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{189                                            \{}
-\DoxyCodeLine{190     \textcolor{keywordflow}{for} (Book comic : comics) \{}
-\DoxyCodeLine{191       \textcolor{keywordflow}{if} (comic.getComicID() == ID) \{}
-\DoxyCodeLine{192         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{193       \}}
-\DoxyCodeLine{194     \}}
-\DoxyCodeLine{195 }
-\DoxyCodeLine{196     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{197   \}}
+\DoxyCodeLine{187                                            \{}
+\DoxyCodeLine{188     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{189       \textcolor{keywordflow}{if} (comic.getComicID() == ID) \{}
+\DoxyCodeLine{190         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{191       \}}
+\DoxyCodeLine{192     \}}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{195   \}}
 
 \end{DoxyCode}
 
@@ -308,19 +314,19 @@ true if the title is available, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 174 of file Book\+Manager.\+java.
+Definition at line 172 of file Book\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{174                                                    \{}
-\DoxyCodeLine{175     \textcolor{keywordflow}{for} (Book comic : comics) \{}
-\DoxyCodeLine{176       \textcolor{keywordflow}{if} (comic.getTitle().equals(title)) \{}
-\DoxyCodeLine{177         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{178       \}}
-\DoxyCodeLine{179     \}}
-\DoxyCodeLine{180 }
-\DoxyCodeLine{181     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{182   \}}
+\DoxyCodeLine{172                                                    \{}
+\DoxyCodeLine{173     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{174       \textcolor{keywordflow}{if} (comic.getTitle().equals(title)) \{}
+\DoxyCodeLine{175         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{176       \}}
+\DoxyCodeLine{177     \}}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{180   \}}
 
 \end{DoxyCode}
 
@@ -395,28 +401,27 @@ Definition at line 84 of file Book\+Manager.\+java.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{84                                                     \{}
 \DoxyCodeLine{85     this.comics = readUsersFromFile(BOOK\_FILE\_PATH);}
-\DoxyCodeLine{86     }
-\DoxyCodeLine{87    }
-\DoxyCodeLine{88     \textcolor{keywordflow}{if} (comics.isEmpty()) \{}
-\DoxyCodeLine{89       System.out.println(\textcolor{stringliteral}{"{}No books found to list.."{}});}
-\DoxyCodeLine{90       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{91     \}}
-\DoxyCodeLine{92 }
-\DoxyCodeLine{93     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ "{}} + condition + \textcolor{stringliteral}{"{} Books in Condition -\/-\/-\/-\/-\/"{}});}
-\DoxyCodeLine{94 }
-\DoxyCodeLine{95     \textcolor{keywordflow}{for} (Book comic : comics) \{}
-\DoxyCodeLine{96       \textcolor{keywordflow}{if} (comic.getuser().equalsIgnoreCase(condition)) \{}
-\DoxyCodeLine{97         System.out.println(\textcolor{stringliteral}{"{}Book ID: "{}} + comic.getComicID());}
-\DoxyCodeLine{98         System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + comic.getTitle());}
-\DoxyCodeLine{99         System.out.println(\textcolor{stringliteral}{"{}Page Number: "{}} + comic.getpageNumber());}
-\DoxyCodeLine{100         System.out.println(\textcolor{stringliteral}{"{}Situation: "{}} + comic.getuser());}
-\DoxyCodeLine{101         System.out.println(\textcolor{stringliteral}{"{}Value: "{}} + comic.getValue());}
-\DoxyCodeLine{102         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
-\DoxyCodeLine{103       \}}
-\DoxyCodeLine{104     \}}
-\DoxyCodeLine{105 }
-\DoxyCodeLine{106     \textcolor{keywordflow}{return} comics.size();}
-\DoxyCodeLine{107   \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     \textcolor{keywordflow}{if} (comics.isEmpty()) \{}
+\DoxyCodeLine{88       System.out.println(\textcolor{stringliteral}{"{}No books found to list.."{}});}
+\DoxyCodeLine{89       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{90     \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ "{}} + condition + \textcolor{stringliteral}{"{} Books in Condition -\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{95       \textcolor{keywordflow}{if} (comic.getuser().equalsIgnoreCase(condition)) \{}
+\DoxyCodeLine{96         System.out.println(\textcolor{stringliteral}{"{}Book ID: "{}} + comic.getComicID());}
+\DoxyCodeLine{97         System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + comic.getTitle());}
+\DoxyCodeLine{98         System.out.println(\textcolor{stringliteral}{"{}Page Number: "{}} + comic.getpageNumber());}
+\DoxyCodeLine{99         System.out.println(\textcolor{stringliteral}{"{}Situation: "{}} + comic.getuser());}
+\DoxyCodeLine{100         System.out.println(\textcolor{stringliteral}{"{}Value: "{}} + comic.getValue());}
+\DoxyCodeLine{101         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{102       \}}
+\DoxyCodeLine{103     \}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     \textcolor{keywordflow}{return} comics.size();}
+\DoxyCodeLine{106   \}}
 
 \end{DoxyCode}
 
@@ -447,32 +452,32 @@ Updates the title of a comic book in the collection based on its ID.
 \end{DoxyReturn}
 
 
-Definition at line 145 of file Book\+Manager.\+java.
+Definition at line 144 of file Book\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{146   \{}
-\DoxyCodeLine{147     \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
-\DoxyCodeLine{148 }
-\DoxyCodeLine{149     \textcolor{keywordflow}{for} (Book comic : comics) \{}
-\DoxyCodeLine{150       \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
-\DoxyCodeLine{151         comic.setTitle(newTitle);}
-\DoxyCodeLine{152         comic.setpageNumber(PageNumber);}
-\DoxyCodeLine{153         comic.setValue(value);}
-\DoxyCodeLine{154         saveUsersToFile(comics,BOOK\_FILE\_PATH);}
-\DoxyCodeLine{155         System.out.println(\textcolor{stringliteral}{"{}The book title has been successfully updated."{}});}
-\DoxyCodeLine{156         found = \textcolor{keyword}{true};}
-\DoxyCodeLine{157         \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{158       \}}
-\DoxyCodeLine{159     \}}
-\DoxyCodeLine{160 }
-\DoxyCodeLine{161     \textcolor{keywordflow}{if} (!found) \{}
-\DoxyCodeLine{162       System.out.println(\textcolor{stringliteral}{"{}No book matching the book ID was found."{}});}
-\DoxyCodeLine{163       \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{164     \}}
-\DoxyCodeLine{165 }
-\DoxyCodeLine{166     \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{167   \}}
+\DoxyCodeLine{144                                                                                        \{}
+\DoxyCodeLine{145     \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147     \textcolor{keywordflow}{for} (Book comic : comics) \{}
+\DoxyCodeLine{148       \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
+\DoxyCodeLine{149         comic.setTitle(newTitle);}
+\DoxyCodeLine{150         comic.setpageNumber(PageNumber);}
+\DoxyCodeLine{151         comic.setValue(value);}
+\DoxyCodeLine{152         saveUsersToFile(comics,BOOK\_FILE\_PATH);}
+\DoxyCodeLine{153         System.out.println(\textcolor{stringliteral}{"{}The book title has been successfully updated."{}});}
+\DoxyCodeLine{154         found = \textcolor{keyword}{true};}
+\DoxyCodeLine{155         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{156       \}}
+\DoxyCodeLine{157     \}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159     \textcolor{keywordflow}{if} (!found) \{}
+\DoxyCodeLine{160       System.out.println(\textcolor{stringliteral}{"{}No book matching the book ID was found."{}});}
+\DoxyCodeLine{161       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{162     \}}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{165   \}}
 
 \end{DoxyCode}
 

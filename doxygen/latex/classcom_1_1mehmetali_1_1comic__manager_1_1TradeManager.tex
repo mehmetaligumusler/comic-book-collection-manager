@@ -1,5 +1,9 @@
 \hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager}{}\doxysection{com.\+mehmetali.\+comic\+\_\+manager.\+Trade\+Manager Class Reference}
 \label{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager}\index{com.mehmetali.comic\_manager.TradeManager@{com.mehmetali.comic\_manager.TradeManager}}
+
+
+Collaboration diagram for com.\+mehmetali.\+comic\+\_\+manager.\+Trade\+Manager\+:
+% FIG 0
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -86,25 +90,22 @@ Definition at line 43 of file Trade\+Manager.\+java.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{43                                    \{}
-\DoxyCodeLine{44     }
-\DoxyCodeLine{45 }
-\DoxyCodeLine{46     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_ad259624e10c4a3de9a1dcf8eb5680888}{isTradeNameAvailable}}(comic.getTitle())) \{}
-\DoxyCodeLine{47       System.out.println(\textcolor{stringliteral}{"{}This Book name is already in use. Please choose a different book name."{}});}
-\DoxyCodeLine{48       \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{49     \}}
-\DoxyCodeLine{50 }
-\DoxyCodeLine{51     \textcolor{comment}{/*}}
-\DoxyCodeLine{52 \textcolor{comment}{    comic.setTitle(comicmanager.getBookTitleByID(comic.getComicID()));}}
-\DoxyCodeLine{53 \textcolor{comment}{    comic.setpageNumber(comicmanager.getBookPageNumberByID(comic.getComicID()));}}
-\DoxyCodeLine{54 \textcolor{comment}{    comic.setValue(comicmanager.getBookValueByID(comic.getComicID()));}}
-\DoxyCodeLine{55 \textcolor{comment}{    */}}
-\DoxyCodeLine{56     }
-\DoxyCodeLine{57     comics.add(comic);}
-\DoxyCodeLine{58     saveUsersToFile(comics);}
-\DoxyCodeLine{59     \textcolor{comment}{//comicmanager.deleteBookByID(comic.getComicID());}}
-\DoxyCodeLine{60     System.out.println(\textcolor{stringliteral}{"{}The book has been successfully added to the Trade list."{}});}
-\DoxyCodeLine{61     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{62   \}}
+\DoxyCodeLine{44     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_ad259624e10c4a3de9a1dcf8eb5680888}{isTradeNameAvailable}}(comic.getTitle())) \{}
+\DoxyCodeLine{45       System.out.println(\textcolor{stringliteral}{"{}This Book name is already in use. Please choose a different book name."{}});}
+\DoxyCodeLine{46       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{comment}{/*}}
+\DoxyCodeLine{50 \textcolor{comment}{    comic.setTitle(comicmanager.getBookTitleByID(comic.getComicID()));}}
+\DoxyCodeLine{51 \textcolor{comment}{    comic.setpageNumber(comicmanager.getBookPageNumberByID(comic.getComicID()));}}
+\DoxyCodeLine{52 \textcolor{comment}{    comic.setValue(comicmanager.getBookValueByID(comic.getComicID()));}}
+\DoxyCodeLine{53 \textcolor{comment}{    */}}
+\DoxyCodeLine{54     comics.add(comic);}
+\DoxyCodeLine{55     saveUsersToFile(comics);}
+\DoxyCodeLine{56     \textcolor{comment}{//comicmanager.deleteBookByID(comic.getComicID());}}
+\DoxyCodeLine{57     System.out.println(\textcolor{stringliteral}{"{}The book has been successfully added to the Trade list."{}});}
+\DoxyCodeLine{58     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{59   \}}
 
 \end{DoxyCode}
 
@@ -133,37 +134,36 @@ Buys a comic book from the trade list by its ID. Transfers the book ownership an
 \end{DoxyReturn}
 
 
-Definition at line 158 of file Trade\+Manager.\+java.
+Definition at line 155 of file Trade\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{158                                        \{}
-\DoxyCodeLine{159     \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
-\DoxyCodeLine{160 }
-\DoxyCodeLine{161     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
-\DoxyCodeLine{162       \textcolor{keywordflow}{if} (comic.getComicID() == TradeID) \{}
-\DoxyCodeLine{163         }
-\DoxyCodeLine{164       String oldUser = comic.getuser();}
-\DoxyCodeLine{165       System.out.print(oldUser);}
-\DoxyCodeLine{166       comics.remove(comic);}
-\DoxyCodeLine{167       saveUsersToFile(comics);}
-\DoxyCodeLine{168       System.out.println(\textcolor{stringliteral}{"{}Book deleted successfully."{}});}
-\DoxyCodeLine{169       found = \textcolor{keyword}{true};}
-\DoxyCodeLine{170       Book newUser = \textcolor{keyword}{new} Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());}
-\DoxyCodeLine{171       comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a53c84067810419af16b5efde4e9678e7}{AddBook}}(newUser);}
-\DoxyCodeLine{172       usermanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_ae89c4bc39cb10ab21674fd2d23e2f271}{creditSellscore}}(Main.LoginName, comic.getValue());}
-\DoxyCodeLine{173       usermanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_aa627b545ada6c4ef7275780b44e34769}{creditbuyscore}}(oldUser, comic.getValue());}
-\DoxyCodeLine{174       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{175       \}}
-\DoxyCodeLine{176     \}}
-\DoxyCodeLine{177 }
-\DoxyCodeLine{178     \textcolor{keywordflow}{if} (!found) \{}
-\DoxyCodeLine{179       System.out.println(\textcolor{stringliteral}{"{}No book matching book ID was found."{}});}
-\DoxyCodeLine{180       \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{181     \}}
-\DoxyCodeLine{182 }
-\DoxyCodeLine{183     \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{184   \}}
+\DoxyCodeLine{155                                        \{}
+\DoxyCodeLine{156     \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
+\DoxyCodeLine{159       \textcolor{keywordflow}{if} (comic.getComicID() == TradeID) \{}
+\DoxyCodeLine{160         String oldUser = comic.getuser();}
+\DoxyCodeLine{161         System.out.print(oldUser);}
+\DoxyCodeLine{162         comics.remove(comic);}
+\DoxyCodeLine{163         saveUsersToFile(comics);}
+\DoxyCodeLine{164         System.out.println(\textcolor{stringliteral}{"{}Book deleted successfully."{}});}
+\DoxyCodeLine{165         found = \textcolor{keyword}{true};}
+\DoxyCodeLine{166         Book newUser = \textcolor{keyword}{new} Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());}
+\DoxyCodeLine{167         comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a53c84067810419af16b5efde4e9678e7}{AddBook}}(newUser);}
+\DoxyCodeLine{168         usermanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_ae89c4bc39cb10ab21674fd2d23e2f271}{creditSellscore}}(Main.LoginName, comic.getValue());}
+\DoxyCodeLine{169         usermanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_aa627b545ada6c4ef7275780b44e34769}{creditbuyscore}}(oldUser, comic.getValue());}
+\DoxyCodeLine{170         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{171       \}}
+\DoxyCodeLine{172     \}}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174     \textcolor{keywordflow}{if} (!found) \{}
+\DoxyCodeLine{175       System.out.println(\textcolor{stringliteral}{"{}No book matching book ID was found."{}});}
+\DoxyCodeLine{176       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{177     \}}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{180   \}}
 
 \end{DoxyCode}
 
@@ -192,32 +192,32 @@ Deletes a comic book from the trade list by its ID. Moves the book back to the u
 \end{DoxyReturn}
 
 
-Definition at line 128 of file Trade\+Manager.\+java.
+Definition at line 125 of file Trade\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{128                                           \{}
-\DoxyCodeLine{129     \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
-\DoxyCodeLine{130 }
-\DoxyCodeLine{131     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
-\DoxyCodeLine{132       \textcolor{keywordflow}{if} (comic.getComicID() == TradeID) \{}
-\DoxyCodeLine{133         comics.remove(comic);}
-\DoxyCodeLine{134         saveUsersToFile(comics);}
-\DoxyCodeLine{135         System.out.println(\textcolor{stringliteral}{"{}Book deleted successfully."{}});}
-\DoxyCodeLine{136         found = \textcolor{keyword}{true};}
-\DoxyCodeLine{137         Book newUser = \textcolor{keyword}{new} Book(TradeID, comic.getTitle(),comic.getpageNumber(),comic.getuser(),comic.getValue());}
-\DoxyCodeLine{138         comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a53c84067810419af16b5efde4e9678e7}{AddBook}}(newUser);}
-\DoxyCodeLine{139         \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{140       \}}
-\DoxyCodeLine{141     \}}
-\DoxyCodeLine{142 }
-\DoxyCodeLine{143     \textcolor{keywordflow}{if} (!found) \{}
-\DoxyCodeLine{144       System.out.println(\textcolor{stringliteral}{"{}No book matching book ID was found."{}});}
-\DoxyCodeLine{145       \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{146     \}}
-\DoxyCodeLine{147 }
-\DoxyCodeLine{148     \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{149   \}}
+\DoxyCodeLine{125                                           \{}
+\DoxyCodeLine{126     \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
+\DoxyCodeLine{129       \textcolor{keywordflow}{if} (comic.getComicID() == TradeID) \{}
+\DoxyCodeLine{130         comics.remove(comic);}
+\DoxyCodeLine{131         saveUsersToFile(comics);}
+\DoxyCodeLine{132         System.out.println(\textcolor{stringliteral}{"{}Book deleted successfully."{}});}
+\DoxyCodeLine{133         found = \textcolor{keyword}{true};}
+\DoxyCodeLine{134         Book newUser = \textcolor{keyword}{new} Book(TradeID, comic.getTitle(),comic.getpageNumber(),comic.getuser(),comic.getValue());}
+\DoxyCodeLine{135         comicmanager.\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_a53c84067810419af16b5efde4e9678e7}{AddBook}}(newUser);}
+\DoxyCodeLine{136         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{137       \}}
+\DoxyCodeLine{138     \}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140     \textcolor{keywordflow}{if} (!found) \{}
+\DoxyCodeLine{141       System.out.println(\textcolor{stringliteral}{"{}No book matching book ID was found."{}});}
+\DoxyCodeLine{142       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{143     \}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{146   \}}
 
 \end{DoxyCode}
 
@@ -246,19 +246,19 @@ The value of the book with the specified ID, or 0 if the book is not found.
 \end{DoxyReturn}
 
 
-Definition at line 208 of file Trade\+Manager.\+java.
+Definition at line 204 of file Trade\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{208                                           \{}
-\DoxyCodeLine{209       \textcolor{keywordflow}{for} (Trade comic : comics) \{}
-\DoxyCodeLine{210           \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
-\DoxyCodeLine{211               \textcolor{keywordflow}{return} comic.getValue();}
-\DoxyCodeLine{212           \}}
-\DoxyCodeLine{213       \}}
-\DoxyCodeLine{214 }
-\DoxyCodeLine{215       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{216   \}}
+\DoxyCodeLine{204                                           \{}
+\DoxyCodeLine{205     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
+\DoxyCodeLine{206       \textcolor{keywordflow}{if} (comic.getComicID() == bookID) \{}
+\DoxyCodeLine{207         \textcolor{keywordflow}{return} comic.getValue();}
+\DoxyCodeLine{208       \}}
+\DoxyCodeLine{209     \}}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{212   \}}
 
 \end{DoxyCode}
 
@@ -283,19 +283,19 @@ The title of the comic book if found, null otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 241 of file Trade\+Manager.\+java.
+Definition at line 237 of file Trade\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{241                                                \{}
-\DoxyCodeLine{242     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
-\DoxyCodeLine{243       \textcolor{keywordflow}{if} (comic.getComicID() == TradeID) \{}
-\DoxyCodeLine{244         \textcolor{keywordflow}{return} comic.getTitle();}
-\DoxyCodeLine{245       \}}
-\DoxyCodeLine{246     \}}
-\DoxyCodeLine{247 }
-\DoxyCodeLine{248     \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
-\DoxyCodeLine{249   \}}
+\DoxyCodeLine{237                                                \{}
+\DoxyCodeLine{238     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
+\DoxyCodeLine{239       \textcolor{keywordflow}{if} (comic.getComicID() == TradeID) \{}
+\DoxyCodeLine{240         \textcolor{keywordflow}{return} comic.getTitle();}
+\DoxyCodeLine{241       \}}
+\DoxyCodeLine{242     \}}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244     \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{245   \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_a65aa70327fab9c08a63cfa32ca821a28}\label{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_a65aa70327fab9c08a63cfa32ca821a28}} 
@@ -316,19 +316,19 @@ True if the ID is available, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 225 of file Trade\+Manager.\+java.
+Definition at line 221 of file Trade\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{225                                             \{}
-\DoxyCodeLine{226     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
-\DoxyCodeLine{227       \textcolor{keywordflow}{if} (comic.getComicID() == ID) \{}
-\DoxyCodeLine{228         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{229       \}}
-\DoxyCodeLine{230     \}}
-\DoxyCodeLine{231 }
-\DoxyCodeLine{232     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{233   \}}
+\DoxyCodeLine{221                                             \{}
+\DoxyCodeLine{222     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
+\DoxyCodeLine{223       \textcolor{keywordflow}{if} (comic.getComicID() == ID) \{}
+\DoxyCodeLine{224         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{225       \}}
+\DoxyCodeLine{226     \}}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{229   \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_ad259624e10c4a3de9a1dcf8eb5680888}\label{classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_ad259624e10c4a3de9a1dcf8eb5680888}} 
@@ -349,19 +349,19 @@ True if the title is available, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 192 of file Trade\+Manager.\+java.
+Definition at line 188 of file Trade\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{192                                                     \{}
-\DoxyCodeLine{193     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
-\DoxyCodeLine{194       \textcolor{keywordflow}{if} (comic.getTitle().equals(title)) \{}
-\DoxyCodeLine{195         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{196       \}}
-\DoxyCodeLine{197     \}}
-\DoxyCodeLine{198 }
-\DoxyCodeLine{199     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{200   \}}
+\DoxyCodeLine{188                                                     \{}
+\DoxyCodeLine{189     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
+\DoxyCodeLine{190       \textcolor{keywordflow}{if} (comic.getTitle().equals(title)) \{}
+\DoxyCodeLine{191         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{192       \}}
+\DoxyCodeLine{193     \}}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{196   \}}
 
 \end{DoxyCode}
 
@@ -381,31 +381,31 @@ The number of comic books listed.
 \end{DoxyReturn}
 
 
-Definition at line 69 of file Trade\+Manager.\+java.
+Definition at line 66 of file Trade\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{69                                 \{}
-\DoxyCodeLine{70     this.comics = readUsersFromFile();}
-\DoxyCodeLine{71 }
-\DoxyCodeLine{72     \textcolor{keywordflow}{if} (comics.isEmpty()) \{}
-\DoxyCodeLine{73       System.out.println(\textcolor{stringliteral}{"{}No books found to list."{}});}
-\DoxyCodeLine{74       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{75     \}}
-\DoxyCodeLine{76 }
-\DoxyCodeLine{77     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ Book List -\/-\/-\/-\/-\/"{}});}
-\DoxyCodeLine{78 }
-\DoxyCodeLine{79     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
-\DoxyCodeLine{80       System.out.println(\textcolor{stringliteral}{"{}Book ID: "{}} + comic.getComicID());}
-\DoxyCodeLine{81       System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + comic.getTitle());}
-\DoxyCodeLine{82       System.out.println(\textcolor{stringliteral}{"{}Page Number: "{}} + comic.getpageNumber());}
-\DoxyCodeLine{83       System.out.println(\textcolor{stringliteral}{"{}Situation: "{}} + comic.getuser());}
-\DoxyCodeLine{84       System.out.println(\textcolor{stringliteral}{"{}Value: "{}} + comic.getValue());}
-\DoxyCodeLine{85       System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
-\DoxyCodeLine{86     \}}
-\DoxyCodeLine{87 }
-\DoxyCodeLine{88     \textcolor{keywordflow}{return} comics.size();}
-\DoxyCodeLine{89   \}}
+\DoxyCodeLine{66                                 \{}
+\DoxyCodeLine{67     this.comics = readUsersFromFile();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \textcolor{keywordflow}{if} (comics.isEmpty()) \{}
+\DoxyCodeLine{70       System.out.println(\textcolor{stringliteral}{"{}No books found to list."{}});}
+\DoxyCodeLine{71       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{72     \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ Book List -\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
+\DoxyCodeLine{77       System.out.println(\textcolor{stringliteral}{"{}Book ID: "{}} + comic.getComicID());}
+\DoxyCodeLine{78       System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + comic.getTitle());}
+\DoxyCodeLine{79       System.out.println(\textcolor{stringliteral}{"{}Page Number: "{}} + comic.getpageNumber());}
+\DoxyCodeLine{80       System.out.println(\textcolor{stringliteral}{"{}Situation: "{}} + comic.getuser());}
+\DoxyCodeLine{81       System.out.println(\textcolor{stringliteral}{"{}Value: "{}} + comic.getValue());}
+\DoxyCodeLine{82       System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{83     \}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{keywordflow}{return} comics.size();}
+\DoxyCodeLine{86   \}}
 
 \end{DoxyCode}
 
@@ -430,33 +430,33 @@ The number of comic books listed.
 \end{DoxyReturn}
 
 
-Definition at line 97 of file Trade\+Manager.\+java.
+Definition at line 94 of file Trade\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{97                                                \{}
-\DoxyCodeLine{98     this.comics = readUsersFromFile();}
-\DoxyCodeLine{99 }
-\DoxyCodeLine{100     \textcolor{keywordflow}{if} (comics.isEmpty()) \{}
-\DoxyCodeLine{101       System.out.println(\textcolor{stringliteral}{"{}No books found to list."{}});}
-\DoxyCodeLine{102       \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{103     \}}
-\DoxyCodeLine{104 }
-\DoxyCodeLine{105     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ "{}} + condition + \textcolor{stringliteral}{"{} Books in Condition -\/-\/-\/-\/-\/"{}});}
-\DoxyCodeLine{106 }
-\DoxyCodeLine{107     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
-\DoxyCodeLine{108       \textcolor{keywordflow}{if} (comic.getuser().equalsIgnoreCase(condition)) \{}
-\DoxyCodeLine{109         System.out.println(\textcolor{stringliteral}{"{}Book ID: "{}} + comic.getComicID());}
-\DoxyCodeLine{110         System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + comic.getTitle());}
-\DoxyCodeLine{111         System.out.println(\textcolor{stringliteral}{"{}Page Number: "{}} + comic.getpageNumber());}
-\DoxyCodeLine{112         System.out.println(\textcolor{stringliteral}{"{}Situation: "{}} + comic.getuser());}
-\DoxyCodeLine{113         System.out.println(\textcolor{stringliteral}{"{}Value: "{}} + comic.getValue());}
-\DoxyCodeLine{114         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
-\DoxyCodeLine{115       \}}
-\DoxyCodeLine{116     \}}
-\DoxyCodeLine{117 }
-\DoxyCodeLine{118     \textcolor{keywordflow}{return} comics.size();}
-\DoxyCodeLine{119   \}}
+\DoxyCodeLine{94                                                \{}
+\DoxyCodeLine{95     this.comics = readUsersFromFile();}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97     \textcolor{keywordflow}{if} (comics.isEmpty()) \{}
+\DoxyCodeLine{98       System.out.println(\textcolor{stringliteral}{"{}No books found to list."{}});}
+\DoxyCodeLine{99       \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{100     \}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ "{}} + condition + \textcolor{stringliteral}{"{} Books in Condition -\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     \textcolor{keywordflow}{for} (Trade comic : comics) \{}
+\DoxyCodeLine{105       \textcolor{keywordflow}{if} (comic.getuser().equalsIgnoreCase(condition)) \{}
+\DoxyCodeLine{106         System.out.println(\textcolor{stringliteral}{"{}Book ID: "{}} + comic.getComicID());}
+\DoxyCodeLine{107         System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + comic.getTitle());}
+\DoxyCodeLine{108         System.out.println(\textcolor{stringliteral}{"{}Page Number: "{}} + comic.getpageNumber());}
+\DoxyCodeLine{109         System.out.println(\textcolor{stringliteral}{"{}Situation: "{}} + comic.getuser());}
+\DoxyCodeLine{110         System.out.println(\textcolor{stringliteral}{"{}Value: "{}} + comic.getValue());}
+\DoxyCodeLine{111         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{112       \}}
+\DoxyCodeLine{113     \}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115     \textcolor{keywordflow}{return} comics.size();}
+\DoxyCodeLine{116   \}}
 
 \end{DoxyCode}
 

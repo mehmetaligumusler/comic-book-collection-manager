@@ -41,11 +41,9 @@ public class TradeManager {
    * @return The title of the comic book if added successfully, null otherwise.
    */
   public int AddTrade(Trade comic) {
-    
-
-<span class="fc bfc" id="L46" title="All 2 branches covered.">    if (!isTradeNameAvailable(comic.getTitle())) {</span>
-<span class="fc" id="L47">      System.out.println(&quot;This Book name is already in use. Please choose a different book name.&quot;);</span>
-<span class="fc" id="L48">      return -1;</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">    if (!isTradeNameAvailable(comic.getTitle())) {</span>
+<span class="fc" id="L45">      System.out.println(&quot;This Book name is already in use. Please choose a different book name.&quot;);</span>
+<span class="fc" id="L46">      return -1;</span>
     }
 
     /*
@@ -53,12 +51,11 @@ public class TradeManager {
     comic.setpageNumber(comicmanager.getBookPageNumberByID(comic.getComicID()));
     comic.setValue(comicmanager.getBookValueByID(comic.getComicID()));
     */
-    
-<span class="fc" id="L57">    comics.add(comic);</span>
-<span class="fc" id="L58">    saveUsersToFile(comics);</span>
+<span class="fc" id="L54">    comics.add(comic);</span>
+<span class="fc" id="L55">    saveUsersToFile(comics);</span>
     //comicmanager.deleteBookByID(comic.getComicID());
-<span class="fc" id="L60">    System.out.println(&quot;The book has been successfully added to the Trade list.&quot;);</span>
-<span class="fc" id="L61">    return 0;</span>
+<span class="fc" id="L57">    System.out.println(&quot;The book has been successfully added to the Trade list.&quot;);</span>
+<span class="fc" id="L58">    return 0;</span>
   }
 
   /**
@@ -67,25 +64,25 @@ public class TradeManager {
    * @return The number of comic books listed.
    */
   public int listAllTradeList() {
-<span class="fc" id="L70">    this.comics = readUsersFromFile();</span>
+<span class="fc" id="L67">    this.comics = readUsersFromFile();</span>
 
-<span class="fc bfc" id="L72" title="All 2 branches covered.">    if (comics.isEmpty()) {</span>
-<span class="fc" id="L73">      System.out.println(&quot;No books found to list.&quot;);</span>
-<span class="fc" id="L74">      return 0;</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">    if (comics.isEmpty()) {</span>
+<span class="fc" id="L70">      System.out.println(&quot;No books found to list.&quot;);</span>
+<span class="fc" id="L71">      return 0;</span>
     }
 
-<span class="fc" id="L77">    System.out.println(&quot;----- Book List -----&quot;);</span>
+<span class="fc" id="L74">    System.out.println(&quot;----- Book List -----&quot;);</span>
 
-<span class="fc bfc" id="L79" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
-<span class="fc" id="L80">      System.out.println(&quot;Book ID: &quot; + comic.getComicID());</span>
-<span class="fc" id="L81">      System.out.println(&quot;Title: &quot; + comic.getTitle());</span>
-<span class="fc" id="L82">      System.out.println(&quot;Page Number: &quot; + comic.getpageNumber());</span>
-<span class="fc" id="L83">      System.out.println(&quot;Situation: &quot; + comic.getuser());</span>
-<span class="fc" id="L84">      System.out.println(&quot;Value: &quot; + comic.getValue());</span>
-<span class="fc" id="L85">      System.out.println(&quot;-------------------------&quot;);</span>
-<span class="fc" id="L86">    }</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
+<span class="fc" id="L77">      System.out.println(&quot;Book ID: &quot; + comic.getComicID());</span>
+<span class="fc" id="L78">      System.out.println(&quot;Title: &quot; + comic.getTitle());</span>
+<span class="fc" id="L79">      System.out.println(&quot;Page Number: &quot; + comic.getpageNumber());</span>
+<span class="fc" id="L80">      System.out.println(&quot;Situation: &quot; + comic.getuser());</span>
+<span class="fc" id="L81">      System.out.println(&quot;Value: &quot; + comic.getValue());</span>
+<span class="fc" id="L82">      System.out.println(&quot;-------------------------&quot;);</span>
+<span class="fc" id="L83">    }</span>
 
-<span class="fc" id="L88">    return comics.size();</span>
+<span class="fc" id="L85">    return comics.size();</span>
   }
 
   /**
@@ -95,27 +92,27 @@ public class TradeManager {
    * @return The number of comic books listed.
    */
   public int listMyTradeList(String condition) {
-<span class="fc" id="L98">    this.comics = readUsersFromFile();</span>
+<span class="fc" id="L95">    this.comics = readUsersFromFile();</span>
 
-<span class="fc bfc" id="L100" title="All 2 branches covered.">    if (comics.isEmpty()) {</span>
-<span class="fc" id="L101">      System.out.println(&quot;No books found to list.&quot;);</span>
-<span class="fc" id="L102">      return 0;</span>
+<span class="fc bfc" id="L97" title="All 2 branches covered.">    if (comics.isEmpty()) {</span>
+<span class="fc" id="L98">      System.out.println(&quot;No books found to list.&quot;);</span>
+<span class="fc" id="L99">      return 0;</span>
     }
 
-<span class="fc" id="L105">    System.out.println(&quot;----- &quot; + condition + &quot; Books in Condition -----&quot;);</span>
+<span class="fc" id="L102">    System.out.println(&quot;----- &quot; + condition + &quot; Books in Condition -----&quot;);</span>
 
-<span class="fc bfc" id="L107" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
-<span class="pc bpc" id="L108" title="1 of 2 branches missed.">      if (comic.getuser().equalsIgnoreCase(condition)) {</span>
-<span class="fc" id="L109">        System.out.println(&quot;Book ID: &quot; + comic.getComicID());</span>
-<span class="fc" id="L110">        System.out.println(&quot;Title: &quot; + comic.getTitle());</span>
-<span class="fc" id="L111">        System.out.println(&quot;Page Number: &quot; + comic.getpageNumber());</span>
-<span class="fc" id="L112">        System.out.println(&quot;Situation: &quot; + comic.getuser());</span>
-<span class="fc" id="L113">        System.out.println(&quot;Value: &quot; + comic.getValue());</span>
-<span class="fc" id="L114">        System.out.println(&quot;-------------------------&quot;);</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
+<span class="pc bpc" id="L105" title="1 of 2 branches missed.">      if (comic.getuser().equalsIgnoreCase(condition)) {</span>
+<span class="fc" id="L106">        System.out.println(&quot;Book ID: &quot; + comic.getComicID());</span>
+<span class="fc" id="L107">        System.out.println(&quot;Title: &quot; + comic.getTitle());</span>
+<span class="fc" id="L108">        System.out.println(&quot;Page Number: &quot; + comic.getpageNumber());</span>
+<span class="fc" id="L109">        System.out.println(&quot;Situation: &quot; + comic.getuser());</span>
+<span class="fc" id="L110">        System.out.println(&quot;Value: &quot; + comic.getValue());</span>
+<span class="fc" id="L111">        System.out.println(&quot;-------------------------&quot;);</span>
       }
-<span class="fc" id="L116">    }</span>
+<span class="fc" id="L113">    }</span>
 
-<span class="fc" id="L118">    return comics.size();</span>
+<span class="fc" id="L115">    return comics.size();</span>
   }
 
   /**
@@ -126,26 +123,26 @@ public class TradeManager {
    * @return 0 if successfully deleted, -1 otherwise.
    */
   public int deleteTradeByID(int TradeID) {
-<span class="fc" id="L129">    boolean found = false;</span>
+<span class="fc" id="L126">    boolean found = false;</span>
 
-<span class="fc bfc" id="L131" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
-<span class="pc bpc" id="L132" title="1 of 2 branches missed.">      if (comic.getComicID() == TradeID) {</span>
-<span class="fc" id="L133">        comics.remove(comic);</span>
-<span class="fc" id="L134">        saveUsersToFile(comics);</span>
-<span class="fc" id="L135">        System.out.println(&quot;Book deleted successfully.&quot;);</span>
-<span class="fc" id="L136">        found = true;</span>
-<span class="fc" id="L137">        Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),comic.getuser(),comic.getValue());</span>
-<span class="fc" id="L138">        comicmanager.AddBook(newUser);</span>
-<span class="fc" id="L139">        return 0;</span>
+<span class="fc bfc" id="L128" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
+<span class="pc bpc" id="L129" title="1 of 2 branches missed.">      if (comic.getComicID() == TradeID) {</span>
+<span class="fc" id="L130">        comics.remove(comic);</span>
+<span class="fc" id="L131">        saveUsersToFile(comics);</span>
+<span class="fc" id="L132">        System.out.println(&quot;Book deleted successfully.&quot;);</span>
+<span class="fc" id="L133">        found = true;</span>
+<span class="fc" id="L134">        Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),comic.getuser(),comic.getValue());</span>
+<span class="fc" id="L135">        comicmanager.AddBook(newUser);</span>
+<span class="fc" id="L136">        return 0;</span>
       }
-<span class="nc" id="L141">    }</span>
+<span class="nc" id="L138">    }</span>
 
-<span class="pc bpc" id="L143" title="1 of 2 branches missed.">    if (!found) {</span>
-<span class="fc" id="L144">      System.out.println(&quot;No book matching book ID was found.&quot;);</span>
-<span class="fc" id="L145">      return -1;</span>
+<span class="pc bpc" id="L140" title="1 of 2 branches missed.">    if (!found) {</span>
+<span class="fc" id="L141">      System.out.println(&quot;No book matching book ID was found.&quot;);</span>
+<span class="fc" id="L142">      return -1;</span>
     }
 
-<span class="nc" id="L148">    return -1;</span>
+<span class="nc" id="L145">    return -1;</span>
   }
 
   /**
@@ -156,31 +153,30 @@ public class TradeManager {
    * @return 0 if successfully bought, -1 otherwise.
    */
   public int BuyTradeByID(int TradeID) {
-<span class="fc" id="L159">    boolean found = false;</span>
+<span class="fc" id="L156">    boolean found = false;</span>
 
-<span class="fc bfc" id="L161" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
-<span class="fc bfc" id="L162" title="All 2 branches covered.">      if (comic.getComicID() == TradeID) {</span>
-        
-<span class="fc" id="L164">      String oldUser = comic.getuser();</span>
-<span class="fc" id="L165">      System.out.print(oldUser);</span>
-<span class="fc" id="L166">      comics.remove(comic);</span>
-<span class="fc" id="L167">      saveUsersToFile(comics);</span>
-<span class="fc" id="L168">      System.out.println(&quot;Book deleted successfully.&quot;);</span>
-<span class="fc" id="L169">      found = true;</span>
-<span class="fc" id="L170">      Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());</span>
-<span class="fc" id="L171">      comicmanager.AddBook(newUser);</span>
-<span class="fc" id="L172">      usermanager.creditSellscore(Main.LoginName, comic.getValue());</span>
-<span class="fc" id="L173">      usermanager.creditbuyscore(oldUser, comic.getValue());</span>
-<span class="fc" id="L174">      return 0;</span>
+<span class="fc bfc" id="L158" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
+<span class="fc bfc" id="L159" title="All 2 branches covered.">      if (comic.getComicID() == TradeID) {</span>
+<span class="fc" id="L160">        String oldUser = comic.getuser();</span>
+<span class="fc" id="L161">        System.out.print(oldUser);</span>
+<span class="fc" id="L162">        comics.remove(comic);</span>
+<span class="fc" id="L163">        saveUsersToFile(comics);</span>
+<span class="fc" id="L164">        System.out.println(&quot;Book deleted successfully.&quot;);</span>
+<span class="fc" id="L165">        found = true;</span>
+<span class="fc" id="L166">        Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());</span>
+<span class="fc" id="L167">        comicmanager.AddBook(newUser);</span>
+<span class="fc" id="L168">        usermanager.creditSellscore(Main.LoginName, comic.getValue());</span>
+<span class="fc" id="L169">        usermanager.creditbuyscore(oldUser, comic.getValue());</span>
+<span class="fc" id="L170">        return 0;</span>
       }
-<span class="fc" id="L176">    }</span>
+<span class="fc" id="L172">    }</span>
 
-<span class="pc bpc" id="L178" title="1 of 2 branches missed.">    if (!found) {</span>
-<span class="fc" id="L179">      System.out.println(&quot;No book matching book ID was found.&quot;);</span>
-<span class="fc" id="L180">      return -1;</span>
+<span class="pc bpc" id="L174" title="1 of 2 branches missed.">    if (!found) {</span>
+<span class="fc" id="L175">      System.out.println(&quot;No book matching book ID was found.&quot;);</span>
+<span class="fc" id="L176">      return -1;</span>
     }
 
-<span class="nc" id="L183">    return -1;</span>
+<span class="nc" id="L179">    return -1;</span>
   }
 
   /**
@@ -190,29 +186,29 @@ public class TradeManager {
    * @return True if the title is available, false otherwise.
    */
   public boolean isTradeNameAvailable(String title) {
-<span class="fc bfc" id="L193" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
-<span class="fc bfc" id="L194" title="All 2 branches covered.">      if (comic.getTitle().equals(title)) {</span>
-<span class="fc" id="L195">        return false;</span>
+<span class="fc bfc" id="L189" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
+<span class="fc bfc" id="L190" title="All 2 branches covered.">      if (comic.getTitle().equals(title)) {</span>
+<span class="fc" id="L191">        return false;</span>
       }
-<span class="fc" id="L197">    }</span>
+<span class="fc" id="L193">    }</span>
 
-<span class="fc" id="L199">    return true;</span>
+<span class="fc" id="L195">    return true;</span>
   }
-  
+
   /**
    * Returns the value of the book with the specified ID.
-   * 
+   *
    * @param bookID The ID of the book.
    * @return The value of the book with the specified ID, or 0 if the book is not found.
    */
   public int getBookValueByID(int bookID) {
-<span class="fc bfc" id="L209" title="All 2 branches covered.">      for (Trade comic : comics) {</span>
-<span class="pc bpc" id="L210" title="1 of 2 branches missed.">          if (comic.getComicID() == bookID) {</span>
-<span class="nc" id="L211">              return comic.getValue();</span>
-          }
-<span class="fc" id="L213">      }</span>
+<span class="fc bfc" id="L205" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
+<span class="pc bpc" id="L206" title="1 of 2 branches missed.">      if (comic.getComicID() == bookID) {</span>
+<span class="nc" id="L207">        return comic.getValue();</span>
+      }
+<span class="fc" id="L209">    }</span>
 
-<span class="fc" id="L215">      return 0;</span>
+<span class="fc" id="L211">    return 0;</span>
   }
 
 
@@ -223,13 +219,13 @@ public class TradeManager {
    * @return True if the ID is available, false otherwise.
    */
   public boolean isTradeIDAvailable(int ID) {
-<span class="fc bfc" id="L226" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
-<span class="fc bfc" id="L227" title="All 2 branches covered.">      if (comic.getComicID() == ID) {</span>
-<span class="fc" id="L228">        return false;</span>
+<span class="fc bfc" id="L222" title="All 2 branches covered.">    for (Trade comic : comics) {</span>
+<span class="fc bfc" id="L223" title="All 2 branches covered.">      if (comic.getComicID() == ID) {</span>
+<span class="fc" id="L224">        return false;</span>
       }
-<span class="fc" id="L230">    }</span>
+<span class="fc" id="L226">    }</span>
 
-<span class="fc" id="L232">    return true;</span>
+<span class="fc" id="L228">    return true;</span>
   }
 
   /**
@@ -239,13 +235,13 @@ public class TradeManager {
    * @return The title of the comic book if found, null otherwise.
    */
   public String getTradeTitleByID(int TradeID) {
-<span class="nc bnc" id="L242" title="All 2 branches missed.">    for (Trade comic : comics) {</span>
-<span class="nc bnc" id="L243" title="All 2 branches missed.">      if (comic.getComicID() == TradeID) {</span>
-<span class="nc" id="L244">        return comic.getTitle();</span>
+<span class="nc bnc" id="L238" title="All 2 branches missed.">    for (Trade comic : comics) {</span>
+<span class="nc bnc" id="L239" title="All 2 branches missed.">      if (comic.getComicID() == TradeID) {</span>
+<span class="nc" id="L240">        return comic.getTitle();</span>
       }
-<span class="nc" id="L246">    }</span>
+<span class="nc" id="L242">    }</span>
 
-<span class="nc" id="L248">    return null;</span>
+<span class="nc" id="L244">    return null;</span>
   }
 
   /**
@@ -255,27 +251,27 @@ public class TradeManager {
    * @return The list of trades read from the file or an empty list if the file doesn't exist.
    */
   private List&lt;Trade&gt; readUsersFromFile() {
-<span class="fc" id="L258">    File file = new File(Trade_FILE_PATH);</span>
+<span class="fc" id="L254">    File file = new File(Trade_FILE_PATH);</span>
 
-<span class="fc bfc" id="L260" title="All 2 branches covered.">    if (!file.exists()) {</span>
+<span class="fc bfc" id="L256" title="All 2 branches covered.">    if (!file.exists()) {</span>
       try {
-<span class="pc bpc" id="L262" title="1 of 2 branches missed.">        if (file.createNewFile()) {</span>
-<span class="fc" id="L263">          System.out.println(&quot;Trades.dat file created.&quot;);</span>
+<span class="pc bpc" id="L258" title="1 of 2 branches missed.">        if (file.createNewFile()) {</span>
+<span class="fc" id="L259">          System.out.println(&quot;Trades.dat file created.&quot;);</span>
         } else {
-<span class="nc" id="L265">          System.out.println(&quot;Trades.dat file already exists.&quot;);</span>
+<span class="nc" id="L261">          System.out.println(&quot;Trades.dat file already exists.&quot;);</span>
         }
-<span class="nc" id="L267">      } catch (IOException e) {</span>
-<span class="nc" id="L268">        System.out.println(&quot;File creation error: &quot; + e.getMessage());</span>
-<span class="fc" id="L269">      }</span>
+<span class="nc" id="L263">      } catch (IOException e) {</span>
+<span class="nc" id="L264">        System.out.println(&quot;File creation error: &quot; + e.getMessage());</span>
+<span class="fc" id="L265">      }</span>
 
-<span class="fc" id="L271">      return new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L267">      return new ArrayList&lt;&gt;();</span>
     }
 
-<span class="fc" id="L274">    try (FileInputStream fileIn = new FileInputStream(Trade_FILE_PATH);</span>
-<span class="fc" id="L275">           ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {</span>
-<span class="fc" id="L276">      return (List&lt;Trade&gt;) objectIn.readObject();</span>
-<span class="fc" id="L277">    } catch (IOException | ClassNotFoundException e) {</span>
-<span class="fc" id="L278">      return new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L270">    try (FileInputStream fileIn = new FileInputStream(Trade_FILE_PATH);</span>
+<span class="fc" id="L271">           ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {</span>
+<span class="fc" id="L272">      return (List&lt;Trade&gt;) objectIn.readObject();</span>
+<span class="fc" id="L273">    } catch (IOException | ClassNotFoundException e) {</span>
+<span class="fc" id="L274">      return new ArrayList&lt;&gt;();</span>
     }
   }
 
@@ -286,14 +282,14 @@ public class TradeManager {
    * @return 0 if the trades are successfully saved, -1 otherwise.
    */
   private int saveUsersToFile(List&lt;Trade&gt; comics2) {
-<span class="fc" id="L289">    try (FileOutputStream fileOut = new FileOutputStream(Trade_FILE_PATH);</span>
-<span class="fc" id="L290">           ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {</span>
-<span class="fc" id="L291">      objectOut.writeObject(comics2);</span>
-<span class="fc" id="L292">      System.out.println(&quot;Book successfully saved to file.&quot;);</span>
-<span class="fc" id="L293">      return 0;</span>
-<span class="nc" id="L294">    } catch (IOException e) {</span>
-<span class="nc" id="L295">      System.out.println(&quot;File write error: &quot; + e.getMessage());</span>
-<span class="nc" id="L296">      return -1;</span>
+<span class="fc" id="L285">    try (FileOutputStream fileOut = new FileOutputStream(Trade_FILE_PATH);</span>
+<span class="fc" id="L286">           ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {</span>
+<span class="fc" id="L287">      objectOut.writeObject(comics2);</span>
+<span class="fc" id="L288">      System.out.println(&quot;Book successfully saved to file.&quot;);</span>
+<span class="fc" id="L289">      return 0;</span>
+<span class="nc" id="L290">    } catch (IOException e) {</span>
+<span class="nc" id="L291">      System.out.println(&quot;File write error: &quot; + e.getMessage());</span>
+<span class="nc" id="L292">      return -1;</span>
     }
   }
 

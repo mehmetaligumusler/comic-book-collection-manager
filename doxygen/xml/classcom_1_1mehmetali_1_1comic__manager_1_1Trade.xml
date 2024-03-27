@@ -213,7 +213,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Trade.java" line="65" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Trade.java" bodystart="65" bodyend="67"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a48a40da38f8ec52bae189d715d17dd20" compoundref="TradeManager_8java" startline="43" endline="62">com.mehmetali.comic_manager.TradeManager.AddTrade</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a48a40da38f8ec52bae189d715d17dd20" compoundref="TradeManager_8java" startline="43" endline="59">com.mehmetali.comic_manager.TradeManager.AddTrade</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1a2eb3738f4d01c56374908626fac35bff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

@@ -57,7 +57,7 @@
 <codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
 <codeline lineno="109" refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1aada444938e70d3a059e92095b304ca34" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1aada444938e70d3a059e92095b304ca34" kindref="member">setUser</ref>(String<sp/>user)<sp/>{</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>this.user<sp/>=<sp/>user;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>this.user<sp/>=<sp/>user;</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight></codeline>

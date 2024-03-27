@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2024-03-27 18:42:45</td>
+            <td class="headerValue">2024-03-27 20:08:52</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">0</td>
@@ -291,7 +291,7 @@
 <a name="221"><span class="lineNum">     221 </span>            :       try {</a>
 <a name="222"><span class="lineNum">     222 </span>            :         if (file.createNewFile()) {</a>
 <a name="223"><span class="lineNum">     223 </span>            :           System.out.println(&quot;Events.dat file has been created.&quot;);</a>
-<a name="224"><span class="lineNum">     224 </span>            :         } </a>
+<a name="224"><span class="lineNum">     224 </span>            :         }</a>
 <a name="225"><span class="lineNum">     225 </span>            :       } catch (IOException e) {}</a>
 <a name="226"><span class="lineNum">     226 </span>            : </a>
 <a name="227"><span class="lineNum">     227 </span>            :       return new ArrayList&lt;&gt;();</a>
@@ -316,11 +316,13 @@
 <a name="246"><span class="lineNum">     246 </span>            :            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {</a>
 <a name="247"><span class="lineNum">     247 </span>            :       objectOut.writeObject(comics2);</a>
 <a name="248"><span class="lineNum">     248 </span>            :       return 0;</a>
-<a name="249"><span class="lineNum">     249 </span>            :     } catch (IOException e) {return -1;}</a>
-<a name="250"><span class="lineNum">     250 </span>            :   }</a>
-<a name="251"><span class="lineNum">     251 </span>            : </a>
-<a name="252"><span class="lineNum">     252 </span>            : </a>
-<a name="253"><span class="lineNum">     253 </span>            : }</a>
+<a name="249"><span class="lineNum">     249 </span>            :     } catch (IOException e) {</a>
+<a name="250"><span class="lineNum">     250 </span>            :       return -1;</a>
+<a name="251"><span class="lineNum">     251 </span>            :     }</a>
+<a name="252"><span class="lineNum">     252 </span>            :   }</a>
+<a name="253"><span class="lineNum">     253 </span>            : </a>
+<a name="254"><span class="lineNum">     254 </span>            : </a>
+<a name="255"><span class="lineNum">     255 </span>            : }</a>
 </pre>
       </td>
     </tr>

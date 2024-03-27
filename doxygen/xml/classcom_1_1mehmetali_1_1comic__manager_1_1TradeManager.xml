@@ -108,10 +108,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="43" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="43" bodyend="62"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="43" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="43" bodyend="59"/>
         <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Trade_1afda42e9be0474bb4040fea48be0af328" compoundref="Trade_8java" startline="65" endline="67">com.mehmetali.comic_manager.Trade.getTitle</references>
-        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad259624e10c4a3de9a1dcf8eb5680888" compoundref="TradeManager_8java" startline="192" endline="200">com.mehmetali.comic_manager.TradeManager.isTradeNameAvailable</references>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afb026813deab3ac6eea0237d98b95e3e" compoundref="Main_8java" startline="413" endline="430">com.mehmetali.comic_manager.Main.TradeAddBookMenu</referencedby>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad259624e10c4a3de9a1dcf8eb5680888" compoundref="TradeManager_8java" startline="188" endline="196">com.mehmetali.comic_manager.TradeManager.isTradeNameAvailable</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afb026813deab3ac6eea0237d98b95e3e" compoundref="Main_8java" startline="389" endline="402">com.mehmetali.comic_manager.Main.TradeAddBookMenu</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad32e44a3007bcc5635698bc0c702a749" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -128,8 +128,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="69" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="69" bodyend="89"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a56e3d96192592fecbf74d82434c7aaa7" compoundref="Main_8java" startline="471" endline="475">com.mehmetali.comic_manager.Main.TradeAllListBookMenu</referencedby>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="66" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="66" bodyend="86"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a56e3d96192592fecbf74d82434c7aaa7" compoundref="Main_8java" startline="442" endline="446">com.mehmetali.comic_manager.Main.TradeAllListBookMenu</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a695c52cf05a3e4104b95bd59dabd4733" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -159,8 +159,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="97" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="97" bodyend="119"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad446db8ec303baaf6e35a7f3900e460d" compoundref="Main_8java" startline="440" endline="444">com.mehmetali.comic_manager.Main.TradeMylistBookMenu</referencedby>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="94" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="94" bodyend="116"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1ad446db8ec303baaf6e35a7f3900e460d" compoundref="Main_8java" startline="412" endline="416">com.mehmetali.comic_manager.Main.TradeMylistBookMenu</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ae1566993ba228ecf9ec28929484f3587" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -190,9 +190,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="128" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="128" bodyend="149"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="125" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="125" bodyend="146"/>
         <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a53c84067810419af16b5efde4e9678e7" compoundref="BookManager_8java" startline="40" endline="49">com.mehmetali.comic_manager.BookManager.AddBook</references>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a293891bfff342d71ff65bfc9dcd66e38" compoundref="Main_8java" startline="454" endline="460">com.mehmetali.comic_manager.Main.TradedeleteBookMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a293891bfff342d71ff65bfc9dcd66e38" compoundref="Main_8java" startline="426" endline="431">com.mehmetali.comic_manager.Main.TradedeleteBookMenu</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a1532a842b55a0bea297ae26f0f2761b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -222,12 +222,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="158" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="158" bodyend="184"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="155" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="155" bodyend="180"/>
         <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a53c84067810419af16b5efde4e9678e7" compoundref="BookManager_8java" startline="40" endline="49">com.mehmetali.comic_manager.BookManager.AddBook</references>
         <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1aa627b545ada6c4ef7275780b44e34769" compoundref="UserManager_8java" startline="138" endline="158">com.mehmetali.comic_manager.UserManager.creditbuyscore</references>
         <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ae89c4bc39cb10ab21674fd2d23e2f271" compoundref="UserManager_8java" startline="167" endline="187">com.mehmetali.comic_manager.UserManager.creditSellscore</references>
         <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a14f1070c79196a3da97886922cd60590" compoundref="Main_8java" startline="26">com.mehmetali.comic_manager.Main.LoginName</references>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1aab4fead2a8abd5ef36f8da3602bacb69" compoundref="Main_8java" startline="485" endline="498">com.mehmetali.comic_manager.Main.TradeBuyBookMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1aab4fead2a8abd5ef36f8da3602bacb69" compoundref="Main_8java" startline="456" endline="469">com.mehmetali.comic_manager.Main.TradeBuyBookMenu</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad259624e10c4a3de9a1dcf8eb5680888" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>boolean</type>
@@ -257,8 +257,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="192" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="192" bodyend="200"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a48a40da38f8ec52bae189d715d17dd20" compoundref="TradeManager_8java" startline="43" endline="62">com.mehmetali.comic_manager.TradeManager.AddTrade</referencedby>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="188" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="188" bodyend="196"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a48a40da38f8ec52bae189d715d17dd20" compoundref="TradeManager_8java" startline="43" endline="59">com.mehmetali.comic_manager.TradeManager.AddTrade</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a05f687ec8ea2bfd5a2e6eea323540da1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -288,8 +288,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="208" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="208" bodyend="216"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1aab4fead2a8abd5ef36f8da3602bacb69" compoundref="Main_8java" startline="485" endline="498">com.mehmetali.comic_manager.Main.TradeBuyBookMenu</referencedby>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="204" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="204" bodyend="212"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1aab4fead2a8abd5ef36f8da3602bacb69" compoundref="Main_8java" startline="456" endline="469">com.mehmetali.comic_manager.Main.TradeBuyBookMenu</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a65aa70327fab9c08a63cfa32ca821a28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>boolean</type>
@@ -319,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="225" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="225" bodyend="233"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="221" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="221" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1aaa9d5b3645cd99ccb99624cab7175811" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>String</type>
@@ -349,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="241" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="241" bodyend="249"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="237" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="237" bodyend="245"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -368,7 +368,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="257" column="16" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="257" bodyend="280"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="253" column="16" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="253" bodyend="276"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1ad6ccac05a805d49408e704cdd0587cd0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -398,7 +398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="288" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="288" bodyend="298"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="284" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="284" bodyend="294"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -412,7 +412,13 @@
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="20" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="20" bodyend="301"/>
+    <collaborationgraph>
+      <node id="1">
+        <label>com.mehmetali.comic_manager.TradeManager</label>
+        <link refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager"/>
+      </node>
+    </collaborationgraph>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" line="20" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/TradeManager.java" bodystart="20" bodyend="297"/>
     <listofallmembers>
       <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a48a40da38f8ec52bae189d715d17dd20" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>AddTrade</name></member>
       <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1TradeManager_1a1532a842b55a0bea297ae26f0f2761b4" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::TradeManager</scope><name>BuyTradeByID</name></member>

@@ -12,104 +12,102 @@ import java.io.PrintStream;
 /**
  * Main class for managing the comic manager application.
  * This class provides methods for user interaction and menu navigation.
- * 
+ *
  * The Main class serves as the entry point for the application and orchestrates user interaction.
- * 
+ *
  * @author mehmetali
  * @version 1.0
  */
 <span class="nc" id="L21">public class Main {</span>
-	
-	/**
-	 * The username of the logged-in user.
-	 */
-	public static String LoginName;
-	
-	/**
-	 * The wallet balance of the logged-in user.
-	 */
-	public static int LoginWallet;
-	
-	
-<span class="fc" id="L34">	private static final Scanner scanner = new Scanner(System.in); /**&lt; The scanner object used for user input. */</span>
+
+  /**
+   * The username of the logged-in user.
+   */
+  public static String LoginName;
+
+  /**
+   * The wallet balance of the logged-in user.
+   */
+  public static int LoginWallet;
 
 
-<span class="fc" id="L37">	private static final UserManager userManager = new UserManager(); /**&lt; The user manager instance for managing user-related operations. */</span>
+<span class="fc" id="L34">  private static final Scanner scanner = new Scanner(System.in); /**&lt; The scanner object used for user input. */</span>
 
 
-<span class="fc" id="L40">	private static final BookManager comicmanager = new BookManager(); /**&lt; The comic manager instance for managing comic book-related operations. */</span>
+<span class="fc" id="L37">  private static final UserManager userManager = new UserManager(); /**&lt; The user manager instance for managing user-related operations. */</span>
 
 
-<span class="fc" id="L43">	private static final WishManager wishmanager = new WishManager(); /**&lt; The wish manager instance for managing wish-related operations. */</span>
+<span class="fc" id="L40">  private static final BookManager comicmanager = new BookManager(); /**&lt; The comic manager instance for managing comic book-related operations. */</span>
 
 
-<span class="fc" id="L46">	private static final TradeManager trademanager = new TradeManager(); /**&lt; The trade manager instance for managing trade-related operations. */</span>
+<span class="fc" id="L43">  private static final WishManager wishmanager = new WishManager(); /**&lt; The wish manager instance for managing wish-related operations. */</span>
 
 
-<span class="fc" id="L49">	private static final EventManager eventmanager = new EventManager(); /**&lt; The event manager instance for managing event-related operations. */</span>
-
-	
-<span class="fc" id="L52">	public static boolean control = false; /**&lt; Boolean variable indicating control status. */</span>
-
-	
+<span class="fc" id="L46">  private static final TradeManager trademanager = new TradeManager(); /**&lt; The trade manager instance for managing trade-related operations. */</span>
 
 
+<span class="fc" id="L49">  private static final EventManager eventmanager = new EventManager(); /**&lt; The event manager instance for managing event-related operations. */</span>
 
-	/**
-	   * Prints the menu with the specified title and options.
-	   * 
-	   * @param title   The title of the menu.
-	   * @param options An array of strings representing the menu options.
-	   */
-	private static void printMenu(String title, String[] options) {
-<span class="fc" id="L65">	    System.out.println(&quot;|===============================================================================|&quot;);</span>
-<span class="fc" id="L66">	    System.out.println(&quot;|&quot; + centerText(title, 79) + &quot;|&quot;);</span>
-<span class="fc" id="L67">	    System.out.println(&quot;|===============================================================================|&quot;);</span>
- 
-<span class="fc" id="L69">	    int wallet = userManager.getUserWallet(LoginName);</span>
-	    
-<span class="fc bfc" id="L71" title="All 2 branches covered.">	    if(control == false)</span>
-	    {
-<span class="fc" id="L73">	    	System.out.println(&quot;|&quot; + rightPad(&quot;User: &quot; + LoginName, 79) + &quot;|&quot;);</span>
-<span class="fc" id="L74">		    System.out.println(&quot;|&quot; + rightPad(&quot;Money: &quot; + wallet, 79) + &quot;|&quot;);</span>
-	    }
 
-<span class="fc bfc" id="L77" title="All 2 branches covered.">	    for (String option : options) {</span>
-<span class="fc" id="L78">	        System.out.println(&quot;|&quot; + centerText(option, 79) + &quot;|&quot;);</span>
-	    }
- 
-<span class="fc" id="L81">	    System.out.println(&quot;|===============================================================================|&quot;);</span>
-<span class="fc" id="L82">	    System.out.print(&quot;Enter your choice: &quot;);</span>
-<span class="fc" id="L83">	}</span>
-	
-	 /**
-	   * Pads the given text on the right side with spaces to make its length equal to the specified length.
-	   * 
-	   * @param text   The text to pad.
-	   * @param length The desired length of the padded text.
-	   * @return The padded text.
-	   */
+<span class="fc" id="L52">  public static boolean control = false; /**&lt; Boolean variable indicating control status. */</span>
 
-	private static String rightPad(String text, int length) {
-<span class="fc" id="L94">	    return String.format(&quot;%-&quot; + length + &quot;s&quot;, text);</span>
-	}
-	
-	 /**
-	   * Centers the given text within a string of the specified length by padding it with spaces on both sides.
-	   * 
-	   * @param text   The text to center.
-	   * @param length The desired length of the string containing the centered text.
-	   * @return The string containing the centered text.
-	   */
+
+
+
+
+  /**
+     * Prints the menu with the specified title and options.
+     *
+     * @param title   The title of the menu.
+     * @param options An array of strings representing the menu options.
+     */
+  private static void printMenu(String title, String[] options) {
+<span class="fc" id="L65">    System.out.println(&quot;|===============================================================================|&quot;);</span>
+<span class="fc" id="L66">    System.out.println(&quot;|&quot; + centerText(title, 79) + &quot;|&quot;);</span>
+<span class="fc" id="L67">    System.out.println(&quot;|===============================================================================|&quot;);</span>
+<span class="fc" id="L68">    int wallet = userManager.getUserWallet(LoginName);</span>
+
+<span class="fc bfc" id="L70" title="All 2 branches covered.">    if(control == false) {</span>
+<span class="fc" id="L71">      System.out.println(&quot;|&quot; + rightPad(&quot;User: &quot; + LoginName, 79) + &quot;|&quot;);</span>
+<span class="fc" id="L72">      System.out.println(&quot;|&quot; + rightPad(&quot;Money: &quot; + wallet, 79) + &quot;|&quot;);</span>
+    }
+
+<span class="fc bfc" id="L75" title="All 2 branches covered.">    for (String option : options) {</span>
+<span class="fc" id="L76">      System.out.println(&quot;|&quot; + centerText(option, 79) + &quot;|&quot;);</span>
+    }
+
+<span class="fc" id="L79">    System.out.println(&quot;|===============================================================================|&quot;);</span>
+<span class="fc" id="L80">    System.out.print(&quot;Enter your choice: &quot;);</span>
+<span class="fc" id="L81">  }</span>
+
+  /**
+    * Pads the given text on the right side with spaces to make its length equal to the specified length.
+    *
+    * @param text   The text to pad.
+    * @param length The desired length of the padded text.
+    * @return The padded text.
+    */
+
+  private static String rightPad(String text, int length) {
+<span class="fc" id="L92">    return String.format(&quot;%-&quot; + length + &quot;s&quot;, text);</span>
+  }
+
+  /**
+    * Centers the given text within a string of the specified length by padding it with spaces on both sides.
+    *
+    * @param text   The text to center.
+    * @param length The desired length of the string containing the centered text.
+    * @return The string containing the centered text.
+    */
 
 
   private static String centerText(String text, int length) {
-<span class="fc" id="L107">    int spaces = length - text.length();</span>
-<span class="fc" id="L108">    int before = spaces / 2;</span>
-<span class="fc" id="L109">    int after = spaces - before;</span>
-<span class="fc" id="L110">    return &quot; &quot;.repeat(before) + text + &quot; &quot;.repeat(after);</span>
+<span class="fc" id="L105">    int spaces = length - text.length();</span>
+<span class="fc" id="L106">    int before = spaces / 2;</span>
+<span class="fc" id="L107">    int after = spaces - before;</span>
+<span class="fc" id="L108">    return &quot; &quot;.repeat(before) + text + &quot; &quot;.repeat(after);</span>
   }
-  
+
   /**
    * Clears the console screen.
    * &lt;p&gt;
@@ -117,94 +115,89 @@ import java.io.PrintStream;
    * it clears the console screen by printing specific escape characters.
    * &lt;/p&gt;
    */
-  
-    public static void clearConsole() {
-        try {
-            // Windows
-<span class="pc bpc" id="L124" title="1 of 2 branches missed.">            if (System.getProperty(&quot;os.name&quot;).contains(&quot;Windows&quot;)) {</span>
-<span class="nc" id="L125">                new ProcessBuilder(&quot;cmd&quot;, &quot;/c&quot;, &quot;cls&quot;).inheritIO().start().waitFor();</span>
-            }
-            // Unix/Linux/Mac
-            else {
-<span class="fc" id="L129">                System.out.print(&quot;\033[H\033[2J&quot;);</span>
-<span class="fc" id="L130">                System.out.flush();</span>
-            }
-<span class="nc" id="L132">        } catch (IOException | InterruptedException ex) {</span>
-            // Handle exception
-<span class="nc" id="L134">            ex.printStackTrace();</span>
-<span class="fc" id="L135">        }</span>
-<span class="fc" id="L136">    }</span>
- 
-    /**
-     * The entry point of the application.
-     * 
-     * @param args The command line arguments.
-     * @throws IOException If an I/O error occurs.
-     */
+
+  public static void clearConsole() {
+    try {
+      // Windows
+<span class="pc bpc" id="L122" title="1 of 2 branches missed.">      if (System.getProperty(&quot;os.name&quot;).contains(&quot;Windows&quot;)) {</span>
+<span class="nc" id="L123">        new ProcessBuilder(&quot;cmd&quot;, &quot;/c&quot;, &quot;cls&quot;).inheritIO().start().waitFor();</span>
+      }
+      // Unix/Linux/Mac
+      else {
+<span class="fc" id="L127">        System.out.print(&quot;\033[H\033[2J&quot;);</span>
+<span class="fc" id="L128">        System.out.flush();</span>
+      }
+<span class="nc" id="L130">    } catch (IOException | InterruptedException ex) {</span>
+      // Handle exception
+<span class="nc" id="L132">      ex.printStackTrace();</span>
+<span class="fc" id="L133">    }</span>
+<span class="fc" id="L134">  }</span>
+
+  /**
+   * The entry point of the application.
+   *
+   * @param args The command line arguments.
+   * @throws IOException If an I/O error occurs.
+   */
   public static void main(String[] args) throws IOException {
-<span class="nc" id="L145">      Scanner scanner = new Scanner(System.in);</span>
-<span class="nc" id="L146">      MainApp(scanner, System.out);</span>
-<span class="nc" id="L147">  }</span>
+<span class="nc" id="L143">    Scanner scanner = new Scanner(System.in);</span>
+<span class="nc" id="L144">    MainApp(scanner, System.out);</span>
+<span class="nc" id="L145">  }</span>
 
   /**
    * Runs the main application loop.
-   * 
+   *
    * @param scanner The scanner object for input.
    * @param out     The output stream for printing.
    * @return An integer indicating the success status of the application.
    * @throws IOException If an I/O error occurs.
    */
-  
+
   public static int MainApp(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L159">	  boolean exit = false;</span>
+<span class="fc" id="L157">    boolean exit = false;</span>
 
-<span class="fc bfc" id="L161" title="All 2 branches covered.">	    while (!exit) {</span>
-	    	
-<span class="fc" id="L163">	      control = true;</span>
-<span class="fc" id="L164">	      String title = &quot;MAIN MENU&quot;;</span>
-<span class="fc" id="L165">	      String[] options = {</span>
-	        &quot;1. Register&quot;,
-	        &quot;2. Login&quot;,
-	        &quot;3. Exit&quot;
-	      };
-<span class="fc" id="L170">	      printMenu(title, options);</span>
-<span class="fc" id="L171">	      int choice = scanner.nextInt();</span>
-<span class="fc" id="L172">	      scanner.nextLine();</span>
-	      
-<span class="fc" id="L174">	      control = false;</span>
+<span class="fc bfc" id="L159" title="All 2 branches covered.">    while (!exit) {</span>
+<span class="fc" id="L160">      control = true;</span>
+<span class="fc" id="L161">      String title = &quot;MAIN MENU&quot;;</span>
+<span class="fc" id="L162">      String[] options = {</span>
+        &quot;1. Register&quot;,
+        &quot;2. Login&quot;,
+        &quot;3. Exit&quot;
+      };
+<span class="fc" id="L167">      printMenu(title, options);</span>
+<span class="fc" id="L168">      int choice = scanner.nextInt();</span>
+<span class="fc" id="L169">      scanner.nextLine();</span>
+<span class="fc" id="L170">      control = false;</span>
 
-<span class="pc bpc" id="L176" title="1 of 4 branches missed.">	      switch (choice) {</span>
-	        case 1:
-<span class="fc" id="L178">	          registerMenu(scanner, System.out);</span>
-<span class="fc" id="L179">	          break;</span>
+<span class="pc bpc" id="L172" title="1 of 4 branches missed.">      switch (choice) {</span>
+        case 1:
+<span class="fc" id="L174">          registerMenu(scanner, System.out);</span>
+<span class="fc" id="L175">          break;</span>
 
-	        case 2:
-<span class="fc" id="L182">	          User loggedInUser = loginMenu(scanner, System.out);</span>
-	          
-<span class="fc" id="L184">	          setLoginName(loggedInUser.getUsername());</span>
-<span class="fc" id="L185">	          setWallet(loggedInUser.getWallet());</span>
-	          
-	          
-<span class="pc bpc" id="L188" title="1 of 2 branches missed.">	          if (loggedInUser != null) {</span>
-<span class="fc" id="L189">	            userMenu(loggedInUser,scanner, System.out);</span>
-	          }
+        case 2:
+<span class="fc" id="L178">          User loggedInUser = loginMenu(scanner, System.out);</span>
+<span class="fc" id="L179">          setLoginName(loggedInUser.getUsername());</span>
+<span class="fc" id="L180">          setWallet(loggedInUser.getWallet());</span>
 
-	          break;
+<span class="pc bpc" id="L182" title="1 of 2 branches missed.">          if (loggedInUser != null) {</span>
+<span class="fc" id="L183">            userMenu(loggedInUser,scanner, System.out);</span>
+          }
 
-	        case 3:
-<span class="fc" id="L195">	          exit = true;</span>
-	          break;
+          break;
 
-	      }
-<span class="fc" id="L199">	    }</span>
+        case 3:
+<span class="fc" id="L189">          exit = true;</span>
+          break;
+      }
+<span class="fc" id="L192">    }</span>
 
-<span class="fc" id="L201">	    scanner.close();</span>
-<span class="fc" id="L202">	    return 0;</span>
+<span class="fc" id="L194">    scanner.close();</span>
+<span class="fc" id="L195">    return 0;</span>
   }
-  
+
   /**
    * Registers a new user.
-   * 
+   *
    * @param scanner The scanner object for input.
    * @param out     The output stream for printing.
    * @return An integer indicating the success status of the registration process.
@@ -213,130 +206,116 @@ import java.io.PrintStream;
 
 
   public static int registerMenu(Scanner scanner, PrintStream out) throws IOException {
- 
-<span class="fc" id="L217">    System.out.print(&quot;UserName: &quot;);</span>
-<span class="fc" id="L218">    String username = scanner.nextLine();</span>
-<span class="fc" id="L219">    System.out.print(&quot;Password: &quot;);</span>
-<span class="fc" id="L220">    String password = scanner.nextLine();</span>
-<span class="fc" id="L221">    User newUser = new User(username, password, 0);</span>
-<span class="fc" id="L222">    userManager.registerUser(newUser);</span>
-<span class="fc" id="L223">    return 0;</span>
-   
+<span class="fc" id="L209">    System.out.print(&quot;UserName: &quot;);</span>
+<span class="fc" id="L210">    String username = scanner.nextLine();</span>
+<span class="fc" id="L211">    System.out.print(&quot;Password: &quot;);</span>
+<span class="fc" id="L212">    String password = scanner.nextLine();</span>
+<span class="fc" id="L213">    User newUser = new User(username, password, 0);</span>
+<span class="fc" id="L214">    userManager.registerUser(newUser);</span>
+<span class="fc" id="L215">    return 0;</span>
   }
-  
+
   //ComicBook
   /**
    * Adds a new book to the book management system.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful addition of the book.
    * @throws IOException Signals that an I/O exception has occurred.
    */
-  public static int AddBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-  	
-<span class="fc" id="L239">    System.out.print(&quot;Book ID: &quot;);</span>
-<span class="fc" id="L240">    int bookId = scanner.nextInt();</span>
-<span class="fc" id="L241">    scanner.nextLine();</span>
-    
-<span class="fc" id="L243">    System.out.print(&quot;Book Name: &quot;);</span>
-<span class="fc" id="L244">    String bookName = scanner.nextLine();</span>
-    
-<span class="fc" id="L246">    System.out.print(&quot;Book Page Number: &quot;);</span>
-<span class="fc" id="L247">    int bookpage = scanner.nextInt();</span>
-    
-<span class="fc" id="L249">    System.out.print(&quot;Book Value: &quot;);</span>
-<span class="fc" id="L250">    int bookvalue = scanner.nextInt();</span>
-
-
-<span class="fc" id="L253">    Book newUser = new Book(bookId, bookName,bookpage,LoginName,bookvalue);</span>
-<span class="fc" id="L254">    comicmanager.AddBook(newUser);</span>
-<span class="fc" id="L255">    return 0;</span>
+  public static int AddBookMenu(Scanner scanner, PrintStream out) throws IOException {
+<span class="fc" id="L228">    System.out.print(&quot;Book ID: &quot;);</span>
+<span class="fc" id="L229">    int bookId = scanner.nextInt();</span>
+<span class="fc" id="L230">    scanner.nextLine();</span>
+<span class="fc" id="L231">    System.out.print(&quot;Book Name: &quot;);</span>
+<span class="fc" id="L232">    String bookName = scanner.nextLine();</span>
+<span class="fc" id="L233">    System.out.print(&quot;Book Page Number: &quot;);</span>
+<span class="fc" id="L234">    int bookpage = scanner.nextInt();</span>
+<span class="fc" id="L235">    System.out.print(&quot;Book Value: &quot;);</span>
+<span class="fc" id="L236">    int bookvalue = scanner.nextInt();</span>
+<span class="fc" id="L237">    Book newUser = new Book(bookId, bookName,bookpage,LoginName,bookvalue);</span>
+<span class="fc" id="L238">    comicmanager.AddBook(newUser);</span>
+<span class="fc" id="L239">    return 0;</span>
   }
-  
+
   /**
    * Displays the list of books owned by the current user.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful display of the book list.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int listBookMenu(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L267">      out.println(&quot;Book List&quot;);</span>
-<span class="fc" id="L268">      comicmanager.listBooksByCondition(LoginName);</span>
-<span class="fc" id="L269">      return 0;</span>
+<span class="fc" id="L251">    out.println(&quot;Book List&quot;);</span>
+<span class="fc" id="L252">    comicmanager.listBooksByCondition(LoginName);</span>
+<span class="fc" id="L253">    return 0;</span>
   }
 
   /**
    * Displays the list of all books in the system.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful display of the book list.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int listAllBookMenu(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L281">      out.println(&quot;Book All List&quot;);</span>
-<span class="fc" id="L282">      comicmanager.listBooks();</span>
-<span class="fc" id="L283">      return 0;</span>
+<span class="fc" id="L265">    out.println(&quot;Book All List&quot;);</span>
+<span class="fc" id="L266">    comicmanager.listBooks();</span>
+<span class="fc" id="L267">    return 0;</span>
   }
 
   /**
    * Deletes a book from the system by its ID.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful deletion of the book.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int deleteBookMenu(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L295">      out.print(&quot;Book ID: &quot;);</span>
-<span class="fc" id="L296">      int bookId = scanner.nextInt();</span>
-      
-<span class="fc" id="L298">      comicmanager.deleteBookByID(bookId);</span>
-<span class="fc" id="L299">      return 0;</span>
+<span class="fc" id="L279">    out.print(&quot;Book ID: &quot;);</span>
+<span class="fc" id="L280">    int bookId = scanner.nextInt();</span>
+<span class="fc" id="L281">    comicmanager.deleteBookByID(bookId);</span>
+<span class="fc" id="L282">    return 0;</span>
   }
 
-  
+
   /**
    * Updates the details of a book in the system by its ID.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful update of the book details.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int updateBookMenu(Scanner scanner, PrintStream out) throws IOException {
-      // Prompting user for the ID of the book to be updated
-<span class="fc" id="L313">      out.print(&quot;Book ID: &quot;);</span>
-<span class="fc" id="L314">      int bookId = scanner.nextInt();</span>
-<span class="fc" id="L315">      scanner.nextLine(); // Consume newline character</span>
-      
-      // Prompting user for the new details of the book
-<span class="fc" id="L318">      out.print(&quot;New Book Name: &quot;);</span>
-<span class="fc" id="L319">      String bookName = scanner.nextLine();</span>
-      
-<span class="fc" id="L321">      out.print(&quot;New Book Page Number: &quot;);</span>
-<span class="fc" id="L322">      int bookpage = scanner.nextInt();</span>
-<span class="fc" id="L323">      scanner.nextLine(); // Consume newline character</span>
-      
-<span class="fc" id="L325">      out.print(&quot;New Book Value: &quot;);</span>
-<span class="fc" id="L326">      int bookvalue = scanner.nextInt();</span>
-<span class="fc" id="L327">      scanner.nextLine(); // Consume newline character</span>
-
-      // Updating the details of the book in the system
-<span class="fc" id="L330">      comicmanager.updateBookTitleByID(bookId, bookName, bookpage, bookvalue);</span>
-<span class="fc" id="L331">      return 0; // Returning 0 to indicate successful update</span>
+    // Prompting user for the ID of the book to be updated
+<span class="fc" id="L296">    out.print(&quot;Book ID: &quot;);</span>
+<span class="fc" id="L297">    int bookId = scanner.nextInt();</span>
+<span class="fc" id="L298">    scanner.nextLine(); // Consume newline character</span>
+    // Prompting user for the new details of the book
+<span class="fc" id="L300">    out.print(&quot;New Book Name: &quot;);</span>
+<span class="fc" id="L301">    String bookName = scanner.nextLine();</span>
+<span class="fc" id="L302">    out.print(&quot;New Book Page Number: &quot;);</span>
+<span class="fc" id="L303">    int bookpage = scanner.nextInt();</span>
+<span class="fc" id="L304">    scanner.nextLine(); // Consume newline character</span>
+<span class="fc" id="L305">    out.print(&quot;New Book Value: &quot;);</span>
+<span class="fc" id="L306">    int bookvalue = scanner.nextInt();</span>
+<span class="fc" id="L307">    scanner.nextLine(); // Consume newline character</span>
+    // Updating the details of the book in the system
+<span class="fc" id="L309">    comicmanager.updateBookTitleByID(bookId, bookName, bookpage, bookvalue);</span>
+<span class="fc" id="L310">    return 0; // Returning 0 to indicate successful update</span>
   }
 
 
   //WishList
-  
+
   /**
    * Adds a book to the wish list of the current user.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful addition of the book to the wish list,
@@ -344,285 +323,266 @@ import java.io.PrintStream;
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int WishAddBookMenu(Scanner scanner, PrintStream out) throws IOException {
-      // Prompting user for the ID of the book to be added to the wish list
-<span class="fc" id="L348">      out.print(&quot;Book ID: &quot;);</span>
-<span class="fc" id="L349">      int bookId = scanner.nextInt();</span>
-<span class="fc" id="L350">      scanner.nextLine(); // Consume newline character</span>
-      
-      // Checking if the book ID is available in the system
-<span class="fc bfc" id="L353" title="All 2 branches covered.">      if (comicmanager.isBookIDAvailable(bookId)) {</span>
-<span class="fc" id="L354">          out.println(&quot;No such book found.&quot;);</span>
-<span class="fc" id="L355">          return -1; // Returning -1 if the book ID is not available</span>
-      }
-      
-      // Retrieving book details for wish list entry
-<span class="fc" id="L359">      int pageNumber = comicmanager.getBookPageNumberByID(bookId);</span>
-<span class="fc" id="L360">      String title = comicmanager.getBookTitleByID(bookId);</span>
-<span class="fc" id="L361">      int value = comicmanager.getBookPageNumberByID(bookId);</span>
-      
-      // Creating a new Wish object and adding it to the wish list
-<span class="fc" id="L364">      Wish newUser = new Wish(bookId, title, pageNumber, LoginName, value);</span>
-<span class="fc" id="L365">      wishmanager.AddBook(newUser);</span>
-      
-<span class="fc" id="L367">      return 0; // Returning 0 to indicate successful addition to the wish list</span>
+    // Prompting user for the ID of the book to be added to the wish list
+<span class="fc" id="L327">    out.print(&quot;Book ID: &quot;);</span>
+<span class="fc" id="L328">    int bookId = scanner.nextInt();</span>
+<span class="fc" id="L329">    scanner.nextLine(); // Consume newline character</span>
+
+    // Checking if the book ID is available in the system
+<span class="fc bfc" id="L332" title="All 2 branches covered.">    if (comicmanager.isBookIDAvailable(bookId)) {</span>
+<span class="fc" id="L333">      out.println(&quot;No such book found.&quot;);</span>
+<span class="fc" id="L334">      return -1; // Returning -1 if the book ID is not available</span>
+    }
+
+    // Retrieving book details for wish list entry
+<span class="fc" id="L338">    int pageNumber = comicmanager.getBookPageNumberByID(bookId);</span>
+<span class="fc" id="L339">    String title = comicmanager.getBookTitleByID(bookId);</span>
+<span class="fc" id="L340">    int value = comicmanager.getBookPageNumberByID(bookId);</span>
+    // Creating a new Wish object and adding it to the wish list
+<span class="fc" id="L342">    Wish newUser = new Wish(bookId, title, pageNumber, LoginName, value);</span>
+<span class="fc" id="L343">    wishmanager.AddBook(newUser);</span>
+<span class="fc" id="L344">    return 0; // Returning 0 to indicate successful addition to the wish list</span>
   }
 
-  
+
   /**
    * Displays the wish list of books owned by the current user.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful display of the wish list.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int WishlistBookMenu(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L380">      out.println(&quot;Wish Book List&quot;);</span>
-<span class="fc" id="L381">      wishmanager.listBooksByUser(LoginName);</span>
-<span class="fc" id="L382">      return 0;</span>
+<span class="fc" id="L357">    out.println(&quot;Wish Book List&quot;);</span>
+<span class="fc" id="L358">    wishmanager.listBooksByUser(LoginName);</span>
+<span class="fc" id="L359">    return 0;</span>
   }
 
   /**
    * Deletes a book from the wish list by its ID.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful deletion of the book from the wish list.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int WishdeleteBookMenu(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L394">      out.print(&quot;Book ID: &quot;);</span>
-<span class="fc" id="L395">      int bookId = scanner.nextInt();</span>
-      
-<span class="fc" id="L397">      wishmanager.deleteBookByID(bookId);</span>
-<span class="fc" id="L398">      return 0;</span>
+<span class="fc" id="L371">    out.print(&quot;Book ID: &quot;);</span>
+<span class="fc" id="L372">    int bookId = scanner.nextInt();</span>
+<span class="fc" id="L373">    wishmanager.deleteBookByID(bookId);</span>
+<span class="fc" id="L374">    return 0;</span>
   }
 
-  
+
   //TradeList
-  
-  
+
+
   /**
    * Adds a book to the trade list of the current user and removes it from their collection.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful addition of the book to the trade list.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int TradeAddBookMenu(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L414">      out.print(&quot;Book ID: &quot;);</span>
-<span class="fc" id="L415">      int bookId = scanner.nextInt();</span>
-      
-      // Retrieving book details for trade list entry
-<span class="fc" id="L418">      int pageNumber = comicmanager.getBookPageNumberByID(bookId);</span>
-<span class="fc" id="L419">      String title = comicmanager.getBookTitleByID(bookId);</span>
-<span class="fc" id="L420">      int value = comicmanager.getBookValueByID(bookId);</span>
-      
-      // Creating a new Trade object and adding it to the trade list
-<span class="fc" id="L423">      Trade newUser = new Trade(bookId, title, pageNumber, LoginName, value);</span>
-<span class="fc" id="L424">      trademanager.AddTrade(newUser);</span>
-      
-      // Deleting the book from the collection
-<span class="fc" id="L427">      comicmanager.deleteBookByID(bookId);</span>
-      
-<span class="fc" id="L429">      return 0; // Returning 0 to indicate successful addition to the trade list</span>
+<span class="fc" id="L390">    out.print(&quot;Book ID: &quot;);</span>
+<span class="fc" id="L391">    int bookId = scanner.nextInt();</span>
+    // Retrieving book details for trade list entry
+<span class="fc" id="L393">    int pageNumber = comicmanager.getBookPageNumberByID(bookId);</span>
+<span class="fc" id="L394">    String title = comicmanager.getBookTitleByID(bookId);</span>
+<span class="fc" id="L395">    int value = comicmanager.getBookValueByID(bookId);</span>
+    // Creating a new Trade object and adding it to the trade list
+<span class="fc" id="L397">    Trade newUser = new Trade(bookId, title, pageNumber, LoginName, value);</span>
+<span class="fc" id="L398">    trademanager.AddTrade(newUser);</span>
+    // Deleting the book from the collection
+<span class="fc" id="L400">    comicmanager.deleteBookByID(bookId);</span>
+<span class="fc" id="L401">    return 0; // Returning 0 to indicate successful addition to the trade list</span>
   }
 
   /**
    * Displays the trade list of books owned by the current user.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful display of the trade list.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int TradeMylistBookMenu(Scanner scanner, PrintStream out) throws IOException {
-      // Displaying the trade list of the current user
-<span class="fc" id="L442">      trademanager.listMyTradeList(LoginName);</span>
-<span class="fc" id="L443">      return 0;</span>
+    // Displaying the trade list of the current user
+<span class="fc" id="L414">    trademanager.listMyTradeList(LoginName);</span>
+<span class="fc" id="L415">    return 0;</span>
   }
 
   /**
    * Deletes a book from the trade list by its ID.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful deletion of the book from the trade list.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int TradedeleteBookMenu(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L455">      out.print(&quot;Book ID: &quot;);</span>
-<span class="fc" id="L456">      int bookId = scanner.nextInt();</span>
-      
-<span class="fc" id="L458">      trademanager.deleteTradeByID(bookId);</span>
-<span class="fc" id="L459">      return 0;</span>
+<span class="fc" id="L427">    out.print(&quot;Book ID: &quot;);</span>
+<span class="fc" id="L428">    int bookId = scanner.nextInt();</span>
+<span class="fc" id="L429">    trademanager.deleteTradeByID(bookId);</span>
+<span class="fc" id="L430">    return 0;</span>
   }
 
-  
+
   /**
    * Displays the list of all books available for trade.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful display of the trade list.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int TradeAllListBookMenu(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L472">      out.println(&quot;Book List&quot;);</span>
-<span class="fc" id="L473">      trademanager.listAllTradeList();</span>
-<span class="fc" id="L474">      return 0;</span>
+<span class="fc" id="L443">    out.println(&quot;Book List&quot;);</span>
+<span class="fc" id="L444">    trademanager.listAllTradeList();</span>
+<span class="fc" id="L445">    return 0;</span>
   }
 
   /**
    * Buys a book from the trade list by its ID if the user's credit score is sufficient.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful purchase of the book, or -1 if the user's credit score is insufficient.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int TradeBuyBookMenu(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L486">      out.print(&quot;Book ID: &quot;);</span>
-<span class="fc" id="L487">      int bookId = scanner.nextInt();</span>
-      
-      // Checking if the user's credit score is sufficient to buy the book
-<span class="pc bpc" id="L490" title="1 of 2 branches missed.">      if (LoginWallet &gt;= trademanager.getBookValueByID(bookId)) {</span>
-<span class="fc" id="L491">          trademanager.BuyTradeByID(bookId);</span>
-      } else {
-<span class="nc" id="L493">          out.println(&quot;Credit Score Insufficient! Could not purchase.&quot;);</span>
-<span class="nc" id="L494">          return -1;</span>
-      }
-      
-<span class="fc" id="L497">      return 0;</span>
+<span class="fc" id="L457">    out.print(&quot;Book ID: &quot;);</span>
+<span class="fc" id="L458">    int bookId = scanner.nextInt();</span>
+
+    // Checking if the user's credit score is sufficient to buy the book
+<span class="pc bpc" id="L461" title="1 of 2 branches missed.">    if (LoginWallet &gt;= trademanager.getBookValueByID(bookId)) {</span>
+<span class="fc" id="L462">      trademanager.BuyTradeByID(bookId);</span>
+    } else {
+<span class="nc" id="L464">      out.println(&quot;Credit Score Insufficient! Could not purchase.&quot;);</span>
+<span class="nc" id="L465">      return -1;</span>
+    }
+
+<span class="fc" id="L468">    return 0;</span>
   }
 
   /**
    * Increases the user's credit score by the specified amount.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful update of the user's credit score.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int CreditBuyScoreMenu(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L509">      out.println(&quot;Credit Score:&quot;);</span>
-      
-<span class="fc" id="L511">      int score = scanner.nextInt();</span>
-      
-<span class="fc" id="L513">      userManager.creditbuyscore(LoginName, score);</span>
-<span class="fc" id="L514">      return 0;</span>
+<span class="fc" id="L480">    out.println(&quot;Credit Score:&quot;);</span>
+<span class="fc" id="L481">    int score = scanner.nextInt();</span>
+<span class="fc" id="L482">    userManager.creditbuyscore(LoginName, score);</span>
+<span class="fc" id="L483">    return 0;</span>
   }
 
-  
- 
+
+
   /**
    * Adds a new event to the event management system.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful addition of the event.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int EventAddBookMenu(Scanner scanner, PrintStream out) throws IOException {
-      // Prompting user for event details
-<span class="fc" id="L529">      out.print(&quot;Event ID: &quot;);</span>
-<span class="fc" id="L530">      int eventId = scanner.nextInt();</span>
-<span class="fc" id="L531">      scanner.nextLine(); // Consume newline character</span>
-      
-<span class="fc" id="L533">      out.print(&quot;Event Name: &quot;);</span>
-<span class="fc" id="L534">      String eventName = scanner.nextLine();</span>
-      
-<span class="fc" id="L536">      out.print(&quot;Event Content: &quot;);</span>
-<span class="fc" id="L537">      String eventContent = scanner.nextLine();</span>
-
-      // Creating a new Event object with the provided details
-<span class="fc" id="L540">      Event newEvent = new Event(eventId, eventName, eventContent, LoginName);</span>
-      
-      // Adding the new event to the event management system
-<span class="fc" id="L543">      eventmanager.AddEvent(newEvent);</span>
-      
-<span class="fc" id="L545">      return 0; // Returning 0 to indicate successful addition</span>
+    // Prompting user for event details
+<span class="fc" id="L498">    out.print(&quot;Event ID: &quot;);</span>
+<span class="fc" id="L499">    int eventId = scanner.nextInt();</span>
+<span class="fc" id="L500">    scanner.nextLine(); // Consume newline character</span>
+<span class="fc" id="L501">    out.print(&quot;Event Name: &quot;);</span>
+<span class="fc" id="L502">    String eventName = scanner.nextLine();</span>
+<span class="fc" id="L503">    out.print(&quot;Event Content: &quot;);</span>
+<span class="fc" id="L504">    String eventContent = scanner.nextLine();</span>
+    // Creating a new Event object with the provided details
+<span class="fc" id="L506">    Event newEvent = new Event(eventId, eventName, eventContent, LoginName);</span>
+    // Adding the new event to the event management system
+<span class="fc" id="L508">    eventmanager.AddEvent(newEvent);</span>
+<span class="fc" id="L509">    return 0; // Returning 0 to indicate successful addition</span>
   }
 
   /**
    * Displays the list of events related to the current user.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful display of the event list.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int EventlistBookMenu(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L557">      out.println(&quot;Event List&quot;);</span>
-<span class="fc" id="L558">      eventmanager.listEventsByCondition(LoginName);</span>
-<span class="fc" id="L559">      return 0;</span>
+<span class="fc" id="L521">    out.println(&quot;Event List&quot;);</span>
+<span class="fc" id="L522">    eventmanager.listEventsByCondition(LoginName);</span>
+<span class="fc" id="L523">    return 0;</span>
   }
 
   /**
    * Displays the list of all events in the system.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful display of all events.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int EventlistAllBookMenu(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L571">      out.println(&quot;Event All List&quot;);</span>
-<span class="fc" id="L572">      eventmanager.listEvents();</span>
-<span class="fc" id="L573">      return 0;</span>
+<span class="fc" id="L535">    out.println(&quot;Event All List&quot;);</span>
+<span class="fc" id="L536">    eventmanager.listEvents();</span>
+<span class="fc" id="L537">    return 0;</span>
   }
 
-  
+
   /**
    * Deletes an event from the event management system by its ID.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful deletion of the event.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int EventdeleteBookMenu(Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L586">      out.print(&quot;Event ID: &quot;);</span>
-<span class="fc" id="L587">      int eventId = scanner.nextInt();</span>
-      
-      // Deleting the event from the event management system
-<span class="fc" id="L590">      eventmanager.deleteEventByID(eventId);</span>
-<span class="fc" id="L591">      return 0;</span>
+<span class="fc" id="L550">    out.print(&quot;Event ID: &quot;);</span>
+<span class="fc" id="L551">    int eventId = scanner.nextInt();</span>
+    // Deleting the event from the event management system
+<span class="fc" id="L553">    eventmanager.deleteEventByID(eventId);</span>
+<span class="fc" id="L554">    return 0;</span>
   }
 
   /**
    * Updates the details of an event in the event management system by its ID.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns 0 upon successful update of the event details.
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static int EventupdateBookMenu(Scanner scanner, PrintStream out) throws IOException {
-      // Prompting user for the ID of the event to be updated
-<span class="fc" id="L604">      out.print(&quot;Event ID: &quot;);</span>
-<span class="fc" id="L605">      int eventId = scanner.nextInt();</span>
-<span class="fc" id="L606">      scanner.nextLine(); // Consume newline character</span>
-      
-      // Prompting user for the new details of the event
-<span class="fc" id="L609">      out.print(&quot;New Event Name: &quot;);</span>
-<span class="fc" id="L610">      String eventName = scanner.nextLine();</span>
-      
-<span class="fc" id="L612">      out.print(&quot;New Event Content: &quot;);</span>
-<span class="fc" id="L613">      String eventContent = scanner.nextLine();</span>
-      
-      // Updating the details of the event in the event management system
-<span class="fc" id="L616">      eventmanager.updateEventTitleByID(eventId, eventName, eventContent);</span>
-<span class="fc" id="L617">      return 0; // Returning 0 to indicate successful update</span>
+    // Prompting user for the ID of the event to be updated
+<span class="fc" id="L567">    out.print(&quot;Event ID: &quot;);</span>
+<span class="fc" id="L568">    int eventId = scanner.nextInt();</span>
+<span class="fc" id="L569">    scanner.nextLine(); // Consume newline character</span>
+    // Prompting user for the new details of the event
+<span class="fc" id="L571">    out.print(&quot;New Event Name: &quot;);</span>
+<span class="fc" id="L572">    String eventName = scanner.nextLine();</span>
+<span class="fc" id="L573">    out.print(&quot;New Event Content: &quot;);</span>
+<span class="fc" id="L574">    String eventContent = scanner.nextLine();</span>
+    // Updating the details of the event in the event management system
+<span class="fc" id="L576">    eventmanager.updateEventTitleByID(eventId, eventName, eventContent);</span>
+<span class="fc" id="L577">    return 0; // Returning 0 to indicate successful update</span>
   }
 
-  
+
   //test
 
   /**
    * Allows a user to log in to the system using their username and password.
-   * 
+   *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
    * @return Returns the User object corresponding to the logged-in user if successful,
@@ -630,28 +590,27 @@ import java.io.PrintStream;
    * @throws IOException Signals that an I/O exception has occurred.
    */
   public static User loginMenu(Scanner scanner, PrintStream out) throws IOException {
-      // Prompting user for username and password
-<span class="fc" id="L634">      out.print(&quot;UserName: &quot;);</span>
-<span class="fc" id="L635">      String username = scanner.nextLine();</span>
-<span class="fc" id="L636">      out.print(&quot;Password: &quot;);</span>
-<span class="fc" id="L637">      String password = scanner.nextLine();</span>
+    // Prompting user for username and password
+<span class="fc" id="L594">    out.print(&quot;UserName: &quot;);</span>
+<span class="fc" id="L595">    String username = scanner.nextLine();</span>
+<span class="fc" id="L596">    out.print(&quot;Password: &quot;);</span>
+<span class="fc" id="L597">    String password = scanner.nextLine();</span>
+    // Attempting to log in the user
+<span class="fc" id="L599">    User user = userManager.login(username, password);</span>
 
-      // Attempting to log in the user
-<span class="fc" id="L640">      User user = userManager.login(username, password);</span>
+    // Displaying login result
+<span class="fc bfc" id="L602" title="All 2 branches covered.">    if (user != null) {</span>
+<span class="fc" id="L603">      out.println(&quot;Hello, &quot; + user.getUsername() + &quot;!&quot;);</span>
+    } else {
+<span class="fc" id="L605">      out.println(&quot;Username or password is wrong!&quot;);</span>
+    }
 
-      // Displaying login result
-<span class="fc bfc" id="L643" title="All 2 branches covered.">      if (user != null) {</span>
-<span class="fc" id="L644">          out.println(&quot;Hello, &quot; + user.getUsername() + &quot;!&quot;);</span>
-      } else {
-<span class="fc" id="L646">          out.println(&quot;Username or password is wrong!&quot;);</span>
-      }
-
-<span class="fc" id="L649">      return user; // Returning the logged-in user object or null if login fails</span>
+<span class="fc" id="L608">    return user; // Returning the logged-in user object or null if login fails</span>
   }
 
   /**
    * Displays the user menu and allows the user to interact with the system based on their role.
-   * 
+   *
    * @param user The User object representing the currently logged-in user.
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
@@ -660,334 +619,338 @@ import java.io.PrintStream;
    */
 
   public static int userMenu(User user,Scanner scanner, PrintStream out) throws IOException {
-<span class="fc" id="L663">    boolean exit = false;</span>
+<span class="fc" id="L622">    boolean exit = false;</span>
 
-<span class="pc bpc" id="L665" title="1 of 2 branches missed.">    while (!exit) {</span>
-    	
-<span class="fc" id="L667">      String title = &quot;USER MENU&quot;;</span>
-<span class="fc" id="L668">      String[] options = {</span>
+<span class="pc bpc" id="L624" title="1 of 2 branches missed.">    while (!exit) {</span>
+<span class="fc" id="L625">      String title = &quot;USER MENU&quot;;</span>
+<span class="fc" id="L626">      String[] options = {</span>
         &quot;1. Cataloging Comic Book Collection&quot;,
         &quot;2. Wishlist and Trade List Management&quot;,
         &quot;3. Comic Book Events and Conventions&quot;,
         &quot;4. Buy Credit Score&quot;,
         &quot;5. Exit&quot;
       };
-      
-      
-<span class="fc" id="L677">      printMenu(title, options);</span>
-<span class="fc" id="L678">      int choice = scanner.nextInt();</span>
-<span class="fc" id="L679">      scanner.nextLine(); </span>
+<span class="fc" id="L633">      printMenu(title, options);</span>
+<span class="fc" id="L634">      int choice = scanner.nextInt();</span>
+<span class="fc" id="L635">      scanner.nextLine();</span>
 
-      
-<span class="pc bpc" id="L682" title="1 of 2 branches missed.">      while (choice != 6) {</span>
-<span class="pc bpc" id="L683" title="1 of 6 branches missed.">      switch (choice) {</span>
-        case 1:
-<span class="fc" id="L685">          System.out.println(&quot;Cataloging Comic Book Collection&quot;);</span>
-          
-<span class="fc" id="L687">          String title2 = &quot;MY BOOK MENU&quot;;</span>
-<span class="fc" id="L688">          String[] options2 = {</span>
-            &quot;1. My Book Add&quot;,
-            &quot;2. My Book Delete&quot;,
-            &quot;3. My Book Update&quot;,
-            &quot;4. My Book List&quot;,
-            &quot;5. All Book List&quot;,
-            &quot;6. Exit&quot;
-          };
-<span class="fc" id="L696">          printMenu(title2, options2);</span>
-<span class="fc" id="L697">          int choice2 = scanner.nextInt();</span>
-<span class="fc" id="L698">          scanner.nextLine(); </span>
-          
-<span class="pc bpc" id="L700" title="2 of 7 branches missed.">          switch (choice2) {</span>
+<span class="pc bpc" id="L637" title="1 of 2 branches missed.">      while (choice != 6) {</span>
+<span class="pc bpc" id="L638" title="1 of 6 branches missed.">        switch (choice) {</span>
           case 1:
-<span class="fc" id="L702">        	  AddBookMenu(scanner, System.out);</span>
-<span class="fc" id="L703">        	  break;</span>
-          case 2:
-<span class="fc" id="L705">        	  deleteBookMenu(scanner, System.out);</span>
-<span class="fc" id="L706">        	  break;</span>
-          case 3:
-<span class="fc" id="L708">        	  updateBookMenu(scanner, System.out);</span>
-<span class="fc" id="L709">        	  break;</span>
-          case 4:
-<span class="nc" id="L711">        	  clearConsole();</span>
-<span class="nc" id="L712">        	  listBookMenu(scanner, System.out);</span>
-<span class="nc" id="L713">        	  break;</span>
-          case 5:
-<span class="fc" id="L715">        	  clearConsole();</span>
-<span class="fc" id="L716">        	  listAllBookMenu(scanner, System.out);</span>
-<span class="fc" id="L717">        	  break;</span>
-          case 6:
-<span class="fc" id="L719">        	  choice = 5;</span>
-        	  break;
-          }
-          
-<span class="fc" id="L723">          break;</span>
-          
+<span class="fc" id="L640">            System.out.println(&quot;Cataloging Comic Book Collection&quot;);</span>
+<span class="fc" id="L641">            String title2 = &quot;MY BOOK MENU&quot;;</span>
+<span class="fc" id="L642">            String[] options2 = {</span>
+              &quot;1. My Book Add&quot;,
+              &quot;2. My Book Delete&quot;,
+              &quot;3. My Book Update&quot;,
+              &quot;4. My Book List&quot;,
+              &quot;5. All Book List&quot;,
+              &quot;6. Exit&quot;
+            };
+<span class="fc" id="L650">            printMenu(title2, options2);</span>
+<span class="fc" id="L651">            int choice2 = scanner.nextInt();</span>
+<span class="fc" id="L652">            scanner.nextLine();</span>
 
-        case 2:
-<span class="fc" id="L727">          System.out.println(&quot;Wishlist and Trade List Management&quot;);</span>
-          
-<span class="fc" id="L729">          String title3 = &quot;WISHLIST OR TRADE MENU&quot;;</span>
-<span class="fc" id="L730">          String[] options3 = {</span>
-            &quot;1. My Wish List&quot;,
-            &quot;2. My Trade List&quot;,
-            &quot;3. Exit&quot;
-          };
-<span class="fc" id="L735">          printMenu(title3, options3);</span>
-<span class="fc" id="L736">          int choice3 = scanner.nextInt();</span>
-<span class="fc" id="L737">          scanner.nextLine(); </span>
-          
-<span class="fc bfc" id="L739" title="All 4 branches covered.">          switch (choice3) {</span>
-          case 1:
-<span class="fc" id="L741">        	  String title4 = &quot;MY WISHLIST MENU&quot;;</span>
-<span class="fc" id="L742">              String[] options4 = {</span>
-                &quot;1. My Wish Book Add&quot;,
-                &quot;2. My Wish Book Delete&quot;,
-                &quot;3. My Wish Book List&quot;,
-                &quot;4. My Book List&quot;,
-                &quot;5. Return&quot;,
-                &quot;5. Exit&quot;
-              };
-<span class="fc" id="L750">              printMenu(title4, options4);</span>
-<span class="fc" id="L751">              int choice4 = scanner.nextInt();</span>
-<span class="fc" id="L752">              scanner.nextLine(); </span>
-              
-<span class="fc bfc" id="L754" title="All 6 branches covered.">              switch (choice4) {</span>
+<span class="pc bpc" id="L654" title="2 of 7 branches missed.">            switch (choice2) {</span>
               case 1:
-<span class="fc" id="L756">            	  WishAddBookMenu(scanner, System.out);</span>
-            	  
-<span class="fc" id="L758">            	  break;</span>
+<span class="fc" id="L656">                AddBookMenu(scanner, System.out);</span>
+<span class="fc" id="L657">                break;</span>
+
               case 2:
-<span class="fc" id="L760">            	  WishdeleteBookMenu(scanner, System.out);</span>
-<span class="fc" id="L761">            	  break;</span>
+<span class="fc" id="L660">                deleteBookMenu(scanner, System.out);</span>
+<span class="fc" id="L661">                break;</span>
+
               case 3:
-<span class="fc" id="L763">            	  WishlistBookMenu(scanner, System.out);</span>
-            
-<span class="fc" id="L765">            	  break;</span>
+<span class="fc" id="L664">                updateBookMenu(scanner, System.out);</span>
+<span class="fc" id="L665">                break;</span>
+
               case 4:
-<span class="fc" id="L767">            	  listBookMenu(scanner, System.out);</span>
-<span class="fc" id="L768">            	  break;</span>
+<span class="nc" id="L668">                clearConsole();</span>
+<span class="nc" id="L669">                listBookMenu(scanner, System.out);</span>
+<span class="nc" id="L670">                break;</span>
+
               case 5:
-<span class="fc" id="L770">            	  choice = 5;</span>
-<span class="fc" id="L771">            	  break;</span>
+<span class="fc" id="L673">                clearConsole();</span>
+<span class="fc" id="L674">                listAllBookMenu(scanner, System.out);</span>
+<span class="fc" id="L675">                break;</span>
+
               case 6:
-            	  break;
-              }
-<span class="fc" id="L775">        	  break;</span>
+<span class="fc" id="L678">                choice = 5;</span>
+                break;
+            }
+
+<span class="fc" id="L682">            break;</span>
+
           case 2:
-<span class="fc" id="L777">        	  String title5 = &quot;MY TRADE MENU&quot;;</span>
-<span class="fc" id="L778">              String[] options5 = {</span>
-                &quot;1. Buy Book&quot;,
-                &quot;2. Sell Book&quot;,
-                &quot;3. Return&quot;,
-                &quot;4. Exit&quot;
-              };
-<span class="fc" id="L784">              printMenu(title5, options5);</span>
-<span class="fc" id="L785">              int choice5 = scanner.nextInt();</span>
-<span class="fc" id="L786">              scanner.nextLine(); </span>
-              
-<span class="pc bpc" id="L788" title="1 of 4 branches missed.">              switch(choice5)</span>
-              {
+<span class="fc" id="L685">            System.out.println(&quot;Wishlist and Trade List Management&quot;);</span>
+<span class="fc" id="L686">            String title3 = &quot;WISHLIST OR TRADE MENU&quot;;</span>
+<span class="fc" id="L687">            String[] options3 = {</span>
+              &quot;1. My Wish List&quot;,
+              &quot;2. My Trade List&quot;,
+              &quot;3. Exit&quot;
+            };
+<span class="fc" id="L692">            printMenu(title3, options3);</span>
+<span class="fc" id="L693">            int choice3 = scanner.nextInt();</span>
+<span class="fc" id="L694">            scanner.nextLine();</span>
+
+<span class="fc bfc" id="L696" title="All 4 branches covered.">            switch (choice3) {</span>
               case 1:
-<span class="fc" id="L791">            	  String title6 = &quot;MY BUY MENU&quot;;</span>
-<span class="fc" id="L792">                  String[] options6 = {</span>
-                    &quot;1. Buy New Book&quot;,
-                    &quot;2. Trade Book List&quot;,
-                    &quot;3. Return&quot;,
-                    &quot;3. Exit&quot;
-                  };
-<span class="fc" id="L798">                  printMenu(title6, options6);</span>
-<span class="fc" id="L799">                  int choice6 = scanner.nextInt();</span>
-<span class="fc" id="L800">                  scanner.nextLine(); </span>
-                  
-<span class="fc bfc" id="L802" title="All 4 branches covered.">                  switch(choice6)</span>
-                  {
+<span class="fc" id="L698">                String title4 = &quot;MY WISHLIST MENU&quot;;</span>
+<span class="fc" id="L699">                String[] options4 = {</span>
+                  &quot;1. My Wish Book Add&quot;,
+                  &quot;2. My Wish Book Delete&quot;,
+                  &quot;3. My Wish Book List&quot;,
+                  &quot;4. My Book List&quot;,
+                  &quot;5. Return&quot;,
+                  &quot;5. Exit&quot;
+                };
+<span class="fc" id="L707">                printMenu(title4, options4);</span>
+<span class="fc" id="L708">                int choice4 = scanner.nextInt();</span>
+<span class="fc" id="L709">                scanner.nextLine();</span>
+
+<span class="fc bfc" id="L711" title="All 6 branches covered.">                switch (choice4) {</span>
                   case 1:
-<span class="fc" id="L805">                	  TradeBuyBookMenu(scanner, System.out);</span>
-<span class="fc" id="L806">                	  break;</span>
+<span class="fc" id="L713">                    WishAddBookMenu(scanner, System.out);</span>
+<span class="fc" id="L714">                    break;</span>
+
                   case 2:
-<span class="fc" id="L808">                	  TradeAllListBookMenu(scanner, System.out);</span>
-<span class="fc" id="L809">                	  break;</span>
+<span class="fc" id="L717">                    WishdeleteBookMenu(scanner, System.out);</span>
+<span class="fc" id="L718">                    break;</span>
+
                   case 3:
-<span class="fc" id="L811">                	  choice = 5;</span>
-<span class="fc" id="L812">                	  break;</span>
+<span class="fc" id="L721">                    WishlistBookMenu(scanner, System.out);</span>
+<span class="fc" id="L722">                    break;</span>
+
                   case 4:
-                	  
-                	  break;
-                 
-                  }
-                  
-<span class="fc" id="L819">            	  break;</span>
-              case 2:
-            	  
-<span class="fc" id="L822">            	  String title7 = &quot;MY SELL MENU&quot;;</span>
-<span class="fc" id="L823">                  String[] options7 = {</span>
-                    &quot;1. Add Sell New Book&quot;,
-                    &quot;2. Delete Sell Book&quot;,
-                    &quot;3. Trade Book List&quot;,
-                    &quot;4. My Trade Book List&quot;,
-                    &quot;5. Return&quot;,
-                    &quot;6. Exit&quot;
-                  };
-<span class="fc" id="L831">                  printMenu(title7, options7);</span>
-<span class="fc" id="L832">                  int choice7 = scanner.nextInt();</span>
-<span class="fc" id="L833">                  scanner.nextLine(); </span>
-                  
-<span class="pc bpc" id="L835" title="1 of 7 branches missed.">                  switch(choice7)</span>
-                  {
-                  case 1:
-<span class="fc" id="L838">                	  TradeAddBookMenu(scanner, System.out);</span>
-<span class="fc" id="L839">                	  break;</span>
-                  case 2:
-<span class="fc" id="L841">                	  TradedeleteBookMenu(scanner, System.out);</span>
-<span class="fc" id="L842">                	  break;</span>
-                  case 3:
-<span class="fc" id="L844">                	  TradeAllListBookMenu(scanner, System.out);</span>
-<span class="fc" id="L845">                	  break;</span>
-                  case 4:
-<span class="fc" id="L847">                	  TradeMylistBookMenu(scanner, System.out);</span>
-<span class="fc" id="L848">                	  break;</span>
+<span class="fc" id="L725">                    listBookMenu(scanner, System.out);</span>
+<span class="fc" id="L726">                    break;</span>
+
                   case 5:
-<span class="fc" id="L850">                	  choice = 5;</span>
-<span class="fc" id="L851">                	  break;</span>
+<span class="fc" id="L729">                    choice = 5;</span>
+<span class="fc" id="L730">                    break;</span>
+
                   case 6:
-<span class="fc" id="L853">                	  exit = true;</span>
-                	  break;
-                
-                  }
-<span class="fc" id="L857">            	  break;</span>
+                    break;
+                }
+
+<span class="fc" id="L736">                break;</span>
+
+              case 2:
+<span class="fc" id="L739">                String title5 = &quot;MY TRADE MENU&quot;;</span>
+<span class="fc" id="L740">                String[] options5 = {</span>
+                  &quot;1. Buy Book&quot;,
+                  &quot;2. Sell Book&quot;,
+                  &quot;3. Return&quot;,
+                  &quot;4. Exit&quot;
+                };
+<span class="fc" id="L746">                printMenu(title5, options5);</span>
+<span class="fc" id="L747">                int choice5 = scanner.nextInt();</span>
+<span class="fc" id="L748">                scanner.nextLine();</span>
+
+<span class="pc bpc" id="L750" title="1 of 4 branches missed.">                switch(choice5) {</span>
+                  case 1:
+<span class="fc" id="L752">                    String title6 = &quot;MY BUY MENU&quot;;</span>
+<span class="fc" id="L753">                    String[] options6 = {</span>
+                      &quot;1. Buy New Book&quot;,
+                      &quot;2. Trade Book List&quot;,
+                      &quot;3. Return&quot;,
+                      &quot;3. Exit&quot;
+                    };
+<span class="fc" id="L759">                    printMenu(title6, options6);</span>
+<span class="fc" id="L760">                    int choice6 = scanner.nextInt();</span>
+<span class="fc" id="L761">                    scanner.nextLine();</span>
+
+<span class="fc bfc" id="L763" title="All 4 branches covered.">                    switch(choice6) {</span>
+                      case 1:
+<span class="fc" id="L765">                        TradeBuyBookMenu(scanner, System.out);</span>
+<span class="fc" id="L766">                        break;</span>
+
+                      case 2:
+<span class="fc" id="L769">                        TradeAllListBookMenu(scanner, System.out);</span>
+<span class="fc" id="L770">                        break;</span>
+
+                      case 3:
+<span class="fc" id="L773">                        choice = 5;</span>
+<span class="fc" id="L774">                        break;</span>
+
+                      case 4:
+                        break;
+                    }
+
+<span class="fc" id="L780">                    break;</span>
+
+                  case 2:
+<span class="fc" id="L783">                    String title7 = &quot;MY SELL MENU&quot;;</span>
+<span class="fc" id="L784">                    String[] options7 = {</span>
+                      &quot;1. Add Sell New Book&quot;,
+                      &quot;2. Delete Sell Book&quot;,
+                      &quot;3. Trade Book List&quot;,
+                      &quot;4. My Trade Book List&quot;,
+                      &quot;5. Return&quot;,
+                      &quot;6. Exit&quot;
+                    };
+<span class="fc" id="L792">                    printMenu(title7, options7);</span>
+<span class="fc" id="L793">                    int choice7 = scanner.nextInt();</span>
+<span class="fc" id="L794">                    scanner.nextLine();</span>
+
+<span class="pc bpc" id="L796" title="1 of 7 branches missed.">                    switch(choice7) {</span>
+                      case 1:
+<span class="fc" id="L798">                        TradeAddBookMenu(scanner, System.out);</span>
+<span class="fc" id="L799">                        break;</span>
+
+                      case 2:
+<span class="fc" id="L802">                        TradedeleteBookMenu(scanner, System.out);</span>
+<span class="fc" id="L803">                        break;</span>
+
+                      case 3:
+<span class="fc" id="L806">                        TradeAllListBookMenu(scanner, System.out);</span>
+<span class="fc" id="L807">                        break;</span>
+
+                      case 4:
+<span class="fc" id="L810">                        TradeMylistBookMenu(scanner, System.out);</span>
+<span class="fc" id="L811">                        break;</span>
+
+                      case 5:
+<span class="fc" id="L814">                        choice = 5;</span>
+<span class="fc" id="L815">                        break;</span>
+
+                      case 6:
+<span class="fc" id="L818">                        exit = true;</span>
+                        break;
+                    }
+
+<span class="fc" id="L822">                    break;</span>
+
+                  case 3:
+<span class="fc" id="L825">                    choice = 5;</span>
+                    break;
+                }
+
+<span class="fc" id="L829">                break;</span>
+
               case 3:
-<span class="fc" id="L859">            	  choice = 5;</span>
-            	  break;
-        
-              }
-              
-<span class="fc" id="L864">        	  break;</span>
-            
-          case 3:
-<span class="fc" id="L867">        	  choice = 5;</span>
-        	  break;
-       
-          }
-          
+<span class="fc" id="L832">                choice = 5;</span>
+                break;
+            }
 
-<span class="fc" id="L873">          break;</span>
+<span class="fc" id="L836">            break;</span>
 
-        case 3:
-<span class="fc" id="L876">          System.out.println(&quot;Comic Book Events and Conventions&quot;);</span>
-          
-<span class="fc" id="L878">          String title8 = &quot;MY EVENT MENU&quot;;</span>
-<span class="fc" id="L879">          String[] options8 = {</span>
-            &quot;1. Add My Event&quot;,
-            &quot;2. Sell My Event&quot;,
-            &quot;3. Update My Event&quot;,
-            &quot;4. My Event List&quot;,
-            &quot;5. All Event List&quot;,
-            &quot;6. Return&quot;,
-            &quot;7. Exit&quot;
-          };
-<span class="fc" id="L888">          printMenu(title8, options8);</span>
-<span class="fc" id="L889">          int choice8 = scanner.nextInt();</span>
-<span class="fc" id="L890">          scanner.nextLine(); </span>
-          
-<span class="fc bfc" id="L892" title="All 7 branches covered.">          switch(choice8)</span>
-          {
-          case 1:
-<span class="fc" id="L895">        	  EventAddBookMenu(scanner, System.out);</span>
-<span class="fc" id="L896">        	  break;</span>
-          case 2:
-<span class="fc" id="L898">        	  EventdeleteBookMenu(scanner, System.out);</span>
-<span class="fc" id="L899">        	  break;</span>
           case 3:
-<span class="fc" id="L901">        	  EventupdateBookMenu(scanner, System.out);</span>
-<span class="fc" id="L902">        	  break;</span>
+<span class="fc" id="L839">            System.out.println(&quot;Comic Book Events and Conventions&quot;);</span>
+<span class="fc" id="L840">            String title8 = &quot;MY EVENT MENU&quot;;</span>
+<span class="fc" id="L841">            String[] options8 = {</span>
+              &quot;1. Add My Event&quot;,
+              &quot;2. Sell My Event&quot;,
+              &quot;3. Update My Event&quot;,
+              &quot;4. My Event List&quot;,
+              &quot;5. All Event List&quot;,
+              &quot;6. Return&quot;,
+              &quot;7. Exit&quot;
+            };
+<span class="fc" id="L850">            printMenu(title8, options8);</span>
+<span class="fc" id="L851">            int choice8 = scanner.nextInt();</span>
+<span class="fc" id="L852">            scanner.nextLine();</span>
+
+<span class="fc bfc" id="L854" title="All 7 branches covered.">            switch(choice8) {</span>
+              case 1:
+<span class="fc" id="L856">                EventAddBookMenu(scanner, System.out);</span>
+<span class="fc" id="L857">                break;</span>
+
+              case 2:
+<span class="fc" id="L860">                EventdeleteBookMenu(scanner, System.out);</span>
+<span class="fc" id="L861">                break;</span>
+
+              case 3:
+<span class="fc" id="L864">                EventupdateBookMenu(scanner, System.out);</span>
+<span class="fc" id="L865">                break;</span>
+
+              case 4:
+<span class="fc" id="L868">                EventlistBookMenu(scanner, System.out);</span>
+<span class="fc" id="L869">                break;</span>
+
+              case 5:
+<span class="fc" id="L872">                EventlistAllBookMenu(scanner, System.out);</span>
+<span class="fc" id="L873">                break;</span>
+
+              case 6:
+<span class="fc" id="L876">                choice = 5;</span>
+<span class="fc" id="L877">                break;</span>
+
+              case 7:
+                break;
+            }
+
+<span class="fc" id="L883">            break;</span>
+
           case 4:
-<span class="fc" id="L904">        	  EventlistBookMenu(scanner, System.out);</span>
-<span class="fc" id="L905">        	  break;</span>
-          case 5:
-<span class="fc" id="L907">        	  EventlistAllBookMenu(scanner, System.out);</span>
-<span class="fc" id="L908">        	  break;</span>
-          case 6:
-<span class="fc" id="L910">        	  choice = 5;</span>
-<span class="fc" id="L911">        	  break;</span>
-          case 7:
-        	  break;
-          
-          }
-<span class="fc" id="L916">          break;</span>
-          
-        case 4:
-<span class="fc" id="L919">      	  String title9 = &quot;MY CREDIT SCORE MENU&quot;;</span>
-<span class="fc" id="L920">            String[] options9 = {</span>
+<span class="fc" id="L886">            String title9 = &quot;MY CREDIT SCORE MENU&quot;;</span>
+<span class="fc" id="L887">            String[] options9 = {</span>
               &quot;1. Buy Credit Score&quot;,
               &quot;2. Exit&quot;
             };
-<span class="fc" id="L924">            printMenu(title9, options9);</span>
-<span class="fc" id="L925">            int choice9 = scanner.nextInt();</span>
-<span class="fc" id="L926">            scanner.nextLine(); </span>
-            
-<span class="pc bpc" id="L928" title="1 of 3 branches missed.">            switch(choice9)</span>
-            {
-            case 1:
-<span class="fc" id="L931">          	  CreditBuyScoreMenu(scanner, System.out);</span>
-          	  
-<span class="fc" id="L933">          	  break;</span>
-            case 2:
-<span class="fc" id="L935">          	 choice = 5;</span>
-          	  break;
+<span class="fc" id="L891">            printMenu(title9, options9);</span>
+<span class="fc" id="L892">            int choice9 = scanner.nextInt();</span>
+<span class="fc" id="L893">            scanner.nextLine();</span>
+
+<span class="pc bpc" id="L895" title="1 of 3 branches missed.">            switch(choice9) {</span>
+              case 1:
+<span class="fc" id="L897">                CreditBuyScoreMenu(scanner, System.out);</span>
+<span class="fc" id="L898">                break;</span>
+
+              case 2:
+<span class="fc" id="L901">                choice = 5;</span>
+                break;
             }
-            
-      	  
-<span class="fc" id="L940">      	  break;</span>
 
-        case 5:
-    
-        	//System.exit(0);
-        	//return 0;
-<span class="fc" id="L946">        	return 0;</span>
-        
-      	}
+<span class="fc" id="L905">            break;</span>
+
+          case 5:
+            //System.exit(0);
+            //return 0;
+<span class="fc" id="L910">            return 0;</span>
+        }
       }
-<span class="nc" id="L950">    }</span>
+<span class="nc" id="L913">    }</span>
 
-<span class="nc" id="L952">    scanner.close(); </span>
-<span class="nc" id="L953">    return 0;</span>
+<span class="nc" id="L915">    scanner.close();</span>
+<span class="nc" id="L916">    return 0;</span>
   }
 
   /**
    * Returns the login name of the current user.
-   * 
+   *
    * @return The login name of the current user.
    */
   public static String getLoginName() {
-<span class="fc" id="L962">      return LoginName;</span>
+<span class="fc" id="L925">    return LoginName;</span>
   }
 
   /**
    * Sets the login name of the current user.
-   * 
+   *
    * @param loginName The login name to be set.
    */
   public static void setLoginName(String loginName) {
-<span class="fc" id="L971">      LoginName = loginName;</span>
-<span class="fc" id="L972">  }</span>
+<span class="fc" id="L934">    LoginName = loginName;</span>
+<span class="fc" id="L935">  }</span>
 
   /**
    * Returns the wallet balance of the current user.
-   * 
+   *
    * @return The wallet balance of the current user.
    */
   public static int getWallet() {
-<span class="fc" id="L980">      return LoginWallet;</span>
+<span class="fc" id="L943">    return LoginWallet;</span>
   }
 
   /**
    * Sets the wallet balance of the current user.
-   * 
+   *
    * @param loginWallet The wallet balance to be set.
    */
   public static void setWallet(int loginWallet) {
-<span class="fc" id="L989">      LoginWallet = loginWallet;</span>
-<span class="fc" id="L990">  }</span>
+<span class="fc" id="L952">    LoginWallet = loginWallet;</span>
+<span class="fc" id="L953">  }</span>
 
 
 

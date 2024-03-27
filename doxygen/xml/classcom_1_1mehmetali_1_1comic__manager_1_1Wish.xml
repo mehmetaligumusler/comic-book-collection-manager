@@ -168,7 +168,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="48" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="48" bodyend="50"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae16ff49bc0e8293cb87dd8b4286d4994" compoundref="WishManager_8java" startline="61" endline="74">com.mehmetali.comic_manager.WishManager.AddBook</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae16ff49bc0e8293cb87dd8b4286d4994" compoundref="WishManager_8java" startline="61" endline="73">com.mehmetali.comic_manager.WishManager.AddBook</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a95191ea0d61bfee5d2dc2f561fcc0c6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -214,7 +214,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="66" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="66" bodyend="68"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae16ff49bc0e8293cb87dd8b4286d4994" compoundref="WishManager_8java" startline="61" endline="74">com.mehmetali.comic_manager.WishManager.AddBook</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae16ff49bc0e8293cb87dd8b4286d4994" compoundref="WishManager_8java" startline="61" endline="73">com.mehmetali.comic_manager.WishManager.AddBook</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1aa816b2b2887f7e1c8dd7888d9356d9b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
