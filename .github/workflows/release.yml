@@ -71,7 +71,7 @@ jobs:
           mkdir -p $currentDir/target/site/coveragereport
         working-directory: ./comic_manager_app
 
-       - name: Check Test Coverage
+            - name: Check Test Coverage
         run: |
           # Parse the JaCoCo XML report and check coverage percentage
           covered=$(xmllint --xpath "string(//counter[@type='INSTRUCTION']/@covered)" target/site/jacoco/jacoco.xml)
