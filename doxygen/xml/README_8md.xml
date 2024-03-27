@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Comic<sp/>Book<sp/>Manager<sp/>Application</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Overview</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>Comic<sp/>Book<sp/>Manager<sp/>application<sp/>is<sp/>a<sp/>software<sp/>tool<sp/>designed<sp/>to<sp/>assist<sp/>users<sp/>in<sp/>cataloging<sp/>and<sp/>managing<sp/>their<sp/>comic<sp/>book<sp/>collections.<sp/>With<sp/>this<sp/>application,<sp/>users<sp/>can<sp/>easily<sp/>organize<sp/>their<sp/>comic<sp/>books,<sp/>track<sp/>their<sp/>wishlists,<sp/>manage<sp/>trade<sp/>lists,<sp/>and<sp/>stay<sp/>updated<sp/>on<sp/>comic<sp/>book<sp/>events<sp/>and<sp/>conventions.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Releases</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[![GitHub<sp/>release<sp/>badge](https://badgen.net/github/release/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java)](https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java/releases/latest)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Platforms</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Ubuntu<sp/>badge](assets/badge-ubuntu.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![macOS<sp/>badge](assets/badge-macos.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Windows<sp/>badge](assets/badge-windows.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Test<sp/>Coverage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Release](https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java/actions/workflows/release.yml/badge.svg)](https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java/actions/workflows/release.yml)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Coverage**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![All](assets/badge_combined.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Branch<sp/>Coverage**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Branch<sp/>Coverage](assets/badge_branchcoverage.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Line<sp/>Coverage**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Line<sp/>Coverage](assets/badge_linecoverage.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Method<sp/>Coverage**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Method<sp/>Coverage](assets/badge_methodcoverage.svg)</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

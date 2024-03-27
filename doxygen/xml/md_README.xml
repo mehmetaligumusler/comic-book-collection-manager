@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="md_README" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>Comic Book Manager Application</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="md_README_1autotoc_md1">
+<title>Overview</title>
+<para>The Comic Book Manager application is a software tool designed to assist users in cataloging and managing their comic book collections. With this application, users can easily organize their comic books, track their wishlists, manage trade lists, and stay updated on comic book events and conventions.</para>
+<sect2 id="md_README_1autotoc_md2">
+<title>Releases</title>
+<para><itemizedlist>
+<listitem><para><ulink url="https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java/releases/latest"><image type="html" name="https://badgen.net/github/release/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java" alt="GitHub release badge" inline="yes"></image>
+</ulink></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md_README_1autotoc_md3">
+<title>Platforms</title>
+<para><itemizedlist>
+<listitem><para><image type="html" name="assets/badge-ubuntu.svg" alt="Ubuntu badge" inline="yes"></image>
+</para>
+</listitem><listitem><para><image type="html" name="assets/badge-macos.svg" alt="macOS badge" inline="yes"></image>
+</para>
+</listitem><listitem><para><image type="html" name="assets/badge-windows.svg" alt="Windows badge" inline="yes"></image>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md_README_1autotoc_md4">
+<title>Test Coverage</title>
+<para><ulink url="https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java/actions/workflows/release.yml"><image type="html" name="https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java/actions/workflows/release.yml/badge.svg" alt="Release" inline="yes"></image>
+</ulink></para>
+<para><bold>Coverage</bold></para>
+<para><itemizedlist>
+<listitem><para><image type="html" name="assets/badge_combined.svg" alt="All" inline="yes"></image>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Branch Coverage</bold></para>
+<para><itemizedlist>
+<listitem><para><image type="html" name="assets/badge_branchcoverage.svg" alt="Branch Coverage" inline="yes"></image>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Line Coverage</bold></para>
+<para><itemizedlist>
+<listitem><para><image type="html" name="assets/badge_linecoverage.svg" alt="Line Coverage" inline="yes"></image>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Method Coverage</bold></para>
+<para><itemizedlist>
+<listitem><para><image type="html" name="assets/badge_methodcoverage.svg" alt="Method Coverage" inline="yes"></image>
+ </para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

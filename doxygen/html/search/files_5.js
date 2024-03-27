@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['wish_2ejava_145',['Wish.java',['../Wish_8java.html',1,'']]],
-  ['wishmanager_2ejava_146',['WishManager.java',['../WishManager_8java.html',1,'']]]
+  ['user_2ejava_146',['User.java',['../User_8java.html',1,'']]],
+  ['usermanager_2ejava_147',['UserManager.java',['../UserManager_8java.html',1,'']]]
 ];

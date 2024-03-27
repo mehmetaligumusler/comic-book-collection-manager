@@ -257,6 +257,10 @@
   </compound>
   <compound refid="WishManager_8java" kind="file"><name>WishManager.java</name>
   </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="md_README" kind="page"><name>md_README</name>
+  </compound>
   <compound refid="dir_dea29856742d0645b4a08086c0b87104" kind="dir"><name>comic_manager_app/src/main/java/com</name>
   </compound>
   <compound refid="dir_c1109ce587b19de1d466cbec5ba42c73" kind="dir"><name>comic_manager_app/src/main/java/com/mehmetali/comic_manager</name>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['trade_2ejava_141',['Trade.java',['../Trade_8java.html',1,'']]],
-  ['trademanager_2ejava_142',['TradeManager.java',['../TradeManager_8java.html',1,'']]]
+  ['readme_2emd_143',['README.md',['../README_8md.html',1,'']]]
 ];
