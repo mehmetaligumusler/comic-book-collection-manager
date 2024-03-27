@@ -47,7 +47,7 @@ public class TradeManager {
     
     comics.add(comic);
     saveUsersToFile(comics);
-    comicmanager.deleteBookByID(comic.getComicID());
+    //comicmanager.deleteBookByID(comic.getComicID());
     System.out.println("The book has been successfully added to the Trade list.");
     return 0;
   }

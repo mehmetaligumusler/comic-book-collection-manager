@@ -71,7 +71,7 @@ public class Main {
             ex.printStackTrace();
         }
     }
-
+ 
   
   
   public static void main(String[] args) throws IOException {
@@ -255,10 +255,11 @@ public class Main {
     
     int pagenumber = comicmanager.getBookPageNumberByID(bookId);
     String title = comicmanager.getBookTitleByID(bookId);
-    int value = comicmanager.getBookPageNumberByID(bookId);
+    int value = comicmanager.getBookValueByID(bookId);
     
     Trade newUser = new Trade(bookId, title,pagenumber,LoginName,value);
     trademanager.AddTrade(newUser);
+    comicmanager.deleteBookByID(bookId);
     return 0;
   }
   
