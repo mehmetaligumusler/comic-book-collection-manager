@@ -1,4 +1,8 @@
+/**
+ * The com.mehmetali.comic_manager package contains classes related to the Comic Manager application.
+ */
 package com.mehmetali.comic_manager;
+
 
 import java.io.*;
 import java.util.ArrayList;
@@ -8,13 +12,18 @@ import java.util.List;
  * The TradeManager class manages the trading of comic books.
  * It handles adding, listing, deleting, and buying/selling comic books.
  *
+ * This class manages the list of trades and provides methods for managing trade operations.
+ *
  * @author mehmetali
+ * @version 1.0
  */
 public class TradeManager {
-  private List<Trade> comics;
-  private static final String Trade_FILE_PATH = "trade.dat";
-  private static final BookManager comicmanager = new BookManager();
-  private static final UserManager usermanager = new UserManager();
+  private List<Trade> comics; /**< The list of trades managed by the TradeManager. */
+  private static final String Trade_FILE_PATH = "trade.dat"; /**< The file path where the trade data is stored. */
+  private static final BookManager comicmanager = new BookManager(); /**< The instance of BookManager for managing comic books. */
+  private static final UserManager usermanager = new UserManager(); /**< The instance of UserManager for managing users. */
+
+
 
   /**
    * Constructs a TradeManager object.
@@ -31,24 +40,25 @@ public class TradeManager {
    * @param comic The comic book to add to the trade list.
    * @return The title of the comic book if added successfully, null otherwise.
    */
-  public String AddTrade(Trade comic) {
-    if (comicmanager.isBookIDAvailable(comic.getComicID())) {
-      System.out.println("No such book found.");
-      return null;
-    }
+  public int AddTrade(Trade comic) {
+    
 
     if (!isTradeNameAvailable(comic.getTitle())) {
       System.out.println("This Book name is already in use. Please choose a different book name.");
-      return null;
+      return -1;
     }
 
-    String Name = comicmanager.getBookTitleByID(comic.getComicID());
-    comic.setTitle(Name);
+    /*
+    comic.setTitle(comicmanager.getBookTitleByID(comic.getComicID()));
+    comic.setpageNumber(comicmanager.getBookPageNumberByID(comic.getComicID()));
+    comic.setValue(comicmanager.getBookValueByID(comic.getComicID()));
+    */
+    
     comics.add(comic);
     saveUsersToFile(comics);
-    comicmanager.deleteBookByID(comic.getComicID());
+    //comicmanager.deleteBookByID(comic.getComicID());
     System.out.println("The book has been successfully added to the Trade list.");
-    return comic.getTitle();
+    return 0;
   }
 
   /**
@@ -150,24 +160,18 @@ public class TradeManager {
 
     for (Trade comic : comics) {
       if (comic.getComicID() == TradeID) {
-        Main main = new Main();
-
-        if(Main.LoginWallet >= comic.getValue()) {
-          String oldUser = comic.getuser();
-          System.out.print(oldUser);
-          comics.remove(comic);
-          saveUsersToFile(comics);
-          System.out.println("Book deleted successfully.");
-          found = true;
-          Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());
-          comicmanager.AddBook(newUser);
-          usermanager.creditSellscore(Main.LoginName, comic.getValue());
-          usermanager.creditbuyscore(oldUser, comic.getValue());
-          return 0;
-        } else {
-          System.out.println("Credit Score Insufficient! Could not purchase.");
-          return -1;
-        }
+        
+      String oldUser = comic.getuser();
+      System.out.print(oldUser);
+      comics.remove(comic);
+      saveUsersToFile(comics);
+      System.out.println("Book deleted successfully.");
+      found = true;
+      Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());
+      comicmanager.AddBook(newUser);
+      usermanager.creditSellscore(Main.LoginName, comic.getValue());
+      usermanager.creditbuyscore(oldUser, comic.getValue());
+      return 0;
       }
     }
 
@@ -194,6 +198,23 @@ public class TradeManager {
 
     return true;
   }
+  
+  /**
+   * Returns the value of the book with the specified ID.
+   * 
+   * @param bookID The ID of the book.
+   * @return The value of the book with the specified ID, or 0 if the book is not found.
+   */
+  public int getBookValueByID(int bookID) {
+      for (Trade comic : comics) {
+          if (comic.getComicID() == bookID) {
+              return comic.getValue();
+          }
+      }
+
+      return 0;
+  }
+
 
   /**
    * Checks if a trade ID is available (not already used).

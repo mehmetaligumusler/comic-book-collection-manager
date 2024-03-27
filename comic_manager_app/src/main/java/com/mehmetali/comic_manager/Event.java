@@ -1,4 +1,8 @@
+/**
+ * The com.mehmetali.comic_manager package contains classes related to the Comic Manager application.
+ */
 package com.mehmetali.comic_manager;
+
 
 import java.io.Serializable;
 
@@ -6,14 +10,17 @@ import java.io.Serializable;
  * The Event class represents an event in the comic manager application.
  * It contains information such as event ID, title, content, and user.
  *
+ * This class implements the Serializable interface to support object serialization.
+ *
  * @author mehmetali
+ * @version 1.0
  */
 @SuppressWarnings("serial")
 public class Event implements Serializable {
-  private int eventID;
-  private String title;
-  private String content;
-  private String user;
+  private int eventID; /**< The unique ID of the event. */
+  private String title; /**< The title of the event. */
+  private String content; /**< The content of the event. */
+  private String user; /**< The user associated with the event. */
 
 
   /**

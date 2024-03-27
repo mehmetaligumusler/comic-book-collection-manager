@@ -1,3 +1,6 @@
+/**
+ * The com.mehmetali.comic_manager package contains classes related to the Comic Manager application.
+ */
 package com.mehmetali.comic_manager;
 
 import java.io.Serializable;
@@ -6,15 +9,18 @@ import java.io.Serializable;
  * The Trade class represents a comic book available for trading.
  * It implements the Serializable interface to support serialization.
  *
+ * This class contains information such as comic ID, title, page number, user, and value.
+ *
  * @author mehmetali
+ * @version 1.0
  */
 @SuppressWarnings("serial")
 public class Trade implements Serializable {
-  private int comicID;
-  private String title;
-  private int pageNumber;
-  private String user;
-  private int value;
+  private int comicID; /**< The unique ID of the comic book available for trading. */
+  private String title; /**< The title of the comic book available for trading. */
+  private int pageNumber; /**< The page number of the comic book available for trading. */
+  private String user; /**< The user associated with the comic book available for trading. */
+  private int value; /**< The value of the comic book available for trading. */
 
   /**
    * Constructs a Trade object with the specified attributes.

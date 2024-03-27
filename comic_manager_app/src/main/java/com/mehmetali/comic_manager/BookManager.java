@@ -1,4 +1,8 @@
+/**
+ * com.mehmetali.comic_manager is a group of bar utils for operating on foo things.
+ */
 package com.mehmetali.comic_manager;
+
 
 import java.io.*;
 import java.util.ArrayList;
@@ -12,14 +16,18 @@ import java.util.List;
  * @author mehmetali
  */
 public class BookManager {
-  private List<Book> comics;
-  private static final String BOOK_FILE_PATH = "books.dat";
+  //private List<Book> comics;
+  private static final String BOOK_FILE_PATH = "books.dat"; /**< The file path where the book data is stored. */
+  private static final BookManager comicmanager = new BookManager(); /**< Instance of the BookManager class. */
+
+  List<Book> comics = readUsersFromFile(BOOK_FILE_PATH);
+  int result = saveUsersToFile(comics, BOOK_FILE_PATH);
 
   /**
    * Constructs a BookManager object and initializes the list of comic books by reading from a file.
    */
   public BookManager() {
-    this.comics = readUsersFromFile();
+    this.comics = readUsersFromFile(BOOK_FILE_PATH);
   }
 
 
@@ -35,7 +43,8 @@ public class BookManager {
     }
 
     comics.add(comic);
-    saveUsersToFile(comics);
+    saveUsersToFile(comics,BOOK_FILE_PATH);
+    readUsersFromFile(BOOK_FILE_PATH);
     return comic.getTitle();
   }
 
@@ -45,7 +54,7 @@ public class BookManager {
    * @return  The number of comic books in the collection.
    */
   public int listBooks() {
-    this.comics = readUsersFromFile();
+    this.comics = readUsersFromFile(BOOK_FILE_PATH);
 
     if (comics.isEmpty()) {
       System.out.println("No books found to list.");
@@ -73,8 +82,9 @@ public class BookManager {
    * @return        The number of comic books satisfying the condition.
    */
   public int listBooksByCondition(String condition) {
-    this.comics = readUsersFromFile();
-
+    this.comics = readUsersFromFile(BOOK_FILE_PATH);
+    
+   
     if (comics.isEmpty()) {
       System.out.println("No books found to list..");
       return 0;
@@ -108,7 +118,7 @@ public class BookManager {
     for (Book comic : comics) {
       if (comic.getComicID() == bookID) {
         comics.remove(comic);
-        saveUsersToFile(comics);
+        saveUsersToFile(comics,BOOK_FILE_PATH);
         System.out.println("Book deleted successfully.");
         found = true;
         return 0;
@@ -141,7 +151,7 @@ public class BookManager {
         comic.setTitle(newTitle);
         comic.setpageNumber(PageNumber);
         comic.setValue(value);
-        saveUsersToFile(comics);
+        saveUsersToFile(comics,BOOK_FILE_PATH);
         System.out.println("The book title has been successfully updated.");
         found = true;
         return 0;
@@ -200,51 +210,91 @@ public class BookManager {
 
     return null;
   }
+  
+  
+  /**
+   * Retrieves the page number of the book with the specified ID.
+   * 
+   * @param bookID The ID of the book.
+   * @return The page number of the book with the specified ID, or 0 if the book is not found.
+   */
+  public int getBookPageNumberByID(int bookID) {
+      for (Book comic : comics) {
+          if (comic.getComicID() == bookID) {
+              return comic.getpageNumber();
+          }
+      }
+      return 0;
+  }
 
   /**
-   * Reads comic books from a file and returns them as a list.
-   * @return A list of comic books read from the file.
+   * Retrieves the value of the book with the specified ID.
+   * 
+   * @param bookID The ID of the book.
+   * @return The value of the book with the specified ID, or 0 if the book is not found.
    */
-  private List<Book> readUsersFromFile() {
-    File file = new File(BOOK_FILE_PATH);
+  public int getBookValueByID(int bookID) {
+      for (Book comic : comics) {
+          if (comic.getComicID() == bookID) {
+              return comic.getValue();
+          }
+      }
+      return 0;
+  }
 
-    if (!file.exists()) {
-      try {
-        if (file.createNewFile()) {
-          System.out.println("books.dat file has been created.");
-        } else {
-          System.out.println("books.dat file already exists.");
-        }
-      } catch (IOException e) {
-        System.out.println("File creation error: " + e.getMessage());
+  
+  
+  
+  /**
+   * Reads a list of Book objects from a file.
+   * 
+   * @param filePath The path of the file to read from.
+   * @return The list of Book objects read from the file, or an empty list if the file doesn't exist or cannot be read.
+   */
+  private List<Book> readUsersFromFile(String filePath) {
+      List<Book> list = new ArrayList<>();
+      File file = new File(filePath);
+
+      if (!file.exists()) {
+          try {
+              if (file.createNewFile()) {
+                  System.out.println(filePath + " file has been created.");
+              } else {
+                  System.out.println(filePath + " file already exists.");
+              }
+          } catch (IOException e) {
+              System.out.println("File creation error: " + e.getMessage());
+          }
+      } else {
+          try (FileInputStream fileIn = new FileInputStream(filePath);
+               ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
+              list = (List<Book>) objectIn.readObject();
+          } catch (IOException | ClassNotFoundException e) {
+              System.out.println("File read error: " + e.getMessage());
+          }
       }
 
-      return new ArrayList<>();
-    }
-
-    try (FileInputStream fileIn = new FileInputStream(BOOK_FILE_PATH);
-           ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
-      return (List<Book>) objectIn.readObject();
-    } catch (IOException | ClassNotFoundException e) {
-      return new ArrayList<>();
-    }
+      return list;
   }
 
   /**
-   * Writes comic books to a file.
-   * @param comics2 The list of comic books to be written to the file.
-   * @return 0 if the comic books are successfully written to the file, -1 otherwise.
+   * Writes a list of Book objects to a file.
+   * 
+   * @param list The list of Book objects to be written to the file.
+   * @param filePath The path of the file to write to.
+   * @return Returns 0 upon successful writing to the file, or -1 if an error occurs.
    */
-  private int saveUsersToFile(List<Book> comics2) {
-    try (FileOutputStream fileOut = new FileOutputStream(BOOK_FILE_PATH);
+  private int saveUsersToFile(List<Book> list, String filePath) {
+      try (FileOutputStream fileOut = new FileOutputStream(filePath);
            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
-      objectOut.writeObject(comics2);
-      return 0;
-    } catch (IOException e) {
-      System.out.println("File write error: " + e.getMessage());
-      return -1;
-    }
+          objectOut.writeObject(list);
+          return 0;
+      } catch (IOException e) {
+          System.out.println("File write error: " + e.getMessage());
+          return -1;
+      }
   }
+
 
 
 }

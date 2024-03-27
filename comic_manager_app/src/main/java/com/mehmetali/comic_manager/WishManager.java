@@ -1,26 +1,54 @@
+/**
+ * The com.mehmetali.comic_manager package contains classes related to the Comic Manager application.
+ */
 package com.mehmetali.comic_manager;
+
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mehmetali.comic_manager.Book;
+//import com.mehmetali.comic_manager.Book;
 
 /**
  * Manages the wish list of comics.
  *
+ * This class provides functionalities to manage the wish list of comics,
+ * including reading from and writing to a file, and interacting with the BookManager.
+ *
+ * The class also includes an interface for writing wish data to a file.
+ *
  * @author mehmetali
+ * @version 1.0
  */
 public class WishManager {
-  private List<Wish> comics;
-  private static final String WISH_FILE_PATH = "wish.dat";
-  private static final BookManager comicmanager = new BookManager();
+
+  private static final String WISH_FILE_PATH = "wish.dat"; /**< The file path where wish data is stored. */
+  private static final BookManager comicmanager = new BookManager(); /**< The instance of BookManager for managing comic books. */
+  private List<Wish> comics = readFromFile(WISH_FILE_PATH); /**< The list of wishes loaded from the wish file. */
+  private int result = writeToFile(comics, WISH_FILE_PATH); /**< The result of writing wish data to the wish file. */
+
+  /**
+   * Interface for writing wish data to a file.
+   */
+  public interface WishWriter {
+    /**
+     * Saves wish data to a file.
+     *
+     * @param wishes The list of wishes to be saved to the file.
+     * @return An integer representing the result of the operation.
+     */
+    int saveUsersToFile2(List<Wish> wishes);
+  }
+
+
+
 
   /**
    * Constructs a WishManager object and reads wish list from file.
    */
   public WishManager() {
-    this.comics = readUsersFromFile();
+    this.comics = readFromFile(WISH_FILE_PATH);
   }
 
 
@@ -30,23 +58,19 @@ public class WishManager {
    * @param comic the wish to add
    * @return the title of the added wish
    */
-  public String AddBook(Wish comic) {
-    if (comicmanager.isBookIDAvailable(comic.getComicID())) {
-      System.out.println("No such book found.");
-      return null;
-    }
-
+  public int AddBook(Wish comic) {
+	  
     if (!isBookNameAvailable(comic.getTitle())) {
       System.out.println("This Book name is already in use. Please choose a different book title.");
-      return null;
+      return -1;
     }
 
-    String Name = comicmanager.getBookTitleByID(comic.getComicID());
-    comic.setTitle(Name);
+    comicmanager.getBookTitleByID(comic.getComicID());
+    //comic.setTitle(Name); 
     comics.add(comic);
-    saveUsersToFile(comics);
+    writeToFile(comics, WISH_FILE_PATH);
     System.out.println("The book has been successfully added to the wish list.");
-    return comic.getTitle();
+    return 0;
   }
 
   /**
@@ -55,7 +79,7 @@ public class WishManager {
    * @return the number of books listed
    */
   public int listBooks() {
-    this.comics = readUsersFromFile();
+    this.comics = readFromFile(WISH_FILE_PATH);
 
     if (comics.isEmpty()) {
       System.out.println("No books found to list.");
@@ -83,7 +107,7 @@ public class WishManager {
    * @return the number of books listed
    */
   public int listBooksByUser(String User) {
-    this.comics = readUsersFromFile();
+    this.comics = readFromFile(WISH_FILE_PATH);
 
     if (comics.isEmpty()) {
       System.out.println("No books found to list.");
@@ -118,7 +142,7 @@ public class WishManager {
     for (Wish comic : comics) {
       if (comic.getComicID() == bookID) {
         comics.remove(comic);
-        saveUsersToFile(comics);
+        writeToFile(comics, WISH_FILE_PATH);
         System.out.println("Book deleted successfully.");
         found = true;
         return 0;
@@ -133,33 +157,9 @@ public class WishManager {
     return -1;
   }
 
-  /**
-   * Updates the title of a book wish in the wish list by its ID.
-   *
-   * @param bookID the ID of the book to update
-   * @param newTitle the new title to set
-   * @return 0 if the title is updated successfully, -1 otherwise
-   */
-  public int updateBookTitleByID(int bookID, String newTitle) {
-    boolean found = false;
+  
 
-    for (Wish comic : comics) {
-      if (comic.getComicID() == bookID) {
-        comic.setTitle(newTitle);
-        saveUsersToFile(comics);
-        System.out.println("Book title updated successfully.");
-        found = true;
-        return 0;
-      }
-    }
-
-    if (!found) {
-      System.out.println("No book matching book ID was found.");
-      return -1;
-    }
-
-    return -1;
-  }
+  
 
 
 
@@ -178,53 +178,62 @@ public class WishManager {
 
     return true;
   }
-
+  
   /**
-   * Reads the wish list from the file.
-   * If the file does not exist, it creates a new one and returns an empty list.
-   *
-   * @return the list of wishes read from the file or an empty list if the file does not exist or an error occurs
+   * Reads a list of Wish objects from a file.
+   * 
+   * @param filePath The path of the file to read from.
+   * @return The list of Wish objects read from the file, or an empty list if the file doesn't exist or cannot be read.
    */
-  private List<Wish> readUsersFromFile() {
-    File file = new File(WISH_FILE_PATH);
+  private List<Wish> readFromFile(String filePath) {
+	    List<Wish> list = new ArrayList<>();
+	    File file = new File(filePath);
 
-    if (!file.exists()) {
-      try {
-        if (file.createNewFile()) {
-          System.out.println("books.dat file has been created.");
-        } else {
-          System.out.println("books.dat file already exists.");
-        }
-      } catch (IOException e) {
-        System.out.println("File creation error: " + e.getMessage());
-      }
+	    if (!file.exists()) {
+	        try {
+	            if (file.createNewFile()) {
+	                System.out.println(filePath + " file has been created.");
+	            } else {
+	                System.out.println(filePath + " file already exists.");
+	            }
+	        } catch (IOException e) {
+	            System.out.println("File creation error: " + e.getMessage());
+	        }
+	    } else {
+	        try (FileInputStream fileIn = new FileInputStream(filePath);
+	             ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
+	            list = (List<Wish>) objectIn.readObject();
+	        } catch (IOException | ClassNotFoundException e) {
+	            System.out.println("File read error: " + e.getMessage());
+	        }
+	    }
 
-      return new ArrayList<>();
-    }
-
-    try (FileInputStream fileIn = new FileInputStream(WISH_FILE_PATH);
-           ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
-      return (List<Wish>) objectIn.readObject();
-    } catch (IOException | ClassNotFoundException e) {
-      return new ArrayList<>();
-    }
-  }
-
+	    return list;
+	}
+  
   /**
-   * Saves the wish list to the file.
-   *
-   * @param wishes the list of wishes to save
-   * @return 0 if the wishes are saved successfully, -1 otherwise
+   * Writes a list of Wish objects to a file.
+   * 
+   * @param list The list of Wish objects to be written to the file.
+   * @param filePath The path of the file to write to.
+   * @return Returns 0 upon successful writing to the file, or -1 if an error occurs.
    */
-  private int saveUsersToFile(List<Wish> comics2) {
-    try (FileOutputStream fileOut = new FileOutputStream(WISH_FILE_PATH);
-           ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
-      objectOut.writeObject(comics2);
-      return 0;
-    } catch (IOException e) {
-      return -1;
-    }
-  }
+  private int writeToFile(List<Wish> list, String filePath) {
+	    try (FileOutputStream fileOut = new FileOutputStream(filePath);
+	         ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
+	        objectOut.writeObject(list);
+	        return 0;
+	    } catch (IOException e) {
+	        System.out.println("File write error: " + e.getMessage());
+	        return -1;
+	    }
+	}
+
+
+
+
+
+
 
 
 }

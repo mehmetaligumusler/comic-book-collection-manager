@@ -1,19 +1,27 @@
+/**
+ * The com.mehmetali.comic_manager package contains classes related to the Comic Manager application.
+ */
 package com.mehmetali.comic_manager;
+
 
 import java.io.Serializable;
 
 /**
  * Represents a comic wish.
  *
+ * This class represents a wish for a comic book.
+ * It contains information such as comic ID, title, page number, user, and value.
+ *
  * @author mehmetali
+ * @version 1.0
  */
 @SuppressWarnings("serial")
 public class Wish implements Serializable {
-  private int comicID;
-  private String title;
-  private int pageNumber;
-  private String user;
-  private int value;
+  private int comicID; /**< The unique ID of the comic book wished for. */
+  private String title; /**< The title of the comic book wished for. */
+  private int pageNumber; /**< The page number of the comic book wished for. */
+  private String user; /**< The user who made the wish. */
+  private int value; /**< The value of the comic book wished for. */
 
   /**
    * Constructs a Wish object.

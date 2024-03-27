@@ -3,13 +3,16 @@ package com.mehmetali.comic_manager;
 import static org.junit.Assert.*;
 
 import java.io.File;
+import java.io.IOException;
 
 import org.junit.*;
 
 public class TradeManagerTest {
 
-  private TradeManager tradeManager;
+  private TradeManager trademanager;
   private BookManager bookManager;
+  private User<String> user;
+  
 
   public static boolean deleteFile(String filepath) {
     File file = new File(filepath);
@@ -25,99 +28,143 @@ public class TradeManagerTest {
 
   @Before
   public void setUp() throws Exception {
-    tradeManager = new TradeManager();
+	user = new User<>("testUser", "password123", 300);
+	trademanager = new TradeManager();
+    bookManager = new BookManager();
   }
 
   @After
   public void tearDown() throws Exception {
   }
 
-  /*
+
   @Test
-  public void addTradeTest() {
-
-    Book newBook = new Book(1,"Title1", 1, "User", 10);
-      bookManager.AddBook(newBook);
-
-      // Test adding a new trade
-      Trade newTrade = new Trade(1, "Title1", 1, "User", 10);
-      String result = tradeManager.AddTrade(newTrade);
-      assertEquals("Title1", result);
-
-      deleteFile("books.dat");
-      deleteFile("trade.dat");
+  public void addDuplicateBookTest() throws IOException {
+	Book newBook = new Book(8,"Title1", 100, "User", 100);
+	bookManager.AddBook(newBook);
+	
+	
+		
+	Trade trade = new Trade(8,"Title1", 100, "User", 100);
+    int result = trademanager.AddTrade(trade);
+    assertEquals(0, result);
+    deleteFile("books.dat");
+    deleteFile("trade.dat");
   }
-  */
-
+  
   @Test
-  public void addDuplicateTradeTest() {
-    // Test adding a trade with duplicate title
-    Trade existingTrade = new Trade(2, "Title2", 1, "User", 10);
-    tradeManager.AddTrade(existingTrade);
-    Trade newTrade = new Trade(3, "Title2", 2, "User2", 15);
-    String result = tradeManager.AddTrade(newTrade);
-    assertNull(result);
+  public void addDuplicateBookTest_error() throws IOException {
+	Book newBook = new Book(4,"Title1", 100, "User", 100);
+	bookManager.AddBook(newBook);
+	
+	Trade trade = new Trade(4,"Title1", 100, "User", 100);
+    trademanager.AddTrade(trade);
+	
+    int result = trademanager.AddTrade(trade);
+    assertEquals(-1, result);
+    deleteFile("books.dat");
+    deleteFile("trade.dat");
+  }
+  
+  @Test
+  public void ListBookTest() throws IOException {
+	Book newBook = new Book(4,"Title1", 100, "User", 100);
+	bookManager.AddBook(newBook);
+	
+	
+		
+	Trade trade = new Trade(4,"Title1", 100, "User", 100);
+    trademanager.AddTrade(trade);
+    
+    int result = trademanager.listAllTradeList();
+    
+    assertEquals(1, result);
+    deleteFile("books.dat");
+    deleteFile("trade.dat");
+  }
+  
+  @Test
+  public void MyListBookTest() throws IOException {
+	Book newBook = new Book(4,"Title1", 100, "User", 100);
+	bookManager.AddBook(newBook);
+	
+	
+		
+	Trade trade = new Trade(4,"Title1", 100, "User", 100);
+    trademanager.AddTrade(trade);
+    
+    int result = trademanager.listMyTradeList("User");
+    
+    assertEquals(2, result);
+    deleteFile("books.dat");
     deleteFile("trade.dat");
   }
 
+  
   @Test
-  public void listAllTradeListTest() {
-    // Test listing all trades
-    int result = tradeManager.listAllTradeList();
-    assertEquals(0, result); // Assuming no trades exist initially
+  public void DeleteBookTest() throws IOException {
+	Book newBook = new Book(4,"Title1", 100, "User", 100);
+	bookManager.AddBook(newBook);
+	
+	
+		
+	Trade trade = new Trade(4,"Title1", 100, "User", 100);
+    trademanager.AddTrade(trade);
+    
+    int result = trademanager.deleteTradeByID(4);
+    
+    assertEquals(0, result);
+    deleteFile("books.dat");
     deleteFile("trade.dat");
   }
-
+  
   @Test
-  public void listMyTradeListTest() {
-    // Test listing trades by user
-    int result = tradeManager.listMyTradeList("User");
-    assertEquals(0, result); // Assuming no trades exist for user "User" initially
+  public void BuyDuplicateBookTest() throws IOException {
+	Book newBook = new Book(4,"Title1", 100, "User", 100);
+	bookManager.AddBook(newBook);
+	
+	
+		
+	Trade trade = new Trade(4,"Title1", 100, "User", 100);
+    trademanager.AddTrade(trade);
+    
+    int result = trademanager.BuyTradeByID(4);
+    
+    assertEquals(0, result);
+    deleteFile("books.dat");
     deleteFile("trade.dat");
   }
-
-  /*
+  
   @Test
-  public void deleteTradeByIDTest() {
+  public void testIsTradeIDAvailable_WhenIDExists() {
+      TradeManager tradeManager = new TradeManager(); // TradeManager nesnesi oluşturulur veya uygun şekilde elde edilir
 
-    Book newBook = new Book(4,"Title3", 1, "User3", 10);
-      bookManager.AddBook(newBook);
+      // Test durumu için bir Trade oluşturulur ve TradeManager'e eklenir
+      Trade trade = new Trade(1,"Title8", 100, "User", 100);
+      tradeManager.AddTrade(trade);
 
-      Trade existingTrade = new Trade(4, "Title3", 1, "User3", 10);
-      tradeManager.AddTrade(existingTrade);
+      // TradeManager'in isTradeIDAvailable metodunu çağırarak test ederiz
+      boolean result = tradeManager.isTradeIDAvailable(1);
 
-      // Test deleting a trade by ID
-      Trade tradeToDelete = new Trade(4, "Title3", 1, "User3", 10);
-      tradeManager.AddTrade(tradeToDelete);
-
-      int deleteResult = tradeManager.deleteTradeByID(4);
-      assertEquals(0, deleteResult);
-
-      deleteFile("books.dat");
-      deleteFile("trade.dat");
+      // Sonuç kontrol edilir, çünkü ID mevcut olduğu için false dönmeli
+      assertFalse(result);
   }
-  */
 
-  /*
   @Test
-  public void buyTradeByIDTest() {
+  public void testIsTradeIDAvailable_WhenIDNotExists() {
+      TradeManager tradeManager = new TradeManager(); // TradeManager nesnesi oluşturulur veya uygun şekilde elde edilir
 
-    Book newBook = new Book(5,"Title3", 1, "User3", 10);
-      bookManager.AddBook(newBook);
+      // Test durumu için bir Trade oluşturulur ve TradeManager'e eklenir
+      Trade trade = new Trade(4,"Title7", 100, "User", 100);
+      tradeManager.AddTrade(trade);
 
-      Trade existingTrade = new Trade(5, "Title3", 1, "User3", 10);
-      tradeManager.AddTrade(existingTrade);
+      // TradeManager'in isTradeIDAvailable metodunu çağırarak test ederiz
+      boolean result = tradeManager.isTradeIDAvailable(2);
 
-      // Test buying a trade by ID
-      Trade tradeToBuy = new Trade(5, "Title4", 1, "User4", 10);
-      tradeManager.AddTrade(tradeToBuy);
-
-      int buyResult = tradeManager.BuyTradeByID(5);
-      assertEquals(0, buyResult);
-      deleteFile("trade.dat");
-      deleteFile("books.dat");
+      // Sonuç kontrol edilir, çünkü ID mevcut olmadığı için true dönmeli
+      assertTrue(result);
   }
-  */
+ 
 
-  // Add tests for other methods such as isTradeNameAvailable, readUsersFromFile, saveUsersToFile
+  // Add tests for other methods such as isBookNameAvailable, readUsersFromFile, saveUsersToFile
 }

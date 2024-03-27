@@ -1,4 +1,8 @@
+/**
+ * The com.mehmetali.comic_manager package contains classes related to the Comic Manager application.
+ */
 package com.mehmetali.comic_manager;
+
 
 import java.io.*;
 import java.util.ArrayList;
@@ -8,11 +12,16 @@ import java.util.List;
  * The EventManager class manages events in the comic manager application.
  * It provides functionalities to add, list, delete, and update events.
  *
+ * This class manages the list of events and provides methods for managing events.
+ *
  * @author mehmetali
+ * @version 1.0
  */
 public class EventManager {
-  private List<Event> comics;
-  private static final String Event_FILE_PATH = "event.dat";
+  private List<Event> comics; /**< The list of events managed by the EventManager. */
+  private static final String Event_FILE_PATH = "event.dat"; /**< The file path where the event data is stored. */
+
+
 
   /**
    * Constructs an EventManager object.
