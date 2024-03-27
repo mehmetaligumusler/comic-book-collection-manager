@@ -45,13 +45,13 @@ Definition at line 20 of file User\+Manager.\+java.
 
 Constructs a \mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager}{User\+Manager}} and reads users from the file. 
 
-Definition at line 29 of file User\+Manager.\+java.
+Definition at line 28 of file User\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{29                        \{}
-\DoxyCodeLine{30     this.users = readUsersFromFile();}
-\DoxyCodeLine{31   \}}
+\DoxyCodeLine{28                        \{}
+\DoxyCodeLine{29     this.users = readUsersFromFile();}
+\DoxyCodeLine{30   \}}
 
 \end{DoxyCode}
 
@@ -77,31 +77,31 @@ the new wallet balance of the user, or -\/1 if the user is not found
 \end{DoxyReturn}
 
 
-Definition at line 138 of file User\+Manager.\+java.
+Definition at line 137 of file User\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{138                                                          \{}
-\DoxyCodeLine{139     User foundUser = \textcolor{keyword}{null};}
-\DoxyCodeLine{140 }
-\DoxyCodeLine{141     \textcolor{keywordflow}{for} (User user : users) \{}
-\DoxyCodeLine{142       \textcolor{keywordflow}{if} (user.getUsername().equals(username)) \{}
-\DoxyCodeLine{143         foundUser = user;}
-\DoxyCodeLine{144         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{145       \}}
-\DoxyCodeLine{146     \}}
-\DoxyCodeLine{147 }
-\DoxyCodeLine{148     \textcolor{keywordflow}{if} (foundUser == \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{149       System.out.println(\textcolor{stringliteral}{"{}User not found."{}});}
-\DoxyCodeLine{150       \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{151     \}}
-\DoxyCodeLine{152 }
-\DoxyCodeLine{153     \textcolor{keywordtype}{int} currentWallet = foundUser.getWallet();}
-\DoxyCodeLine{154     \textcolor{keywordtype}{int} newWallet = currentWallet + credit;}
-\DoxyCodeLine{155     foundUser.setWallet(newWallet);}
-\DoxyCodeLine{156     saveUsersToFile(users);}
-\DoxyCodeLine{157     \textcolor{keywordflow}{return} newWallet;}
-\DoxyCodeLine{158   \}}
+\DoxyCodeLine{137                                                          \{}
+\DoxyCodeLine{138     User foundUser = \textcolor{keyword}{null};}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140     \textcolor{keywordflow}{for} (User user : users) \{}
+\DoxyCodeLine{141       \textcolor{keywordflow}{if} (user.getUsername().equals(username)) \{}
+\DoxyCodeLine{142         foundUser = user;}
+\DoxyCodeLine{143         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{144       \}}
+\DoxyCodeLine{145     \}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147     \textcolor{keywordflow}{if} (foundUser == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{148       System.out.println(\textcolor{stringliteral}{"{}User not found."{}});}
+\DoxyCodeLine{149       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{150     \}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152     \textcolor{keywordtype}{int} currentWallet = foundUser.getWallet();}
+\DoxyCodeLine{153     \textcolor{keywordtype}{int} newWallet = currentWallet + credit;}
+\DoxyCodeLine{154     foundUser.setWallet(newWallet);}
+\DoxyCodeLine{155     saveUsersToFile(users);}
+\DoxyCodeLine{156     \textcolor{keywordflow}{return} newWallet;}
+\DoxyCodeLine{157   \}}
 
 \end{DoxyCode}
 
@@ -132,31 +132,31 @@ the new wallet balance of the user, or -\/1 if the user is not found
 \end{DoxyReturn}
 
 
-Definition at line 167 of file User\+Manager.\+java.
+Definition at line 166 of file User\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{167                                                           \{}
-\DoxyCodeLine{168     User foundUser = \textcolor{keyword}{null};}
-\DoxyCodeLine{169 }
-\DoxyCodeLine{170     \textcolor{keywordflow}{for} (User user : users) \{}
-\DoxyCodeLine{171       \textcolor{keywordflow}{if} (user.getUsername().equals(username)) \{}
-\DoxyCodeLine{172         foundUser = user;}
-\DoxyCodeLine{173         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{174       \}}
-\DoxyCodeLine{175     \}}
-\DoxyCodeLine{176 }
-\DoxyCodeLine{177     \textcolor{keywordflow}{if} (foundUser == \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{178       System.out.println(\textcolor{stringliteral}{"{}User not found."{}});}
-\DoxyCodeLine{179       \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{180     \}}
-\DoxyCodeLine{181 }
-\DoxyCodeLine{182     \textcolor{keywordtype}{int} currentWallet = foundUser.getWallet();}
-\DoxyCodeLine{183     \textcolor{keywordtype}{int} newWallet = currentWallet -\/ credit;}
-\DoxyCodeLine{184     foundUser.setWallet(newWallet);}
-\DoxyCodeLine{185     saveUsersToFile(users);}
-\DoxyCodeLine{186     \textcolor{keywordflow}{return} newWallet;}
-\DoxyCodeLine{187   \}}
+\DoxyCodeLine{166                                                           \{}
+\DoxyCodeLine{167     User foundUser = \textcolor{keyword}{null};}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169     \textcolor{keywordflow}{for} (User user : users) \{}
+\DoxyCodeLine{170       \textcolor{keywordflow}{if} (user.getUsername().equals(username)) \{}
+\DoxyCodeLine{171         foundUser = user;}
+\DoxyCodeLine{172         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{173       \}}
+\DoxyCodeLine{174     \}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176     \textcolor{keywordflow}{if} (foundUser == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{177       System.out.println(\textcolor{stringliteral}{"{}User not found."{}});}
+\DoxyCodeLine{178       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{179     \}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181     \textcolor{keywordtype}{int} currentWallet = foundUser.getWallet();}
+\DoxyCodeLine{182     \textcolor{keywordtype}{int} newWallet = currentWallet -\/ credit;}
+\DoxyCodeLine{183     foundUser.setWallet(newWallet);}
+\DoxyCodeLine{184     saveUsersToFile(users);}
+\DoxyCodeLine{185     \textcolor{keywordflow}{return} newWallet;}
+\DoxyCodeLine{186   \}}
 
 \end{DoxyCode}
 
@@ -185,19 +185,19 @@ the wallet balance of the user, or -\/1 if the user is not found
 \end{DoxyReturn}
 
 
-Definition at line 194 of file User\+Manager.\+java.
+Definition at line 193 of file User\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{194                                             \{}
-\DoxyCodeLine{195     \textcolor{keywordflow}{for} (User user : users) \{}
-\DoxyCodeLine{196       \textcolor{keywordflow}{if} (user.getUsername().equals(username)) \{}
-\DoxyCodeLine{197         \textcolor{keywordflow}{return} user.getWallet();}
-\DoxyCodeLine{198       \}}
-\DoxyCodeLine{199     \}}
-\DoxyCodeLine{200 }
-\DoxyCodeLine{201     \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{202   \}}
+\DoxyCodeLine{193                                             \{}
+\DoxyCodeLine{194     \textcolor{keywordflow}{for} (User user : users) \{}
+\DoxyCodeLine{195       \textcolor{keywordflow}{if} (user.getUsername().equals(username)) \{}
+\DoxyCodeLine{196         \textcolor{keywordflow}{return} user.getWallet();}
+\DoxyCodeLine{197       \}}
+\DoxyCodeLine{198     \}}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{201   \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a5c046bddd600f8fcc17b2e13ada2681e}\label{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a5c046bddd600f8fcc17b2e13ada2681e}} 
@@ -218,19 +218,19 @@ true if the username is available, false otherwise
 \end{DoxyReturn}
 
 
-Definition at line 57 of file User\+Manager.\+java.
+Definition at line 56 of file User\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{57                                                       \{}
-\DoxyCodeLine{58     \textcolor{keywordflow}{for} (User user : users) \{}
-\DoxyCodeLine{59       \textcolor{keywordflow}{if} (user.getUsername().equals(username)) \{}
-\DoxyCodeLine{60         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{61       \}}
-\DoxyCodeLine{62     \}}
-\DoxyCodeLine{63 }
-\DoxyCodeLine{64     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{65   \}}
+\DoxyCodeLine{56                                                       \{}
+\DoxyCodeLine{57     \textcolor{keywordflow}{for} (User user : users) \{}
+\DoxyCodeLine{58       \textcolor{keywordflow}{if} (user.getUsername().equals(username)) \{}
+\DoxyCodeLine{59         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{60       \}}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{64   \}}
 
 \end{DoxyCode}
 
@@ -257,19 +257,19 @@ the user object if login is successful, null otherwise
 \end{DoxyReturn}
 
 
-Definition at line 121 of file User\+Manager.\+java.
+Definition at line 120 of file User\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{121                                                       \{}
-\DoxyCodeLine{122     \textcolor{keywordflow}{for} (User user : users) \{}
-\DoxyCodeLine{123       \textcolor{keywordflow}{if} (user.getUsername().equals(username) \&\& user.getPassword().equals(password)) \{}
-\DoxyCodeLine{124         \textcolor{keywordflow}{return} user;}
-\DoxyCodeLine{125       \}}
-\DoxyCodeLine{126     \}}
-\DoxyCodeLine{127 }
-\DoxyCodeLine{128     \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
-\DoxyCodeLine{129   \}}
+\DoxyCodeLine{120                                                       \{}
+\DoxyCodeLine{121     \textcolor{keywordflow}{for} (User user : users) \{}
+\DoxyCodeLine{122       \textcolor{keywordflow}{if} (user.getUsername().equals(username) \&\& user.getPassword().equals(password)) \{}
+\DoxyCodeLine{123         \textcolor{keywordflow}{return} user;}
+\DoxyCodeLine{124       \}}
+\DoxyCodeLine{125     \}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{128   \}}
 
 \end{DoxyCode}
 
@@ -294,21 +294,21 @@ the username of the registered user, or null if registration fails
 \end{DoxyReturn}
 
 
-Definition at line 39 of file User\+Manager.\+java.
+Definition at line 38 of file User\+Manager.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{39                                         \{}
-\DoxyCodeLine{40     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a5c046bddd600f8fcc17b2e13ada2681e}{isUsernameAvailable}}(user.getUsername())) \{}
-\DoxyCodeLine{41       System.out.println(\textcolor{stringliteral}{"{}This username is already in use. Please choose a different username."{}});}
-\DoxyCodeLine{42       \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
-\DoxyCodeLine{43     \}}
-\DoxyCodeLine{44 }
-\DoxyCodeLine{45     users.add(user);}
-\DoxyCodeLine{46     saveUsersToFile(users);}
-\DoxyCodeLine{47     System.out.println(\textcolor{stringliteral}{"{}User registered successfully."{}});}
-\DoxyCodeLine{48     \textcolor{keywordflow}{return} user.getUsername();}
-\DoxyCodeLine{49   \}}
+\DoxyCodeLine{38                                         \{}
+\DoxyCodeLine{39     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_a5c046bddd600f8fcc17b2e13ada2681e}{isUsernameAvailable}}(user.getUsername())) \{}
+\DoxyCodeLine{40       System.out.println(\textcolor{stringliteral}{"{}This username is already in use. Please choose a different username."{}});}
+\DoxyCodeLine{41       \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     users.add(user);}
+\DoxyCodeLine{45     saveUsersToFile(users);}
+\DoxyCodeLine{46     System.out.println(\textcolor{stringliteral}{"{}User registered successfully."{}});}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} user.getUsername();}
+\DoxyCodeLine{48   \}}
 
 \end{DoxyCode}
 

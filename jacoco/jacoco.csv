@@ -1,5 +1,5 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-comic_manager_app,com.mehmetali.comic_manager,Main,54,1162,12,60,15,305,14,72,2,32
+comic_manager_app,com.mehmetali.comic_manager,Main,54,1187,12,60,15,330,14,72,2,32
 comic_manager_app,com.mehmetali.comic_manager,UserManager,40,241,1,31,8,66,1,24,0,9
 comic_manager_app,com.mehmetali.comic_manager,User,0,141,0,0,0,39,0,20,0,20
 comic_manager_app,com.mehmetali.comic_manager,EventManager,13,393,6,34,7,88,6,25,0,11

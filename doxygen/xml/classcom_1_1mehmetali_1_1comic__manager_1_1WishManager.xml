@@ -115,7 +115,7 @@
         <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a422b4944d82addfaea204bb93a1858ec" compoundref="Wish_8java" startline="48" endline="50">com.mehmetali.comic_manager.Wish.getComicID</references>
         <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ad5a5770d230ecfcc2fbb0ea5e1e088ad" compoundref="Wish_8java" startline="66" endline="68">com.mehmetali.comic_manager.Wish.getTitle</references>
         <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1a33c38b04fbb3dbe255cc83a05b293d1e" compoundref="WishManager_8java" startline="171" endline="179">com.mehmetali.comic_manager.WishManager.isBookNameAvailable</references>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1acce50654a239e2528271c7683221a389" compoundref="Main_8java" startline="325" endline="345">com.mehmetali.comic_manager.Main.WishAddBookMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1acce50654a239e2528271c7683221a389" compoundref="Main_8java" startline="327" endline="347">com.mehmetali.comic_manager.Main.WishAddBookMenu</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae495b9c01f9d119c30d3ade91e4f7906" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -163,7 +163,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/WishManager.java" line="108" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/WishManager.java" bodystart="108" bodyend="130"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9d1930b53d5fb23b30186978f27db3fe" compoundref="Main_8java" startline="356" endline="360">com.mehmetali.comic_manager.Main.WishlistBookMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9d1930b53d5fb23b30186978f27db3fe" compoundref="Main_8java" startline="358" endline="362">com.mehmetali.comic_manager.Main.WishlistBookMenu</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1affccdb63c5a7f1f94c677c50354c8181" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -194,7 +194,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/WishManager.java" line="138" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/WishManager.java" bodystart="138" bodyend="157"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a436b3d62b9a7e98f9972d86c3fab7bfe" compoundref="Main_8java" startline="370" endline="375">com.mehmetali.comic_manager.Main.WishdeleteBookMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a436b3d62b9a7e98f9972d86c3fab7bfe" compoundref="Main_8java" startline="372" endline="377">com.mehmetali.comic_manager.Main.WishdeleteBookMenu</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1a33c38b04fbb3dbe255cc83a05b293d1e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>boolean</type>

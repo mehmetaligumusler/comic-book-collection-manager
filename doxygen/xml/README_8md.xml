@@ -44,6 +44,88 @@
 <codeline><highlight class="normal">**Method<sp/>Coverage**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>![Method<sp/>Coverage](assets/badge_methodcoverage.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Project<sp/>Description</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">CE204,<sp/>Midterm</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java.git</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Build<sp/>the<sp/>Project</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Enter<sp/>pom.xml<sp/>root<sp/>folder<sp/>and<sp/>run<sp/>following<sp/>command<sp/>to<sp/>test<sp/>and<sp/>generate<sp/>jar<sp/>file</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">mvn<sp/>clean<sp/>test<sp/>site<sp/>package</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Run<sp/>Project</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>run<sp/>application<sp/>by<sp/>specify<sp/>the<sp/>Main<sp/>function</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">java<sp/>-cp<sp/>comic_manager_app-1.0-SNAPSHOT.jar<sp/>com.mehmetali.comic_manager_app.Main</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Contributing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Mehmet<sp/>Ali<sp/>GUMUSLER,<sp/>(mehmetali_gumusler21@erdogan.edu.tr)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Gökay<sp/>DERVISOĞLU,<sp/>(gokay_dervisoglu21@erdogan.edu.tr)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>License</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Dependencies</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Doxygen](https://www.doxygen.nl/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Chocolatey](https://chocolatey.org/install)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Scoop](https://scoop.sh/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Reportgenerator<sp/>](https://reportgenerator.io/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Testing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tests<sp/>are<sp/>Underdevelopment<sp/>with<sp/>Real<sp/>Environment</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Support</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Project<sp/>can<sp/>be<sp/>updated<sp/>according<sp/>issues.</highlight></codeline>
+<codeline><highlight class="normal">Contact<sp/>me<sp/>if<sp/>you<sp/>have<sp/>any<sp/>questions.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Contact</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Mehmet<sp/>Ali<sp/>GUMUSLER,<sp/>(mehmetali_gumusler21@erdogan.edu.tr)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Gökay<sp/>DERVISOĞLU,<sp/>(gokay_dervisoglu21@erdogan.edu.tr)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Instructor:<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Ugur<sp/>CORUH</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Acknowledgments</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Microsoft](https://visualstudio.microsoft.com/tr/vs/community/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Github](https://github.com/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Doxygen](https://www.doxygen.nl/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>About</highlight></codeline>
+<codeline></codeline>
     </programlisting>
     <location file="README.md"/>
   </compounddef>

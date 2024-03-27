@@ -180,9 +180,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="58" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="58" bodyend="60"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1aa627b545ada6c4ef7275780b44e34769" compoundref="UserManager_8java" startline="138" endline="158">com.mehmetali.comic_manager.UserManager.creditbuyscore</referencedby>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ae89c4bc39cb10ab21674fd2d23e2f271" compoundref="UserManager_8java" startline="167" endline="187">com.mehmetali.comic_manager.UserManager.creditSellscore</referencedby>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" compoundref="Main_8java" startline="156" endline="196">com.mehmetali.comic_manager.Main.MainApp</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1aa627b545ada6c4ef7275780b44e34769" compoundref="UserManager_8java" startline="137" endline="157">com.mehmetali.comic_manager.UserManager.creditbuyscore</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ae89c4bc39cb10ab21674fd2d23e2f271" compoundref="UserManager_8java" startline="166" endline="186">com.mehmetali.comic_manager.UserManager.creditSellscore</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" compoundref="Main_8java" startline="157" endline="198">com.mehmetali.comic_manager.Main.MainApp</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1af8d572dee3c8b46bb786deec41a5e91b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -211,8 +211,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="67" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="67" bodyend="69"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1aa627b545ada6c4ef7275780b44e34769" compoundref="UserManager_8java" startline="138" endline="158">com.mehmetali.comic_manager.UserManager.creditbuyscore</referencedby>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ae89c4bc39cb10ab21674fd2d23e2f271" compoundref="UserManager_8java" startline="167" endline="187">com.mehmetali.comic_manager.UserManager.creditSellscore</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1aa627b545ada6c4ef7275780b44e34769" compoundref="UserManager_8java" startline="137" endline="157">com.mehmetali.comic_manager.UserManager.creditbuyscore</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ae89c4bc39cb10ab21674fd2d23e2f271" compoundref="UserManager_8java" startline="166" endline="186">com.mehmetali.comic_manager.UserManager.creditSellscore</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1a4fc86647d5efe0bbfae2821208ad58a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>String</type>
@@ -230,9 +230,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" line="76" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/User.java" bodystart="76" bodyend="78"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9aed727b7977c1aa386dd0c2142671a1" compoundref="Main_8java" startline="592" endline="609">com.mehmetali.comic_manager.Main.loginMenu</referencedby>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" compoundref="Main_8java" startline="156" endline="196">com.mehmetali.comic_manager.Main.MainApp</referencedby>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ac7b628a800efefa0a9585181d1e49e5f" compoundref="UserManager_8java" startline="39" endline="49">com.mehmetali.comic_manager.UserManager.registerUser</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a9aed727b7977c1aa386dd0c2142671a1" compoundref="Main_8java" startline="631" endline="650">com.mehmetali.comic_manager.Main.loginMenu</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1afd3a4df6d687db75318d40908e4291e8" compoundref="Main_8java" startline="157" endline="198">com.mehmetali.comic_manager.Main.MainApp</referencedby>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1UserManager_1ac7b628a800efefa0a9585181d1e49e5f" compoundref="UserManager_8java" startline="38" endline="48">com.mehmetali.comic_manager.UserManager.registerUser</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1User_1ae405364198712afbc3ef7c6cdca20a46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
