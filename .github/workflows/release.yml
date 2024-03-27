@@ -78,11 +78,11 @@ jobs:
           missed=$(xmllint --xpath "string(//counter[@type='INSTRUCTION']/@missed)" target/site/jacoco/jacoco.xml)
           total=$((covered + missed))
           coverage_percentage=$(awk "BEGIN { print ($covered / $total) * 100 }")
-          # Check if coverage is 90% or higher
-          if (( $(echo "$coverage_percentage > 80" ) )); then
-            echo "Test coverage is great!"
+          # Check if coverage is 100%
+          if (( $(echo "$coverage_percentage == 100" | bc -l) )); then
+            echo "Test coverage is 100%!"
           else
-            echo "Test coverage is below 90%."
+            echo "Test coverage is not 100%."
             echo "Coverage Percentage: $coverage_percentage"
             exit 1  # Fail the GitHub Actions workflow
           fi
