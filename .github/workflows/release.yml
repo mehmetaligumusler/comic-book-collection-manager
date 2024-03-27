@@ -71,7 +71,7 @@ jobs:
           mkdir -p $currentDir/target/site/coveragereport
         working-directory: ./comic_manager_app
 
-      - name: Check Test Coverage
+       - name: Check Test Coverage
         run: |
           # Parse the JaCoCo XML report and check coverage percentage
           covered=$(xmllint --xpath "string(//counter[@type='INSTRUCTION']/@covered)" target/site/jacoco/jacoco.xml)
@@ -82,8 +82,8 @@ jobs:
           if (( $(echo "$coverage_percentage == 100" | bc -l) )); then
             echo "Test coverage is 100%!"
           else
-            echo "Test coverage is not 100%."
             echo "Coverage Percentage: $coverage_percentage"
+            echo "Test coverage is not 100%."
             exit 1  # Fail the GitHub Actions workflow
           fi
           echo "Coverage Percentage: $coverage_percentage"
