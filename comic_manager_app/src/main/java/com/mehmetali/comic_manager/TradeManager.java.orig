@@ -41,6 +41,8 @@ public class TradeManager {
    * @return The title of the comic book if added successfully, null otherwise.
    */
   public int AddTrade(Trade comic) {
+    
+
     if (!isTradeNameAvailable(comic.getTitle())) {
       System.out.println("This Book name is already in use. Please choose a different book name.");
       return -1;
@@ -51,6 +53,7 @@ public class TradeManager {
     comic.setpageNumber(comicmanager.getBookPageNumberByID(comic.getComicID()));
     comic.setValue(comicmanager.getBookValueByID(comic.getComicID()));
     */
+    
     comics.add(comic);
     saveUsersToFile(comics);
     //comicmanager.deleteBookByID(comic.getComicID());
@@ -157,17 +160,18 @@ public class TradeManager {
 
     for (Trade comic : comics) {
       if (comic.getComicID() == TradeID) {
-        String oldUser = comic.getuser();
-        System.out.print(oldUser);
-        comics.remove(comic);
-        saveUsersToFile(comics);
-        System.out.println("Book deleted successfully.");
-        found = true;
-        Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());
-        comicmanager.AddBook(newUser);
-        usermanager.creditSellscore(Main.LoginName, comic.getValue());
-        usermanager.creditbuyscore(oldUser, comic.getValue());
-        return 0;
+        
+      String oldUser = comic.getuser();
+      System.out.print(oldUser);
+      comics.remove(comic);
+      saveUsersToFile(comics);
+      System.out.println("Book deleted successfully.");
+      found = true;
+      Book newUser = new Book(TradeID, comic.getTitle(),comic.getpageNumber(),Main.LoginName,comic.getValue());
+      comicmanager.AddBook(newUser);
+      usermanager.creditSellscore(Main.LoginName, comic.getValue());
+      usermanager.creditbuyscore(oldUser, comic.getValue());
+      return 0;
       }
     }
 
@@ -194,21 +198,21 @@ public class TradeManager {
 
     return true;
   }
-
+  
   /**
    * Returns the value of the book with the specified ID.
-   *
+   * 
    * @param bookID The ID of the book.
    * @return The value of the book with the specified ID, or 0 if the book is not found.
    */
   public int getBookValueByID(int bookID) {
-    for (Trade comic : comics) {
-      if (comic.getComicID() == bookID) {
-        return comic.getValue();
+      for (Trade comic : comics) {
+          if (comic.getComicID() == bookID) {
+              return comic.getValue();
+          }
       }
-    }
 
-    return 0;
+      return 0;
   }
 
 

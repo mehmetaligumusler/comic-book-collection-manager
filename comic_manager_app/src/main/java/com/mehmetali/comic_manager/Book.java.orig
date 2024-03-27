@@ -2,7 +2,7 @@
 @namespace com.mehmetali.comic_manager
 @brief package
 */
-package com.mehmetali.comic_manager;
+package com.mehmetali.comic_manager; 
 
 import java.io.Serializable;
 
@@ -17,11 +17,11 @@ import java.io.Serializable;
  */
 @SuppressWarnings("serial")
 public class Book implements Serializable {
-  private int comicID; /**< The unique ID of the comic book. */
-  private String title; /**< The title of the comic book. */
-  private int pageNumber; /**< The number of pages in the comic book. */
-  private String user; /**< The user who owns the comic book. */
-  private int value; /**< The value of the comic book. */
+	private int comicID; /**< The unique ID of the comic book. */
+	  private String title; /**< The title of the comic book. */
+	  private int pageNumber; /**< The number of pages in the comic book. */
+	  private String user; /**< The user who owns the comic book. */
+	  private int value; /**< The value of the comic book. */
 
   /**
    * Constructs a Book object with the specified parameters.

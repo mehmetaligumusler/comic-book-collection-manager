@@ -83,7 +83,8 @@ public class BookManager {
    */
   public int listBooksByCondition(String condition) {
     this.comics = readUsersFromFile(BOOK_FILE_PATH);
-
+    
+   
     if (comics.isEmpty()) {
       System.out.println("No books found to list..");
       return 0;
@@ -141,7 +142,8 @@ public class BookManager {
    * @param value    The new value for the comic book.
    * @return        0 if the comic book title is successfully updated, -1 otherwise.
    */
-  public int updateBookTitleByID(int bookID, String newTitle,int PageNumber,int value) {
+  public int updateBookTitleByID(int bookID, String newTitle,int PageNumber,int value) 
+  {
     boolean found = false;
 
     for (Book comic : comics) {
@@ -208,91 +210,89 @@ public class BookManager {
 
     return null;
   }
-
-
+  
+  
   /**
    * Retrieves the page number of the book with the specified ID.
-   *
+   * 
    * @param bookID The ID of the book.
    * @return The page number of the book with the specified ID, or 0 if the book is not found.
    */
   public int getBookPageNumberByID(int bookID) {
-    for (Book comic : comics) {
-      if (comic.getComicID() == bookID) {
-        return comic.getpageNumber();
+      for (Book comic : comics) {
+          if (comic.getComicID() == bookID) {
+              return comic.getpageNumber();
+          }
       }
-    }
-
-    return 0;
+      return 0;
   }
 
   /**
    * Retrieves the value of the book with the specified ID.
-   *
+   * 
    * @param bookID The ID of the book.
    * @return The value of the book with the specified ID, or 0 if the book is not found.
    */
   public int getBookValueByID(int bookID) {
-    for (Book comic : comics) {
-      if (comic.getComicID() == bookID) {
-        return comic.getValue();
+      for (Book comic : comics) {
+          if (comic.getComicID() == bookID) {
+              return comic.getValue();
+          }
       }
-    }
-
-    return 0;
+      return 0;
   }
 
-
-
-
+  
+  
+  
   /**
    * Reads a list of Book objects from a file.
-   *
+   * 
    * @param filePath The path of the file to read from.
    * @return The list of Book objects read from the file, or an empty list if the file doesn't exist or cannot be read.
    */
   private List<Book> readUsersFromFile(String filePath) {
-    List<Book> list = new ArrayList<>();
-    File file = new File(filePath);
+      List<Book> list = new ArrayList<>();
+      File file = new File(filePath);
 
-    if (!file.exists()) {
-      try {
-        if (file.createNewFile()) {
-          System.out.println(filePath + " file has been created.");
-        } else {
-          System.out.println(filePath + " file already exists.");
-        }
-      } catch (IOException e) {
-        System.out.println("File creation error: " + e.getMessage());
+      if (!file.exists()) {
+          try {
+              if (file.createNewFile()) {
+                  System.out.println(filePath + " file has been created.");
+              } else {
+                  System.out.println(filePath + " file already exists.");
+              }
+          } catch (IOException e) {
+              System.out.println("File creation error: " + e.getMessage());
+          }
+      } else {
+          try (FileInputStream fileIn = new FileInputStream(filePath);
+               ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
+              list = (List<Book>) objectIn.readObject();
+          } catch (IOException | ClassNotFoundException e) {
+              System.out.println("File read error: " + e.getMessage());
+          }
       }
-    } else {
-      try (FileInputStream fileIn = new FileInputStream(filePath);
-             ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
-        list = (List<Book>) objectIn.readObject();
-      } catch (IOException | ClassNotFoundException e) {
-        System.out.println("File read error: " + e.getMessage());
-      }
-    }
 
-    return list;
+      return list;
   }
 
   /**
    * Writes a list of Book objects to a file.
-   *
+   * 
    * @param list The list of Book objects to be written to the file.
    * @param filePath The path of the file to write to.
    * @return Returns 0 upon successful writing to the file, or -1 if an error occurs.
    */
   private int saveUsersToFile(List<Book> list, String filePath) {
-    try (FileOutputStream fileOut = new FileOutputStream(filePath);
+      try (FileOutputStream fileOut = new FileOutputStream(filePath);
            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
-      objectOut.writeObject(list);
-      return 0;
-    } catch (IOException e) {
-      System.out.println("File write error: " + e.getMessage());
-      return -1;
-    }
+          objectOut.writeObject(list);
+          return 0;
+      } catch (IOException e) {
+          System.out.println("File write error: " + e.getMessage());
+          return -1;
+      }
   }
 
 

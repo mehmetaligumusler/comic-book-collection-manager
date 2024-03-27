@@ -52,31 +52,40 @@ public class BookManagerTest {
   @Test
   public void listBooksTest() {
     // Test listing books
-    Book newBook = new Book(5,"Title2", 2, "User2", 15);
-    bookManager.AddBook(newBook);
+	
+	Book newBook = new Book(5,"Title2", 2, "User2", 15);
+	bookManager.AddBook(newBook);  
+	  
     int result = bookManager.listBooks();
+    
+    
     assertEquals(1, result); // Assuming no books exist initially
     deleteFile("books.dat");
   }
-
+  
   @Test
   public void listBooksTest_empty() {
     // Test listing books
+ 
+	  
     int result = bookManager.listBooks();
+    
+    
     assertEquals(0, result); // Assuming no books exist initially
     deleteFile("books.dat");
   }
 
   @Test
   public void listBooksByConditionTest() {
-    Book newBook = new Book(5,"Title2", 2, "Condition", 15);
-    bookManager.AddBook(newBook);
+	  
+	Book newBook = new Book(5,"Title2", 2, "Condition", 15);
+	bookManager.AddBook(newBook);  
     // Test listing books by condition
     int result = bookManager.listBooksByCondition("Condition");
     assertEquals(1, result); // Assuming no books exist initially
     deleteFile("books.dat");
   }
-
+  
   @Test
   public void listBooksByConditionTest_empty() {
     // Test listing books by condition
@@ -94,7 +103,7 @@ public class BookManagerTest {
     assertEquals(0, result); // Assuming book with ID 4 exists and is deleted
     deleteFile("books.dat");
   }
-
+  
   @Test
   public void deleteBookByIDTest_error() {
     // Test deleting a book by ID
@@ -110,7 +119,7 @@ public class BookManagerTest {
     // Test updating book title by ID
     Book newBook = new Book(5,"Title5", 1, "User", 10);
     bookManager.AddBook(newBook);
-    int result = bookManager.updateBookTitleByID(5, "NewTitle", 2, 10);
+    int result = bookManager.updateBookTitleByID(5, "NewTitle", 2 , 10);
     assertEquals(0, result); // Assuming book with ID 5 exists and title is updated
     deleteFile("books.dat");
   }
@@ -144,7 +153,7 @@ public class BookManagerTest {
     assertEquals("Title8", result); // Assuming book with ID 8 exists
     deleteFile("books.dat");
   }
-
+  
   @Test
   public void getBookPageNumberByIDTest() {
     // Test getting book title by ID
@@ -154,7 +163,7 @@ public class BookManagerTest {
     assertEquals(1, result); // Assuming book with ID 8 exists
     deleteFile("books.dat");
   }
-
+  
   @Test
   public void getBookValueByIDTest() {
     // Test getting book title by ID

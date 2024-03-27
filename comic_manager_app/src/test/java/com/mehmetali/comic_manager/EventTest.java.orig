@@ -40,22 +40,25 @@ public class EventTest {
     assertEquals("Content2", event.getContent());
     assertEquals("User2", event.getUser());
   }
-
+  
   @Test
   public void testToString() {
-    // Create an Event object for testing
-    Event event = new Event(1, "Sample Event", "Sample content", "Sample user");
-    // Expected string representation of the Event object
-    String expected = "event{" +
-                      "eventID=1" +
-                      ", title='Sample Event'" +
-                      ", content=Sample content" +
-                      ", user=Sample user" +
-                      '}';
-    // Call the toString() method of the Event object
-    String actual = event.toString();
-    // Assert that the actual string matches the expected string
-    assertEquals(expected, actual);
+      // Create an Event object for testing
+      Event event = new Event(1, "Sample Event", "Sample content", "Sample user");
+
+      // Expected string representation of the Event object
+      String expected = "event{" +
+                        "eventID=1" +
+                        ", title='Sample Event'" +
+                        ", content=Sample content" +
+                        ", user=Sample user" +
+                        '}';
+
+      // Call the toString() method of the Event object
+      String actual = event.toString();
+
+      // Assert that the actual string matches the expected string
+      assertEquals(expected, actual);
   }
 
   /*
