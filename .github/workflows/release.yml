@@ -75,7 +75,7 @@ jobs:
         run: |
           # Parse the JaCoCo XML report and check coverage percentage
           covered=$(xmllint --xpath "string(//counter[@type='INSTRUCTION' and @covered > 3000]/@covered)" target/site/jacoco/jacoco.xml)
-          missed=$(xmllint --xpath "string(//counter[@type='INSTRUCTION' and @missed > 400]/@missed)" target/site/jacoco/jacoco.xml)
+          missed=$(xmllint --xpath "string(//counter[@type='INSTRUCTION' and @missed > 300]/@missed)" target/site/jacoco/jacoco.xml)
           total=$((covered + missed))
           coverage_percentage=$(awk "BEGIN { printf \"%.2f\", ($covered / $total) * 100 }")
           uncoverage_percentage=$(awk "BEGIN { printf \"%.2f\", ($missed / $total) * 100 }")
