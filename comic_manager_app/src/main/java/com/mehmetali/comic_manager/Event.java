@@ -106,9 +106,10 @@ public class Event implements Serializable {
    *
    * @param user the user associated with the event to set
    */
-  public void setUser(String User) {
-    this.user = User;
+  public void setUser(String user) {
+      this.user = user;
   }
+
 
 
   /**
