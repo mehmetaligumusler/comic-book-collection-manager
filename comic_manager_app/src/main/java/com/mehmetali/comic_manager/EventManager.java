@@ -221,12 +221,8 @@ public class EventManager {
       try {
         if (file.createNewFile()) {
           System.out.println("Events.dat file has been created.");
-        } else {
-          System.out.println("Events.dat file already exists.");
-        }
-      } catch (IOException e) {
-        System.out.println("File creation error: " + e.getMessage());
-      }
+        } 
+      } catch (IOException e) {}
 
       return new ArrayList<>();
     }
@@ -250,10 +246,7 @@ public class EventManager {
            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
       objectOut.writeObject(comics2);
       return 0;
-    } catch (IOException e) {
-      System.out.println("File write error: " + e.getMessage());
-      return -1;
-    }
+    } catch (IOException e) {return -1;}
   }
 
 
