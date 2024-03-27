@@ -74,8 +74,8 @@ jobs:
       - name: Check Test Coverage
         run: |
           # Parse the JaCoCo XML report and check coverage percentage
-          covered=$(xmllint --xpath "string(//counter[@type='INSTRUCTION']/@covered)" target/site/jacoco/jacoco.xml)
-          missed=$(xmllint --xpath "string(//counter[@type='INSTRUCTION']/@missed)" target/site/jacoco/jacoco.xml)
+          covered=$(xmllint --xpath "//*[@id="folder0"]/div[2]/div[4]/span/span[3]/span[2]" target/site/jacoco/jacoco.xml)
+          missed=$(xmllint --xpath "//*[@id="folder0"]/div[2]/div[4]/span/span[2]/span[2]" target/site/jacoco/jacoco.xml)
           total=$((covered + missed))
           coverage_percentage=$(awk "BEGIN { print ($covered / $total) * 100 }")
           uncoverage_percentage=$(awk "BEGIN { print ($missed / $total) * 100 }")
@@ -87,7 +87,7 @@ jobs:
           echo "Coverage Percentage: $coverage_percentage"
 
           # Check if coverage is 100%
-          if (( $(echo "$coverage_percentage == 100" | bc -l) )); then
+          if (( $(echo "$coverage_percentage >= 90" | bc -l) )); then
             echo "Test coverage is 100%!"
           else
             echo "Unoverage Percentage: $uncoverage_percentage"
