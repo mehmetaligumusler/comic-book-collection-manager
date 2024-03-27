@@ -21,30 +21,6 @@ public class UserManager {
   private List<User> users; /**< The list of users managed by the UserManager. */
   private static final String USER_FILE_PATH = "users.dat"; /**< The file path where user data is stored. */
 
-  /**
-   * Clears the console screen.
-   * <p>
-   * On Windows, it uses the "cls" command through the command prompt. On Unix/Linux/Mac systems,
-   * it clears the console screen by printing specific escape characters.
-   * </p>
-   */
-  public static void clearConsole() {
-    try {
-      // Windows
-      if (System.getProperty("os.name").contains("Windows")) {
-        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-      }
-      // Unix/Linux/Mac
-      else {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-      }
-    } catch (IOException | InterruptedException ex) {
-      // Handle exception
-      ex.printStackTrace();
-    }
-  }
-
 
   /**
    * Constructs a UserManager and reads users from the file.
