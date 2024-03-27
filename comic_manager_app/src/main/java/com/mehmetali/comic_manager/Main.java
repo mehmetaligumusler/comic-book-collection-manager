@@ -1,26 +1,66 @@
+/**
+ * The com.mehmetali.comic_manager package contains classes related to the Comic Manager application.
+ */
 package com.mehmetali.comic_manager;
+
 
 import java.util.Scanner;
 import java.io.IOException;
 import java.io.PrintStream;
 
 
-
+/**
+ * Main class for managing the comic manager application.
+ * This class provides methods for user interaction and menu navigation.
+ * 
+ * The Main class serves as the entry point for the application and orchestrates user interaction.
+ * 
+ * @author mehmetali
+ * @version 1.0
+ */
 public class Main {
 	
+	/**
+	 * The username of the logged-in user.
+	 */
 	public static String LoginName;
+	
+	/**
+	 * The wallet balance of the logged-in user.
+	 */
 	public static int LoginWallet;
 	
-	private static final Scanner scanner = new Scanner(System.in);
-	private static final UserManager userManager = new UserManager();
-	private static final BookManager comicmanager = new BookManager();
-	private static final WishManager wishmanager = new WishManager();
-	private static final TradeManager trademanager = new TradeManager();
-	private static final EventManager eventmanager = new EventManager();
 	
-	public static boolean control = false;
+	private static final Scanner scanner = new Scanner(System.in); /**< The scanner object used for user input. */
 
 
+	private static final UserManager userManager = new UserManager(); /**< The user manager instance for managing user-related operations. */
+
+
+	private static final BookManager comicmanager = new BookManager(); /**< The comic manager instance for managing comic book-related operations. */
+
+
+	private static final WishManager wishmanager = new WishManager(); /**< The wish manager instance for managing wish-related operations. */
+
+
+	private static final TradeManager trademanager = new TradeManager(); /**< The trade manager instance for managing trade-related operations. */
+
+
+	private static final EventManager eventmanager = new EventManager(); /**< The event manager instance for managing event-related operations. */
+
+	
+	public static boolean control = false; /**< Boolean variable indicating control status. */
+
+	
+
+
+
+	/**
+	   * Prints the menu with the specified title and options.
+	   * 
+	   * @param title   The title of the menu.
+	   * @param options An array of strings representing the menu options.
+	   */
 	private static void printMenu(String title, String[] options) {
 	    System.out.println("|===============================================================================|");
 	    System.out.println("|" + centerText(title, 79) + "|");
@@ -41,10 +81,26 @@ public class Main {
 	    System.out.println("|===============================================================================|");
 	    System.out.print("Enter your choice: ");
 	}
+	
+	 /**
+	   * Pads the given text on the right side with spaces to make its length equal to the specified length.
+	   * 
+	   * @param text   The text to pad.
+	   * @param length The desired length of the padded text.
+	   * @return The padded text.
+	   */
 
 	private static String rightPad(String text, int length) {
 	    return String.format("%-" + length + "s", text);
 	}
+	
+	 /**
+	   * Centers the given text within a string of the specified length by padding it with spaces on both sides.
+	   * 
+	   * @param text   The text to center.
+	   * @param length The desired length of the string containing the centered text.
+	   * @return The string containing the centered text.
+	   */
 
 
   private static String centerText(String text, int length) {
@@ -54,6 +110,13 @@ public class Main {
     return " ".repeat(before) + text + " ".repeat(after);
   }
   
+  /**
+   * Clears the console screen.
+   * <p>
+   * On Windows, it uses the "cls" command through the command prompt. On Unix/Linux/Mac systems,
+   * it clears the console screen by printing specific escape characters.
+   * </p>
+   */
   
     public static void clearConsole() {
         try {
@@ -72,13 +135,26 @@ public class Main {
         }
     }
  
-  
-  
+    /**
+     * The entry point of the application.
+     * 
+     * @param args The command line arguments.
+     * @throws IOException If an I/O error occurs.
+     */
   public static void main(String[] args) throws IOException {
       Scanner scanner = new Scanner(System.in);
       MainApp(scanner, System.out);
   }
 
+  /**
+   * Runs the main application loop.
+   * 
+   * @param scanner The scanner object for input.
+   * @param out     The output stream for printing.
+   * @return An integer indicating the success status of the application.
+   * @throws IOException If an I/O error occurs.
+   */
+  
   public static int MainApp(Scanner scanner, PrintStream out) throws IOException {
 	  boolean exit = false;
 
@@ -125,6 +201,16 @@ public class Main {
 	    scanner.close();
 	    return 0;
   }
+  
+  /**
+   * Registers a new user.
+   * 
+   * @param scanner The scanner object for input.
+   * @param out     The output stream for printing.
+   * @return An integer indicating the success status of the registration process.
+   * @throws IOException If an I/O error occurs.
+   */
+
 
   public static int registerMenu(Scanner scanner, PrintStream out) throws IOException {
  
@@ -139,7 +225,14 @@ public class Main {
   }
   
   //ComicBook
-  
+  /**
+   * Adds a new book to the book management system.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful addition of the book.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
   public static int AddBookMenu(Scanner scanner, PrintStream out) throws IOException
   {
   	
@@ -162,231 +255,409 @@ public class Main {
     return 0;
   }
   
-  public static int listBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-	  System.out.println("Book List");
-	  comicmanager.listBooksByCondition(LoginName);
-	  return 0;
+  /**
+   * Displays the list of books owned by the current user.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful display of the book list.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int listBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      out.println("Book List");
+      comicmanager.listBooksByCondition(LoginName);
+      return 0;
   }
-  
-  public static int listAllBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-	  System.out.println("Book All List");
-	  comicmanager.listBooks();
-	  return 0;
-  }
- 
-  public static int deleteBookMenu(Scanner scanner, PrintStream out) throws IOException
-  { 
-	  System.out.print("Book ID: ");
-	  int bookId = scanner.nextInt();
-	  
-	  comicmanager.deleteBookByID(bookId);
-	  return 0;
-  }
-  
-  public static int updateBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-	  System.out.print("Book ID: ");
-	  int bookId = scanner.nextInt();
-	  scanner.nextLine();
-	  
-	  System.out.print("New Book Name: ");
-	  String bookName = scanner.nextLine();
-	  
-	  System.out.print("New Book Page Number: ");
-	  int bookpage = scanner.nextInt();
-	  scanner.nextLine();
-	  
-	  System.out.print("New Book Value: ");
-	  int bookvalue = scanner.nextInt();
-	  scanner.nextLine();
 
-	  comicmanager.updateBookTitleByID(bookId, bookName,bookpage,bookvalue);
-	  return 0;
+  /**
+   * Displays the list of all books in the system.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful display of the book list.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int listAllBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      out.println("Book All List");
+      comicmanager.listBooks();
+      return 0;
   }
+
+  /**
+   * Deletes a book from the system by its ID.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful deletion of the book.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int deleteBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      out.print("Book ID: ");
+      int bookId = scanner.nextInt();
+      
+      comicmanager.deleteBookByID(bookId);
+      return 0;
+  }
+
+  
+  /**
+   * Updates the details of a book in the system by its ID.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful update of the book details.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int updateBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      // Prompting user for the ID of the book to be updated
+      out.print("Book ID: ");
+      int bookId = scanner.nextInt();
+      scanner.nextLine(); // Consume newline character
+      
+      // Prompting user for the new details of the book
+      out.print("New Book Name: ");
+      String bookName = scanner.nextLine();
+      
+      out.print("New Book Page Number: ");
+      int bookpage = scanner.nextInt();
+      scanner.nextLine(); // Consume newline character
+      
+      out.print("New Book Value: ");
+      int bookvalue = scanner.nextInt();
+      scanner.nextLine(); // Consume newline character
+
+      // Updating the details of the book in the system
+      comicmanager.updateBookTitleByID(bookId, bookName, bookpage, bookvalue);
+      return 0; // Returning 0 to indicate successful update
+  }
+
 
   //WishList
   
-  public static int WishAddBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-    System.out.print("Book ID: ");
-    int bookId = scanner.nextInt();
-    scanner.nextLine();
-    
-    if (comicmanager.isBookIDAvailable(bookId)) {
-        System.out.println("No such book found.");
-        return -1;
+  /**
+   * Adds a book to the wish list of the current user.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful addition of the book to the wish list,
+   *         or -1 if the book ID is not available in the system.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int WishAddBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      // Prompting user for the ID of the book to be added to the wish list
+      out.print("Book ID: ");
+      int bookId = scanner.nextInt();
+      scanner.nextLine(); // Consume newline character
+      
+      // Checking if the book ID is available in the system
+      if (comicmanager.isBookIDAvailable(bookId)) {
+          out.println("No such book found.");
+          return -1; // Returning -1 if the book ID is not available
       }
-    
-    
-    int pagenumber = comicmanager.getBookPageNumberByID(bookId);
-    String title = comicmanager.getBookTitleByID(bookId);
-    int value = comicmanager.getBookPageNumberByID(bookId);
-    
-    Wish newUser = new Wish(bookId, title,pagenumber,LoginName,value);
-    wishmanager.AddBook(newUser);
-    return 0;
+      
+      // Retrieving book details for wish list entry
+      int pageNumber = comicmanager.getBookPageNumberByID(bookId);
+      String title = comicmanager.getBookTitleByID(bookId);
+      int value = comicmanager.getBookPageNumberByID(bookId);
+      
+      // Creating a new Wish object and adding it to the wish list
+      Wish newUser = new Wish(bookId, title, pageNumber, LoginName, value);
+      wishmanager.AddBook(newUser);
+      
+      return 0; // Returning 0 to indicate successful addition to the wish list
   }
+
   
-  public static int WishlistBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-	  System.out.println("Wish Book List");
-	  wishmanager.listBooksByUser(LoginName);
-	  return 0;
+  /**
+   * Displays the wish list of books owned by the current user.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful display of the wish list.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int WishlistBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      out.println("Wish Book List");
+      wishmanager.listBooksByUser(LoginName);
+      return 0;
   }
-  
-  public static int WishdeleteBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-	  System.out.print("Book ID: ");
-	  int bookId = scanner.nextInt();
-	  
-	  wishmanager.deleteBookByID(bookId);
-	  return 0;
+
+  /**
+   * Deletes a book from the wish list by its ID.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful deletion of the book from the wish list.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int WishdeleteBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      out.print("Book ID: ");
+      int bookId = scanner.nextInt();
+      
+      wishmanager.deleteBookByID(bookId);
+      return 0;
   }
+
   
   //TradeList
   
   
-  public static int TradeAddBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-    System.out.print("Book ID: ");
-    int bookId = scanner.nextInt();
-    
-    int pagenumber = comicmanager.getBookPageNumberByID(bookId);
-    String title = comicmanager.getBookTitleByID(bookId);
-    int value = comicmanager.getBookValueByID(bookId);
-    
-    Trade newUser = new Trade(bookId, title,pagenumber,LoginName,value);
-    trademanager.AddTrade(newUser);
-    comicmanager.deleteBookByID(bookId);
-    return 0;
+  /**
+   * Adds a book to the trade list of the current user and removes it from their collection.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful addition of the book to the trade list.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int TradeAddBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      out.print("Book ID: ");
+      int bookId = scanner.nextInt();
+      
+      // Retrieving book details for trade list entry
+      int pageNumber = comicmanager.getBookPageNumberByID(bookId);
+      String title = comicmanager.getBookTitleByID(bookId);
+      int value = comicmanager.getBookValueByID(bookId);
+      
+      // Creating a new Trade object and adding it to the trade list
+      Trade newUser = new Trade(bookId, title, pageNumber, LoginName, value);
+      trademanager.AddTrade(newUser);
+      
+      // Deleting the book from the collection
+      comicmanager.deleteBookByID(bookId);
+      
+      return 0; // Returning 0 to indicate successful addition to the trade list
   }
+
+  /**
+   * Displays the trade list of books owned by the current user.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful display of the trade list.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int TradeMylistBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      // Displaying the trade list of the current user
+      trademanager.listMyTradeList(LoginName);
+      return 0;
+  }
+
+  /**
+   * Deletes a book from the trade list by its ID.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful deletion of the book from the trade list.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int TradedeleteBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      out.print("Book ID: ");
+      int bookId = scanner.nextInt();
+      
+      trademanager.deleteTradeByID(bookId);
+      return 0;
+  }
+
   
-  public static int TradeMylistBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-	  trademanager.listMyTradeList(LoginName);
-	  return 0;
+  /**
+   * Displays the list of all books available for trade.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful display of the trade list.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int TradeAllListBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      out.println("Book List");
+      trademanager.listAllTradeList();
+      return 0;
   }
-  
-  public static int TradedeleteBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-	  System.out.print("Book ID: ");
-	  int bookId = scanner.nextInt();
-	  
-	  trademanager.deleteTradeByID(bookId);
-	  return 0;
+
+  /**
+   * Buys a book from the trade list by its ID if the user's credit score is sufficient.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful purchase of the book, or -1 if the user's credit score is insufficient.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int TradeBuyBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      out.print("Book ID: ");
+      int bookId = scanner.nextInt();
+      
+      // Checking if the user's credit score is sufficient to buy the book
+      if (LoginWallet >= trademanager.getBookValueByID(bookId)) {
+          trademanager.BuyTradeByID(bookId);
+      } else {
+          out.println("Credit Score Insufficient! Could not purchase.");
+          return -1;
+      }
+      
+      return 0;
   }
-  
-  public static int TradeAllListBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-	  System.out.println("Book List");
-	  trademanager.listAllTradeList();
-	  return 0;
+
+  /**
+   * Increases the user's credit score by the specified amount.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful update of the user's credit score.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int CreditBuyScoreMenu(Scanner scanner, PrintStream out) throws IOException {
+      out.println("Credit Score:");
+      
+      int score = scanner.nextInt();
+      
+      userManager.creditbuyscore(LoginName, score);
+      return 0;
   }
-    
-  public static int TradeBuyBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {	  
-	  System.out.print("Book ID: ");
-	  int bookId = scanner.nextInt();
-	  
-	  if(LoginWallet >= trademanager.getBookValueByID(bookId)){
-		  trademanager.BuyTradeByID(bookId);
-	  }
-	  else
-	  {
-		  System.out.println("Credit Score Insufficient! Could not purchase.");
-		  return -1;
-	  }
-	  
-	  return 0;
-  }
-  
-  public static int CreditBuyScoreMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-	  System.out.println("Credit Score:");
-	  
-	  int score = scanner.nextInt();
-	  
-	  userManager.creditbuyscore(LoginName, score);
-	  return 0;
-  }
+
   
  
-  public static int EventAddBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-    System.out.print("Event ID: ");
-    int bookId = scanner.nextInt();
-    scanner.nextLine();
-    
-    System.out.print("Event Name: ");
-    String title = scanner.nextLine();
-    
-    System.out.print("Event Content: ");
-    String content = scanner.nextLine();
+  /**
+   * Adds a new event to the event management system.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful addition of the event.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int EventAddBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      // Prompting user for event details
+      out.print("Event ID: ");
+      int eventId = scanner.nextInt();
+      scanner.nextLine(); // Consume newline character
+      
+      out.print("Event Name: ");
+      String eventName = scanner.nextLine();
+      
+      out.print("Event Content: ");
+      String eventContent = scanner.nextLine();
 
-    Event newUser = new Event(bookId, title,content,LoginName);
-    eventmanager.AddEvent(newUser);
-    return 0;
+      // Creating a new Event object with the provided details
+      Event newEvent = new Event(eventId, eventName, eventContent, LoginName);
+      
+      // Adding the new event to the event management system
+      eventmanager.AddEvent(newEvent);
+      
+      return 0; // Returning 0 to indicate successful addition
   }
+
+  /**
+   * Displays the list of events related to the current user.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful display of the event list.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int EventlistBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      out.println("Event List");
+      eventmanager.listEventsByCondition(LoginName);
+      return 0;
+  }
+
+  /**
+   * Displays the list of all events in the system.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful display of all events.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int EventlistAllBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      out.println("Event All List");
+      eventmanager.listEvents();
+      return 0;
+  }
+
   
-  public static int EventlistBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-	  System.out.println("Event List");
-	  eventmanager.listEventsByCondition(LoginName);
-	  return 0;
+  /**
+   * Deletes an event from the event management system by its ID.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful deletion of the event.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int EventdeleteBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      out.print("Event ID: ");
+      int eventId = scanner.nextInt();
+      
+      // Deleting the event from the event management system
+      eventmanager.deleteEventByID(eventId);
+      return 0;
   }
-  
-  public static int EventlistAllBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-	  System.out.println("Event All List");
-	  eventmanager.listEvents();
-	  return 0;
+
+  /**
+   * Updates the details of an event in the event management system by its ID.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful update of the event details.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
+  public static int EventupdateBookMenu(Scanner scanner, PrintStream out) throws IOException {
+      // Prompting user for the ID of the event to be updated
+      out.print("Event ID: ");
+      int eventId = scanner.nextInt();
+      scanner.nextLine(); // Consume newline character
+      
+      // Prompting user for the new details of the event
+      out.print("New Event Name: ");
+      String eventName = scanner.nextLine();
+      
+      out.print("New Event Content: ");
+      String eventContent = scanner.nextLine();
+      
+      // Updating the details of the event in the event management system
+      eventmanager.updateEventTitleByID(eventId, eventName, eventContent);
+      return 0; // Returning 0 to indicate successful update
   }
-  
-  public static int EventdeleteBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-	  System.out.print("Event ID: ");
-	  int bookId = scanner.nextInt();
-	  
-	  eventmanager.deleteEventByID(bookId);
-	  return 0;
-  }
-  
-  public static int EventupdateBookMenu(Scanner scanner, PrintStream out) throws IOException
-  {
-	  System.out.print("Event ID: ");
-	  int bookId = scanner.nextInt();
-	  scanner.nextLine();
-	  
-	  System.out.print("New Event Name: ");
-	  String title = scanner.nextLine();
-	
-	  System.out.print("New Event Content: ");
-	  String content = scanner.nextLine();
-	  
-	  eventmanager.updateEventTitleByID(bookId, title,content);
-	  return 0;
-  }
+
   
   //test
 
+  /**
+   * Allows a user to log in to the system using their username and password.
+   * 
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns the User object corresponding to the logged-in user if successful,
+   *         or null if the login attempt fails.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
   public static User loginMenu(Scanner scanner, PrintStream out) throws IOException {
-    System.out.print("UserName: ");
-    String username = scanner.nextLine();
-    System.out.print("Password: ");
-    String password = scanner.nextLine();
- 
-    User user = userManager.login(username, password);
+      // Prompting user for username and password
+      out.print("UserName: ");
+      String username = scanner.nextLine();
+      out.print("Password: ");
+      String password = scanner.nextLine();
 
-    if (user != null) {
-      System.out.println("Hello, " + user.getUsername() + "!");
-    } else {
-      System.out.println("Username or password is wrong!");
-    }
+      // Attempting to log in the user
+      User user = userManager.login(username, password);
 
-    return user;
+      // Displaying login result
+      if (user != null) {
+          out.println("Hello, " + user.getUsername() + "!");
+      } else {
+          out.println("Username or password is wrong!");
+      }
+
+      return user; // Returning the logged-in user object or null if login fails
   }
+
+  /**
+   * Displays the user menu and allows the user to interact with the system based on their role.
+   * 
+   * @param user The User object representing the currently logged-in user.
+   * @param scanner A Scanner object for user input.
+   * @param out A PrintStream object for output.
+   * @return Returns 0 upon successful completion of user interaction.
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
 
   public static int userMenu(User user,Scanner scanner, PrintStream out) throws IOException {
     boolean exit = false;
@@ -682,21 +953,42 @@ public class Main {
     return 0;
   }
 
-public static String getLoginName() {
-	return LoginName;
-}
+  /**
+   * Returns the login name of the current user.
+   * 
+   * @return The login name of the current user.
+   */
+  public static String getLoginName() {
+      return LoginName;
+  }
 
-public static void setLoginName(String loginName) {
-	LoginName = loginName;
-}
+  /**
+   * Sets the login name of the current user.
+   * 
+   * @param loginName The login name to be set.
+   */
+  public static void setLoginName(String loginName) {
+      LoginName = loginName;
+  }
 
-public static int getWallet() {
-	return LoginWallet;
-}
+  /**
+   * Returns the wallet balance of the current user.
+   * 
+   * @return The wallet balance of the current user.
+   */
+  public static int getWallet() {
+      return LoginWallet;
+  }
 
-public static void setWallet(int loginWallet) {
-	LoginWallet = loginWallet;
-}
+  /**
+   * Sets the wallet balance of the current user.
+   * 
+   * @param loginWallet The wallet balance to be set.
+   */
+  public static void setWallet(int loginWallet) {
+      LoginWallet = loginWallet;
+  }
+
 
 
 }

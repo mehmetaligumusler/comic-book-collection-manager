@@ -1,4 +1,8 @@
-package com.mehmetali.comic_manager;
+/**
+@namespace com.mehmetali.comic_manager
+@brief package
+*/
+package com.mehmetali.comic_manager; 
 
 import java.io.Serializable;
 
@@ -6,15 +10,18 @@ import java.io.Serializable;
  * The Book class represents a comic book in the comic manager application.
  * It contains information such as comic ID, title, page number, user, and value.
  *
+ * This class implements the Serializable interface to support object serialization.
+ *
  * @author mehmetali
+ * @version 1.0
  */
 @SuppressWarnings("serial")
 public class Book implements Serializable {
-  private int comicID;
-  private String title;
-  private int pageNumber;
-  private String user;
-  private int value;
+	private int comicID; /**< The unique ID of the comic book. */
+	  private String title; /**< The title of the comic book. */
+	  private int pageNumber; /**< The number of pages in the comic book. */
+	  private String user; /**< The user who owns the comic book. */
+	  private int value; /**< The value of the comic book. */
 
   /**
    * Constructs a Book object with the specified parameters.

@@ -1,4 +1,8 @@
+/**
+ * The com.mehmetali.comic_manager package contains classes related to the Comic Manager application.
+ */
 package com.mehmetali.comic_manager;
+
 
 import java.io.*;
 import java.util.ArrayList;
@@ -7,11 +11,17 @@ import java.util.List;
 /**
  * Manages user operations such as registration, login, and credit manipulation.
  *
+ * This class provides functionalities to manage users including registration, login,
+ * and manipulation of user credits.
+ *
  * @author mehmetali
+ * @version 1.0
  */
 public class UserManager {
-  private List<User> users;
-  private static final String USER_FILE_PATH = "users.dat";
+  private List<User> users; /**< The list of users managed by the UserManager. */
+  private static final String USER_FILE_PATH = "users.dat"; /**< The file path where user data is stored. */
+
+
 
   /**
    * Constructs a UserManager and reads users from the file.

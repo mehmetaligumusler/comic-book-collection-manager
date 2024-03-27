@@ -1,4 +1,8 @@
+/**
+ * The com.mehmetali.comic_manager package contains classes related to the Comic Manager application.
+ */
 package com.mehmetali.comic_manager;
+
 
 import java.io.*;
 import java.util.ArrayList;
@@ -9,21 +13,35 @@ import java.util.List;
 /**
  * Manages the wish list of comics.
  *
+ * This class provides functionalities to manage the wish list of comics,
+ * including reading from and writing to a file, and interacting with the BookManager.
+ *
+ * The class also includes an interface for writing wish data to a file.
+ *
  * @author mehmetali
+ * @version 1.0
  */
 public class WishManager {
 
-  
-  private static final String WISH_FILE_PATH = "wish.dat";
-  private static final BookManager comicmanager = new BookManager();
-  List<Wish> comics = readFromFile(WISH_FILE_PATH);
-  int result = writeToFile(comics, WISH_FILE_PATH);
+  private static final String WISH_FILE_PATH = "wish.dat"; /**< The file path where wish data is stored. */
+  private static final BookManager comicmanager = new BookManager(); /**< The instance of BookManager for managing comic books. */
+  private List<Wish> comics = readFromFile(WISH_FILE_PATH); /**< The list of wishes loaded from the wish file. */
+  private int result = writeToFile(comics, WISH_FILE_PATH); /**< The result of writing wish data to the wish file. */
 
-  
-
+  /**
+   * Interface for writing wish data to a file.
+   */
   public interface WishWriter {
+    /**
+     * Saves wish data to a file.
+     *
+     * @param wishes The list of wishes to be saved to the file.
+     * @return An integer representing the result of the operation.
+     */
     int saveUsersToFile2(List<Wish> wishes);
   }
+
+
 
 
   /**
@@ -160,7 +178,13 @@ public class WishManager {
 
     return true;
   }
-
+  
+  /**
+   * Reads a list of Wish objects from a file.
+   * 
+   * @param filePath The path of the file to read from.
+   * @return The list of Wish objects read from the file, or an empty list if the file doesn't exist or cannot be read.
+   */
   private List<Wish> readFromFile(String filePath) {
 	    List<Wish> list = new ArrayList<>();
 	    File file = new File(filePath);
@@ -187,6 +211,13 @@ public class WishManager {
 	    return list;
 	}
   
+  /**
+   * Writes a list of Wish objects to a file.
+   * 
+   * @param list The list of Wish objects to be written to the file.
+   * @param filePath The path of the file to write to.
+   * @return Returns 0 upon successful writing to the file, or -1 if an error occurs.
+   */
   private int writeToFile(List<Wish> list, String filePath) {
 	    try (FileOutputStream fileOut = new FileOutputStream(filePath);
 	         ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {

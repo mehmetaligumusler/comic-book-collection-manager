@@ -1,4 +1,8 @@
+/**
+ * The com.mehmetali.comic_manager package contains classes related to the Comic Manager application.
+ */
 package com.mehmetali.comic_manager;
+
 
 import java.io.*;
 import java.util.ArrayList;
@@ -8,13 +12,18 @@ import java.util.List;
  * The TradeManager class manages the trading of comic books.
  * It handles adding, listing, deleting, and buying/selling comic books.
  *
+ * This class manages the list of trades and provides methods for managing trade operations.
+ *
  * @author mehmetali
+ * @version 1.0
  */
 public class TradeManager {
-  private List<Trade> comics;
-  private static final String Trade_FILE_PATH = "trade.dat";
-  private static final BookManager comicmanager = new BookManager();
-  private static final UserManager usermanager = new UserManager();
+  private List<Trade> comics; /**< The list of trades managed by the TradeManager. */
+  private static final String Trade_FILE_PATH = "trade.dat"; /**< The file path where the trade data is stored. */
+  private static final BookManager comicmanager = new BookManager(); /**< The instance of BookManager for managing comic books. */
+  private static final UserManager usermanager = new UserManager(); /**< The instance of UserManager for managing users. */
+
+
 
   /**
    * Constructs a TradeManager object.
@@ -190,15 +199,22 @@ public class TradeManager {
     return true;
   }
   
+  /**
+   * Returns the value of the book with the specified ID.
+   * 
+   * @param bookID The ID of the book.
+   * @return The value of the book with the specified ID, or 0 if the book is not found.
+   */
   public int getBookValueByID(int bookID) {
-	    for (Trade comic : comics) {
-	      if (comic.getComicID() == bookID) {
-	        return comic.getValue();
-	      }
-	    }
+      for (Trade comic : comics) {
+          if (comic.getComicID() == bookID) {
+              return comic.getValue();
+          }
+      }
 
-	    return 0;
-	  }
+      return 0;
+  }
+
 
   /**
    * Checks if a trade ID is available (not already used).

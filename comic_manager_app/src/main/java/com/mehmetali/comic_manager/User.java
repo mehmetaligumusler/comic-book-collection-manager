@@ -1,3 +1,6 @@
+/**
+ * The com.mehmetali.comic_manager package contains classes related to the Comic Manager application.
+ */
 package com.mehmetali.comic_manager;
 
 import java.io.Serializable;
@@ -7,21 +10,28 @@ import java.util.List;
 /**
  * Represents a user in the comic management system.
  *
- * @author mehmetali
+ * This class represents a user in the comic management system.
+ * It contains information such as username, password, wallet balance,
+ * collection of comics, wishlist, and trade list.
  *
+ * The class implements the Serializable interface to support object serialization.
+ *
+ * @author mehmetali
+ * @version 1.0
  * @param <Comic> the type of comic in the user's collection, wishlist, and trade list
  */
 public class User<Comic> implements Serializable {
-  private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L; /**< The serial version UID for object serialization. */
+
+  private String username; /**< The username of the user. */
+  private String password; /**< The password of the user. */
+  private int wallet; /**< The wallet balance of the user. */
+
+  private List<Comic> collection; /**< The collection of comics owned by the user. */
+  private List<Comic> wishlist; /**< The wishlist of comics desired by the user. */
+  private List<Comic> tradeList; /**< The list of comics available for trade by the user. */
 
 
-  private String username;
-  private String password;
-  private int wallet;
-
-  private List<Comic> collection;
-  private List<Comic> wishlist;
-  private List<Comic> tradeList;
 
 
   /**
