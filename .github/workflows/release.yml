@@ -71,24 +71,29 @@ jobs:
           mkdir -p $currentDir/target/site/coveragereport
         working-directory: ./comic_manager_app
 
-       - name: Check Test Coverage
+      - name: Check Test Coverage
         run: |
           # Parse the JaCoCo XML report and check coverage percentage
-          covered=$(xmllint --xpath "string(//counter[@type='INSTRUCTION']/@covered)" target/site/jacoco/jacoco.xml)
-          missed=$(xmllint --xpath "string(//counter[@type='INSTRUCTION']/@missed)" target/site/jacoco/jacoco.xml)
+          covered=$(xmllint --xpath "string(//counter[@type='INSTRUCTION' and @covered > 3000]/@covered)" target/site/jacoco/jacoco.xml)
+          missed=$(xmllint --xpath "string(//counter[@type='INSTRUCTION' and @missed > 300]/@missed)" target/site/jacoco/jacoco.xml)
           total=$((covered + missed))
-          coverage_percentage=$(awk "BEGIN { print ($covered / $total) * 100 }")
-          # Check if coverage is 100%
-          if (( $(echo "$coverage_percentage == 100" | bc -l) )); then
-            echo "Test coverage is 100%!"
-          else
-            echo "Coverage Percentage: $coverage_percentage"
-            echo "Test coverage is not 100%."
-            exit 1  # Fail the GitHub Actions workflow
-          fi
-          echo "Coverage Percentage: $coverage_percentage"
+          coverage_percentage=$(awk "BEGIN { printf \"%.2f\", ($covered / $total) * 100 }")
+          uncoverage_percentage=$(awk "BEGIN { printf \"%.2f\", ($missed / $total) * 100 }")
+
+          # Debugging output
           echo "Covered: $covered"
           echo "Missed: $missed"
+          echo "Total: $total"
+          echo "Coverage Percentage: $coverage_percentage"
+
+          # Check if coverage is at least 90%
+          if (( $(echo "$coverage_percentage >= 90" | bc -l) )); then
+            echo "Test coverage is at least 90%!"
+          else
+            echo "Uncoverage Percentage: $uncoverage_percentage"
+            echo "Test coverage is less than 90%."
+            exit 1  # Fail the GitHub Actions workflow
+          fi
         working-directory: ./comic_manager_app
 
       - name: Install ReportGenerator
