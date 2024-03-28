@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * Represents a user in the comic management system.
  *
@@ -32,8 +33,6 @@ public class User<Comic> implements Serializable {
   private List<Comic> tradeList; /**< The list of comics available for trade by the user. */
 
 
-
-
   /**
    * Constructs a user with the specified username, password, and wallet balance.
    *
@@ -50,6 +49,7 @@ public class User<Comic> implements Serializable {
     this.tradeList = new ArrayList<>();
   }
 
+
   /**
    * Gets the wallet balance of the user.
    *
@@ -58,6 +58,7 @@ public class User<Comic> implements Serializable {
   public int getWallet() {
     return wallet;
   }
+
 
   /**
    * Sets the wallet balance of the user.
@@ -68,6 +69,7 @@ public class User<Comic> implements Serializable {
     this.wallet = wallet;
   }
 
+
   /**
    * Gets the username of the user.
    *
@@ -76,6 +78,7 @@ public class User<Comic> implements Serializable {
   public String getUsername() {
     return username;
   }
+
 
   /**
    * Sets the username of the user.
@@ -86,6 +89,7 @@ public class User<Comic> implements Serializable {
     this.username = username;
   }
 
+
   /**
    * Gets the password of the user.
    *
@@ -94,6 +98,7 @@ public class User<Comic> implements Serializable {
   public String getPassword() {
     return password;
   }
+
 
   /**
    * Sets the password of the user.
@@ -104,6 +109,7 @@ public class User<Comic> implements Serializable {
     this.password = password;
   }
 
+
   /**
    * Gets the collection of comics owned by the user.
    *
@@ -112,6 +118,7 @@ public class User<Comic> implements Serializable {
   public List<Comic> getCollection() {
     return collection;
   }
+
 
   /**
    * Sets the collection of comics owned by the user.
@@ -122,6 +129,7 @@ public class User<Comic> implements Serializable {
     this.collection = collection;
   }
 
+
   /**
    * Gets the wishlist of comics of the user.
    *
@@ -130,6 +138,7 @@ public class User<Comic> implements Serializable {
   public List<Comic> getWishlist() {
     return wishlist;
   }
+
 
   /**
    * Sets the wishlist of comics of the user.
@@ -140,6 +149,7 @@ public class User<Comic> implements Serializable {
     this.wishlist = wishlist;
   }
 
+
   /**
    * Gets the trade list of comics of the user.
    *
@@ -148,6 +158,7 @@ public class User<Comic> implements Serializable {
   public List<Comic> getTradeList() {
     return tradeList;
   }
+
 
   /**
    * Sets the trade list of comics of the user.
@@ -158,6 +169,7 @@ public class User<Comic> implements Serializable {
     this.tradeList = tradeList;
   }
 
+
   /**
    * Adds a comic to the user's collection.
    *
@@ -166,6 +178,7 @@ public class User<Comic> implements Serializable {
   public void addToCollection(Comic comic) {
     collection.add(comic);
   }
+
 
   /**
    * Removes a comic from the user's collection.
@@ -176,6 +189,7 @@ public class User<Comic> implements Serializable {
     collection.remove(comic);
   }
 
+
   /**
    * Adds a comic to the user's wishlist.
    *
@@ -184,6 +198,7 @@ public class User<Comic> implements Serializable {
   public void addToWishlist(Comic comic) {
     wishlist.add(comic);
   }
+
 
   /**
    * Removes a comic from the user's wishlist.
@@ -194,6 +209,7 @@ public class User<Comic> implements Serializable {
     wishlist.remove(comic);
   }
 
+
   /**
    * Adds a comic to the user's trade list.
    *
@@ -203,6 +219,7 @@ public class User<Comic> implements Serializable {
     tradeList.add(comic);
   }
 
+
   /**
    * Removes a comic from the user's trade list.
    *
@@ -211,6 +228,7 @@ public class User<Comic> implements Serializable {
   public void removeFromTradeList(Comic comic) {
     tradeList.remove(comic);
   }
+
 
   /**
    * Returns a string representation of the user.

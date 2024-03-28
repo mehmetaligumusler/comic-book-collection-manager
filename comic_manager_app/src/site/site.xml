@@ -33,13 +33,11 @@
 	</poweredBy>
 
 	<body>
-		<head>Comic Book Collection Manager App</head>
+		<head>ETERNALS</head>
 		<!-- Add any additional meta tags, CSS files, or JavaScript files -->
 
 		<menu name="Overview">
-				<item name="Introduction" href="index.html" />
-				<item name="README.md" href="readme.html" />
-				<item name="Overiew Markdown" href="overview.html" />
+				<item name="Introduction" href="readme.html" />
 				<item name="Project Info" href="project-info.html" />
 				<item name="Project Summary" href="summary.html" />
 				<item name="Project Team" href="team.html" />

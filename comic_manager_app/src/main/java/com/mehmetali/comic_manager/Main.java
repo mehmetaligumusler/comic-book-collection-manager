@@ -3,8 +3,6 @@
  */
 package com.mehmetali.comic_manager;
 
-//590
-
 import java.util.Scanner;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -21,10 +19,12 @@ import java.io.PrintStream;
  */
 public class Main {
 
+
   /**
    * The username of the logged-in user.
    */
   public static String LoginName;
+
 
   /**
    * The wallet balance of the logged-in user.
@@ -53,9 +53,6 @@ public class Main {
   public static boolean control = false; /**< Boolean variable indicating control status. */
 
 
-
-
-
   /**
      * Prints the menu with the specified title and options.
      *
@@ -81,6 +78,7 @@ public class Main {
     System.out.print("Enter your choice: ");
   }
 
+
   /**
     * Pads the given text on the right side with spaces to make its length equal to the specified length.
     *
@@ -88,10 +86,10 @@ public class Main {
     * @param length The desired length of the padded text.
     * @return The padded text.
     */
-
   private static String rightPad(String text, int length) {
     return String.format("%-" + length + "s", text);
   }
+
 
   /**
     * Centers the given text within a string of the specified length by padding it with spaces on both sides.
@@ -100,14 +98,13 @@ public class Main {
     * @param length The desired length of the string containing the centered text.
     * @return The string containing the centered text.
     */
-
-
   private static String centerText(String text, int length) {
     int spaces = length - text.length();
     int before = spaces / 2;
     int after = spaces - before;
     return " ".repeat(before) + text + " ".repeat(after);
   }
+
 
   /**
    * Clears the console screen.
@@ -116,7 +113,6 @@ public class Main {
    * it clears the console screen by printing specific escape characters.
    * </p>
    */
-
   public static void clearConsole() {
     try {
       // Windows
@@ -134,6 +130,7 @@ public class Main {
     }
   }
 
+
   /**
    * The entry point of the application.
    *
@@ -145,6 +142,7 @@ public class Main {
     MainApp(scanner, System.out);
   }
 
+
   /**
    * Runs the main application loop.
    *
@@ -153,7 +151,6 @@ public class Main {
    * @return An integer indicating the success status of the application.
    * @throws IOException If an I/O error occurs.
    */
-
   public static int MainApp(Scanner scanner, PrintStream out) throws IOException {
     boolean exit = false;
 
@@ -197,6 +194,7 @@ public class Main {
     return 0;
   }
 
+
   /**
    * Registers a new user.
    *
@@ -205,8 +203,6 @@ public class Main {
    * @return An integer indicating the success status of the registration process.
    * @throws IOException If an I/O error occurs.
    */
-
-
   public static int registerMenu(Scanner scanner, PrintStream out) throws IOException {
     System.out.print("UserName: ");
     String username = scanner.nextLine();
@@ -217,7 +213,7 @@ public class Main {
     return 0;
   }
 
-  //ComicBook
+
   /**
    * Adds a new book to the book management system.
    *
@@ -241,6 +237,7 @@ public class Main {
     return 0;
   }
 
+
   /**
    * Displays the list of books owned by the current user.
    *
@@ -255,6 +252,7 @@ public class Main {
     return 0;
   }
 
+
   /**
    * Displays the list of all books in the system.
    *
@@ -268,6 +266,7 @@ public class Main {
     comicmanager.listBooks();
     return 0;
   }
+
 
   /**
    * Deletes a book from the system by its ID.
@@ -312,8 +311,6 @@ public class Main {
     return 0; // Returning 0 to indicate successful update
   }
 
-
-  //WishList
 
   /**
    * Adds a book to the wish list of the current user.
@@ -361,6 +358,7 @@ public class Main {
     return 0;
   }
 
+
   /**
    * Deletes a book from the wish list by its ID.
    *
@@ -375,9 +373,6 @@ public class Main {
     wishmanager.deleteBookByID(bookId);
     return 0;
   }
-
-
-  //TradeList
 
 
   /**
@@ -403,6 +398,7 @@ public class Main {
     return 0; // Returning 0 to indicate successful addition to the trade list
   }
 
+
   /**
    * Displays the trade list of books owned by the current user.
    *
@@ -416,6 +412,7 @@ public class Main {
     trademanager.listMyTradeList(LoginName);
     return 0;
   }
+
 
   /**
    * Deletes a book from the trade list by its ID.
@@ -447,6 +444,7 @@ public class Main {
     return 0;
   }
 
+
   /**
    * Buys a book from the trade list by its ID if the user's credit score is sufficient.
    *
@@ -470,6 +468,7 @@ public class Main {
     return 0;
   }
 
+
   /**
    * Increases the user's credit score by the specified amount.
    *
@@ -484,7 +483,6 @@ public class Main {
     userManager.creditbuyscore(LoginName, score);
     return 0;
   }
-
 
 
   /**
@@ -511,6 +509,7 @@ public class Main {
     return 0; // Returning 0 to indicate successful addition
   }
 
+
   /**
    * Displays the list of events related to the current user.
    *
@@ -524,6 +523,7 @@ public class Main {
     eventmanager.listEventsByCondition(LoginName);
     return 0;
   }
+
 
   /**
    * Displays the list of all events in the system.
@@ -556,6 +556,7 @@ public class Main {
     return 0;
   }
 
+
   /**
    * Updates the details of an event in the event management system by its ID.
    *
@@ -579,55 +580,15 @@ public class Main {
     return 0; // Returning 0 to indicate successful update
   }
 
-  /**
-   * Handles the login process for the user.
-   *
-   * @param scanner Scanner object to read user input.
-   * @param out PrintStream object to display output to the user.
-   * @return User object representing the logged-in user, or null if login fails.
-   * @throws IOException if an I/O error occurs.
-   */
-  /*
-  public static User loginMenu(Scanner scanner, PrintStream out) throws IOException {
-      User user = null;
-      boolean loggedIn = false;
-
-      do {
-          // Prompting user for username and password
-          out.print("UserName: ");
-          String username = scanner.nextLine();
-          out.print("Password: ");
-          String password = scanner.nextLine();
-
-          // Attempting to log in the user
-         user = userManager.login(username, password);
-
-          // Displaying login result
-          if (user != null) {
-              clearConsole();
-              out.println("Hello, " + user.getUsername() + "!");
-              loggedIn = true;
-          } else {
-              clearConsole();
-              out.println("Username or password is wrong!");
-              out.println("Please try again.");
-          }
-      } while (!loggedIn);
-
-      return user; // Returning the logged-in user object
-  }
-  */
 
   /**
    * Allows a user to log in to the system using their username and password.
    *
    * @param scanner A Scanner object for user input.
    * @param out A PrintStream object for output.
-   * @return Returns the User object corresponding to the logged-in user if successful,
-   *         or null if the login attempt fails.
+   * @return Returns the User object corresponding to the logged-in user if successful, or null if the login attempt fails.
    * @throws IOException Signals that an I/O exception has occurred.
    */
-
   public static User loginMenu(Scanner scanner, PrintStream out) throws IOException {
     // Prompting user for username and password
     out.print("UserName: ");
@@ -649,6 +610,7 @@ public class Main {
     return user; // Returning the logged-in user object or null if login fails
   }
 
+
   /**
    * Displays the user menu and allows the user to interact with the system based on their role.
    *
@@ -658,7 +620,6 @@ public class Main {
    * @return Returns 0 upon successful completion of user interaction.
    * @throws IOException Signals that an I/O exception has occurred.
    */
-
   public static int userMenu(User user,Scanner scanner, PrintStream out) throws IOException {
     boolean exit = false;
 
@@ -972,8 +933,6 @@ public class Main {
             break;
 
           case 5:
-            //System.exit(0);
-            //return 0;
             return 0;
         }
       }
@@ -982,6 +941,7 @@ public class Main {
     scanner.close();
     return 0;
   }
+
 
   /**
    * Returns the login name of the current user.
@@ -992,6 +952,7 @@ public class Main {
     return LoginName;
   }
 
+
   /**
    * Sets the login name of the current user.
    *
@@ -1000,6 +961,7 @@ public class Main {
   public static void setLoginName(String loginName) {
     LoginName = loginName;
   }
+
 
   /**
    * Returns the wallet balance of the current user.
@@ -1010,6 +972,7 @@ public class Main {
     return LoginWallet;
   }
 
+
   /**
    * Sets the wallet balance of the current user.
    *
@@ -1018,7 +981,4 @@ public class Main {
   public static void setWallet(int loginWallet) {
     LoginWallet = loginWallet;
   }
-
-
-
 }

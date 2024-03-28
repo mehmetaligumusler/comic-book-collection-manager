@@ -3,10 +3,10 @@
  */
 package com.mehmetali.comic_manager;
 
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * The EventManager class manages events in the comic manager application.
@@ -20,7 +20,6 @@ import java.util.List;
 public class EventManager {
   private List<Event> comics; /**< The list of events managed by the EventManager. */
   private static final String Event_FILE_PATH = "event.dat"; /**< The file path where the event data is stored. */
-
 
 
   /**
@@ -49,6 +48,7 @@ public class EventManager {
     return comic.getTitle();
   }
 
+
   /**
    * Lists all events.
    *
@@ -73,6 +73,7 @@ public class EventManager {
 
     return comics.size();
   }
+
 
   /**
    * Lists events based on a condition.
@@ -103,6 +104,7 @@ public class EventManager {
     return comics.size();
   }
 
+
   /**
    * Deletes an event by its ID.
    *
@@ -129,6 +131,7 @@ public class EventManager {
 
     return -1;
   }
+
 
   /**
    * Updates the title and content of an event by its ID.
@@ -177,6 +180,7 @@ public class EventManager {
     return true;
   }
 
+
   /**
    * Checks if an event ID is available.
    *
@@ -193,6 +197,7 @@ public class EventManager {
     return true;
   }
 
+
   /**
    * Retrieves the title of an event by its ID.
    *
@@ -208,6 +213,7 @@ public class EventManager {
 
     return null;
   }
+
 
   /**
    * Reads events from a file.
@@ -235,6 +241,7 @@ public class EventManager {
     }
   }
 
+
   /**
    * Writes the list of events to a file.
    *
@@ -250,6 +257,4 @@ public class EventManager {
       return -1;
     }
   }
-
-
 }

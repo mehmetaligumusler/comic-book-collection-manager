@@ -3,8 +3,8 @@
  */
 package com.mehmetali.comic_manager;
 
-
 import java.io.Serializable;
+
 
 /**
  * The Event class represents an event in the comic manager application.
@@ -38,6 +38,7 @@ public class Event implements Serializable {
     this.user = user;
   }
 
+
   /**
    * Gets the ID of the event.
    *
@@ -46,6 +47,7 @@ public class Event implements Serializable {
   public int geteventID() {
     return eventID;
   }
+
 
   /**
    * Sets the ID of the event.
@@ -56,6 +58,7 @@ public class Event implements Serializable {
     this.eventID = eventID;
   }
 
+
   /**
    * Gets the title of the event.
    *
@@ -64,6 +67,7 @@ public class Event implements Serializable {
   public String getTitle() {
     return title;
   }
+
 
   /**
    * Sets the title of the event.
@@ -74,6 +78,7 @@ public class Event implements Serializable {
     this.title = title;
   }
 
+
   /**
    * Gets the content of the event.
    *
@@ -82,6 +87,7 @@ public class Event implements Serializable {
   public String getContent() {
     return content;
   }
+
 
   /**
    * Sets the content of the event.
@@ -92,6 +98,7 @@ public class Event implements Serializable {
     this.content = content;
   }
 
+
   /**
    * Gets the user associated with the event.
    *
@@ -101,6 +108,7 @@ public class Event implements Serializable {
     return user;
   }
 
+
   /**
    * Sets the user associated with the event.
    *
@@ -109,7 +117,6 @@ public class Event implements Serializable {
   public void setUser(String user) {
     this.user = user;
   }
-
 
 
   /**

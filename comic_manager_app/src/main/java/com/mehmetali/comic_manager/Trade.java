@@ -5,6 +5,7 @@ package com.mehmetali.comic_manager;
 
 import java.io.Serializable;
 
+
 /**
  * The Trade class represents a comic book available for trading.
  * It implements the Serializable interface to support serialization.
@@ -21,6 +22,7 @@ public class Trade implements Serializable {
   private int pageNumber; /**< The page number of the comic book available for trading. */
   private String user; /**< The user associated with the comic book available for trading. */
   private int value; /**< The value of the comic book available for trading. */
+
 
   /**
    * Constructs a Trade object with the specified attributes.
@@ -39,6 +41,7 @@ public class Trade implements Serializable {
     this.value = value;
   }
 
+
   /**
    * Gets the ID of the comic.
    *
@@ -47,6 +50,7 @@ public class Trade implements Serializable {
   public int getComicID() {
     return comicID;
   }
+
 
   /**
    * Sets the ID of the comic.
@@ -57,6 +61,7 @@ public class Trade implements Serializable {
     this.comicID = comicID;
   }
 
+
   /**
    * Gets the title of the comic.
    *
@@ -65,6 +70,7 @@ public class Trade implements Serializable {
   public String getTitle() {
     return title;
   }
+
 
   /**
    * Sets the title of the comic.
@@ -75,6 +81,7 @@ public class Trade implements Serializable {
     this.title = title;
   }
 
+
   /**
    * Gets the page number of the comic.
    *
@@ -83,6 +90,7 @@ public class Trade implements Serializable {
   public int getpageNumber() {
     return pageNumber;
   }
+
 
   /**
    * Sets the page number of the comic.
@@ -93,6 +101,7 @@ public class Trade implements Serializable {
     this.pageNumber = pageNumber;
   }
 
+
   /**
    * Gets the user associated with the comic.
    *
@@ -101,6 +110,7 @@ public class Trade implements Serializable {
   public String getuser() {
     return user;
   }
+
 
   /**
    * Sets the user associated with the comic.
@@ -111,6 +121,7 @@ public class Trade implements Serializable {
     this.user = user;
   }
 
+
   /**
    * Gets the value of the comic.
    *
@@ -120,6 +131,7 @@ public class Trade implements Serializable {
     return value;
   }
 
+
   /**
    * Sets the value of the comic.
    *
@@ -128,6 +140,7 @@ public class Trade implements Serializable {
   public void setValue(int value) {
     this.value = value;
   }
+
 
   /**
    * Returns a string representation of the Trade object.

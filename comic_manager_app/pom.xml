@@ -39,6 +39,7 @@
 			</properties>
 			<roles>
 				<role>Developer</role>
+				<role>Designer</role>
 			</roles>
 		</developer>
 	</developers>
@@ -64,6 +65,7 @@
 			</properties>
 			<roles>
 				<role>Developer</role>
+				<role>Designer</role>
 			</roles>
 		</contributor>
 	</contributors>

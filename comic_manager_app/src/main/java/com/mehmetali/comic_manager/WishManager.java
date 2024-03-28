@@ -3,12 +3,10 @@
  */
 package com.mehmetali.comic_manager;
 
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-//import com.mehmetali.comic_manager.Book;
 
 /**
  * Manages the wish list of comics.
@@ -28,6 +26,7 @@ public class WishManager {
   private List<Wish> comics = readFromFile(WISH_FILE_PATH); /**< The list of wishes loaded from the wish file. */
   private int result = writeToFile(comics, WISH_FILE_PATH); /**< The result of writing wish data to the wish file. */
 
+
   /**
    * Interface for writing wish data to a file.
    */
@@ -40,8 +39,6 @@ public class WishManager {
      */
     int saveUsersToFile2(List<Wish> wishes);
   }
-
-
 
 
   /**
@@ -65,12 +62,12 @@ public class WishManager {
     }
 
     comicmanager.getBookTitleByID(comic.getComicID());
-    //comic.setTitle(Name);
     comics.add(comic);
     writeToFile(comics, WISH_FILE_PATH);
     System.out.println("The book has been successfully added to the wish list.");
     return 0;
   }
+
 
   /**
    * Lists all books in the wish list.
@@ -98,6 +95,7 @@ public class WishManager {
 
     return comics.size();
   }
+
 
   /**
    * Lists books in the wish list owned by a specific user.
@@ -129,6 +127,7 @@ public class WishManager {
     return comics.size();
   }
 
+
   /**
    * Deletes a book wish from the wish list by its ID.
    *
@@ -157,11 +156,6 @@ public class WishManager {
   }
 
 
-
-
-
-
-
   /**
    * Checks if a book name is available in the wish list.
    *
@@ -177,6 +171,7 @@ public class WishManager {
 
     return true;
   }
+
 
   /**
    * Reads a list of Wish objects from a file.
@@ -210,6 +205,7 @@ public class WishManager {
     return list;
   }
 
+
   /**
    * Writes a list of Wish objects to a file.
    *
@@ -227,12 +223,4 @@ public class WishManager {
       return -1;
     }
   }
-
-
-
-
-
-
-
-
 }

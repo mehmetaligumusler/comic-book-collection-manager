@@ -3,8 +3,8 @@
  */
 package com.mehmetali.comic_manager;
 
-
 import java.io.Serializable;
+
 
 /**
  * Represents a comic wish.
@@ -23,6 +23,7 @@ public class Wish implements Serializable {
   private String user; /**< The user who made the wish. */
   private int value; /**< The value of the comic book wished for. */
 
+
   /**
    * Constructs a Wish object.
    *
@@ -40,6 +41,7 @@ public class Wish implements Serializable {
     this.value = value;
   }
 
+
   /**
    * Gets the ID of the comic.
    *
@@ -48,6 +50,7 @@ public class Wish implements Serializable {
   public int getComicID() {
     return comicID;
   }
+
 
   /**
    * Sets the ID of the comic.
@@ -58,6 +61,7 @@ public class Wish implements Serializable {
     this.comicID = comicID;
   }
 
+
   /**
    * Gets the title of the comic.
    *
@@ -66,6 +70,7 @@ public class Wish implements Serializable {
   public String getTitle() {
     return title;
   }
+
 
   /**
    * Sets the title of the comic.
@@ -76,6 +81,7 @@ public class Wish implements Serializable {
     this.title = title;
   }
 
+
   /**
    * Gets the page number of the comic.
    *
@@ -84,6 +90,7 @@ public class Wish implements Serializable {
   public int getpageNumber() {
     return pageNumber;
   }
+
 
   /**
    * Sets the page number of the comic.
@@ -94,6 +101,7 @@ public class Wish implements Serializable {
     this.pageNumber = pageNumber;
   }
 
+
   /**
    * Gets the user associated with the comic.
    *
@@ -102,6 +110,7 @@ public class Wish implements Serializable {
   public String getuser() {
     return user;
   }
+
 
   /**
    * Sets the user associated with the comic.
@@ -112,6 +121,7 @@ public class Wish implements Serializable {
     this.user = user;
   }
 
+
   /**
    * Gets the value of the comic.
    *
@@ -121,6 +131,7 @@ public class Wish implements Serializable {
     return value;
   }
 
+
   /**
    * Sets the value of the comic.
    *
@@ -129,6 +140,7 @@ public class Wish implements Serializable {
   public void setValue(int value) {
     this.value = value;
   }
+
 
   /**
    * Returns a string representation of the comic wish.

@@ -3,7 +3,6 @@
  */
 package com.mehmetali.comic_manager;
 
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +21,7 @@ public class BookManager {
 
   List<Book> comics = readUsersFromFile(BOOK_FILE_PATH);
   int result = saveUsersToFile(comics, BOOK_FILE_PATH);
+
 
   /**
    * Constructs a BookManager object and initializes the list of comic books by reading from a file.
@@ -47,6 +47,7 @@ public class BookManager {
     readUsersFromFile(BOOK_FILE_PATH);
     return comic.getTitle();
   }
+
 
   /**
    * Lists all comic books in the collection.
@@ -74,6 +75,7 @@ public class BookManager {
 
     return comics.size();
   }
+
 
   /**
    * Lists comic books in the collection based on a specific condition.
@@ -105,6 +107,7 @@ public class BookManager {
     return comics.size();
   }
 
+
   /**
    * Deletes a comic book from the collection based on its ID.
    *
@@ -131,6 +134,7 @@ public class BookManager {
 
     return -1;
   }
+
 
   /**
    * Updates the title of a comic book in the collection based on its ID.
@@ -164,6 +168,7 @@ public class BookManager {
     return -1;
   }
 
+
   /**
    * Checks if a given comic book title is available in the collection.
    * @param title   The title of the comic book.
@@ -179,6 +184,7 @@ public class BookManager {
     return true;
   }
 
+
   /**
    * Checks if a given comic book ID is available in the collection.
    * @param ID The ID of the comic book.
@@ -193,6 +199,7 @@ public class BookManager {
 
     return true;
   }
+
 
   /**
    * Retrieves the title of a comic book based on its ID.
@@ -226,6 +233,7 @@ public class BookManager {
     return 0;
   }
 
+
   /**
    * Retrieves the value of the book with the specified ID.
    *
@@ -241,8 +249,6 @@ public class BookManager {
 
     return 0;
   }
-
-
 
 
   /**
@@ -277,6 +283,7 @@ public class BookManager {
     return list;
   }
 
+
   /**
    * Writes a list of Book objects to a file.
    *
@@ -294,7 +301,4 @@ public class BookManager {
       return -1;
     }
   }
-
-
-
 }

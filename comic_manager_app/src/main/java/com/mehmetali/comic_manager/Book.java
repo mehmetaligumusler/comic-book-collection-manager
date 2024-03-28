@@ -6,6 +6,7 @@ package com.mehmetali.comic_manager;
 
 import java.io.Serializable;
 
+
 /**
  * The Book class represents a comic book in the comic manager application.
  * It contains information such as comic ID, title, page number, user, and value.
@@ -22,6 +23,7 @@ public class Book implements Serializable {
   private int pageNumber; /**< The number of pages in the comic book. */
   private String user; /**< The user who owns the comic book. */
   private int value; /**< The value of the comic book. */
+
 
   /**
    * Constructs a Book object with the specified parameters.
@@ -40,6 +42,7 @@ public class Book implements Serializable {
     this.value = value;
   }
 
+
   /**
    * Gets the ID of the comic.
    *
@@ -48,6 +51,7 @@ public class Book implements Serializable {
   public int getComicID() {
     return comicID;
   }
+
 
   /**
    * Sets the ID of the comic.
@@ -58,6 +62,7 @@ public class Book implements Serializable {
     this.comicID = comicID;
   }
 
+
   /**
    * Gets the title of the comic.
    *
@@ -66,6 +71,7 @@ public class Book implements Serializable {
   public String getTitle() {
     return title;
   }
+
 
   /**
    * Sets the title of the comic.
@@ -76,6 +82,7 @@ public class Book implements Serializable {
     this.title = title;
   }
 
+
   /**
    * Gets the page number of the comic.
    *
@@ -84,6 +91,7 @@ public class Book implements Serializable {
   public int getpageNumber() {
     return pageNumber;
   }
+
 
   /**
    * Sets the page number of the comic.
@@ -94,6 +102,7 @@ public class Book implements Serializable {
     this.pageNumber = pageNumber;
   }
 
+
   /**
    * Gets the user associated with the comic.
    *
@@ -102,6 +111,7 @@ public class Book implements Serializable {
   public String getuser() {
     return user;
   }
+
 
   /**
    * Sets the user associated with the comic.
@@ -112,6 +122,7 @@ public class Book implements Serializable {
     this.user = user;
   }
 
+
   /**
    * Gets the value of the comic.
    *
@@ -121,6 +132,7 @@ public class Book implements Serializable {
     return value;
   }
 
+
   /**
    * Sets the value of the comic.
    *
@@ -129,6 +141,7 @@ public class Book implements Serializable {
   public void setValue(int value) {
     this.value = value;
   }
+
 
   /**
    * Returns a string representation of the Book object.

@@ -3,10 +3,10 @@
  */
 package com.mehmetali.comic_manager;
 
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * Manages user operations such as registration, login, and credit manipulation.
@@ -29,6 +29,7 @@ public class UserManager {
     this.users = readUsersFromFile();
   }
 
+
   /**
    * Registers a new user.
    *
@@ -47,6 +48,7 @@ public class UserManager {
     return user.getUsername();
   }
 
+
   /**
    * Checks if a username is available.
    *
@@ -62,6 +64,7 @@ public class UserManager {
 
     return true;
   }
+
 
   /**
    * Reads users from the file.
@@ -93,6 +96,7 @@ public class UserManager {
     }
   }
 
+
   /**
    * Saves users to the file.
    *
@@ -110,6 +114,7 @@ public class UserManager {
     }
   }
 
+
   /**
    * Logs in a user with the given username and password.
    *
@@ -126,6 +131,7 @@ public class UserManager {
 
     return null;
   }
+
 
   /**
    * Increases the wallet balance of a user.
@@ -156,6 +162,7 @@ public class UserManager {
     return newWallet;
   }
 
+
   /**
    * Decreases the wallet balance of a user.
    *
@@ -184,12 +191,14 @@ public class UserManager {
     saveUsersToFile(users);
     return newWallet;
   }
+
+
   /**
-      * Gets the wallet balance of a user.
-      *
-      * @param username the username of the user
-      * @return the wallet balance of the user, or -1 if the user is not found
-      */
+   * Gets the wallet balance of a user.
+   *
+   * @param username the username of the user
+   * @return the wallet balance of the user, or -1 if the user is not found
+   */
   public int getUserWallet(String username) {
     for (User user : users) {
       if (user.getUsername().equals(username)) {
@@ -199,5 +208,4 @@ public class UserManager {
 
     return -1;
   }
-
 }

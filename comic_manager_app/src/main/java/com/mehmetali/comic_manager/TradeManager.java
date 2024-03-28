@@ -3,10 +3,10 @@
  */
 package com.mehmetali.comic_manager;
 
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * The TradeManager class manages the trading of comic books.
@@ -24,7 +24,6 @@ public class TradeManager {
   private static final UserManager usermanager = new UserManager(); /**< The instance of UserManager for managing users. */
 
 
-
   /**
    * Constructs a TradeManager object.
    * Initializes the list of trades by reading from file.
@@ -32,6 +31,7 @@ public class TradeManager {
   public TradeManager() {
     this.comics = readUsersFromFile();
   }
+
 
   /**
    * Adds a comic book to the trade list.
@@ -46,17 +46,13 @@ public class TradeManager {
       return -1;
     }
 
-    /*
-    comic.setTitle(comicmanager.getBookTitleByID(comic.getComicID()));
-    comic.setpageNumber(comicmanager.getBookPageNumberByID(comic.getComicID()));
-    comic.setValue(comicmanager.getBookValueByID(comic.getComicID()));
-    */
     comics.add(comic);
     saveUsersToFile(comics);
     //comicmanager.deleteBookByID(comic.getComicID());
     System.out.println("The book has been successfully added to the Trade list.");
     return 0;
   }
+
 
   /**
    * Lists all comic books available for trade.
@@ -84,6 +80,7 @@ public class TradeManager {
 
     return comics.size();
   }
+
 
   /**
    * Lists the comic books available for trade by a specific condition (e.g., user).
@@ -115,6 +112,7 @@ public class TradeManager {
     return comics.size();
   }
 
+
   /**
    * Deletes a comic book from the trade list by its ID.
    * Moves the book back to the user's book list.
@@ -144,6 +142,7 @@ public class TradeManager {
 
     return -1;
   }
+
 
   /**
    * Buys a comic book from the trade list by its ID.
@@ -179,6 +178,7 @@ public class TradeManager {
     return -1;
   }
 
+
   /**
    * Checks if a trade name is available (not already used).
    *
@@ -194,6 +194,7 @@ public class TradeManager {
 
     return true;
   }
+
 
   /**
    * Returns the value of the book with the specified ID.
@@ -228,6 +229,7 @@ public class TradeManager {
     return true;
   }
 
+
   /**
    * Retrieves the title of a comic book by its ID.
    *
@@ -243,6 +245,7 @@ public class TradeManager {
 
     return null;
   }
+
 
   /**
    * Reads the list of trades from the file specified by the Trade_FILE_PATH.
@@ -275,6 +278,7 @@ public class TradeManager {
     }
   }
 
+
   /**
    * Saves the list of trades to the file specified by the Trade_FILE_PATH.
    *
@@ -292,6 +296,4 @@ public class TradeManager {
       return -1;
     }
   }
-
-
 }
