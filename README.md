@@ -61,7 +61,7 @@ mvn clean test site package
 You can run application by specify the Main function
 
 ```bash
-java -cp comic_manager_app-1.0-SNAPSHOT.jar com.mehmetali.comic_manager_app.Main
+java -cp comic_manager_app-1.0-SNAPSHOT.jar com.mehmetali.comic_manager.Main
 ```
 
 ## Contributing
