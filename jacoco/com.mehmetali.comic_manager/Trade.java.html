@@ -5,6 +5,7 @@ package com.mehmetali.comic_manager;
 
 import java.io.Serializable;
 
+
 /**
  * The Trade class represents a comic book available for trading.
  * It implements the Serializable interface to support serialization.
@@ -22,6 +23,7 @@ public class Trade implements Serializable {
   private String user; /**&lt; The user associated with the comic book available for trading. */
   private int value; /**&lt; The value of the comic book available for trading. */
 
+
   /**
    * Constructs a Trade object with the specified attributes.
    *
@@ -31,13 +33,14 @@ public class Trade implements Serializable {
    * @param user       The user who owns the comic.
    * @param value      The value of the comic.
    */
-<span class="fc" id="L34">  public Trade(int comicID, String title, int pageNumber, String user, int value) {</span>
-<span class="fc" id="L35">    this.comicID = comicID;</span>
-<span class="fc" id="L36">    this.title = title;</span>
-<span class="fc" id="L37">    this.pageNumber = pageNumber;</span>
-<span class="fc" id="L38">    this.user = user;</span>
-<span class="fc" id="L39">    this.value = value;</span>
-<span class="fc" id="L40">  }</span>
+<span class="fc" id="L36">  public Trade(int comicID, String title, int pageNumber, String user, int value) {</span>
+<span class="fc" id="L37">    this.comicID = comicID;</span>
+<span class="fc" id="L38">    this.title = title;</span>
+<span class="fc" id="L39">    this.pageNumber = pageNumber;</span>
+<span class="fc" id="L40">    this.user = user;</span>
+<span class="fc" id="L41">    this.value = value;</span>
+<span class="fc" id="L42">  }</span>
+
 
   /**
    * Gets the ID of the comic.
@@ -45,8 +48,9 @@ public class Trade implements Serializable {
    * @return the ID of the comic
    */
   public int getComicID() {
-<span class="fc" id="L48">    return comicID;</span>
+<span class="fc" id="L51">    return comicID;</span>
   }
+
 
   /**
    * Sets the ID of the comic.
@@ -54,8 +58,9 @@ public class Trade implements Serializable {
    * @param comicID the ID of the comic to set
    */
   public void setComicID(int comicID) {
-<span class="fc" id="L57">    this.comicID = comicID;</span>
-<span class="fc" id="L58">  }</span>
+<span class="fc" id="L61">    this.comicID = comicID;</span>
+<span class="fc" id="L62">  }</span>
+
 
   /**
    * Gets the title of the comic.
@@ -63,8 +68,9 @@ public class Trade implements Serializable {
    * @return the title of the comic
    */
   public String getTitle() {
-<span class="fc" id="L66">    return title;</span>
+<span class="fc" id="L71">    return title;</span>
   }
+
 
   /**
    * Sets the title of the comic.
@@ -72,8 +78,9 @@ public class Trade implements Serializable {
    * @param title the title of the comic to set
    */
   public void setTitle(String title) {
-<span class="fc" id="L75">    this.title = title;</span>
-<span class="fc" id="L76">  }</span>
+<span class="fc" id="L81">    this.title = title;</span>
+<span class="fc" id="L82">  }</span>
+
 
   /**
    * Gets the page number of the comic.
@@ -81,8 +88,9 @@ public class Trade implements Serializable {
    * @return the page number of the comic
    */
   public int getpageNumber() {
-<span class="fc" id="L84">    return pageNumber;</span>
+<span class="fc" id="L91">    return pageNumber;</span>
   }
+
 
   /**
    * Sets the page number of the comic.
@@ -90,8 +98,9 @@ public class Trade implements Serializable {
    * @param pageNumber the page number of the comic to set
    */
   public void setpageNumber(int pageNumber) {
-<span class="fc" id="L93">    this.pageNumber = pageNumber;</span>
-<span class="fc" id="L94">  }</span>
+<span class="fc" id="L101">    this.pageNumber = pageNumber;</span>
+<span class="fc" id="L102">  }</span>
+
 
   /**
    * Gets the user associated with the comic.
@@ -99,8 +108,9 @@ public class Trade implements Serializable {
    * @return the user associated with the comic
    */
   public String getuser() {
-<span class="fc" id="L102">    return user;</span>
+<span class="fc" id="L111">    return user;</span>
   }
+
 
   /**
    * Sets the user associated with the comic.
@@ -108,8 +118,9 @@ public class Trade implements Serializable {
    * @param user the user associated with the comic to set
    */
   public void setuser(String user) {
-<span class="fc" id="L111">    this.user = user;</span>
-<span class="fc" id="L112">  }</span>
+<span class="fc" id="L121">    this.user = user;</span>
+<span class="fc" id="L122">  }</span>
+
 
   /**
    * Gets the value of the comic.
@@ -117,8 +128,9 @@ public class Trade implements Serializable {
    * @return the value of the comic
    */
   public int getValue() {
-<span class="fc" id="L120">    return value;</span>
+<span class="fc" id="L131">    return value;</span>
   }
+
 
   /**
    * Sets the value of the comic.
@@ -126,8 +138,9 @@ public class Trade implements Serializable {
    * @param value the value of the comic to set
    */
   public void setValue(int value) {
-<span class="fc" id="L129">    this.value = value;</span>
-<span class="fc" id="L130">  }</span>
+<span class="fc" id="L141">    this.value = value;</span>
+<span class="fc" id="L142">  }</span>
+
 
   /**
    * Returns a string representation of the Trade object.
@@ -136,7 +149,7 @@ public class Trade implements Serializable {
    */
   @Override
   public String toString() {
-<span class="nc" id="L139">    return &quot;Comic{&quot; +</span>
+<span class="nc" id="L152">    return &quot;Comic{&quot; +</span>
            &quot;comicID=&quot; + comicID +
            &quot;, title='&quot; + title + '\'' +
            &quot;, pageNumber=&quot; + pageNumber +

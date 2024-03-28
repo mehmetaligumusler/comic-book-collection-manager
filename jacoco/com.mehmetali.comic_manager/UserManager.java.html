@@ -3,10 +3,10 @@
  */
 package com.mehmetali.comic_manager;
 
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * Manages user operations such as registration, login, and credit manipulation.
@@ -29,6 +29,7 @@ public class UserManager {
 <span class="fc" id="L29">    this.users = readUsersFromFile();</span>
 <span class="fc" id="L30">  }</span>
 
+
   /**
    * Registers a new user.
    *
@@ -36,16 +37,17 @@ public class UserManager {
    * @return the username of the registered user, or null if registration fails
    */
   public String registerUser(User user) {
-<span class="fc bfc" id="L39" title="All 2 branches covered.">    if (!isUsernameAvailable(user.getUsername())) {</span>
-<span class="fc" id="L40">      System.out.println(&quot;This username is already in use. Please choose a different username.&quot;);</span>
-<span class="fc" id="L41">      return null;</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">    if (!isUsernameAvailable(user.getUsername())) {</span>
+<span class="fc" id="L41">      System.out.println(&quot;This username is already in use. Please choose a different username.&quot;);</span>
+<span class="fc" id="L42">      return null;</span>
     }
 
-<span class="fc" id="L44">    users.add(user);</span>
-<span class="fc" id="L45">    saveUsersToFile(users);</span>
-<span class="fc" id="L46">    System.out.println(&quot;User registered successfully.&quot;);</span>
-<span class="fc" id="L47">    return user.getUsername();</span>
+<span class="fc" id="L45">    users.add(user);</span>
+<span class="fc" id="L46">    saveUsersToFile(users);</span>
+<span class="fc" id="L47">    System.out.println(&quot;User registered successfully.&quot;);</span>
+<span class="fc" id="L48">    return user.getUsername();</span>
   }
+
 
   /**
    * Checks if a username is available.
@@ -54,14 +56,15 @@ public class UserManager {
    * @return true if the username is available, false otherwise
    */
   public boolean isUsernameAvailable(String username) {
-<span class="fc bfc" id="L57" title="All 2 branches covered.">    for (User user : users) {</span>
-<span class="fc bfc" id="L58" title="All 2 branches covered.">      if (user.getUsername().equals(username)) {</span>
-<span class="fc" id="L59">        return false;</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">    for (User user : users) {</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">      if (user.getUsername().equals(username)) {</span>
+<span class="fc" id="L61">        return false;</span>
       }
-<span class="fc" id="L61">    }</span>
+<span class="fc" id="L63">    }</span>
 
-<span class="fc" id="L63">    return true;</span>
+<span class="fc" id="L65">    return true;</span>
   }
+
 
   /**
    * Reads users from the file.
@@ -69,29 +72,30 @@ public class UserManager {
    * @return the list of users read from the file, or an empty list if the file doesn't exist
    */
   private List&lt;User&gt; readUsersFromFile() {
-<span class="fc" id="L72">    File file = new File(USER_FILE_PATH);</span>
+<span class="fc" id="L75">    File file = new File(USER_FILE_PATH);</span>
 
-<span class="fc bfc" id="L74" title="All 2 branches covered.">    if (!file.exists()) {</span>
+<span class="fc bfc" id="L77" title="All 2 branches covered.">    if (!file.exists()) {</span>
       try {
-<span class="pc bpc" id="L76" title="1 of 2 branches missed.">        if (file.createNewFile()) {</span>
-<span class="fc" id="L77">          System.out.println(&quot;users.dat file created.&quot;);</span>
+<span class="pc bpc" id="L79" title="1 of 2 branches missed.">        if (file.createNewFile()) {</span>
+<span class="fc" id="L80">          System.out.println(&quot;users.dat file created.&quot;);</span>
         } else {
-<span class="nc" id="L79">          System.out.println(&quot;users.dat file already exists.&quot;);</span>
+<span class="nc" id="L82">          System.out.println(&quot;users.dat file already exists.&quot;);</span>
         }
-<span class="nc" id="L81">      } catch (IOException e) {</span>
-<span class="nc" id="L82">        System.out.println(&quot;File creation error: &quot; + e.getMessage());</span>
-<span class="fc" id="L83">      }</span>
+<span class="nc" id="L84">      } catch (IOException e) {</span>
+<span class="nc" id="L85">        System.out.println(&quot;File creation error: &quot; + e.getMessage());</span>
+<span class="fc" id="L86">      }</span>
 
-<span class="fc" id="L85">      return new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L88">      return new ArrayList&lt;&gt;();</span>
     }
 
-<span class="fc" id="L88">    try (FileInputStream fileIn = new FileInputStream(USER_FILE_PATH);</span>
-<span class="nc" id="L89">           ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {</span>
-<span class="nc" id="L90">      return (List&lt;User&gt;) objectIn.readObject();</span>
-<span class="fc" id="L91">    } catch (IOException | ClassNotFoundException e) {</span>
-<span class="fc" id="L92">      return new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L91">    try (FileInputStream fileIn = new FileInputStream(USER_FILE_PATH);</span>
+<span class="nc" id="L92">           ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {</span>
+<span class="nc" id="L93">      return (List&lt;User&gt;) objectIn.readObject();</span>
+<span class="fc" id="L94">    } catch (IOException | ClassNotFoundException e) {</span>
+<span class="fc" id="L95">      return new ArrayList&lt;&gt;();</span>
     }
   }
+
 
   /**
    * Saves users to the file.
@@ -100,15 +104,16 @@ public class UserManager {
    * @return 0 if saving is successful, -1 otherwise
    */
   private int saveUsersToFile(List&lt;User&gt; userList) {
-<span class="fc" id="L103">    try (FileOutputStream fileOut = new FileOutputStream(USER_FILE_PATH);</span>
-<span class="fc" id="L104">           ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {</span>
-<span class="fc" id="L105">      objectOut.writeObject(userList);</span>
-<span class="fc" id="L106">      return 0;</span>
-<span class="nc" id="L107">    } catch (IOException e) {</span>
-<span class="nc" id="L108">      System.out.println(&quot;File creation error: &quot; + e.getMessage());</span>
-<span class="nc" id="L109">      return -1;</span>
+<span class="fc" id="L107">    try (FileOutputStream fileOut = new FileOutputStream(USER_FILE_PATH);</span>
+<span class="fc" id="L108">           ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {</span>
+<span class="fc" id="L109">      objectOut.writeObject(userList);</span>
+<span class="fc" id="L110">      return 0;</span>
+<span class="nc" id="L111">    } catch (IOException e) {</span>
+<span class="nc" id="L112">      System.out.println(&quot;File creation error: &quot; + e.getMessage());</span>
+<span class="nc" id="L113">      return -1;</span>
     }
   }
+
 
   /**
    * Logs in a user with the given username and password.
@@ -118,14 +123,15 @@ public class UserManager {
    * @return the user object if login is successful, null otherwise
    */
   public User login(String username, String password) {
-<span class="fc bfc" id="L121" title="All 2 branches covered.">    for (User user : users) {</span>
-<span class="fc bfc" id="L122" title="All 4 branches covered.">      if (user.getUsername().equals(username) &amp;&amp; user.getPassword().equals(password)) {</span>
-<span class="fc" id="L123">        return user;</span>
+<span class="fc bfc" id="L126" title="All 2 branches covered.">    for (User user : users) {</span>
+<span class="fc bfc" id="L127" title="All 4 branches covered.">      if (user.getUsername().equals(username) &amp;&amp; user.getPassword().equals(password)) {</span>
+<span class="fc" id="L128">        return user;</span>
       }
-<span class="fc" id="L125">    }</span>
+<span class="fc" id="L130">    }</span>
 
-<span class="fc" id="L127">    return null;</span>
+<span class="fc" id="L132">    return null;</span>
   }
+
 
   /**
    * Increases the wallet balance of a user.
@@ -135,26 +141,27 @@ public class UserManager {
    * @return the new wallet balance of the user, or -1 if the user is not found
    */
   public int creditbuyscore(String username, int credit) {
-<span class="fc" id="L138">    User foundUser = null;</span>
+<span class="fc" id="L144">    User foundUser = null;</span>
 
-<span class="fc bfc" id="L140" title="All 2 branches covered.">    for (User user : users) {</span>
-<span class="fc bfc" id="L141" title="All 2 branches covered.">      if (user.getUsername().equals(username)) {</span>
-<span class="fc" id="L142">        foundUser = user;</span>
-<span class="fc" id="L143">        break;</span>
+<span class="fc bfc" id="L146" title="All 2 branches covered.">    for (User user : users) {</span>
+<span class="fc bfc" id="L147" title="All 2 branches covered.">      if (user.getUsername().equals(username)) {</span>
+<span class="fc" id="L148">        foundUser = user;</span>
+<span class="fc" id="L149">        break;</span>
       }
-<span class="fc" id="L145">    }</span>
+<span class="fc" id="L151">    }</span>
 
-<span class="fc bfc" id="L147" title="All 2 branches covered.">    if (foundUser == null) {</span>
-<span class="fc" id="L148">      System.out.println(&quot;User not found.&quot;);</span>
-<span class="fc" id="L149">      return -1;</span>
+<span class="fc bfc" id="L153" title="All 2 branches covered.">    if (foundUser == null) {</span>
+<span class="fc" id="L154">      System.out.println(&quot;User not found.&quot;);</span>
+<span class="fc" id="L155">      return -1;</span>
     }
 
-<span class="fc" id="L152">    int currentWallet = foundUser.getWallet();</span>
-<span class="fc" id="L153">    int newWallet = currentWallet + credit;</span>
-<span class="fc" id="L154">    foundUser.setWallet(newWallet);</span>
-<span class="fc" id="L155">    saveUsersToFile(users);</span>
-<span class="fc" id="L156">    return newWallet;</span>
+<span class="fc" id="L158">    int currentWallet = foundUser.getWallet();</span>
+<span class="fc" id="L159">    int newWallet = currentWallet + credit;</span>
+<span class="fc" id="L160">    foundUser.setWallet(newWallet);</span>
+<span class="fc" id="L161">    saveUsersToFile(users);</span>
+<span class="fc" id="L162">    return newWallet;</span>
   }
+
 
   /**
    * Decreases the wallet balance of a user.
@@ -164,41 +171,42 @@ public class UserManager {
    * @return the new wallet balance of the user, or -1 if the user is not found
    */
   public int creditSellscore(String username, int credit) {
-<span class="fc" id="L167">    User foundUser = null;</span>
+<span class="fc" id="L174">    User foundUser = null;</span>
 
-<span class="fc bfc" id="L169" title="All 2 branches covered.">    for (User user : users) {</span>
-<span class="fc bfc" id="L170" title="All 2 branches covered.">      if (user.getUsername().equals(username)) {</span>
-<span class="fc" id="L171">        foundUser = user;</span>
-<span class="fc" id="L172">        break;</span>
+<span class="fc bfc" id="L176" title="All 2 branches covered.">    for (User user : users) {</span>
+<span class="fc bfc" id="L177" title="All 2 branches covered.">      if (user.getUsername().equals(username)) {</span>
+<span class="fc" id="L178">        foundUser = user;</span>
+<span class="fc" id="L179">        break;</span>
       }
-<span class="fc" id="L174">    }</span>
+<span class="fc" id="L181">    }</span>
 
-<span class="fc bfc" id="L176" title="All 2 branches covered.">    if (foundUser == null) {</span>
-<span class="fc" id="L177">      System.out.println(&quot;User not found.&quot;);</span>
-<span class="fc" id="L178">      return -1;</span>
+<span class="fc bfc" id="L183" title="All 2 branches covered.">    if (foundUser == null) {</span>
+<span class="fc" id="L184">      System.out.println(&quot;User not found.&quot;);</span>
+<span class="fc" id="L185">      return -1;</span>
     }
 
-<span class="fc" id="L181">    int currentWallet = foundUser.getWallet();</span>
-<span class="fc" id="L182">    int newWallet = currentWallet - credit;</span>
-<span class="fc" id="L183">    foundUser.setWallet(newWallet);</span>
-<span class="fc" id="L184">    saveUsersToFile(users);</span>
-<span class="fc" id="L185">    return newWallet;</span>
+<span class="fc" id="L188">    int currentWallet = foundUser.getWallet();</span>
+<span class="fc" id="L189">    int newWallet = currentWallet - credit;</span>
+<span class="fc" id="L190">    foundUser.setWallet(newWallet);</span>
+<span class="fc" id="L191">    saveUsersToFile(users);</span>
+<span class="fc" id="L192">    return newWallet;</span>
   }
+
+
   /**
-      * Gets the wallet balance of a user.
-      *
-      * @param username the username of the user
-      * @return the wallet balance of the user, or -1 if the user is not found
-      */
+   * Gets the wallet balance of a user.
+   *
+   * @param username the username of the user
+   * @return the wallet balance of the user, or -1 if the user is not found
+   */
   public int getUserWallet(String username) {
-<span class="fc bfc" id="L194" title="All 2 branches covered.">    for (User user : users) {</span>
-<span class="fc bfc" id="L195" title="All 2 branches covered.">      if (user.getUsername().equals(username)) {</span>
-<span class="fc" id="L196">        return user.getWallet();</span>
+<span class="fc bfc" id="L203" title="All 2 branches covered.">    for (User user : users) {</span>
+<span class="fc bfc" id="L204" title="All 2 branches covered.">      if (user.getUsername().equals(username)) {</span>
+<span class="fc" id="L205">        return user.getWallet();</span>
       }
-<span class="fc" id="L198">    }</span>
+<span class="fc" id="L207">    }</span>
 
-<span class="fc" id="L200">    return -1;</span>
+<span class="fc" id="L209">    return -1;</span>
   }
-
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

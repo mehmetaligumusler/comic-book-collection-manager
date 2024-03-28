@@ -259,8 +259,6 @@
   </compound>
   <compound refid="README_8md" kind="file"><name>README.md</name>
   </compound>
-  <compound refid="md_README" kind="page"><name>md_README</name>
-  </compound>
   <compound refid="dir_dea29856742d0645b4a08086c0b87104" kind="dir"><name>comic_manager_app/src/main/java/com</name>
   </compound>
   <compound refid="dir_c1109ce587b19de1d466cbec5ba42c73" kind="dir"><name>comic_manager_app/src/main/java/com/mehmetali/comic_manager</name>
@@ -274,5 +272,7 @@
   <compound refid="dir_9add1e7f1f6eee3e15419b63e7b2d38e" kind="dir"><name>comic_manager_app/src/main/java/com/mehmetali</name>
   </compound>
   <compound refid="dir_429501c8357fbb65adebb0dd6cad6b77" kind="dir"><name>comic_manager_app/src</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
   </compound>
 </doxygenindex>

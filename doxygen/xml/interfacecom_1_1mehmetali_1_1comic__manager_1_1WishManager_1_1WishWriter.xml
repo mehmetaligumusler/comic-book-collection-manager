@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/WishManager.java" line="41" column="9"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/WishManager.java" line="40" column="9"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -45,7 +45,7 @@
         <link refid="interfacecom_1_1mehmetali_1_1comic__manager_1_1WishManager_1_1WishWriter"/>
       </node>
     </collaborationgraph>
-    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/WishManager.java" line="34" column="20" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/WishManager.java" bodystart="34" bodyend="42"/>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/WishManager.java" line="33" column="20" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/WishManager.java" bodystart="33" bodyend="41"/>
     <listofallmembers>
       <member refid="interfacecom_1_1mehmetali_1_1comic__manager_1_1WishManager_1_1WishWriter_1a26c1e233caa345179f13982a937370de" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::WishManager::WishWriter</scope><name>saveUsersToFile2</name></member>
     </listofallmembers>

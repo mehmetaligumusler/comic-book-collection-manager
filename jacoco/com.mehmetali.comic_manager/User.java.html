@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * Represents a user in the comic management system.
  *
@@ -32,8 +33,6 @@ public class User&lt;Comic&gt; implements Serializable {
   private List&lt;Comic&gt; tradeList; /**&lt; The list of comics available for trade by the user. */
 
 
-
-
   /**
    * Constructs a user with the specified username, password, and wallet balance.
    *
@@ -41,14 +40,15 @@ public class User&lt;Comic&gt; implements Serializable {
    * @param password the password of the user
    * @param wallet   the wallet balance of the user
    */
-<span class="fc" id="L44">  public User(String username, String password, int wallet) {</span>
-<span class="fc" id="L45">    this.username = username;</span>
-<span class="fc" id="L46">    this.password = password;</span>
-<span class="fc" id="L47">    this.wallet = wallet;</span>
-<span class="fc" id="L48">    this.collection = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L49">    this.wishlist = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L50">    this.tradeList = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L51">  }</span>
+<span class="fc" id="L43">  public User(String username, String password, int wallet) {</span>
+<span class="fc" id="L44">    this.username = username;</span>
+<span class="fc" id="L45">    this.password = password;</span>
+<span class="fc" id="L46">    this.wallet = wallet;</span>
+<span class="fc" id="L47">    this.collection = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L48">    this.wishlist = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L49">    this.tradeList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L50">  }</span>
+
 
   /**
    * Gets the wallet balance of the user.
@@ -59,14 +59,16 @@ public class User&lt;Comic&gt; implements Serializable {
 <span class="fc" id="L59">    return wallet;</span>
   }
 
+
   /**
    * Sets the wallet balance of the user.
    *
    * @param wallet the wallet balance of the user to set
    */
   public void setWallet(int wallet) {
-<span class="fc" id="L68">    this.wallet = wallet;</span>
-<span class="fc" id="L69">  }</span>
+<span class="fc" id="L69">    this.wallet = wallet;</span>
+<span class="fc" id="L70">  }</span>
+
 
   /**
    * Gets the username of the user.
@@ -74,8 +76,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @return the username of the user
    */
   public String getUsername() {
-<span class="fc" id="L77">    return username;</span>
+<span class="fc" id="L79">    return username;</span>
   }
+
 
   /**
    * Sets the username of the user.
@@ -83,8 +86,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @param username the username of the user to set
    */
   public void setUsername(String username) {
-<span class="fc" id="L86">    this.username = username;</span>
-<span class="fc" id="L87">  }</span>
+<span class="fc" id="L89">    this.username = username;</span>
+<span class="fc" id="L90">  }</span>
+
 
   /**
    * Gets the password of the user.
@@ -92,8 +96,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @return the password of the user
    */
   public String getPassword() {
-<span class="fc" id="L95">    return password;</span>
+<span class="fc" id="L99">    return password;</span>
   }
+
 
   /**
    * Sets the password of the user.
@@ -101,8 +106,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @param password the password of the user to set
    */
   public void setPassword(String password) {
-<span class="fc" id="L104">    this.password = password;</span>
-<span class="fc" id="L105">  }</span>
+<span class="fc" id="L109">    this.password = password;</span>
+<span class="fc" id="L110">  }</span>
+
 
   /**
    * Gets the collection of comics owned by the user.
@@ -110,8 +116,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @return the collection of comics owned by the user
    */
   public List&lt;Comic&gt; getCollection() {
-<span class="fc" id="L113">    return collection;</span>
+<span class="fc" id="L119">    return collection;</span>
   }
+
 
   /**
    * Sets the collection of comics owned by the user.
@@ -119,8 +126,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @param collection the collection of comics owned by the user to set
    */
   public void setCollection(List&lt;Comic&gt; collection) {
-<span class="fc" id="L122">    this.collection = collection;</span>
-<span class="fc" id="L123">  }</span>
+<span class="fc" id="L129">    this.collection = collection;</span>
+<span class="fc" id="L130">  }</span>
+
 
   /**
    * Gets the wishlist of comics of the user.
@@ -128,8 +136,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @return the wishlist of comics of the user
    */
   public List&lt;Comic&gt; getWishlist() {
-<span class="fc" id="L131">    return wishlist;</span>
+<span class="fc" id="L139">    return wishlist;</span>
   }
+
 
   /**
    * Sets the wishlist of comics of the user.
@@ -137,8 +146,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @param wishlist the wishlist of comics of the user to set
    */
   public void setWishlist(List&lt;Comic&gt; wishlist) {
-<span class="fc" id="L140">    this.wishlist = wishlist;</span>
-<span class="fc" id="L141">  }</span>
+<span class="fc" id="L149">    this.wishlist = wishlist;</span>
+<span class="fc" id="L150">  }</span>
+
 
   /**
    * Gets the trade list of comics of the user.
@@ -146,8 +156,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @return the trade list of comics of the user
    */
   public List&lt;Comic&gt; getTradeList() {
-<span class="fc" id="L149">    return tradeList;</span>
+<span class="fc" id="L159">    return tradeList;</span>
   }
+
 
   /**
    * Sets the trade list of comics of the user.
@@ -155,8 +166,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @param tradeList the trade list of comics of the user to set
    */
   public void setTradeList(List&lt;Comic&gt; tradeList) {
-<span class="fc" id="L158">    this.tradeList = tradeList;</span>
-<span class="fc" id="L159">  }</span>
+<span class="fc" id="L169">    this.tradeList = tradeList;</span>
+<span class="fc" id="L170">  }</span>
+
 
   /**
    * Adds a comic to the user's collection.
@@ -164,8 +176,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @param comic the comic to add to the collection
    */
   public void addToCollection(Comic comic) {
-<span class="fc" id="L167">    collection.add(comic);</span>
-<span class="fc" id="L168">  }</span>
+<span class="fc" id="L179">    collection.add(comic);</span>
+<span class="fc" id="L180">  }</span>
+
 
   /**
    * Removes a comic from the user's collection.
@@ -173,8 +186,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @param comic the comic to remove from the collection
    */
   public void removeFromCollection(Comic comic) {
-<span class="fc" id="L176">    collection.remove(comic);</span>
-<span class="fc" id="L177">  }</span>
+<span class="fc" id="L189">    collection.remove(comic);</span>
+<span class="fc" id="L190">  }</span>
+
 
   /**
    * Adds a comic to the user's wishlist.
@@ -182,8 +196,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @param comic the comic to add to the wishlist
    */
   public void addToWishlist(Comic comic) {
-<span class="fc" id="L185">    wishlist.add(comic);</span>
-<span class="fc" id="L186">  }</span>
+<span class="fc" id="L199">    wishlist.add(comic);</span>
+<span class="fc" id="L200">  }</span>
+
 
   /**
    * Removes a comic from the user's wishlist.
@@ -191,8 +206,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @param comic the comic to remove from the wishlist
    */
   public void removeFromWishlist(Comic comic) {
-<span class="fc" id="L194">    wishlist.remove(comic);</span>
-<span class="fc" id="L195">  }</span>
+<span class="fc" id="L209">    wishlist.remove(comic);</span>
+<span class="fc" id="L210">  }</span>
+
 
   /**
    * Adds a comic to the user's trade list.
@@ -200,8 +216,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @param comic the comic to add to the trade list
    */
   public void addToTradeList(Comic comic) {
-<span class="fc" id="L203">    tradeList.add(comic);</span>
-<span class="fc" id="L204">  }</span>
+<span class="fc" id="L219">    tradeList.add(comic);</span>
+<span class="fc" id="L220">  }</span>
+
 
   /**
    * Removes a comic from the user's trade list.
@@ -209,8 +226,9 @@ public class User&lt;Comic&gt; implements Serializable {
    * @param comic the comic to remove from the trade list
    */
   public void removeFromTradeList(Comic comic) {
-<span class="fc" id="L212">    tradeList.remove(comic);</span>
-<span class="fc" id="L213">  }</span>
+<span class="fc" id="L229">    tradeList.remove(comic);</span>
+<span class="fc" id="L230">  }</span>
+
 
   /**
    * Returns a string representation of the user.
@@ -219,7 +237,7 @@ public class User&lt;Comic&gt; implements Serializable {
    */
   @Override
   public String toString() {
-<span class="fc" id="L222">    return &quot;User{&quot; +</span>
+<span class="fc" id="L240">    return &quot;User{&quot; +</span>
            &quot;username='&quot; + username + '\'' +
            &quot;, password='&quot; + password + '\'' +
            &quot;, collection=&quot; + collection +

@@ -3,10 +3,10 @@
  */
 package com.mehmetali.comic_manager;
 
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * The EventManager class manages events in the comic manager application.
@@ -22,14 +22,13 @@ public class EventManager {
   private static final String Event_FILE_PATH = &quot;event.dat&quot;; /**&lt; The file path where the event data is stored. */
 
 
-
   /**
    * Constructs an EventManager object.
    * Initializes the list of events by reading from a file.
    */
-<span class="fc" id="L30">  public EventManager() {</span>
-<span class="fc" id="L31">    this.comics = readUsersFromFile();</span>
-<span class="fc" id="L32">  }</span>
+<span class="fc" id="L29">  public EventManager() {</span>
+<span class="fc" id="L30">    this.comics = readUsersFromFile();</span>
+<span class="fc" id="L31">  }</span>
 
 
   /**
@@ -38,16 +37,17 @@ public class EventManager {
    * @return The title of the added event if successful, null otherwise.
    */
   public String AddEvent(Event comic) {
-<span class="fc bfc" id="L41" title="All 2 branches covered.">    if (!isEventNameAvailable(comic.getTitle())) {</span>
-<span class="fc" id="L42">      System.out.println(&quot;This Event name is already in use. Please choose a different Event name.&quot;);</span>
-<span class="fc" id="L43">      return null;</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">    if (!isEventNameAvailable(comic.getTitle())) {</span>
+<span class="fc" id="L41">      System.out.println(&quot;This Event name is already in use. Please choose a different Event name.&quot;);</span>
+<span class="fc" id="L42">      return null;</span>
     }
 
-<span class="fc" id="L46">    comics.add(comic);</span>
-<span class="fc" id="L47">    saveUsersToFile(comics);</span>
-<span class="fc" id="L48">    System.out.println(&quot;Event saved successfully.&quot;);</span>
-<span class="fc" id="L49">    return comic.getTitle();</span>
+<span class="fc" id="L45">    comics.add(comic);</span>
+<span class="fc" id="L46">    saveUsersToFile(comics);</span>
+<span class="fc" id="L47">    System.out.println(&quot;Event saved successfully.&quot;);</span>
+<span class="fc" id="L48">    return comic.getTitle();</span>
   }
+
 
   /**
    * Lists all events.
@@ -74,6 +74,7 @@ public class EventManager {
 <span class="fc" id="L74">    return comics.size();</span>
   }
 
+
   /**
    * Lists events based on a condition.
    *
@@ -81,27 +82,28 @@ public class EventManager {
    * @return The number of events listed.
    */
   public int listEventsByCondition(String condition) {
-<span class="fc" id="L84">    this.comics = readUsersFromFile();</span>
+<span class="fc" id="L85">    this.comics = readUsersFromFile();</span>
 
-<span class="fc bfc" id="L86" title="All 2 branches covered.">    if (comics.isEmpty()) {</span>
-<span class="fc" id="L87">      System.out.println(&quot;No Events found to list.&quot;);</span>
-<span class="fc" id="L88">      return 0;</span>
+<span class="fc bfc" id="L87" title="All 2 branches covered.">    if (comics.isEmpty()) {</span>
+<span class="fc" id="L88">      System.out.println(&quot;No Events found to list.&quot;);</span>
+<span class="fc" id="L89">      return 0;</span>
     }
 
-<span class="fc" id="L91">    System.out.println(&quot;----- &quot; + condition + &quot; Events in Status -----&quot;);</span>
+<span class="fc" id="L92">    System.out.println(&quot;----- &quot; + condition + &quot; Events in Status -----&quot;);</span>
 
-<span class="fc bfc" id="L93" title="All 2 branches covered.">    for (Event comic : comics) {</span>
-<span class="fc bfc" id="L94" title="All 2 branches covered.">      if (comic.getUser().equalsIgnoreCase(condition)) {</span>
-<span class="fc" id="L95">        System.out.println(&quot;Event ID: &quot; + comic.geteventID());</span>
-<span class="fc" id="L96">        System.out.println(&quot;Title: &quot; + comic.getTitle());</span>
-<span class="fc" id="L97">        System.out.println(&quot;Content &quot; + comic.getContent());</span>
-<span class="fc" id="L98">        System.out.println(&quot;User: &quot; + comic.getUser());</span>
-<span class="fc" id="L99">        System.out.println(&quot;-------------------------&quot;);</span>
+<span class="fc bfc" id="L94" title="All 2 branches covered.">    for (Event comic : comics) {</span>
+<span class="fc bfc" id="L95" title="All 2 branches covered.">      if (comic.getUser().equalsIgnoreCase(condition)) {</span>
+<span class="fc" id="L96">        System.out.println(&quot;Event ID: &quot; + comic.geteventID());</span>
+<span class="fc" id="L97">        System.out.println(&quot;Title: &quot; + comic.getTitle());</span>
+<span class="fc" id="L98">        System.out.println(&quot;Content &quot; + comic.getContent());</span>
+<span class="fc" id="L99">        System.out.println(&quot;User: &quot; + comic.getUser());</span>
+<span class="fc" id="L100">        System.out.println(&quot;-------------------------&quot;);</span>
       }
-<span class="fc" id="L101">    }</span>
+<span class="fc" id="L102">    }</span>
 
-<span class="fc" id="L103">    return comics.size();</span>
+<span class="fc" id="L104">    return comics.size();</span>
   }
+
 
   /**
    * Deletes an event by its ID.
@@ -110,25 +112,26 @@ public class EventManager {
    * @return 0 if the event is successfully deleted, -1 otherwise.
    */
   public int deleteEventByID(int EventID) {
-<span class="fc" id="L113">    boolean found = false;</span>
+<span class="fc" id="L115">    boolean found = false;</span>
 
-<span class="fc bfc" id="L115" title="All 2 branches covered.">    for (Event comic : comics) {</span>
-<span class="pc bpc" id="L116" title="1 of 2 branches missed.">      if (comic.geteventID() == EventID) {</span>
-<span class="fc" id="L117">        comics.remove(comic);</span>
-<span class="fc" id="L118">        saveUsersToFile(comics);</span>
-<span class="fc" id="L119">        System.out.println(&quot;Event deleted successfully.&quot;);</span>
-<span class="fc" id="L120">        found = true;</span>
-<span class="fc" id="L121">        return 0;</span>
+<span class="fc bfc" id="L117" title="All 2 branches covered.">    for (Event comic : comics) {</span>
+<span class="pc bpc" id="L118" title="1 of 2 branches missed.">      if (comic.geteventID() == EventID) {</span>
+<span class="fc" id="L119">        comics.remove(comic);</span>
+<span class="fc" id="L120">        saveUsersToFile(comics);</span>
+<span class="fc" id="L121">        System.out.println(&quot;Event deleted successfully.&quot;);</span>
+<span class="fc" id="L122">        found = true;</span>
+<span class="fc" id="L123">        return 0;</span>
       }
-<span class="nc" id="L123">    }</span>
+<span class="nc" id="L125">    }</span>
 
-<span class="pc bpc" id="L125" title="1 of 2 branches missed.">    if (!found) {</span>
-<span class="fc" id="L126">      System.out.println(&quot;No Event matching Event ID was found..&quot;);</span>
-<span class="fc" id="L127">      return -1;</span>
+<span class="pc bpc" id="L127" title="1 of 2 branches missed.">    if (!found) {</span>
+<span class="fc" id="L128">      System.out.println(&quot;No Event matching Event ID was found..&quot;);</span>
+<span class="fc" id="L129">      return -1;</span>
     }
 
-<span class="nc" id="L130">    return -1;</span>
+<span class="nc" id="L132">    return -1;</span>
   }
+
 
   /**
    * Updates the title and content of an event by its ID.
@@ -139,25 +142,25 @@ public class EventManager {
    * @return 0 if the event title is successfully updated, -1 otherwise.
    */
   public int updateEventTitleByID(int EventID, String newTitle, String newContent) {
-<span class="fc" id="L142">    boolean found = false;</span>
+<span class="fc" id="L145">    boolean found = false;</span>
 
-<span class="fc bfc" id="L144" title="All 2 branches covered.">    for (Event comic : comics) {</span>
-<span class="pc bpc" id="L145" title="1 of 2 branches missed.">      if (comic.geteventID() == EventID) {</span>
-<span class="fc" id="L146">        comic.setContent(newContent);</span>
-<span class="fc" id="L147">        comic.setTitle(newTitle);</span>
-<span class="fc" id="L148">        saveUsersToFile(comics);</span>
-<span class="fc" id="L149">        System.out.println(&quot;Event title updated successfully.&quot;);</span>
-<span class="fc" id="L150">        found = true;</span>
-<span class="fc" id="L151">        return 0;</span>
+<span class="fc bfc" id="L147" title="All 2 branches covered.">    for (Event comic : comics) {</span>
+<span class="pc bpc" id="L148" title="1 of 2 branches missed.">      if (comic.geteventID() == EventID) {</span>
+<span class="fc" id="L149">        comic.setContent(newContent);</span>
+<span class="fc" id="L150">        comic.setTitle(newTitle);</span>
+<span class="fc" id="L151">        saveUsersToFile(comics);</span>
+<span class="fc" id="L152">        System.out.println(&quot;Event title updated successfully.&quot;);</span>
+<span class="fc" id="L153">        found = true;</span>
+<span class="fc" id="L154">        return 0;</span>
       }
-<span class="nc" id="L153">    }</span>
+<span class="nc" id="L156">    }</span>
 
-<span class="pc bpc" id="L155" title="1 of 2 branches missed.">    if (!found) {</span>
-<span class="fc" id="L156">      System.out.println(&quot;No Event matching Event ID was found.&quot;);</span>
-<span class="fc" id="L157">      return -1;</span>
+<span class="pc bpc" id="L158" title="1 of 2 branches missed.">    if (!found) {</span>
+<span class="fc" id="L159">      System.out.println(&quot;No Event matching Event ID was found.&quot;);</span>
+<span class="fc" id="L160">      return -1;</span>
     }
 
-<span class="nc" id="L160">    return -1;</span>
+<span class="nc" id="L163">    return -1;</span>
   }
 
 
@@ -168,14 +171,15 @@ public class EventManager {
    * @return true if the event name is available, false otherwise.
    */
   public boolean isEventNameAvailable(String title) {
-<span class="fc bfc" id="L171" title="All 2 branches covered.">    for (Event comic : comics) {</span>
-<span class="fc bfc" id="L172" title="All 2 branches covered.">      if (comic.getTitle().equals(title)) {</span>
-<span class="fc" id="L173">        return false;</span>
+<span class="fc bfc" id="L174" title="All 2 branches covered.">    for (Event comic : comics) {</span>
+<span class="fc bfc" id="L175" title="All 2 branches covered.">      if (comic.getTitle().equals(title)) {</span>
+<span class="fc" id="L176">        return false;</span>
       }
-<span class="fc" id="L175">    }</span>
+<span class="fc" id="L178">    }</span>
 
-<span class="fc" id="L177">    return true;</span>
+<span class="fc" id="L180">    return true;</span>
   }
+
 
   /**
    * Checks if an event ID is available.
@@ -184,14 +188,15 @@ public class EventManager {
    * @return true if the event ID is available, false otherwise.
    */
   public boolean isEventIDAvailable(int ID) {
-<span class="fc bfc" id="L187" title="All 2 branches covered.">    for (Event comic : comics) {</span>
-<span class="fc bfc" id="L188" title="All 2 branches covered.">      if (comic.geteventID() == ID) {</span>
-<span class="fc" id="L189">        return false;</span>
+<span class="fc bfc" id="L191" title="All 2 branches covered.">    for (Event comic : comics) {</span>
+<span class="fc bfc" id="L192" title="All 2 branches covered.">      if (comic.geteventID() == ID) {</span>
+<span class="fc" id="L193">        return false;</span>
       }
-<span class="fc" id="L191">    }</span>
+<span class="fc" id="L195">    }</span>
 
-<span class="fc" id="L193">    return true;</span>
+<span class="fc" id="L197">    return true;</span>
   }
+
 
   /**
    * Retrieves the title of an event by its ID.
@@ -200,14 +205,15 @@ public class EventManager {
    * @return The title of the event if found, null otherwise.
    */
   public String getEventTitleByID(int EventID) {
-<span class="fc bfc" id="L203" title="All 2 branches covered.">    for (Event comic : comics) {</span>
-<span class="pc bpc" id="L204" title="1 of 2 branches missed.">      if (comic.geteventID() == EventID) {</span>
-<span class="nc" id="L205">        return comic.getTitle();</span>
+<span class="fc bfc" id="L208" title="All 2 branches covered.">    for (Event comic : comics) {</span>
+<span class="pc bpc" id="L209" title="1 of 2 branches missed.">      if (comic.geteventID() == EventID) {</span>
+<span class="nc" id="L210">        return comic.getTitle();</span>
       }
-<span class="fc" id="L207">    }</span>
+<span class="fc" id="L212">    }</span>
 
-<span class="fc" id="L209">    return null;</span>
+<span class="fc" id="L214">    return null;</span>
   }
+
 
   /**
    * Reads events from a file.
@@ -215,25 +221,26 @@ public class EventManager {
    * @return The list of events read from the file.
    */
   private List&lt;Event&gt; readUsersFromFile() {
-<span class="fc" id="L218">    File file = new File(Event_FILE_PATH);</span>
+<span class="fc" id="L224">    File file = new File(Event_FILE_PATH);</span>
 
-<span class="fc bfc" id="L220" title="All 2 branches covered.">    if (!file.exists()) {</span>
+<span class="fc bfc" id="L226" title="All 2 branches covered.">    if (!file.exists()) {</span>
       try {
-<span class="pc bpc" id="L222" title="1 of 2 branches missed.">        if (file.createNewFile()) {</span>
-<span class="fc" id="L223">          System.out.println(&quot;Events.dat file has been created.&quot;);</span>
+<span class="pc bpc" id="L228" title="1 of 2 branches missed.">        if (file.createNewFile()) {</span>
+<span class="fc" id="L229">          System.out.println(&quot;Events.dat file has been created.&quot;);</span>
         }
-<span class="pc" id="L225">      } catch (IOException e) {}</span>
+<span class="pc" id="L231">      } catch (IOException e) {}</span>
 
-<span class="fc" id="L227">      return new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L233">      return new ArrayList&lt;&gt;();</span>
     }
 
-<span class="fc" id="L230">    try (FileInputStream fileIn = new FileInputStream(Event_FILE_PATH);</span>
-<span class="fc" id="L231">           ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {</span>
-<span class="fc" id="L232">      return (List&lt;Event&gt;) objectIn.readObject();</span>
-<span class="fc" id="L233">    } catch (IOException | ClassNotFoundException e) {</span>
-<span class="fc" id="L234">      return new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L236">    try (FileInputStream fileIn = new FileInputStream(Event_FILE_PATH);</span>
+<span class="fc" id="L237">           ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {</span>
+<span class="fc" id="L238">      return (List&lt;Event&gt;) objectIn.readObject();</span>
+<span class="fc" id="L239">    } catch (IOException | ClassNotFoundException e) {</span>
+<span class="fc" id="L240">      return new ArrayList&lt;&gt;();</span>
     }
   }
+
 
   /**
    * Writes the list of events to a file.
@@ -242,15 +249,13 @@ public class EventManager {
    * @return 0 if the events are successfully written to the file, -1 otherwise.
    */
   private int saveUsersToFile(List&lt;Event&gt; comics2) {
-<span class="fc" id="L245">    try (FileOutputStream fileOut = new FileOutputStream(Event_FILE_PATH);</span>
-<span class="fc" id="L246">           ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {</span>
-<span class="fc" id="L247">      objectOut.writeObject(comics2);</span>
-<span class="fc" id="L248">      return 0;</span>
-<span class="nc" id="L249">    } catch (IOException e) {</span>
-<span class="nc" id="L250">      return -1;</span>
+<span class="fc" id="L252">    try (FileOutputStream fileOut = new FileOutputStream(Event_FILE_PATH);</span>
+<span class="fc" id="L253">           ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {</span>
+<span class="fc" id="L254">      objectOut.writeObject(comics2);</span>
+<span class="fc" id="L255">      return 0;</span>
+<span class="nc" id="L256">    } catch (IOException e) {</span>
+<span class="nc" id="L257">      return -1;</span>
     }
   }
-
-
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

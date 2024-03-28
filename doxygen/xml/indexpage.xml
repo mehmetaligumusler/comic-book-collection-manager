@@ -1,15 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
-  <compounddef id="md_README" kind="page">
-    <compoundname>md_README</compoundname>
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
     <title>Comic Book Manager Application</title>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<sect1 id="md_README_1autotoc_md1">
+<para><anchor id="index_1md_README"/> </para>
+<sect1 id="index_1autotoc_md1">
 <title>Overview</title>
 <para>The Comic Book Manager application is a software tool designed to assist users in cataloging and managing their comic book collections. With this application, users can easily organize their comic books, track their wishlists, manage trade lists, and stay updated on comic book events and conventions.</para>
-<sect2 id="md_README_1autotoc_md2">
+<sect2 id="index_1autotoc_md2">
 <title>Releases</title>
 <para><itemizedlist>
 <listitem><para><ulink url="https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java/releases/latest"><image type="html" name="https://badgen.net/github/release/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java" alt="GitHub release badge" inline="yes"></image>
@@ -17,7 +18,7 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md_README_1autotoc_md3">
+<sect2 id="index_1autotoc_md3">
 <title>Platforms</title>
 <para><itemizedlist>
 <listitem><para><image type="html" name="assets/badge-ubuntu.svg" alt="Ubuntu badge" inline="yes"></image>
@@ -29,7 +30,7 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md_README_1autotoc_md4">
+<sect2 id="index_1autotoc_md4">
 <title>Test Coverage</title>
 <para><ulink url="https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java/actions/workflows/release.yml"><image type="html" name="https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java/actions/workflows/release.yml/badge.svg" alt="Release" inline="yes"></image>
 </ulink></para>
@@ -58,39 +59,39 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md_README_1autotoc_md5">
+<sect2 id="index_1autotoc_md5">
 <title>Project Description</title>
 <para>CE204, Midterm</para>
 </sect2>
-<sect2 id="md_README_1autotoc_md6">
+<sect2 id="index_1autotoc_md6">
 <title>Installation</title>
 <para><programlisting><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/mehmetaligumusler/ce204-midterm-mehmetali-gumusler-java.git</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md_README_1autotoc_md7">
+<sect2 id="index_1autotoc_md7">
 <title>Usage</title>
-<sect3 id="md_README_1autotoc_md8">
+<sect3 id="index_1autotoc_md8">
 <title>Build the Project</title>
 <para>Enter pom.xml root folder and run following command to test and generate jar file</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">mvn<sp/>clean<sp/>test<sp/>site<sp/>package</highlight></codeline>
 </programlisting></para>
 </sect3>
-<sect3 id="md_README_1autotoc_md9">
+<sect3 id="index_1autotoc_md9">
 <title>Run Project</title>
 <para>You can run application by specify the Main function</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">java<sp/>-cp<sp/>comic_manager_app-1.0-SNAPSHOT.jar<sp/>com.mehmetali.comic_manager_app.Main</highlight></codeline>
 </programlisting></para>
 </sect3>
 </sect2>
-<sect2 id="md_README_1autotoc_md10">
+<sect2 id="index_1autotoc_md10">
 <title>Contributing</title>
 <para>Mehmet Ali GUMUSLER, (<ulink url="mailto:mehmetali_gumusler21@erdogan.edu.tr">mehmetali_gumusler21@erdogan.edu.tr</ulink>)</para>
 <para>Gökay DERVISOĞLU, (<ulink url="mailto:gokay_dervisoglu21@erdogan.edu.tr">gokay_dervisoglu21@erdogan.edu.tr</ulink>)</para>
 </sect2>
-<sect2 id="md_README_1autotoc_md11">
+<sect2 id="index_1autotoc_md11">
 <title>License</title>
 </sect2>
-<sect2 id="md_README_1autotoc_md12">
+<sect2 id="index_1autotoc_md12">
 <title>Dependencies</title>
 <para><itemizedlist>
 <listitem><para><ulink url="https://www.doxygen.nl/">Doxygen</ulink></para>
@@ -100,17 +101,17 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md_README_1autotoc_md13">
+<sect2 id="index_1autotoc_md13">
 <title>Features</title>
-<sect3 id="md_README_1autotoc_md14">
+<sect3 id="index_1autotoc_md14">
 <title>Testing</title>
 <para>Tests are Underdevelopment with Real Environment</para>
 </sect3>
-<sect3 id="md_README_1autotoc_md15">
+<sect3 id="index_1autotoc_md15">
 <title>Support</title>
 <para>Project can be updated according issues. Contact me if you have any questions.</para>
 </sect3>
-<sect3 id="md_README_1autotoc_md16">
+<sect3 id="index_1autotoc_md16">
 <title>Contact</title>
 <para><itemizedlist>
 <listitem><para>Mehmet Ali GUMUSLER, (<ulink url="mailto:mehmetali_gumusler21@erdogan.edu.tr">mehmetali_gumusler21@erdogan.edu.tr</ulink>)</para>
@@ -118,14 +119,14 @@
 </listitem></itemizedlist>
 </para>
 </sect3>
-<sect3 id="md_README_1autotoc_md17">
+<sect3 id="index_1autotoc_md17">
 <title>Instructor:</title>
 <para><itemizedlist>
 <listitem><para>Ugur CORUH</para>
 </listitem></itemizedlist>
 </para>
 </sect3>
-<sect3 id="md_README_1autotoc_md18">
+<sect3 id="index_1autotoc_md18">
 <title>Acknowledgments</title>
 <para><itemizedlist>
 <listitem><para><ulink url="https://visualstudio.microsoft.com/tr/vs/community/">Microsoft</ulink></para>
@@ -135,7 +136,7 @@
 </para>
 </sect3>
 </sect2>
-<sect2 id="md_README_1autotoc_md19">
+<sect2 id="index_1autotoc_md19">
 <title>About</title>
 </sect2>
 </sect1>

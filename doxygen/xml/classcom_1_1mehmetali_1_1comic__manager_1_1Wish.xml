@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="35" column="10" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="35" bodyend="41"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="36" column="10" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="36" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a422b4944d82addfaea204bb93a1858ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -167,8 +167,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="48" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="48" bodyend="50"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae16ff49bc0e8293cb87dd8b4286d4994" compoundref="WishManager_8java" startline="61" endline="73">com.mehmetali.comic_manager.WishManager.AddBook</referencedby>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="50" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="50" bodyend="52"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae16ff49bc0e8293cb87dd8b4286d4994" compoundref="WishManager_8java" startline="58" endline="69">com.mehmetali.comic_manager.WishManager.AddBook</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a95191ea0d61bfee5d2dc2f561fcc0c6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -196,7 +196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="57" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="57" bodyend="59"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="60" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="60" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ad5a5770d230ecfcc2fbb0ea5e1e088ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>String</type>
@@ -213,8 +213,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="66" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="66" bodyend="68"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae16ff49bc0e8293cb87dd8b4286d4994" compoundref="WishManager_8java" startline="61" endline="73">com.mehmetali.comic_manager.WishManager.AddBook</referencedby>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="70" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="70" bodyend="72"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1WishManager_1ae16ff49bc0e8293cb87dd8b4286d4994" compoundref="WishManager_8java" startline="58" endline="69">com.mehmetali.comic_manager.WishManager.AddBook</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1aa816b2b2887f7e1c8dd7888d9356d9b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -242,7 +242,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="75" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="75" bodyend="77"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="80" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="80" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ae7be55862c2fdd3905581753193d643f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="84" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="84" bodyend="86"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="90" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="90" bodyend="92"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a8c867e91f60e255f20bd62e428d7b40d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -287,7 +287,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="93" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="93" bodyend="95"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="100" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="100" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a9727d55ca5a5deb2aa3107f6d7f45cca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>String</type>
@@ -304,7 +304,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="102" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="102" bodyend="104"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="110" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="110" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ad649de4f9b34bf9165f7a8321db328bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -332,7 +332,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="111" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="111" bodyend="113"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="120" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="120" bodyend="122"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1abb77f1f53727d01206f20eee790b9813" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -349,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="120" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="120" bodyend="122"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="130" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="130" bodyend="132"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a816bf18cad02f1739e59081017a4ea22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -377,7 +377,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="129" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="129" bodyend="131"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="140" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="140" bodyend="142"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a82a86d221699264fed2efb7082b5ee6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>String</type>
@@ -394,7 +394,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="139" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="139" bodyend="147"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="151" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="151" bodyend="159"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -430,7 +430,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="19" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="19" bodyend="148"/>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" line="19" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Wish.java" bodystart="19" bodyend="160"/>
     <listofallmembers>
       <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1ae3164494e76f9b6b7b2c542ca9ff739c" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>comicID</name></member>
       <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Wish_1a422b4944d82addfaea204bb93a1858ec" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Wish</scope><name>getComicID</name></member>

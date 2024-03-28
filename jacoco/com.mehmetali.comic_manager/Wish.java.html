@@ -3,8 +3,8 @@
  */
 package com.mehmetali.comic_manager;
 
-
 import java.io.Serializable;
+
 
 /**
  * Represents a comic wish.
@@ -23,6 +23,7 @@ public class Wish implements Serializable {
   private String user; /**&lt; The user who made the wish. */
   private int value; /**&lt; The value of the comic book wished for. */
 
+
   /**
    * Constructs a Wish object.
    *
@@ -32,13 +33,14 @@ public class Wish implements Serializable {
    * @param user       the user who made the wish
    * @param value      the value of the comic
    */
-<span class="fc" id="L35">  public Wish(int comicID, String title, int pageNumber, String user, int value) {</span>
-<span class="fc" id="L36">    this.comicID = comicID;</span>
-<span class="fc" id="L37">    this.title = title;</span>
-<span class="fc" id="L38">    this.pageNumber = pageNumber;</span>
-<span class="fc" id="L39">    this.user = user;</span>
-<span class="fc" id="L40">    this.value = value;</span>
-<span class="fc" id="L41">  }</span>
+<span class="fc" id="L36">  public Wish(int comicID, String title, int pageNumber, String user, int value) {</span>
+<span class="fc" id="L37">    this.comicID = comicID;</span>
+<span class="fc" id="L38">    this.title = title;</span>
+<span class="fc" id="L39">    this.pageNumber = pageNumber;</span>
+<span class="fc" id="L40">    this.user = user;</span>
+<span class="fc" id="L41">    this.value = value;</span>
+<span class="fc" id="L42">  }</span>
+
 
   /**
    * Gets the ID of the comic.
@@ -46,8 +48,9 @@ public class Wish implements Serializable {
    * @return the ID of the comic
    */
   public int getComicID() {
-<span class="fc" id="L49">    return comicID;</span>
+<span class="fc" id="L51">    return comicID;</span>
   }
+
 
   /**
    * Sets the ID of the comic.
@@ -55,8 +58,9 @@ public class Wish implements Serializable {
    * @param comicID the ID of the comic to set
    */
   public void setComicID(int comicID) {
-<span class="fc" id="L58">    this.comicID = comicID;</span>
-<span class="fc" id="L59">  }</span>
+<span class="fc" id="L61">    this.comicID = comicID;</span>
+<span class="fc" id="L62">  }</span>
+
 
   /**
    * Gets the title of the comic.
@@ -64,8 +68,9 @@ public class Wish implements Serializable {
    * @return the title of the comic
    */
   public String getTitle() {
-<span class="fc" id="L67">    return title;</span>
+<span class="fc" id="L71">    return title;</span>
   }
+
 
   /**
    * Sets the title of the comic.
@@ -73,8 +78,9 @@ public class Wish implements Serializable {
    * @param title the title of the comic to set
    */
   public void setTitle(String title) {
-<span class="fc" id="L76">    this.title = title;</span>
-<span class="fc" id="L77">  }</span>
+<span class="fc" id="L81">    this.title = title;</span>
+<span class="fc" id="L82">  }</span>
+
 
   /**
    * Gets the page number of the comic.
@@ -82,8 +88,9 @@ public class Wish implements Serializable {
    * @return the page number of the comic
    */
   public int getpageNumber() {
-<span class="fc" id="L85">    return pageNumber;</span>
+<span class="fc" id="L91">    return pageNumber;</span>
   }
+
 
   /**
    * Sets the page number of the comic.
@@ -91,8 +98,9 @@ public class Wish implements Serializable {
    * @param pageNumber the page number of the comic to set
    */
   public void setpageNumber(int pageNumber) {
-<span class="fc" id="L94">    this.pageNumber = pageNumber;</span>
-<span class="fc" id="L95">  }</span>
+<span class="fc" id="L101">    this.pageNumber = pageNumber;</span>
+<span class="fc" id="L102">  }</span>
+
 
   /**
    * Gets the user associated with the comic.
@@ -100,8 +108,9 @@ public class Wish implements Serializable {
    * @return the user associated with the comic
    */
   public String getuser() {
-<span class="fc" id="L103">    return user;</span>
+<span class="fc" id="L111">    return user;</span>
   }
+
 
   /**
    * Sets the user associated with the comic.
@@ -109,8 +118,9 @@ public class Wish implements Serializable {
    * @param user the user associated with the comic to set
    */
   public void setuser(String user) {
-<span class="fc" id="L112">    this.user = user;</span>
-<span class="fc" id="L113">  }</span>
+<span class="fc" id="L121">    this.user = user;</span>
+<span class="fc" id="L122">  }</span>
+
 
   /**
    * Gets the value of the comic.
@@ -118,8 +128,9 @@ public class Wish implements Serializable {
    * @return the value of the comic
    */
   public int getValue() {
-<span class="fc" id="L121">    return value;</span>
+<span class="fc" id="L131">    return value;</span>
   }
+
 
   /**
    * Sets the value of the comic.
@@ -127,8 +138,9 @@ public class Wish implements Serializable {
    * @param value the value of the comic to set
    */
   public void setValue(int value) {
-<span class="fc" id="L130">    this.value = value;</span>
-<span class="fc" id="L131">  }</span>
+<span class="fc" id="L141">    this.value = value;</span>
+<span class="fc" id="L142">  }</span>
+
 
   /**
    * Returns a string representation of the comic wish.
@@ -137,7 +149,7 @@ public class Wish implements Serializable {
    */
   @Override
   public String toString() {
-<span class="nc" id="L140">    return &quot;Comic{&quot; +</span>
+<span class="nc" id="L152">    return &quot;Comic{&quot; +</span>
            &quot;comicID=&quot; + comicID +
            &quot;, title='&quot; + title + '\'' +
            &quot;, pageNumber=&quot; + pageNumber +

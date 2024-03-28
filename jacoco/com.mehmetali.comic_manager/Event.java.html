@@ -3,8 +3,8 @@
  */
 package com.mehmetali.comic_manager;
 
-
 import java.io.Serializable;
+
 
 /**
  * The Event class represents an event in the comic manager application.
@@ -38,14 +38,16 @@ public class Event implements Serializable {
 <span class="fc" id="L38">    this.user = user;</span>
 <span class="fc" id="L39">  }</span>
 
+
   /**
    * Gets the ID of the event.
    *
    * @return the ID of the event
    */
   public int geteventID() {
-<span class="fc" id="L47">    return eventID;</span>
+<span class="fc" id="L48">    return eventID;</span>
   }
+
 
   /**
    * Sets the ID of the event.
@@ -53,8 +55,9 @@ public class Event implements Serializable {
    * @param eventID the ID of the event to set
    */
   public void seteventID(int eventID) {
-<span class="fc" id="L56">    this.eventID = eventID;</span>
-<span class="fc" id="L57">  }</span>
+<span class="fc" id="L58">    this.eventID = eventID;</span>
+<span class="fc" id="L59">  }</span>
+
 
   /**
    * Gets the title of the event.
@@ -62,8 +65,9 @@ public class Event implements Serializable {
    * @return the title of the event
    */
   public String getTitle() {
-<span class="fc" id="L65">    return title;</span>
+<span class="fc" id="L68">    return title;</span>
   }
+
 
   /**
    * Sets the title of the event.
@@ -71,8 +75,9 @@ public class Event implements Serializable {
    * @param title the title of the event to set
    */
   public void setTitle(String title) {
-<span class="fc" id="L74">    this.title = title;</span>
-<span class="fc" id="L75">  }</span>
+<span class="fc" id="L78">    this.title = title;</span>
+<span class="fc" id="L79">  }</span>
+
 
   /**
    * Gets the content of the event.
@@ -80,8 +85,9 @@ public class Event implements Serializable {
    * @return the content of the event
    */
   public String getContent() {
-<span class="fc" id="L83">    return content;</span>
+<span class="fc" id="L88">    return content;</span>
   }
+
 
   /**
    * Sets the content of the event.
@@ -89,8 +95,9 @@ public class Event implements Serializable {
    * @param content the content of the event to set
    */
   public void setContent(String content) {
-<span class="fc" id="L92">    this.content = content;</span>
-<span class="fc" id="L93">  }</span>
+<span class="fc" id="L98">    this.content = content;</span>
+<span class="fc" id="L99">  }</span>
+
 
   /**
    * Gets the user associated with the event.
@@ -98,8 +105,9 @@ public class Event implements Serializable {
    * @return the user associated with the event
    */
   public String getUser() {
-<span class="fc" id="L101">    return user;</span>
+<span class="fc" id="L108">    return user;</span>
   }
+
 
   /**
    * Sets the user associated with the event.
@@ -107,9 +115,8 @@ public class Event implements Serializable {
    * @param user the user associated with the event to set
    */
   public void setUser(String user) {
-<span class="fc" id="L110">    this.user = user;</span>
-<span class="fc" id="L111">  }</span>
-
+<span class="fc" id="L118">    this.user = user;</span>
+<span class="fc" id="L119">  }</span>
 
 
   /**
@@ -119,7 +126,7 @@ public class Event implements Serializable {
    */
   @Override
   public String toString() {
-<span class="fc" id="L122">    return &quot;event{&quot; +</span>
+<span class="fc" id="L129">    return &quot;event{&quot; +</span>
            &quot;eventID=&quot; + eventID +
            &quot;, title='&quot; + title + '\'' +
            &quot;, content=&quot; + content +

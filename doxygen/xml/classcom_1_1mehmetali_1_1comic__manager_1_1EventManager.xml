@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="30" column="10" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="30" bodyend="32"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="29" column="10" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="29" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a7f3523855546199753ac5c8a8c4af16f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>String</type>
@@ -77,10 +77,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="40" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="40" bodyend="50"/>
-        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1a38449eab71fc7d11c4d3af71ef6fbefe" compoundref="Event_8java" startline="64" endline="66">com.mehmetali.comic_manager.Event.getTitle</references>
-        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1adbde9cfdfafdc847c4a6e84e59ef2d24" compoundref="EventManager_8java" startline="170" endline="178">com.mehmetali.comic_manager.EventManager.isEventNameAvailable</references>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a5077840ac159d4f6c8c03325dbd8c86c" compoundref="Main_8java" startline="498" endline="512">com.mehmetali.comic_manager.Main.EventAddBookMenu</referencedby>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="39" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="39" bodyend="49"/>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1Event_1a38449eab71fc7d11c4d3af71ef6fbefe" compoundref="Event_8java" startline="67" endline="69">com.mehmetali.comic_manager.Event.getTitle</references>
+        <references refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1adbde9cfdfafdc847c4a6e84e59ef2d24" compoundref="EventManager_8java" startline="173" endline="181">com.mehmetali.comic_manager.EventManager.isEventNameAvailable</references>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a5077840ac159d4f6c8c03325dbd8c86c" compoundref="Main_8java" startline="496" endline="510">com.mehmetali.comic_manager.Main.EventAddBookMenu</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a01eb58f4ac8908f9fcf41d2eee4cebf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -128,8 +128,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="83" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="83" bodyend="104"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a616ef6317be731a8fcadb7443decaccd" compoundref="Main_8java" startline="522" endline="526">com.mehmetali.comic_manager.Main.EventlistBookMenu</referencedby>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="84" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="84" bodyend="105"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a616ef6317be731a8fcadb7443decaccd" compoundref="Main_8java" startline="521" endline="525">com.mehmetali.comic_manager.Main.EventlistBookMenu</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1af990a5fffaf20a62a1c5b38d233362ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="112" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="112" bodyend="131"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="114" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="114" bodyend="133"/>
         <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a761438ee4546023c6236602326a489dd" compoundref="Main_8java" startline="551" endline="557">com.mehmetali.comic_manager.Main.EventdeleteBookMenu</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a0368a83c16cac9edba503026117a6964" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -214,8 +214,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="141" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="141" bodyend="161"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a6c3db295c714a3d76b8db2007cf57137" compoundref="Main_8java" startline="567" endline="580">com.mehmetali.comic_manager.Main.EventupdateBookMenu</referencedby>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="144" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="144" bodyend="164"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1Main_1a6c3db295c714a3d76b8db2007cf57137" compoundref="Main_8java" startline="568" endline="581">com.mehmetali.comic_manager.Main.EventupdateBookMenu</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1adbde9cfdfafdc847c4a6e84e59ef2d24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>boolean</type>
@@ -245,8 +245,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="170" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="170" bodyend="178"/>
-        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a7f3523855546199753ac5c8a8c4af16f" compoundref="EventManager_8java" startline="40" endline="50">com.mehmetali.comic_manager.EventManager.AddEvent</referencedby>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="173" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="173" bodyend="181"/>
+        <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a7f3523855546199753ac5c8a8c4af16f" compoundref="EventManager_8java" startline="39" endline="49">com.mehmetali.comic_manager.EventManager.AddEvent</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a896725dbd2310e5ef93fc99d12c3c191" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>boolean</type>
@@ -276,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="186" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="186" bodyend="194"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="190" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="190" bodyend="198"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1acbef6e6afa5d6d438efb2096e05b292a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>String</type>
@@ -306,7 +306,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="202" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="202" bodyend="210"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="207" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="207" bodyend="215"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -325,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="217" column="16" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="217" bodyend="236"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="223" column="16" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="223" bodyend="242"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1aa2c98d448f280dafc40721b11d37c3f8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -355,7 +355,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="244" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="244" bodyend="252"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="251" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="251" bodyend="259"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -375,7 +375,7 @@
         <link refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager"/>
       </node>
     </collaborationgraph>
-    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="20" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="20" bodyend="255"/>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" line="20" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/EventManager.java" bodystart="20" bodyend="260"/>
     <listofallmembers>
       <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1a7f3523855546199753ac5c8a8c4af16f" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>AddEvent</name></member>
       <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1EventManager_1ada4ce9ae239021c27e7fb48dcc760e9e" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::EventManager</scope><name>comics</name></member>

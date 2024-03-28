@@ -3,12 +3,10 @@
  */
 package com.mehmetali.comic_manager;
 
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-//import com.mehmetali.comic_manager.Book;
 
 /**
  * Manages the wish list of comics.
@@ -24,9 +22,10 @@ import java.util.List;
 public class WishManager {
 
   private static final String WISH_FILE_PATH = &quot;wish.dat&quot;; /**&lt; The file path where wish data is stored. */
-<span class="fc" id="L27">  private static final BookManager comicmanager = new BookManager(); /**&lt; The instance of BookManager for managing comic books. */</span>
-<span class="fc" id="L28">  private List&lt;Wish&gt; comics = readFromFile(WISH_FILE_PATH); /**&lt; The list of wishes loaded from the wish file. */</span>
-<span class="fc" id="L29">  private int result = writeToFile(comics, WISH_FILE_PATH); /**&lt; The result of writing wish data to the wish file. */</span>
+<span class="fc" id="L25">  private static final BookManager comicmanager = new BookManager(); /**&lt; The instance of BookManager for managing comic books. */</span>
+<span class="fc" id="L26">  private List&lt;Wish&gt; comics = readFromFile(WISH_FILE_PATH); /**&lt; The list of wishes loaded from the wish file. */</span>
+<span class="fc" id="L27">  private int result = writeToFile(comics, WISH_FILE_PATH); /**&lt; The result of writing wish data to the wish file. */</span>
+
 
   /**
    * Interface for writing wish data to a file.
@@ -42,14 +41,12 @@ public class WishManager {
   }
 
 
-
-
   /**
    * Constructs a WishManager object and reads wish list from file.
    */
-<span class="fc" id="L50">  public WishManager() {</span>
-<span class="fc" id="L51">    this.comics = readFromFile(WISH_FILE_PATH);</span>
-<span class="fc" id="L52">  }</span>
+<span class="fc" id="L47">  public WishManager() {</span>
+<span class="fc" id="L48">    this.comics = readFromFile(WISH_FILE_PATH);</span>
+<span class="fc" id="L49">  }</span>
 
 
   /**
@@ -59,18 +56,18 @@ public class WishManager {
    * @return the title of the added wish
    */
   public int AddBook(Wish comic) {
-<span class="fc bfc" id="L62" title="All 2 branches covered.">    if (!isBookNameAvailable(comic.getTitle())) {</span>
-<span class="fc" id="L63">      System.out.println(&quot;This Book name is already in use. Please choose a different book title.&quot;);</span>
-<span class="fc" id="L64">      return -1;</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">    if (!isBookNameAvailable(comic.getTitle())) {</span>
+<span class="fc" id="L60">      System.out.println(&quot;This Book name is already in use. Please choose a different book title.&quot;);</span>
+<span class="fc" id="L61">      return -1;</span>
     }
 
-<span class="fc" id="L67">    comicmanager.getBookTitleByID(comic.getComicID());</span>
-    //comic.setTitle(Name);
-<span class="fc" id="L69">    comics.add(comic);</span>
-<span class="fc" id="L70">    writeToFile(comics, WISH_FILE_PATH);</span>
-<span class="fc" id="L71">    System.out.println(&quot;The book has been successfully added to the wish list.&quot;);</span>
-<span class="fc" id="L72">    return 0;</span>
+<span class="fc" id="L64">    comicmanager.getBookTitleByID(comic.getComicID());</span>
+<span class="fc" id="L65">    comics.add(comic);</span>
+<span class="fc" id="L66">    writeToFile(comics, WISH_FILE_PATH);</span>
+<span class="fc" id="L67">    System.out.println(&quot;The book has been successfully added to the wish list.&quot;);</span>
+<span class="fc" id="L68">    return 0;</span>
   }
+
 
   /**
    * Lists all books in the wish list.
@@ -78,26 +75,27 @@ public class WishManager {
    * @return the number of books listed
    */
   public int listBooks() {
-<span class="fc" id="L81">    this.comics = readFromFile(WISH_FILE_PATH);</span>
+<span class="fc" id="L78">    this.comics = readFromFile(WISH_FILE_PATH);</span>
 
-<span class="fc bfc" id="L83" title="All 2 branches covered.">    if (comics.isEmpty()) {</span>
-<span class="fc" id="L84">      System.out.println(&quot;No books found to list.&quot;);</span>
-<span class="fc" id="L85">      return 0;</span>
+<span class="fc bfc" id="L80" title="All 2 branches covered.">    if (comics.isEmpty()) {</span>
+<span class="fc" id="L81">      System.out.println(&quot;No books found to list.&quot;);</span>
+<span class="fc" id="L82">      return 0;</span>
     }
 
-<span class="fc" id="L88">    System.out.println(&quot;----- Book List -----&quot;);</span>
+<span class="fc" id="L85">    System.out.println(&quot;----- Book List -----&quot;);</span>
 
-<span class="fc bfc" id="L90" title="All 2 branches covered.">    for (Wish comic : comics) {</span>
-<span class="fc" id="L91">      System.out.println(&quot;Book ID: &quot; + comic.getComicID());</span>
-<span class="fc" id="L92">      System.out.println(&quot;Title: &quot; + comic.getTitle());</span>
-<span class="fc" id="L93">      System.out.println(&quot;Page Number: &quot; + comic.getpageNumber());</span>
-<span class="fc" id="L94">      System.out.println(&quot;Situation: &quot; + comic.getuser());</span>
-<span class="fc" id="L95">      System.out.println(&quot;Value: &quot; + comic.getValue());</span>
-<span class="fc" id="L96">      System.out.println(&quot;-------------------------&quot;);</span>
-<span class="fc" id="L97">    }</span>
+<span class="fc bfc" id="L87" title="All 2 branches covered.">    for (Wish comic : comics) {</span>
+<span class="fc" id="L88">      System.out.println(&quot;Book ID: &quot; + comic.getComicID());</span>
+<span class="fc" id="L89">      System.out.println(&quot;Title: &quot; + comic.getTitle());</span>
+<span class="fc" id="L90">      System.out.println(&quot;Page Number: &quot; + comic.getpageNumber());</span>
+<span class="fc" id="L91">      System.out.println(&quot;Situation: &quot; + comic.getuser());</span>
+<span class="fc" id="L92">      System.out.println(&quot;Value: &quot; + comic.getValue());</span>
+<span class="fc" id="L93">      System.out.println(&quot;-------------------------&quot;);</span>
+<span class="fc" id="L94">    }</span>
 
-<span class="fc" id="L99">    return comics.size();</span>
+<span class="fc" id="L96">    return comics.size();</span>
   }
+
 
   /**
    * Lists books in the wish list owned by a specific user.
@@ -106,28 +104,29 @@ public class WishManager {
    * @return the number of books listed
    */
   public int listBooksByUser(String User) {
-<span class="fc" id="L109">    this.comics = readFromFile(WISH_FILE_PATH);</span>
+<span class="fc" id="L107">    this.comics = readFromFile(WISH_FILE_PATH);</span>
 
-<span class="fc bfc" id="L111" title="All 2 branches covered.">    if (comics.isEmpty()) {</span>
-<span class="fc" id="L112">      System.out.println(&quot;No books found to list.&quot;);</span>
-<span class="fc" id="L113">      return 0;</span>
+<span class="fc bfc" id="L109" title="All 2 branches covered.">    if (comics.isEmpty()) {</span>
+<span class="fc" id="L110">      System.out.println(&quot;No books found to list.&quot;);</span>
+<span class="fc" id="L111">      return 0;</span>
     }
 
-<span class="fc" id="L116">    System.out.println(&quot;----- &quot; + User + &quot; Books in Condition -----&quot;);</span>
+<span class="fc" id="L114">    System.out.println(&quot;----- &quot; + User + &quot; Books in Condition -----&quot;);</span>
 
-<span class="fc bfc" id="L118" title="All 2 branches covered.">    for (Wish comic : comics) {</span>
-<span class="pc bpc" id="L119" title="1 of 2 branches missed.">      if (comic.getuser().equalsIgnoreCase(User)) {</span>
-<span class="fc" id="L120">        System.out.println(&quot;Book ID: &quot; + comic.getComicID());</span>
-<span class="fc" id="L121">        System.out.println(&quot;Title: &quot; + comic.getTitle());</span>
-<span class="fc" id="L122">        System.out.println(&quot;Page Number: &quot; + comic.getpageNumber());</span>
-<span class="fc" id="L123">        System.out.println(&quot;Situation: &quot; + comic.getuser());</span>
-<span class="fc" id="L124">        System.out.println(&quot;Value: &quot; + comic.getValue());</span>
-<span class="fc" id="L125">        System.out.println(&quot;-------------------------&quot;);</span>
+<span class="fc bfc" id="L116" title="All 2 branches covered.">    for (Wish comic : comics) {</span>
+<span class="pc bpc" id="L117" title="1 of 2 branches missed.">      if (comic.getuser().equalsIgnoreCase(User)) {</span>
+<span class="fc" id="L118">        System.out.println(&quot;Book ID: &quot; + comic.getComicID());</span>
+<span class="fc" id="L119">        System.out.println(&quot;Title: &quot; + comic.getTitle());</span>
+<span class="fc" id="L120">        System.out.println(&quot;Page Number: &quot; + comic.getpageNumber());</span>
+<span class="fc" id="L121">        System.out.println(&quot;Situation: &quot; + comic.getuser());</span>
+<span class="fc" id="L122">        System.out.println(&quot;Value: &quot; + comic.getValue());</span>
+<span class="fc" id="L123">        System.out.println(&quot;-------------------------&quot;);</span>
       }
-<span class="fc" id="L127">    }</span>
+<span class="fc" id="L125">    }</span>
 
-<span class="fc" id="L129">    return comics.size();</span>
+<span class="fc" id="L127">    return comics.size();</span>
   }
+
 
   /**
    * Deletes a book wish from the wish list by its ID.
@@ -136,30 +135,25 @@ public class WishManager {
    * @return 0 if the book is deleted successfully, -1 otherwise
    */
   public int deleteBookByID(int bookID) {
-<span class="fc" id="L139">    boolean found = false;</span>
+<span class="fc" id="L138">    boolean found = false;</span>
 
-<span class="fc bfc" id="L141" title="All 2 branches covered.">    for (Wish comic : comics) {</span>
-<span class="fc bfc" id="L142" title="All 2 branches covered.">      if (comic.getComicID() == bookID) {</span>
-<span class="fc" id="L143">        comics.remove(comic);</span>
-<span class="fc" id="L144">        writeToFile(comics, WISH_FILE_PATH);</span>
-<span class="fc" id="L145">        System.out.println(&quot;Book deleted successfully.&quot;);</span>
-<span class="fc" id="L146">        found = true;</span>
-<span class="fc" id="L147">        return 0;</span>
+<span class="fc bfc" id="L140" title="All 2 branches covered.">    for (Wish comic : comics) {</span>
+<span class="fc bfc" id="L141" title="All 2 branches covered.">      if (comic.getComicID() == bookID) {</span>
+<span class="fc" id="L142">        comics.remove(comic);</span>
+<span class="fc" id="L143">        writeToFile(comics, WISH_FILE_PATH);</span>
+<span class="fc" id="L144">        System.out.println(&quot;Book deleted successfully.&quot;);</span>
+<span class="fc" id="L145">        found = true;</span>
+<span class="fc" id="L146">        return 0;</span>
       }
-<span class="fc" id="L149">    }</span>
+<span class="fc" id="L148">    }</span>
 
-<span class="pc bpc" id="L151" title="1 of 2 branches missed.">    if (!found) {</span>
-<span class="fc" id="L152">      System.out.println(&quot;No book matching book ID was found.&quot;);</span>
-<span class="fc" id="L153">      return -1;</span>
+<span class="pc bpc" id="L150" title="1 of 2 branches missed.">    if (!found) {</span>
+<span class="fc" id="L151">      System.out.println(&quot;No book matching book ID was found.&quot;);</span>
+<span class="fc" id="L152">      return -1;</span>
     }
 
-<span class="nc" id="L156">    return -1;</span>
+<span class="nc" id="L155">    return -1;</span>
   }
-
-
-
-
-
 
 
   /**
@@ -169,14 +163,15 @@ public class WishManager {
    * @return true if the title is available, false otherwise
    */
   public boolean isBookNameAvailable(String title) {
-<span class="fc bfc" id="L172" title="All 2 branches covered.">    for (Wish comic : comics) {</span>
-<span class="pc bpc" id="L173" title="1 of 2 branches missed.">      if (comic.getTitle().equals(title)) {</span>
-<span class="fc" id="L174">        return false;</span>
+<span class="fc bfc" id="L166" title="All 2 branches covered.">    for (Wish comic : comics) {</span>
+<span class="pc bpc" id="L167" title="1 of 2 branches missed.">      if (comic.getTitle().equals(title)) {</span>
+<span class="fc" id="L168">        return false;</span>
       }
-<span class="nc" id="L176">    }</span>
+<span class="nc" id="L170">    }</span>
 
-<span class="fc" id="L178">    return true;</span>
+<span class="fc" id="L172">    return true;</span>
   }
+
 
   /**
    * Reads a list of Wish objects from a file.
@@ -185,30 +180,31 @@ public class WishManager {
    * @return The list of Wish objects read from the file, or an empty list if the file doesn't exist or cannot be read.
    */
   private List&lt;Wish&gt; readFromFile(String filePath) {
-<span class="fc" id="L188">    List&lt;Wish&gt; list = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L189">    File file = new File(filePath);</span>
+<span class="fc" id="L183">    List&lt;Wish&gt; list = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L184">    File file = new File(filePath);</span>
 
-<span class="fc bfc" id="L191" title="All 2 branches covered.">    if (!file.exists()) {</span>
+<span class="fc bfc" id="L186" title="All 2 branches covered.">    if (!file.exists()) {</span>
       try {
-<span class="pc bpc" id="L193" title="1 of 2 branches missed.">        if (file.createNewFile()) {</span>
-<span class="fc" id="L194">          System.out.println(filePath + &quot; file has been created.&quot;);</span>
+<span class="pc bpc" id="L188" title="1 of 2 branches missed.">        if (file.createNewFile()) {</span>
+<span class="fc" id="L189">          System.out.println(filePath + &quot; file has been created.&quot;);</span>
         } else {
-<span class="nc" id="L196">          System.out.println(filePath + &quot; file already exists.&quot;);</span>
+<span class="nc" id="L191">          System.out.println(filePath + &quot; file already exists.&quot;);</span>
         }
-<span class="nc" id="L198">      } catch (IOException e) {</span>
-<span class="nc" id="L199">        System.out.println(&quot;File creation error: &quot; + e.getMessage());</span>
-<span class="pc" id="L200">      }</span>
+<span class="nc" id="L193">      } catch (IOException e) {</span>
+<span class="nc" id="L194">        System.out.println(&quot;File creation error: &quot; + e.getMessage());</span>
+<span class="pc" id="L195">      }</span>
     } else {
-<span class="fc" id="L202">      try (FileInputStream fileIn = new FileInputStream(filePath);</span>
-<span class="fc" id="L203">             ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {</span>
-<span class="fc" id="L204">        list = (List&lt;Wish&gt;) objectIn.readObject();</span>
-<span class="nc" id="L205">      } catch (IOException | ClassNotFoundException e) {</span>
-<span class="nc" id="L206">        System.out.println(&quot;File read error: &quot; + e.getMessage());</span>
-<span class="fc" id="L207">      }</span>
+<span class="fc" id="L197">      try (FileInputStream fileIn = new FileInputStream(filePath);</span>
+<span class="fc" id="L198">             ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {</span>
+<span class="fc" id="L199">        list = (List&lt;Wish&gt;) objectIn.readObject();</span>
+<span class="nc" id="L200">      } catch (IOException | ClassNotFoundException e) {</span>
+<span class="nc" id="L201">        System.out.println(&quot;File read error: &quot; + e.getMessage());</span>
+<span class="fc" id="L202">      }</span>
     }
 
-<span class="fc" id="L210">    return list;</span>
+<span class="fc" id="L205">    return list;</span>
   }
+
 
   /**
    * Writes a list of Wish objects to a file.
@@ -218,22 +214,14 @@ public class WishManager {
    * @return Returns 0 upon successful writing to the file, or -1 if an error occurs.
    */
   private int writeToFile(List&lt;Wish&gt; list, String filePath) {
-<span class="fc" id="L221">    try (FileOutputStream fileOut = new FileOutputStream(filePath);</span>
-<span class="fc" id="L222">           ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {</span>
-<span class="fc" id="L223">      objectOut.writeObject(list);</span>
-<span class="fc" id="L224">      return 0;</span>
-<span class="nc" id="L225">    } catch (IOException e) {</span>
-<span class="nc" id="L226">      System.out.println(&quot;File write error: &quot; + e.getMessage());</span>
-<span class="nc" id="L227">      return -1;</span>
+<span class="fc" id="L217">    try (FileOutputStream fileOut = new FileOutputStream(filePath);</span>
+<span class="fc" id="L218">           ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {</span>
+<span class="fc" id="L219">      objectOut.writeObject(list);</span>
+<span class="fc" id="L220">      return 0;</span>
+<span class="nc" id="L221">    } catch (IOException e) {</span>
+<span class="nc" id="L222">      System.out.println(&quot;File write error: &quot; + e.getMessage());</span>
+<span class="nc" id="L223">      return -1;</span>
     }
   }
-
-
-
-
-
-
-
-
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

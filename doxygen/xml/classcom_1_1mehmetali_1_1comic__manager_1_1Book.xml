@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="20" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="20" bodyend="-1"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="21" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a1f1a2346794a9235008bd7bf92d8c658" prot="private" static="no" mutable="no">
         <type>String</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="21" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="21" bodyend="-1"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="22" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a4e69b1295daa45b8769ae27fe1e3a957" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="22" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="22" bodyend="-1"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="23" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a0f0493e3ba7bebd9f9e8cb9379e79922" prot="private" static="no" mutable="no">
         <type>String</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="23" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="23" bodyend="-1"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="24" column="18" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1acba90735452013f88509a06da6d3d6fb" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="24" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="24" bodyend="-1"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="25" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="25" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="35" column="10" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="35" bodyend="41"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="37" column="10" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="37" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a873434646b077c70811144d85954ce93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="48" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="48" bodyend="50"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="51" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="51" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1ac4f90f4faa55931f74a6483709518556" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="57" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="57" bodyend="59"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="61" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="61" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1ade33be84035c99f858572a9a612e47cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>String</type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="66" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="66" bodyend="68"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="71" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="71" bodyend="73"/>
         <referencedby refid="classcom_1_1mehmetali_1_1comic__manager_1_1BookManager_1a53c84067810419af16b5efde4e9678e7" compoundref="BookManager_8java" startline="40" endline="49">com.mehmetali.comic_manager.BookManager.AddBook</referencedby>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1aa6c1cf8c550f1e43c5981741fcc055b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -241,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="75" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="75" bodyend="77"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="81" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="81" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a5427f21361f4053b4118e684a8f01f72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="84" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="84" bodyend="86"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="91" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="91" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a3fd7b898c9d4c1493ae45e943a626d45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -286,7 +286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="93" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="93" bodyend="95"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="101" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="101" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a4c379167be1431c9aba1f2080d13b5fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>String</type>
@@ -303,7 +303,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="102" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="102" bodyend="104"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="111" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="111" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a319ca84c2a9032c86f96574bcdac56be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -331,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="111" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="111" bodyend="113"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="121" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="121" bodyend="123"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a621a5357f4554c62a00f62ec42934eb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -348,7 +348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="120" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="120" bodyend="122"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="131" column="14" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="131" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a0d6e00e684c8bfc1468f39d83799205e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -376,7 +376,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="129" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="129" bodyend="131"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="141" column="15" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="141" bodyend="143"/>
       </memberdef>
       <memberdef kind="function" id="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a8280ec0ba12adcde64b0f01803809575" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>String</type>
@@ -393,7 +393,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="139" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="139" bodyend="147"/>
+        <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="152" column="17" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="152" bodyend="160"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -429,7 +429,7 @@
         <label>Serializable</label>
       </node>
     </collaborationgraph>
-    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="19" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="19" bodyend="148"/>
+    <location file="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" line="20" column="7" bodyfile="comic_manager_app/src/main/java/com/mehmetali/comic_manager/Book.java" bodystart="20" bodyend="161"/>
     <listofallmembers>
       <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1abed0aba305f0158f85f1d665db7c11a3" prot="public" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>Book</name></member>
       <member refid="classcom_1_1mehmetali_1_1comic__manager_1_1Book_1a704c02e092521fca4d62fc0ecc22b3af" prot="private" virt="non-virtual"><scope>com::mehmetali::comic_manager::Book</scope><name>comicID</name></member>
