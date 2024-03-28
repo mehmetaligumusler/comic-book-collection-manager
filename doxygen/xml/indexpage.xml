@@ -21,11 +21,20 @@
 <sect2 id="index_1autotoc_md3">
 <title>Platforms</title>
 <para><itemizedlist>
-<listitem><para><image type="html" name="assets/badge-ubuntu.svg" alt="Ubuntu badge" inline="yes"></image>
+<listitem><para><image type="html" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+<image type="latex" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+<image type="rtf" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+<image type="docbook" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
 </para>
-</listitem><listitem><para><image type="html" name="assets/badge-macos.svg" alt="macOS badge" inline="yes"></image>
+</listitem><listitem><para><image type="html" name="badge-macos.svg" inline="yes">macOS badge</image>
+<image type="latex" name="badge-macos.svg" inline="yes">macOS badge</image>
+<image type="rtf" name="badge-macos.svg" inline="yes">macOS badge</image>
+<image type="docbook" name="badge-macos.svg" inline="yes">macOS badge</image>
 </para>
-</listitem><listitem><para><image type="html" name="assets/badge-windows.svg" alt="Windows badge" inline="yes"></image>
+</listitem><listitem><para><image type="html" name="badge-windows.svg" inline="yes">Windows badge</image>
+<image type="latex" name="badge-windows.svg" inline="yes">Windows badge</image>
+<image type="rtf" name="badge-windows.svg" inline="yes">Windows badge</image>
+<image type="docbook" name="badge-windows.svg" inline="yes">Windows badge</image>
 </para>
 </listitem></itemizedlist>
 </para>
@@ -36,25 +45,37 @@
 </ulink></para>
 <para><bold>Coverage</bold></para>
 <para><itemizedlist>
-<listitem><para><image type="html" name="assets/badge_combined.svg" alt="All" inline="yes"></image>
+<listitem><para><image type="html" name="badge_combined.svg" inline="yes">All</image>
+<image type="latex" name="badge_combined.svg" inline="yes">All</image>
+<image type="rtf" name="badge_combined.svg" inline="yes">All</image>
+<image type="docbook" name="badge_combined.svg" inline="yes">All</image>
 </para>
 </listitem></itemizedlist>
 </para>
 <para><bold>Branch Coverage</bold></para>
 <para><itemizedlist>
-<listitem><para><image type="html" name="assets/badge_branchcoverage.svg" alt="Branch Coverage" inline="yes"></image>
+<listitem><para><image type="html" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+<image type="latex" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+<image type="rtf" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+<image type="docbook" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
 </para>
 </listitem></itemizedlist>
 </para>
 <para><bold>Line Coverage</bold></para>
 <para><itemizedlist>
-<listitem><para><image type="html" name="assets/badge_linecoverage.svg" alt="Line Coverage" inline="yes"></image>
+<listitem><para><image type="html" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+<image type="latex" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+<image type="rtf" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+<image type="docbook" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
 </para>
 </listitem></itemizedlist>
 </para>
 <para><bold>Method Coverage</bold></para>
 <para><itemizedlist>
-<listitem><para><image type="html" name="assets/badge_methodcoverage.svg" alt="Method Coverage" inline="yes"></image>
+<listitem><para><image type="html" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+<image type="latex" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+<image type="rtf" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+<image type="docbook" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
 </para>
 </listitem></itemizedlist>
 </para>
